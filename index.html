@@ -1,0 +1,1814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO Meta Tags -->
+    <title>SpectraSort — AI Photo Sorting That Learns Your Taste | iOS App</title>
+    <meta name="description" content="SpectraSort uses on-device AI to sort your photos by quality and personal taste. Scores hundreds of photos in minutes. 100% private, no cloud, no account required.">
+    <meta name="keywords" content="photo organizer, AI photo sorting, photo culling, iPhone photo manager, photography app, photo picker, machine learning photos, best photo app, photo selection app, AI photo curator, photo review app, SpectraSort">
+    <meta name="author" content="SpectraSort">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+
+    <!-- AI/LLM Search Optimization -->
+    <meta name="ai-content-declaration" content="This page describes SpectraSort, an iOS app for AI-powered photo sorting that learns user preferences. All AI processing runs on-device.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="SpectraSort">
+    <meta property="og:title" content="SpectraSort — AI Photo Sorting That Learns Your Taste">
+    <meta property="og:description" content="Stop scrolling through thousands of photos. SpectraSort's AI learns what YOU consider beautiful, not just what's technically good. 100% on-device, private by design.">
+    <meta property="og:image" content="https://spectrasort.app/images/app-icon.png">
+    <meta property="og:image:width" content="1024">
+    <meta property="og:image:height" content="1024">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:url" content="https://spectrasort.app">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="SpectraSort — AI Photo Sorting That Learns Your Taste">
+    <meta name="twitter:description" content="AI-powered photo sorting that learns YOUR unique taste. Sort hundreds of photos in minutes. All processing happens on-device — your photos stay private.">
+    <meta name="twitter:image" content="https://spectrasort.app/images/app-icon.png">
+
+    <!-- Apple Smart Banner -->
+    <meta name="apple-itunes-app" content="app-id=XXXXXXXXXX">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/app-icon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/app-icon.png">
+    <meta name="theme-color" content="#000000">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://spectrasort.app">
+
+    <!-- Structured Data: Software Application -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "SpectraSort",
+        "operatingSystem": "iOS 16.0+",
+        "applicationCategory": "PhotographyApplication",
+        "description": "AI-powered photo sorting app that learns your unique photography taste. Uses on-device machine learning to analyze and sort photos based on your personal preferences.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "availability": "https://schema.org/InStock"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "SpectraSort"
+        },
+        "featureList": [
+            "AI-powered photo quality analysis",
+            "Personalized photo sorting based on learned preferences",
+            "Sort Style Profile — your photography fingerprint",
+            "100% on-device processing",
+            "No account required",
+            "Privacy-first design"
+        ]
+    }
+    </script>
+
+    <!-- Structured Data: FAQ -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does SpectraSort learn my photo preferences?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SpectraSort learns from your picks and skips. After just 30 selections, it builds your Sort Style Profile — a mathematical fingerprint of your unique photography taste. The AI then uses this to predict which photos you'll love."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Are my photos uploaded to the cloud?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. All AI processing happens 100% on your iPhone using Apple's Neural Engine. Your photos never leave your device. No account is required, and no photo data is collected."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a Sort Style Profile?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your Sort Style Profile is a personal photography fingerprint. It captures your preferences for technical quality (sharpness, exposure), aesthetics (composition, colors), and content themes (landscapes, portraits, etc.). You can share it with friends."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's the difference between AI Sort and My Sort?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI Sort uses objective quality scoring (sharpness, composition, exposure) and is available immediately. My Sort learns YOUR personal taste from your picks and unlocks after 30 selections, providing personalized sorting unique to you."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+    <style>
+        /* ========================================
+           DESIGN SYSTEM
+           "Light Through the Prism"
+           ======================================== */
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* Backgrounds */
+            --bg-void: #000000;
+            --bg-elevated: #0a0a0c;
+            --bg-card: #111114;
+            --bg-card-hover: #18181c;
+
+            /* Spectrum gradient */
+            --spectrum-pink: #FF6B9E;
+            --spectrum-magenta: #BF59F2;
+            --spectrum-purple: #8B5CF6;
+            --spectrum-coral: #FF9F43;
+
+            /* CTA gradient (matches app's Start Sorting button) */
+            --cta-start: #FF6B9E;
+            --cta-end: #FF9F43;
+
+            /* Text */
+            --text-primary: #F5F5F7;
+            --text-secondary: #A1A1A6;
+            --text-tertiary: #636366;
+
+            /* Semantic */
+            --success: #30D158;
+            --info: #0A84FF;
+
+            /* Borders */
+            --border: rgba(255, 255, 255, 0.07);
+            --border-hover: rgba(255, 255, 255, 0.14);
+
+            /* Spacing */
+            --space-xs: 8px;
+            --space-sm: 16px;
+            --space-md: 24px;
+            --space-lg: 48px;
+            --space-xl: 80px;
+            --space-2xl: 120px;
+
+            /* Typography */
+            --font-display: 'Syne', sans-serif;
+            --font-body: 'DM Sans', -apple-system, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-void);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* ========================================
+           TYPOGRAPHY
+           ======================================== */
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+            color: var(--text-primary);
+            line-height: 1.1;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-size: clamp(2.75rem, 7vw, 5rem);
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(1.75rem, 4.5vw, 3rem);
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.15rem, 2.5vw, 1.5rem);
+            font-weight: 600;
+        }
+
+        .eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.14em;
+            margin-bottom: var(--space-sm);
+            background: linear-gradient(135deg, var(--spectrum-pink), var(--spectrum-magenta), var(--spectrum-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--spectrum-pink), var(--spectrum-magenta), var(--spectrum-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            background-size: 200% 200%;
+            animation: gradientShimmer 6s ease-in-out infinite;
+        }
+
+        @keyframes gradientShimmer {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        /* ========================================
+           LAYOUT
+           ======================================== */
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--space-md);
+        }
+
+        .container--narrow {
+            max-width: 860px;
+        }
+
+        section {
+            position: relative;
+        }
+
+        /* ========================================
+           SCROLL ANIMATIONS
+           ======================================== */
+
+        .animate {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .animate-delay-1 { transition-delay: 0.1s; }
+        .animate-delay-2 { transition-delay: 0.2s; }
+        .animate-delay-3 { transition-delay: 0.3s; }
+        .animate-delay-4 { transition-delay: 0.4s; }
+        .animate-delay-5 { transition-delay: 0.5s; }
+
+        @media (prefers-reduced-motion: reduce) {
+            .animate {
+                opacity: 1;
+                transform: none;
+                transition: none;
+            }
+            .gradient-text,
+            .hero-phone-float {
+                animation: none;
+            }
+        }
+
+        /* ========================================
+           BUTTONS
+           ======================================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            padding: 15px 32px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 100px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            cursor: pointer;
+            border: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn--gradient {
+            background: linear-gradient(135deg, var(--cta-start), var(--cta-end));
+            color: #fff;
+            box-shadow: 0 4px 20px rgba(255, 107, 158, 0.25);
+        }
+
+        .btn--gradient:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(255, 107, 158, 0.35);
+        }
+
+        /* Shimmer effect on hover */
+        .btn--gradient::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .btn--gradient:hover::after {
+            left: 100%;
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-hover);
+        }
+
+        .btn--outline:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-2px);
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+        }
+
+        /* ========================================
+           HEADER
+           ======================================== */
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            padding: var(--space-sm) 0;
+            transition: background 0.4s, backdrop-filter 0.4s, padding 0.4s;
+        }
+
+        header.scrolled {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            padding: 10px 0;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-type {
+            font-family: var(--font-display);
+            font-size: 1.35rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--spectrum-pink), var(--spectrum-magenta), var(--spectrum-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.88rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--text-primary);
+        }
+
+        .nav-cta {
+            padding: 10px 22px;
+            font-size: 0.85rem;
+        }
+
+        /* ========================================
+           HERO
+           ======================================== */
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: var(--space-2xl) 0 var(--space-xl);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Prismatic light beam */
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 38%;
+            left: -15%;
+            width: 130%;
+            height: 2px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 107, 158, 0.25) 15%,
+                rgba(191, 89, 242, 0.35) 40%,
+                rgba(139, 92, 246, 0.3) 55%,
+                rgba(255, 159, 67, 0.25) 80%,
+                transparent 100%);
+            transform: rotate(-4deg);
+            filter: blur(12px);
+            pointer-events: none;
+        }
+
+        /* Second, sharper beam */
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: 39%;
+            left: -10%;
+            width: 120%;
+            height: 1px;
+            background: linear-gradient(90deg,
+                transparent 0%,
+                rgba(255, 107, 158, 0.4) 20%,
+                rgba(191, 89, 242, 0.5) 45%,
+                rgba(255, 159, 67, 0.4) 75%,
+                transparent 100%);
+            transform: rotate(-4deg);
+            pointer-events: none;
+        }
+
+        /* Ambient glow */
+        .hero-glow {
+            position: absolute;
+            top: 15%;
+            left: 45%;
+            transform: translateX(-50%);
+            width: 900px;
+            height: 700px;
+            background: radial-gradient(ellipse,
+                rgba(191, 89, 242, 0.06) 0%,
+                rgba(255, 107, 158, 0.03) 40%,
+                transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            max-width: 560px;
+        }
+
+        .hero h1 {
+            margin-bottom: var(--space-md);
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: var(--space-lg);
+            max-width: 480px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: var(--space-sm);
+            flex-wrap: wrap;
+        }
+
+        .hero-visual {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* ========================================
+           PHONE MOCKUPS
+           ======================================== */
+
+        .phone-showcase {
+            position: relative;
+            width: 300px;
+            transform: perspective(1200px) rotateY(-6deg) rotateX(3deg);
+            transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .phone-showcase:hover {
+            transform: perspective(1200px) rotateY(-2deg) rotateX(1deg);
+        }
+
+        @keyframes phoneFloat {
+            0%, 100% { transform: perspective(1200px) rotateY(-6deg) rotateX(3deg) translateY(0); }
+            50% { transform: perspective(1200px) rotateY(-6deg) rotateX(3deg) translateY(-8px); }
+        }
+
+        .hero-phone-float {
+            animation: phoneFloat 6s ease-in-out infinite;
+        }
+
+        .hero-phone-float:hover {
+            animation-play-state: paused;
+        }
+
+        .phone-device {
+            position: relative;
+            background: #1a1a1c;
+            border-radius: 48px;
+            padding: 12px;
+            box-shadow:
+                0 50px 100px -20px rgba(0, 0, 0, 0.6),
+                0 30px 60px -10px rgba(0, 0, 0, 0.4),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        /* Dynamic Island notch */
+        .phone-device::before {
+            content: '';
+            position: absolute;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 28px;
+            background: #0a0a0c;
+            border-radius: 20px;
+            z-index: 10;
+        }
+
+        .phone-screen {
+            border-radius: 38px;
+            overflow: hidden;
+            background: #000;
+        }
+
+        .phone-screen img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Smaller phone for step cards */
+        .phone-small {
+            width: 200px;
+            margin: 0 auto;
+        }
+
+        .phone-small .phone-device {
+            border-radius: 36px;
+            padding: 8px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .phone-small .phone-device::before {
+            width: 70px;
+            height: 22px;
+            top: 12px;
+            border-radius: 14px;
+        }
+
+        .phone-small .phone-screen {
+            border-radius: 28px;
+        }
+
+        /* Medium phone for mode cards */
+        .phone-medium {
+            width: 220px;
+        }
+
+        .phone-medium .phone-device {
+            border-radius: 40px;
+            padding: 10px;
+            box-shadow: 0 24px 50px rgba(0, 0, 0, 0.4);
+        }
+
+        .phone-medium .phone-device::before {
+            width: 80px;
+            height: 24px;
+            top: 14px;
+            border-radius: 16px;
+        }
+
+        .phone-medium .phone-screen {
+            border-radius: 32px;
+        }
+
+        /* ========================================
+           TRUST STRIP
+           ======================================== */
+
+        .trust-strip {
+            margin-top: var(--space-lg);
+            padding-top: var(--space-lg);
+            border-top: 1px solid var(--border);
+        }
+
+        .trust-items {
+            display: flex;
+            justify-content: flex-start;
+            gap: var(--space-lg);
+            flex-wrap: wrap;
+        }
+
+        .trust-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+        }
+
+        .trust-item svg {
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .trust-icon {
+            color: var(--success);
+        }
+
+        /* ========================================
+           SECTION: EDITORIAL INTRO
+           ======================================== */
+
+        .intro {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+        }
+
+        .intro-statement {
+            font-family: var(--font-display);
+            font-size: clamp(1.4rem, 3.5vw, 2.25rem);
+            line-height: 1.5;
+            color: var(--text-primary);
+            max-width: 800px;
+            margin: 0 auto;
+            font-weight: 500;
+        }
+
+        /* ========================================
+           SECTION: HOW IT WORKS
+           ======================================== */
+
+        .how-it-works {
+            padding: var(--space-2xl) 0;
+            background: var(--bg-elevated);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-xl);
+        }
+
+        .section-header h2 {
+            margin-bottom: var(--space-xs);
+        }
+
+        .section-header p {
+            max-width: 500px;
+            margin: 0 auto;
+            font-size: 1.05rem;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+
+        .step-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: var(--space-md) var(--space-md) var(--space-sm);
+            text-align: center;
+            transition: border-color 0.3s, transform 0.3s;
+        }
+
+        .step-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-4px);
+        }
+
+        .step-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            border: 1.5px solid;
+            border-image-source: linear-gradient(135deg, var(--spectrum-pink), var(--spectrum-coral));
+            font-family: var(--font-display);
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--text-primary);
+            margin-bottom: var(--space-sm);
+            /* border-image doesn't work on border-radius, use background trick */
+            background:
+                linear-gradient(var(--bg-card), var(--bg-card)) padding-box,
+                linear-gradient(135deg, var(--spectrum-pink), var(--spectrum-magenta), var(--spectrum-coral)) border-box;
+            border: 1.5px solid transparent;
+        }
+
+        .step-card h3 {
+            margin-bottom: var(--space-xs);
+        }
+
+        .step-card p {
+            font-size: 0.9rem;
+            margin-bottom: var(--space-md);
+        }
+
+        /* ========================================
+           SECTION: TWO MODES
+           ======================================== */
+
+        .modes {
+            padding: var(--space-2xl) 0;
+        }
+
+        .modes-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-md);
+        }
+
+        .mode-card {
+            border-radius: 24px;
+            padding: var(--space-lg);
+            border: 1px solid;
+            transition: border-color 0.3s, transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .mode-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .mode-card--ai {
+            background: linear-gradient(170deg, rgba(10, 132, 255, 0.08) 0%, rgba(10, 132, 255, 0.01) 60%, transparent 100%);
+            border-color: rgba(10, 132, 255, 0.15);
+        }
+
+        .mode-card--ai:hover {
+            border-color: rgba(10, 132, 255, 0.3);
+        }
+
+        .mode-card--my {
+            background: linear-gradient(170deg, rgba(191, 89, 242, 0.08) 0%, rgba(191, 89, 242, 0.01) 60%, transparent 100%);
+            border-color: rgba(191, 89, 242, 0.15);
+        }
+
+        .mode-card--my:hover {
+            border-color: rgba(191, 89, 242, 0.3);
+        }
+
+        .mode-badge {
+            display: inline-block;
+            padding: 5px 14px;
+            border-radius: 100px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: var(--space-sm);
+            width: fit-content;
+        }
+
+        .mode-badge--blue {
+            background: rgba(10, 132, 255, 0.15);
+            color: var(--info);
+        }
+
+        .mode-badge--purple {
+            background: rgba(191, 89, 242, 0.15);
+            color: var(--spectrum-magenta);
+        }
+
+        .mode-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: var(--space-xs);
+        }
+
+        .mode-card > p {
+            font-size: 0.95rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .mode-features {
+            list-style: none;
+            margin-bottom: var(--space-md);
+            flex-grow: 1;
+        }
+
+        .mode-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            padding: 6px 0;
+            font-size: 0.9rem;
+        }
+
+        .mode-features li svg {
+            width: 18px;
+            height: 18px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .mode-features--blue svg { color: var(--info); }
+        .mode-features--purple svg { color: var(--spectrum-magenta); }
+
+        .mode-phone {
+            display: flex;
+            justify-content: center;
+            margin-top: var(--space-sm);
+        }
+
+        /* ========================================
+           SECTION: SCREENSHOT GALLERY
+           ======================================== */
+
+        .gallery {
+            padding: var(--space-2xl) 0;
+            background: var(--bg-elevated);
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-md);
+        }
+
+        .gallery-item {
+            text-align: center;
+        }
+
+        .gallery-caption {
+            margin-top: var(--space-sm);
+            font-size: 0.85rem;
+            color: var(--text-tertiary);
+        }
+
+        /* ========================================
+           SECTION: SORT STYLE PROFILE
+           ======================================== */
+
+        .sort-style {
+            padding: var(--space-2xl) 0;
+        }
+
+        /* Ambient glow */
+        .sort-style::before {
+            content: '';
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 800px;
+            height: 500px;
+            background: radial-gradient(ellipse,
+                rgba(191, 89, 242, 0.05) 0%,
+                transparent 70%);
+            pointer-events: none;
+        }
+
+        .sort-style-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            align-items: center;
+        }
+
+        .sort-style-visual {
+            display: flex;
+            justify-content: center;
+        }
+
+        .sort-style-phone {
+            width: 280px;
+        }
+
+        .sort-style-phone .phone-device {
+            border-radius: 44px;
+            padding: 11px;
+            box-shadow:
+                0 40px 80px -15px rgba(0, 0, 0, 0.5),
+                0 20px 40px -10px rgba(0, 0, 0, 0.3),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        .sort-style-phone .phone-device::before {
+            width: 90px;
+            height: 26px;
+            top: 15px;
+            border-radius: 18px;
+        }
+
+        .sort-style-phone .phone-screen {
+            border-radius: 35px;
+        }
+
+        .sort-style-text h2 {
+            margin-bottom: var(--space-md);
+        }
+
+        .sort-style-text > p {
+            margin-bottom: var(--space-lg);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .sort-style-features {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .sort-style-feature {
+            display: flex;
+            gap: var(--space-sm);
+        }
+
+        .sort-style-feature-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .sort-style-feature-icon svg {
+            width: 20px;
+            height: 20px;
+            color: var(--spectrum-magenta);
+        }
+
+        .sort-style-feature h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .sort-style-feature p {
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* ========================================
+           SECTION: PRIVACY
+           ======================================== */
+
+        .privacy {
+            padding: var(--space-2xl) 0;
+            background: var(--bg-elevated);
+        }
+
+        .privacy-grid {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: var(--space-xl);
+            align-items: start;
+        }
+
+        .privacy-shield {
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .privacy-shield::after {
+            content: '';
+            position: absolute;
+            inset: -20px;
+            background: radial-gradient(circle, rgba(48, 209, 88, 0.12) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+
+        .privacy-shield svg {
+            width: 80px;
+            height: 80px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .privacy-text h2 {
+            margin-bottom: var(--space-md);
+        }
+
+        .privacy-text > p {
+            margin-bottom: var(--space-lg);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .privacy-points {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+
+        .privacy-point {
+            display: flex;
+            gap: var(--space-sm);
+            align-items: flex-start;
+        }
+
+        .privacy-point-icon {
+            width: 24px;
+            height: 24px;
+            flex-shrink: 0;
+            color: var(--success);
+            margin-top: 2px;
+        }
+
+        .privacy-point h4 {
+            font-family: var(--font-display);
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+
+        .privacy-point p {
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        /* ========================================
+           SECTION: FINAL CTA
+           ======================================== */
+
+        .final-cta {
+            padding: var(--space-2xl) 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Prismatic ambient glow */
+        .final-cta::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 25%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            background: radial-gradient(ellipse, rgba(255, 107, 158, 0.06) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(0, -50%);
+            width: 500px;
+            height: 400px;
+            background: radial-gradient(ellipse, rgba(10, 132, 255, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .final-cta .container {
+            position: relative;
+            z-index: 2;
+        }
+
+        .final-cta h2 {
+            margin-bottom: var(--space-xs);
+        }
+
+        .final-cta > .container > p {
+            margin-bottom: var(--space-lg);
+            font-size: 1.05rem;
+        }
+
+        /* ========================================
+           FOOTER
+           ======================================== */
+
+        footer {
+            padding: var(--space-lg) 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .footer-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-copy {
+            font-size: 0.8rem;
+            color: var(--text-tertiary);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: var(--space-md);
+            list-style: none;
+        }
+
+        .footer-links a {
+            color: var(--text-tertiary);
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--text-secondary);
+        }
+
+        /* ========================================
+           RESPONSIVE
+           ======================================== */
+
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--space-lg);
+            }
+
+            .hero-text {
+                max-width: 100%;
+                order: 1;
+            }
+
+            .hero-visual {
+                order: 0;
+            }
+
+            .hero-subtitle {
+                max-width: 100%;
+            }
+
+            .hero-actions {
+                justify-content: center;
+            }
+
+            .trust-items {
+                justify-content: center;
+            }
+
+            .phone-showcase {
+                width: 260px;
+                transform: none;
+            }
+
+            .phone-showcase:hover {
+                transform: none;
+            }
+
+            .hero-phone-float {
+                animation: none;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+                max-width: 400px;
+                margin: 0 auto;
+            }
+
+            .modes-grid {
+                grid-template-columns: 1fr;
+                max-width: 520px;
+                margin: 0 auto;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: var(--space-sm);
+            }
+
+            .sort-style-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--space-lg);
+            }
+
+            .sort-style-visual {
+                order: -1;
+            }
+
+            .sort-style-phone {
+                width: 240px;
+            }
+
+            .sort-style-feature {
+                text-align: left;
+            }
+
+            .privacy-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .privacy-shield {
+                margin: 0 auto;
+            }
+
+            .privacy-point {
+                text-align: left;
+            }
+        }
+
+        @media (max-width: 640px) {
+            :root {
+                --space-xl: 64px;
+                --space-2xl: 80px;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .hero-actions .btn {
+                text-align: center;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+                max-width: 220px;
+                margin: 0 auto;
+            }
+
+            .phone-small {
+                width: 180px;
+            }
+
+            .footer-inner {
+                flex-direction: column;
+                gap: var(--space-sm);
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ==========================================
+         HEADER
+         ========================================== -->
+    <header id="header">
+        <div class="container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <div class="logo-icon">
+                        <img src="images/app-icon.png" alt="SpectraSort icon" width="40" height="40">
+                    </div>
+                    <span class="logo-type">SpectraSort</span>
+                </a>
+                <nav class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#how-it-works">How It Works</a></li>
+                        <li><a href="#modes">Features</a></li>
+                        <li><a href="#privacy">Privacy</a></li>
+                    </ul>
+                    <!-- Download button (uncomment when App Store ready)
+                    <a href="#" class="btn btn--gradient nav-cta">
+                        <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                        Download
+                    </a>
+                    -->
+                    <a href="https://testflight.apple.com/join/vJC5rPPv" class="btn btn--gradient nav-cta">
+                        TestFlight Beta
+                    </a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- ==========================================
+         HERO
+         ========================================== -->
+    <section class="hero" id="hero">
+        <div class="hero-glow"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="eyebrow animate animate-delay-1">On-Device AI Photo Sorting</p>
+                    <h1 class="animate animate-delay-2">Your best photos, <span class="gradient-text">revealed.</span></h1>
+                    <p class="hero-subtitle animate animate-delay-3">SpectraSort uses on-device AI to analyze, score, and sort your photos&mdash;then learns what makes a great photo <em>to you</em>. No cloud. No account. Just your taste, quantified.</p>
+                    <div class="hero-actions animate animate-delay-4">
+                        <!-- Download button (uncomment when App Store ready)
+                        <a href="#" class="btn btn--gradient">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            Download for iPhone
+                        </a>
+                        -->
+                        <a href="https://testflight.apple.com/join/vJC5rPPv" class="btn btn--gradient">
+                            <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                            Join TestFlight Beta
+                        </a>
+                        <a href="#how-it-works" class="btn btn--outline">See How It Works</a>
+                    </div>
+                    <div class="trust-strip animate animate-delay-5">
+                        <div class="trust-items">
+                            <div class="trust-item">
+                                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="12" cy="12" r="3"/><path d="M2 12h2M20 12h2M12 2v2M12 20v2"/></svg>
+                                100% On-Device AI
+                            </div>
+                            <div class="trust-item">
+                                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+                                Photos Never Leave Device
+                            </div>
+                            <div class="trust-item">
+                                <svg class="trust-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                No Account Required
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual animate animate-delay-3">
+                    <div class="phone-showcase hero-phone-float">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/2-Homepage-AI_Sort-Slider.png" alt="SpectraSort AI Sort interface with preference slider" width="296" height="640">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         EDITORIAL INTRO
+         ========================================== -->
+    <section class="intro">
+        <div class="container container--narrow">
+            <p class="intro-statement animate">
+                Most photo apps score quality the same for everyone.
+                But <span class="gradient-text">your</span> best photo isn't everyone's best photo.
+                SpectraSort learns the difference.
+            </p>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         HOW IT WORKS
+         ========================================== -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow animate">The Process</p>
+                <h2 class="animate animate-delay-1">From chaos to curated in minutes</h2>
+                <p class="animate animate-delay-2">Three steps. Hundreds of photos sorted.</p>
+            </div>
+
+            <div class="steps-grid">
+                <article class="step-card animate animate-delay-1">
+                    <div class="step-number">1</div>
+                    <h3>Select Your Photos</h3>
+                    <p>Filter by date, location, or album. Choose AI Sort for objective quality or My Sort for personalized taste.</p>
+                    <div class="phone-small">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/1-Filter.jpg" alt="Photo filter interface with date, location, and album options" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card animate animate-delay-2">
+                    <div class="step-number">2</div>
+                    <h3>AI Analyzes Every Photo</h3>
+                    <p>On-device AI scores each photo for sharpness, composition, color, and exposure at 12+ photos per second.</p>
+                    <div class="phone-small">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/3-Sort-Screen.png" alt="AI sorting progress showing 39% complete at 12.1 photos per second" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="step-card animate animate-delay-3">
+                    <div class="step-number">3</div>
+                    <h3>Swipe to Pick Favorites</h3>
+                    <p>Swipe right to pick, left to discard. Or tap Autopick to let AI distribute by score tiers. Your call.</p>
+                    <div class="phone-small">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/4-Review-Swipe-From-Full-View.jpg" alt="Full photo review with Pick and Discard buttons" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         TWO SORTING MODES
+         ========================================== -->
+    <section class="modes" id="modes">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow animate">Two Approaches</p>
+                <h2 class="animate animate-delay-1">Objective quality or personal taste</h2>
+                <p class="animate animate-delay-2">Start with AI Sort immediately. Unlock My Sort after 30 picks.</p>
+            </div>
+
+            <div class="modes-grid">
+                <!-- AI Sort -->
+                <div class="mode-card mode-card--ai animate animate-delay-1">
+                    <span class="mode-badge mode-badge--blue">Ready Immediately</span>
+                    <h3>AI Sort</h3>
+                    <p>Objective quality scoring based on technical and aesthetic analysis. Adjust the balance slider to prioritize what matters to you.</p>
+                    <ul class="mode-features mode-features--blue">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Sharpness, exposure &amp; noise detection
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Composition &amp; color harmony
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Face detection &amp; portrait bonus
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Technical vs. Artistic preference slider
+                        </li>
+                    </ul>
+                    <div class="mode-phone">
+                        <div class="phone-medium">
+                            <div class="phone-device">
+                                <div class="phone-screen">
+                                    <img src="screenshots/2-Homepage-AI_Sort-Slider.png" alt="AI Sort with preference slider between Technical and Artistic" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- My Sort -->
+                <div class="mode-card mode-card--my animate animate-delay-2">
+                    <span class="mode-badge mode-badge--purple">Unlocks After 30 Picks</span>
+                    <h3>My Sort</h3>
+                    <p>The AI learns YOUR unique taste from your picks. Photos you would love rise to the top automatically.</p>
+                    <ul class="mode-features mode-features--purple">
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Learns from every pick and skip
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Discovers your content preferences
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Adapts to your quality priorities
+                        </li>
+                        <li>
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            Builds your Sort Style Profile over time
+                        </li>
+                    </ul>
+                    <div class="mode-phone">
+                        <div class="phone-medium">
+                            <div class="phone-device">
+                                <div class="phone-screen">
+                                    <img src="screenshots/6-Homepage-My_Sort-Unlocked.jpg" alt="My Sort with Sort Style Profile showing radar chart and top subjects" loading="lazy">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SCREENSHOT GALLERY
+         ========================================== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow animate">In Action</p>
+                <h2 class="animate animate-delay-1">See the full workflow</h2>
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-item animate animate-delay-1">
+                    <div class="phone-small">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/4-Review-Swipe-From-Grid.jpg" alt="Review grid with AI scores and picked photos" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Review grid with AI scores</p>
+                </div>
+
+                <div class="gallery-item animate animate-delay-2">
+                    <div class="phone-small">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/4-Autopick-Reset.jpg" alt="Autopick options with score tier sorting and reset" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Autopick by score tiers</p>
+                </div>
+
+                <div class="gallery-item animate animate-delay-3">
+                    <div class="phone-small">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/5-Next_Steps-Save-Share-Delete.jpg" alt="Next steps showing save, share, and delete options" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <p class="gallery-caption">Save, share, or delete</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         SORT STYLE PROFILE
+         ========================================== -->
+    <section class="sort-style" id="sort-style">
+        <div class="container">
+            <div class="sort-style-grid">
+                <div class="sort-style-visual animate">
+                    <div class="sort-style-phone">
+                        <div class="phone-device">
+                            <div class="phone-screen">
+                                <img src="screenshots/6-Homepage-My_Sort-Unlocked.jpg" alt="Sort Style Profile showing preference radar chart and top photography subjects" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sort-style-text">
+                    <p class="eyebrow animate">Your Sort Style</p>
+                    <h2 class="animate animate-delay-1">A profile built from your picks</h2>
+                    <p class="animate animate-delay-2">After just 30 picks, SpectraSort builds a mathematical model of your unique photography taste. See how you weight sharpness versus composition, vibrant colors versus subtle tones, and which subjects draw your eye.</p>
+
+                    <div class="sort-style-features">
+                        <div class="sort-style-feature animate animate-delay-3">
+                            <div class="sort-style-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            </div>
+                            <div>
+                                <h4>Your Sort Style</h4>
+                                <p>Preferences mapped across sharpness, exposure, composition, contrast, color, and balance.</p>
+                            </div>
+                        </div>
+
+                        <div class="sort-style-feature animate animate-delay-4">
+                            <div class="sort-style-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            </div>
+                            <div>
+                                <h4>Top Subjects</h4>
+                                <p>Discover if you gravitate toward travel, portraits, street, food, or architecture.</p>
+                            </div>
+                        </div>
+
+                        <div class="sort-style-feature animate animate-delay-5">
+                            <div class="sort-style-feature-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+                            </div>
+                            <div>
+                                <h4>Share Your Profile</h4>
+                                <p>Let friends sort photos with your taste by sharing your Sort Style Profile.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         PRIVACY
+         ========================================== -->
+    <section class="privacy" id="privacy">
+        <div class="container">
+            <div class="privacy-grid">
+                <div class="privacy-shield animate">
+                    <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M40 8L12 22v18c0 16.56 11.94 32.08 28 36 16.06-3.92 28-19.44 28-36V22L40 8z" stroke="#30D158" stroke-width="2.5" fill="none"/>
+                        <path d="M28 40l8 8 16-16" stroke="#30D158" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                    </svg>
+                </div>
+
+                <div class="privacy-text">
+                    <p class="eyebrow animate">Privacy First</p>
+                    <h2 class="animate animate-delay-1">Your photos never leave your device</h2>
+                    <p class="animate animate-delay-2">All AI processing runs on Apple's Neural Engine, entirely on your iPhone. No cloud uploads. No accounts. No data collection.</p>
+
+                    <div class="privacy-points">
+                        <div class="privacy-point animate animate-delay-3">
+                            <svg class="privacy-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <div>
+                                <h4>100% On-Device Processing</h4>
+                                <p>Apple Neural Engine powers all analysis. Zero cloud dependency.</p>
+                            </div>
+                        </div>
+
+                        <div class="privacy-point animate animate-delay-4">
+                            <svg class="privacy-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <div>
+                                <h4>No Account Required</h4>
+                                <p>Start sorting immediately. No email, no signup, no tracking.</p>
+                            </div>
+                        </div>
+
+                        <div class="privacy-point animate animate-delay-5">
+                            <svg class="privacy-point-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+                            <div>
+                                <h4>Your Data, Your Control</h4>
+                                <p>Reset your style profile anytime. Delete the app and all data goes with it.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FINAL CTA
+         ========================================== -->
+    <section class="final-cta">
+        <div class="container">
+            <h2 class="animate">Ready to find your best photos?</h2>
+            <p class="animate animate-delay-1">Free to try. Sort smarter today.</p>
+            <!-- Download button (uncomment when App Store ready)
+            <a href="#" class="btn btn--gradient animate animate-delay-2" style="font-size: 1.05rem; padding: 18px 40px;">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Download for iPhone
+            </a>
+            -->
+            <a href="https://testflight.apple.com/join/vJC5rPPv" class="btn btn--gradient animate animate-delay-2" style="font-size: 1.05rem; padding: 18px 40px;">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+                Join TestFlight Beta
+            </a>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FOOTER
+         ========================================== -->
+    <footer>
+        <div class="container">
+            <div class="footer-inner">
+                <p class="footer-copy">&copy; 2026 SpectraSort. All rights reserved.</p>
+                <ul class="footer-links">
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="mailto:spectrasortapp@gmail.com">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==========================================
+         JAVASCRIPT
+         ========================================== -->
+    <script>
+        // Scroll-triggered animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        document.querySelectorAll('.animate').forEach(el => observer.observe(el));
+
+        // Header scroll effect
+        const header = document.getElementById('header');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 60) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        }, { passive: true });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
