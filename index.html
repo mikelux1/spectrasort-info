@@ -26,7 +26,7 @@
     <meta property="og:url" content="https://spectrasort.app">
 
     <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="SpectraSort — AI Photo Sorting That Learns Your Taste">
     <meta name="twitter:description" content="AI-powered photo sorting that learns YOUR unique taste. Sort hundreds of photos in minutes. All processing happens on-device — your photos stay private.">
     <meta name="twitter:image" content="https://spectrasort.app/images/app-icon.png">
@@ -43,33 +43,51 @@
     <!-- Canonical URL -->
     <link rel="canonical" href="https://spectrasort.app">
 
-    <!-- Structured Data: Software Application -->
+    <!-- Structured Data: Mobile Application -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "SoftwareApplication",
+        "@type": "MobileApplication",
         "name": "SpectraSort",
         "operatingSystem": "iOS 16.0+",
         "applicationCategory": "PhotographyApplication",
-        "description": "AI-powered photo sorting app that learns your unique photography taste. Uses on-device machine learning to analyze and sort photos based on your personal preferences.",
+        "applicationSubCategory": "Photo & Video",
+        "description": "AI-powered photo sorting app that learns your unique photography taste. Uses on-device machine learning to analyze and sort photos by quality and personal preference. The only iOS photo organizer that combines objective quality scoring with personalized taste learning, entirely on-device.",
+        "url": "https://spectrasort.app",
+        "inLanguage": "en",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD",
-            "availability": "https://schema.org/InStock"
+            "availability": "https://schema.org/InStock",
+            "description": "Free with 7-day premium trial. Premium subscription for unlimited sorting sessions, personal taste learning, and full Sort Style Profile."
         },
         "author": {
             "@type": "Organization",
-            "name": "SpectraSort"
+            "name": "SpectraSort",
+            "url": "https://spectrasort.app"
         },
         "featureList": [
-            "AI-powered photo quality analysis",
-            "Personalized photo sorting based on learned preferences",
-            "Sort Style Profile — your photography fingerprint",
-            "100% on-device processing",
-            "No account required",
-            "Privacy-first design"
+            "AI-powered photo quality analysis (sharpness, exposure, composition, color harmony)",
+            "Personalized photo sorting that learns your unique taste",
+            "Sort Style Profile — a shareable photography fingerprint",
+            "CLIP-based semantic content search",
+            "Tinder-style swipe review interface",
+            "12+ photos analyzed per second",
+            "100% on-device processing via Apple Neural Engine",
+            "No account required — privacy-first design"
         ]
+    }
+    </script>
+
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "SpectraSort",
+        "url": "https://spectrasort.app",
+        "logo": "https://spectrasort.app/images/app-icon.png"
     }
     </script>
 
@@ -114,6 +132,10 @@
         ]
     }
     </script>
+
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://www.gstatic.com">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

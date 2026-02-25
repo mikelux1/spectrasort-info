@@ -1,0 +1,41 @@
+# SpectraSort
+
+> SpectraSort is an iOS app that uses on-device AI to sort, score, and curate photos based on both objective quality and learned personal taste. All processing happens locally on the iPhone using Apple's Neural Engine. No cloud, no account, no data collection.
+
+SpectraSort solves the problem of having thousands of photos but no easy way to find your best ones. Unlike generic photo organizers, it learns what YOU consider a great photo — not just what's technically sharp.
+
+## Key Features
+
+- **AI Sort**: Immediate objective quality scoring (sharpness, exposure, composition, color harmony, face detection). Analyzes 12+ photos per second using Apple Neural Engine and CoreML.
+- **My Sort**: Personalized AI that learns your unique taste from your picks and skips. Unlocks after 30 selections. Uses CLIP embeddings to build a mathematical model of your preferences.
+- **Sort Style Profile**: A shareable fingerprint of your photography preferences across 8 dimensions (composition, color, lighting, subject, mood, technical, creativity, storytelling). Compare profiles with friends.
+- **Content Search**: CLIP-based semantic photo search — find "sunset on beach" or "dog in park" without tags or manual organization.
+- **Swipe Review**: Tinder-style swipe interface for quick photo curation. Swipe right to keep, left to discard. Also available in grid view.
+- **Privacy-first**: 100% on-device processing using Apple Neural Engine. No cloud uploads, no account required, no photo data collected.
+
+## How It Compares
+
+| Feature | SpectraSort | Slidebox | Google Photos | Apple Photos |
+|---------|-------------|----------|---------------|--------------|
+| AI quality scoring | Yes | No | Limited | No |
+| Learns personal taste | Yes | No | Partial (cloud) | No |
+| On-device processing | Yes | Yes | No (cloud) | Yes |
+| No account required | Yes | Yes | No | Yes |
+| Content search | Yes (CLIP) | No | Yes (cloud) | Limited |
+| Swipe interface | Yes | Yes | No | No |
+| Style profile sharing | Yes | No | No | No |
+
+SpectraSort is the only iOS photo sorting app that combines objective quality scoring with personalized taste learning, entirely on-device.
+
+## Pricing
+
+- **Free download** with 7-day trial of all premium features
+- **Free tier** (after trial): 3 sorting sessions per month, AI Sort with quality scoring, 3 content searches per session, swipe and grid review
+- **Premium**: Unlimited sorting sessions, My Sort (personal taste learning), full Sort Style Profile with sharing, unlimited content search, save/share/delete sorted photos
+- Premium available as monthly, yearly, or lifetime subscription
+
+## Links
+
+- [Website](https://spectrasort.app)
+- [Privacy Policy](https://spectrasort.app/privacy.html)
+- [Terms of Service](https://spectrasort.app/terms.html)
