@@ -1812,5 +1812,48 @@
         });
     </script>
 
+    <!-- Firebase Analytics -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+        import { getAnalytics, logEvent } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-analytics.js";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCDaOOlELzAJiglwkz4r07VvSKKZ9wVd-Q",
+            authDomain: "spectrasort-website.firebaseapp.com",
+            projectId: "spectrasort-website",
+            storageBucket: "spectrasort-website.firebasestorage.app",
+            messagingSenderId: "265127429107",
+            appId: "1:265127429107:web:540f38b6a35e1a03d9c886",
+            measurementId: "G-Y18XHGYQB9"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+
+        // Track CTA clicks
+        document.querySelectorAll('.btn--gradient').forEach(btn => {
+            btn.addEventListener('click', () => {
+                logEvent(analytics, 'cta_click', {
+                    button_text: btn.textContent.trim(),
+                    page_section: btn.closest('section')?.id || 'header'
+                });
+            });
+        });
+
+        // Track section views
+        const sectionObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    logEvent(analytics, 'section_view', {
+                        section_id: entry.target.id
+                    });
+                    sectionObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('section[id]').forEach(s => sectionObserver.observe(s));
+    </script>
+
 </body>
 </html>
