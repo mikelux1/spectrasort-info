@@ -126,7 +126,15 @@
                 "name": "What's the difference between AI Sort and My Sort?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "AI Sort uses objective quality scoring (sharpness, composition, exposure) and is available immediately. My Sort learns YOUR personal taste from your picks and unlocks after 30 selections, providing personalized sorting unique to you."
+                    "text": "AI Sort uses objective quality scoring (ranging from Technical to Artistic) and is available immediately. My Sort learns YOUR personal taste from your picks and unlocks after 30 selections, providing personalized photo culling unique to you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is this different from other photo organizer apps?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SpectraSort is the only iOS photo organizer that combines objective quality scoring with personalized taste learning, entirely on-device. Other apps offer manual swiping without AI scoring, or require cloud uploads. SpectraSort does both — privately."
                 }
             }
         ]
@@ -200,6 +208,7 @@
         html {
             scroll-behavior: smooth;
             overflow-x: hidden;
+            max-width: 100%;
         }
 
         body {
@@ -210,6 +219,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
             overflow-x: hidden;
+            max-width: 100%;
         }
 
         img {
@@ -642,6 +652,7 @@
 
         .phone-screen img {
             width: 100%;
+            height: auto;
             display: block;
         }
 
@@ -1142,6 +1153,81 @@
         }
 
         /* ========================================
+           SECTION: FAQ
+           ======================================== */
+
+        .faq {
+            padding: var(--space-2xl) 0;
+            background: var(--bg-elevated);
+        }
+
+        .faq-grid {
+            max-width: 720px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+
+        .faq-item {
+            border: 1px solid rgba(255, 255, 255, 0.06);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(255, 255, 255, 0.12);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: var(--space-sm) var(--space-md);
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-family: var(--font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: var(--space-sm);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 400;
+            color: var(--text-secondary);
+            transition: transform 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .faq-item.open .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-answer p {
+            padding: 0 var(--space-md) var(--space-sm);
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+        }
+
+        /* ========================================
            SECTION: FINAL CTA
            ======================================== */
 
@@ -1347,6 +1433,10 @@
                 margin: 0 auto;
             }
 
+            .phone-showcase {
+                width: 180px;
+            }
+
             .phone-small {
                 width: 180px;
             }
@@ -1407,8 +1497,8 @@
             <div class="hero-content">
                 <div class="hero-text">
                     <p class="eyebrow animate animate-delay-1">On-Device AI Photo Sorting</p>
-                    <h1 class="animate animate-delay-2">Your best photos, <span class="gradient-text">revealed.</span></h1>
-                    <p class="hero-subtitle animate animate-delay-3">SpectraSort uses on-device AI to analyze, score, and sort your photos&mdash;then learns what makes a great photo <em>to you</em>. No cloud. No account. Just your taste, quantified.</p>
+                    <h1 class="animate animate-delay-2">AI photo sorting that learns <span class="gradient-text">your taste.</span></h1>
+                    <p class="hero-subtitle animate animate-delay-3">SpectraSort is the iPhone photo organizer that goes beyond basic culling. On-device AI analyzes, scores, and sorts your photos&mdash;then learns what makes a great photo <em>to you</em>. No cloud. No account. Just your taste, quantified.</p>
                     <div class="hero-actions animate animate-delay-4">
                         <!-- Download button (uncomment when App Store ready)
                         <a href="#" class="btn btn--gradient">
@@ -1473,7 +1563,7 @@
             <div class="section-header">
                 <p class="eyebrow animate">The Process</p>
                 <h2 class="animate animate-delay-1">From chaos to curated in minutes</h2>
-                <p class="animate animate-delay-2">Three steps. Hundreds of photos sorted.</p>
+                <p class="animate animate-delay-2">Photo culling made effortless. Three steps, hundreds of photos sorted.</p>
             </div>
 
             <div class="steps-grid">
@@ -1748,6 +1838,65 @@
                                 <p>Reset your style profile anytime. Delete the app and all data goes with it.</p>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
+         FAQ
+         ========================================== -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <p class="eyebrow animate">Common Questions</p>
+                <h2 class="animate animate-delay-1">Frequently asked questions</h2>
+            </div>
+
+            <div class="faq-grid">
+                <div class="faq-item animate animate-delay-1">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        How does SpectraSort learn my photo preferences?
+                    </button>
+                    <div class="faq-answer">
+                        <p>SpectraSort learns from your picks and skips. After just 30 selections, it builds your Sort Style Profile &mdash; a mathematical fingerprint of your unique photography taste. The AI then uses this to predict which photos you'll love.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate animate-delay-2">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        Are my photos uploaded to the cloud?
+                    </button>
+                    <div class="faq-answer">
+                        <p>No. All AI processing happens 100% on your iPhone using Apple's Neural Engine. Your photos never leave your device. No account is required, and no photo data is collected.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate animate-delay-3">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        What is a Sort Style Profile?
+                    </button>
+                    <div class="faq-answer">
+                        <p>Your Sort Style Profile is a personal photography fingerprint. It captures your preferences for technical quality (sharpness, exposure), aesthetics (composition, colors), and content themes (landscapes, portraits, etc.). You can share it with friends.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate animate-delay-4">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        What's the difference between AI Sort and My Sort?
+                    </button>
+                    <div class="faq-answer">
+                        <p>AI Sort uses objective quality scoring (ranging from Technical to Artistic) and is available immediately. My Sort learns YOUR personal taste from your picks and unlocks after 30 selections, providing personalized photo culling unique to you.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item animate animate-delay-5">
+                    <button class="faq-question" onclick="this.parentElement.classList.toggle('open')">
+                        How is this different from other photo organizer apps?
+                    </button>
+                    <div class="faq-answer">
+                        <p>SpectraSort is the only iOS photo organizer that combines objective quality scoring with personalized taste learning, entirely on-device. Other apps offer manual swiping without AI scoring, or require cloud uploads. SpectraSort does both &mdash; privately.</p>
                     </div>
                 </div>
             </div>
