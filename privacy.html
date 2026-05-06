@@ -154,7 +154,7 @@
             <div class="page-header">
                 <h1>Privacy Policy</h1>
                 <p>Your photos stay on your device. Period.</p>
-                <span class="last-updated">Last updated: February 2026</span>
+                <span class="last-updated">Last updated: May 2026 (v2.0 release)</span>
             </div>
 
             <div class="content">
@@ -174,13 +174,21 @@
                 </ul>
 
                 <h2>2. Information We May Collect</h2>
-                <p>To improve SpectraSort, we may collect anonymous, aggregated usage data:</p>
+                <p>To improve SpectraSort, we may collect anonymous, aggregated usage data through Firebase Analytics and Firebase Crashlytics. The data is limited to:</p>
                 <ul>
-                    <li><strong>App usage statistics</strong> - Feature usage, session duration, crash reports</li>
-                    <li><strong>Device information</strong> - Device model, iOS version (for compatibility)</li>
-                    <li><strong>Performance metrics</strong> - Processing times, memory usage (to optimize the app)</li>
+                    <li><strong>App usage events</strong> - which screens you view, which features you tap (no names, no photos, no content)</li>
+                    <li><strong>Device model and iOS version</strong> - for compatibility</li>
+                    <li><strong>Crash diagnostics</strong> - stack traces and device state when the app crashes</li>
+                    <li><strong>Performance metrics</strong> - processing times, memory usage</li>
+                    <li><strong>App-instance identifier</strong> - a randomly generated ID Firebase assigns to the install, used only to deduplicate sessions and link crashes to events. Resets if you reinstall the app.</li>
                 </ul>
-                <p>This data is anonymized and cannot be used to identify you. You can disable analytics in Settings.</p>
+                <p>The app-instance identifier is <strong>not</strong> linked to your Apple ID, name, email, IP address, or any data outside SpectraSort. It cannot be used to identify you.</p>
+                <p><strong>Tracking domains used:</strong> <code>app-measurement.com</code> (Firebase Analytics) and <code>firebase-settings.crashlytics.com</code> (Crashlytics). These are the only outbound network destinations the analytics SDK uses.</p>
+                <p><strong>You can disable analytics anytime</strong> in Settings &rarr; Privacy &rarr; "Send anonymous usage data." When the toggle is off, no events or crash reports are transmitted. Users in the EU, UK, and EEA default to off; everyone else can toggle on or off.</p>
+
+                <h2>2a. App Tracking Transparency (ATT)</h2>
+                <p>On first launch, SpectraSort shows iOS's standard App Tracking Transparency prompt. The prompt asks whether the app may track you across other apps and websites. <strong>SpectraSort does not actually engage in cross-app tracking</strong>: we do not share data with advertisers, run no ads, and do not link analytics events to identifiers from other apps. The prompt appears because Firebase Analytics is the underlying SDK and Apple requires the prompt for any app that integrates an SDK capable of tracking.</p>
+                <p>Whether you allow or deny the ATT prompt, your photos remain on-device and we collect no advertising-related data. Denying the prompt is fully supported &mdash; the app works identically.</p>
 
                 <h2>3. On-Device Processing</h2>
                 <p>All AI processing in SpectraSort happens locally on your iPhone using Apple's Core ML framework. This includes:</p>
@@ -216,12 +224,13 @@
                 </ul>
 
                 <h2>6. Third-Party Services</h2>
-                <p>SpectraSort may use the following third-party services:</p>
+                <p>SpectraSort uses the following third-party services:</p>
                 <ul>
-                    <li><strong>Apple App Store</strong> - For app distribution and in-app purchases</li>
-                    <li><strong>Firebase Analytics</strong> - Privacy-focused analytics (optional, can be disabled)</li>
+                    <li><strong>Apple App Store</strong> - For app distribution, in-app purchases, and subscription management</li>
+                    <li><strong>Firebase Analytics</strong> (Google) - Anonymous usage events. Off by default in EU/UK/EEA; toggleable elsewhere. Endpoint: <code>app-measurement.com</code>.</li>
+                    <li><strong>Firebase Crashlytics</strong> (Google) - Crash diagnostics so we can fix bugs. Off by the same Settings toggle. Endpoint: <code>firebase-settings.crashlytics.com</code>.</li>
                 </ul>
-                <p>We do not use advertising networks, social media SDKs, or tracking pixels.</p>
+                <p>We do <strong>not</strong> use advertising networks, social media SDKs, retargeting pixels, attribution SDKs, or any other tracking infrastructure.</p>
 
                 <h2>7. Data Storage</h2>
                 <p>All app data is stored locally on your device:</p>
