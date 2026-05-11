@@ -186,34 +186,24 @@
                 <p><strong>Tracking domains used:</strong> <code>app-measurement.com</code> (Firebase Analytics) and <code>firebase-settings.crashlytics.com</code> (Crashlytics). These are the only outbound network destinations the analytics SDK uses.</p>
                 <p><strong>You can disable analytics anytime</strong> in Settings &rarr; Privacy &rarr; "Send anonymous usage data." When the toggle is off, no events or crash reports are transmitted. Users in the EU, UK, and EEA default to off; everyone else can toggle on or off.</p>
 
-                <h2>2a. App Tracking Transparency (ATT)</h2>
-                <p>On first launch, SpectraSort shows iOS's standard App Tracking Transparency prompt. The prompt asks whether the app may track you across other apps and websites. <strong>SpectraSort does not actually engage in cross-app tracking</strong>: we do not share data with advertisers, run no ads, and do not link analytics events to identifiers from other apps. The prompt appears because Firebase Analytics is the underlying SDK and Apple requires the prompt for any app that integrates an SDK capable of tracking.</p>
-                <p>Whether you allow or deny the ATT prompt, your photos remain on-device and we collect no advertising-related data. Denying the prompt is fully supported &mdash; the app works identically.</p>
-
                 <h2>3. On-Device Processing</h2>
                 <p>All AI processing in SpectraSort happens locally on your iPhone using Apple's Core ML framework. This includes:</p>
                 <ul>
                     <li>Photo quality analysis (sharpness, exposure, composition)</li>
                     <li>Aesthetic scoring</li>
                     <li>Content understanding (what's in the photo)</li>
-                    <li>Sort Style Profile learning and personalization</li>
+                    <li>Taste profile learning from the photos you keep and discard</li>
                 </ul>
                 <p>The AI models are bundled with the app. No internet connection is required for photo analysis.</p>
 
-                <h2>4. Sort Style Profile Sharing</h2>
-                <p>When you share your Sort Style Profile, you are sharing:</p>
-                <ul>
-                    <li>Numerical preference weights (e.g., "prefers high sharpness")</li>
-                    <li>Content preference vectors (abstract mathematical representations)</li>
-                    <li>Your chosen style name and emoji (if set)</li>
-                </ul>
-                <p><strong>Your Sort Style Profile does not contain:</strong></p>
+                <h2>4. Taste Profile</h2>
+                <p>The Taste profile is a small set of preference parameters &mdash; subject weights and quality-dimension weights &mdash; built from the photos you choose to keep and the ones you discard during Review. It is stored on your device only. There is no profile-sharing feature in this version, and the profile is never transmitted to us or any third party. You can reset it any time from Settings &rarr; Reset Taste Profile.</p>
+                <p><strong>The Taste profile does not contain:</strong></p>
                 <ul>
                     <li>Any actual photos or image data</li>
                     <li>Photo metadata (locations, dates, etc.)</li>
                     <li>Personally identifiable information</li>
                 </ul>
-                <p>Your Sort Style Profile is a mathematical fingerprint of your taste preferences, not a window into your photo library.</p>
 
                 <h2>5. Photo Library Access</h2>
                 <p>SpectraSort requires access to your photo library to function. We use Apple's PhotoKit framework, which means:</p>
@@ -235,7 +225,7 @@
                 <h2>7. Data Storage</h2>
                 <p>All app data is stored locally on your device:</p>
                 <ul>
-                    <li><strong>Sort Style Profile</strong> - Stored in encrypted app storage</li>
+                    <li><strong>Taste profile</strong> - Stored locally in app storage</li>
                     <li><strong>Learning history</strong> - Stored locally, never synced</li>
                     <li><strong>Settings</strong> - Stored in iOS UserDefaults</li>
                 </ul>
