@@ -1,4 +1,38 @@
 User-agent: *
 Allow: /
 
+# AI / LLM crawlers — explicitly welcome.
+# We want SpectraSort to be discoverable via ChatGPT, Claude, Perplexity,
+# and Google's AI-assist surfaces.
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
 Sitemap: https://spectrasort.app/sitemap.xml

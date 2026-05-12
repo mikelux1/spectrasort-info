@@ -1,41 +1,68 @@
 # SpectraSort
 
-> SpectraSort is an iOS app that uses on-device AI to sort, score, and curate photos based on both objective quality and learned personal taste. All processing happens locally on the iPhone using Apple's Neural Engine. No cloud, no account, no data collection.
+> SpectraSort is an iOS app that sorts your iPhone photos by subject and quality, on-device. Sort through hundreds or thousands of photos in seconds. Nothing leaves the phone.
 
-SpectraSort solves the problem of having thousands of photos but no easy way to find your best ones. Unlike generic photo organizers, it learns what YOU consider a great photo — not just what's technically sharp.
+SpectraSort solves the picking problem: you have thousands of photos but no easy way to find the ones worth keeping. The app scores each photo across seven quality dimensions and ranks subject relevance to the categories you choose, all locally on your iPhone using Apple's Neural Engine.
 
-## Key Features
+## Three sorting profiles
 
-- **AI Sort**: Immediate objective quality scoring (sharpness, exposure, composition, color harmony, face detection). Analyzes 12+ photos per second using Apple Neural Engine and CoreML.
-- **My Sort**: Personalized AI that learns your unique taste from your picks and skips. Unlocks after 30 selections. Uses CLIP embeddings to build a mathematical model of your preferences.
-- **Sort Style Profile**: A shareable fingerprint of your photography preferences across 8 dimensions (composition, color, lighting, subject, mood, technical, creativity, storytelling). Compare profiles with friends.
-- **Content Search**: CLIP-based semantic photo search — find "sunset on beach" or "dog in park" without tags or manual organization.
-- **Swipe Review**: Tinder-style swipe interface for quick photo curation. Swipe right to keep, left to discard. Also available in grid view.
-- **Privacy-first**: 100% on-device processing using Apple Neural Engine. No cloud uploads, no account required, no photo data collected.
+There are three kinds of profile in SpectraSort. Use any of them at any time.
 
-## How It Compares
+- **Bookmarked profiles** — preset, ready to use. Three ship with the app: **City & Travel** (urban scenes, landmarks, street life), **The Outdoors** (landscapes, nature, adventure), and **Faces** (portraits, candids, family). You can also save your own Custom profiles as Bookmarked for quick switching.
 
-| Feature | SpectraSort | Slidebox | Google Photos | Apple Photos |
-|---------|-------------|----------|---------------|--------------|
-| AI quality scoring | Yes | No | Limited | No |
-| Learns personal taste | Yes | No | Partial (cloud) | No |
-| On-device processing | Yes | Yes | No (cloud) | Yes |
-| No account required | Yes | Yes | No | Yes |
-| Content search | Yes (CLIP) | No | Yes (cloud) | Limited |
-| Swipe interface | Yes | Yes | No | No |
-| Style profile sharing | Yes | No | No | No |
+- **Custom profile** — full manual control. Pick up to 3 subjects from 8 built-in categories (Urban, Nature, Portrait, Travel, Food, Architecture, Street, Night) or add your own keyword. Dial in any of the 7 quality dimensions individually, slide the whole set along the Technical/Artistic axis, or spin the balance wheel to weigh subject relevance against raw quality.
 
-SpectraSort is the only iOS photo sorting app that combines objective quality scoring with personalized taste learning, entirely on-device.
+- **Taste profile** — automatically built from your picks and discards during Review. After about 30 picks and 10 discards, a Taste profile takes shape and earns its own auto-generated name (e.g. "Versatile Creative"). It loads like any other profile, but the subjects and quality signature are drawn from your specific choices. The Taste profile lives on your device only — there is no profile sharing in this version.
+
+## Key features
+
+- **Up to 100+ photos per second** on the latest iPhones via Apple's Neural Engine. A library of 2,000 photos sorts in under 30 seconds.
+- **Seven quality dimensions** scored per photo: sharpness, exposure, contrast, noise, composition, color harmony, visual balance.
+- **8 built-in subjects** plus unlimited custom keywords. Up to 3 subjects per sort.
+- **Technical/Artistic slider** moves all 7 quality dimensions together along a single axis.
+- **Balance wheel** sets how much subject relevance matters vs. raw quality.
+- **Swipe Review or Grid Review** — choose between swiping through one photo at a time (right to keep, left to let go) or scanning a scored grid.
+- **Save / Share / Bulk Delete** (Premium) — write keepers to a new album, share standouts, remove the rest in one batch.
+- **100% on-device processing.** No cloud, no account, no photo data ever leaves the iPhone.
+
+## How it compares
+
+| Feature                       | SpectraSort | Apple Photos | Google Photos |
+|-------------------------------|-------------|--------------|---------------|
+| AI quality scoring            | Yes         | No           | Limited       |
+| Learns personal taste         | Yes (on-device) | No       | Partial (cloud) |
+| On-device processing          | Yes         | Yes          | No (cloud)    |
+| No account required           | Yes         | Yes          | No            |
+| Sort by subject + quality     | Yes (combined) | No        | No            |
+| Swipe interface for picking   | Yes         | No           | No            |
+| Bulk delete after review      | Yes         | Manual       | Manual        |
+
+SpectraSort is the only iOS photo sorter that combines objective quality scoring with personalized taste learning, entirely on-device, and surfaces the keepers in seconds.
 
 ## Pricing
 
-- **Free download** with 7-day trial of all premium features
-- **Free tier** (after trial): 3 sorting sessions per month, AI Sort with quality scoring, 3 content searches per session, swipe and grid review
-- **Premium**: Unlimited sorting sessions, My Sort (personal taste learning), full Sort Style Profile with sharing, unlimited content search, save/share/delete sorted photos
-- Premium available as monthly, yearly, or lifetime subscription
+Sorting itself is free, on every profile (Bookmarked, Custom, Taste). Premium unlocks the post-sort actions: save to a new album, share, and bulk delete.
+
+- **Weekly** — $1.99 / week, auto-renewing
+- **Monthly** — $4.99 / month, auto-renewing
+- **Lifetime** — $39.99, one-time purchase
+
+No introductory free trial. Premium can be restored on any new device signed in with the same Apple ID.
+
+## Privacy
+
+Everything happens on your device using Apple's Neural Engine and Core ML. There are no photo uploads, no cloud processing, no account, and no analytics on photo content.
+
+The only data we collect is anonymous app-usage analytics (Firebase Analytics + Crashlytics) and only when the user opts in. The toggle defaults to off in the EU, UK, and EEA; it defaults to on elsewhere but can be turned off at any time in Settings → Privacy. The analytics never include photo data, locations, or anything that could identify the user — only event names like "sort started" and crash diagnostics.
 
 ## Links
 
 - [Website](https://spectrasort.app)
-- [Privacy Policy](https://spectrasort.app/privacy.html)
-- [Terms of Service](https://spectrasort.app/terms.html)
+- [App Store](https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134)
+- [Privacy Policy](https://spectrasort.app/privacy)
+- [Terms of Use](https://spectrasort.app/terms)
+- Support: spectrasortapp@gmail.com
+
+## Version
+
+Current version: 2.0 (May 2026). iPhone, iOS 16 or later.
