@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary SEO -->
-    <title>SpectraSort — AI Photo Sorter for iPhone</title>
-    <meta name="description" content="SpectraSort sorts hundreds / thousands of your iPhone photos in seconds and surfaces the ones that match your taste. Runs entirely on device. Nothing leaves your phone.">
-    <meta name="keywords" content="photo organizer, AI photo sorting, photo culling, iPhone photo manager, photography app, photo picker, sort photos by quality, photo cleanup, SpectraSort">
+    <title>SpectraSort — On-Device AI Photo Sorter for iPhone</title>
+    <meta name="description" content="Sort 1000 photos in under a minute, entirely on your iPhone. No upload, no account, no data collected from your photos. Runs on Apple's Neural Engine.">
+    <meta name="keywords" content="private photo organizer, on-device AI photo sorting, iPhone photo culling, private photo app, photo manager iOS, photo picker, sort photos by quality, photo cleanup, on-device AI, SpectraSort">
     <meta name="author" content="SpectraSort">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="SpectraSort">
-    <meta property="og:title" content="SpectraSort — AI Photo Sorter for iPhone">
-    <meta property="og:description" content="A photo library worth keeping starts with sorting it. SpectraSort runs on-device — nothing leaves your phone.">
+    <meta property="og:title" content="SpectraSort — On-Device AI Photo Sorter for iPhone">
+    <meta property="og:description" content="Sort 1000 photos in under a minute, entirely on your iPhone. No upload, no account, no data collected from your photos.">
     <meta property="og:image" content="https://spectrasort.app/og-image.png">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -24,8 +24,8 @@
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SpectraSort — AI Photo Sorter for iPhone">
-    <meta name="twitter:description" content="A photo library worth keeping starts with sorting it. SpectraSort runs on-device — nothing leaves your phone.">
+    <meta name="twitter:title" content="SpectraSort — On-Device AI Photo Sorter for iPhone">
+    <meta name="twitter:description" content="Sort 1000 photos in under a minute, entirely on your iPhone. No upload, no account, no data collected from your photos.">
     <meta name="twitter:image" content="https://spectrasort.app/og-image.png">
 
     <!-- Apple Smart Banner -->
@@ -49,7 +49,7 @@
         "applicationCategory": "PhotographyApplication",
         "applicationSubCategory": "Photo Sorting",
         "softwareVersion": "2.0",
-        "description": "AI photo sorter for iPhone. Sorts hundreds / thousands of photos in seconds by subject and quality, on-device. Nothing leaves your phone.",
+        "description": "Private AI photo sorter for iPhone. Sorts hundreds / thousands of photos in seconds by subject and quality, entirely on-device. No upload, no account, no data collected from your photos.",
         "url": "https://spectrasort.app",
         "downloadUrl": "https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134",
         "installUrl": "https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134",
@@ -147,7 +147,31 @@
                 "name": "Do my photos ever leave my phone?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "No. Every step — sorting, scoring, the Taste profile, subject recognition — runs on your device using Apple's Neural Engine. There are no cloud uploads. The app maker never sees your photos."
+                    "text": "No. Every step — sorting, scoring, the Taste profile, subject recognition — runs on your iPhone's Neural Engine. There are no uploads. There is no SpectraSort server in the path."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does SpectraSort upload my photos to the cloud?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. SpectraSort never sends your photos anywhere. The AI models run on your iPhone's Neural Engine. Every part of the sort — model inference, scoring, ranking, your Taste profile — happens on the device. The whole pipeline is local."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does SpectraSort use my photos to train AI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. The models that ship with SpectraSort are pre-trained and do not learn from individual users' photos. Because the AI runs entirely on your iPhone, the maker has no way to access photo content — it never leaves your device."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What data does SpectraSort collect about me?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No data about your photos or their content. The app uses anonymous usage data — taps, screens viewed, crashes — to improve the experience. You can turn this off in Settings → Privacy. These analytics never include image data or anything linked to your identity. See the App Privacy nutrition label on the App Store for the full disclosure."
                 }
             },
             {
@@ -825,24 +849,37 @@
             max-width: 320px;
         }
 
-        /* === PRIVACY claim ============================================ */
-        .privacy-row {
-            display: flex;
+        /* === FAST & PRIVATE combined section =========================== */
+        .fastprivate-grid {
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 170px);
+            gap: 64px;
             align-items: center;
-            gap: 56px;
-            flex-wrap: wrap;
+            margin-top: 56px;
         }
-        .privacy-row .privacy-mark {
-            font-family: var(--font-serif);
-            font-style: italic;
-            font-weight: 500;
-            font-size: clamp(28px, 3vw, 36px);
+        @media (max-width: 900px) {
+            .fastprivate-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                margin-top: 40px;
+            }
+        }
+        .fastprivate-grid .stat-block {
+            margin-top: 0;
+        }
+        .fastprivate-graphic-wrap {
+            display: flex;
+            justify-content: center;
+        }
+        .privacy-graphic {
+            width: 100%;
+            max-width: 155px;
+            height: auto;
             color: var(--text);
-            max-width: 480px;
+            display: block;
         }
-        .privacy-row .privacy-body {
-            color: var(--text-mid);
-            max-width: 460px;
+        @media (max-width: 900px) {
+            .privacy-graphic { max-width: 120px; }
         }
 
         /* === PRICING ================================================== */
@@ -999,6 +1036,40 @@
             color: var(--text);
             border-bottom-color: var(--hairline-bold);
         }
+
+        /* === Theme override (preview-only — body classes beat the media query) === */
+        body.theme-light {
+            --bg:           var(--moon-yue);
+            --surface:      var(--moon-bright);
+            --surface-rise: var(--moon-paper);
+            --text:         var(--ink-nong);
+            --text-mid:     var(--moon-low);
+            --text-low:     var(--moon-mid);
+            --hairline:     rgba(0, 0, 0, 0.10);
+            --hairline-bold:rgba(0, 0, 0, 0.18);
+            --cta-bg:       var(--ink-nong);
+            --cta-text:     var(--moon-bright);
+        }
+        body.theme-dark {
+            --bg:           var(--ink-mo);
+            --surface:      var(--ink-nong);
+            --surface-rise: var(--ink-zhong);
+            --text:         var(--moon-yue);
+            --text-mid:     var(--moon-mid);
+            --text-low:     var(--moon-low);
+            --hairline:     rgba(255, 255, 255, 0.08);
+            --hairline-bold:rgba(255, 255, 255, 0.16);
+            --cta-bg:       var(--moon-yue);
+            --cta-text:     var(--ink-mo);
+        }
+        body.theme-dark .phone {
+            box-shadow: 0 1px 2px rgba(0,0,0,0.4), 0 28px 80px rgba(0,0,0,0.55);
+        }
+        body.theme-light .phone {
+            box-shadow:
+                0 1px 2px rgba(0,0,0,0.06),
+                0 24px 60px rgba(0,0,0,0.10);
+        }
     </style>
 </head>
 <body>
@@ -1022,9 +1093,9 @@
     <div class="container">
         <div class="hero-grid">
             <div class="hero-copy">
-                <span class="eyebrow">AI photo sorter for iPhone</span>
-                <h1>A photo library worth keeping starts with sorting it.</h1>
-                <p class="lead">SpectraSort sorts hundreds / thousands of your photos in seconds and surfaces the ones that match your taste. It runs entirely on your device. Nothing leaves your phone.</p>
+                <span class="eyebrow">On-device AI photo sorter for iPhone</span>
+                <h1>Sort 1000 photos in under a minute. Without ever uploading them.</h1>
+                <p class="lead">SpectraSort runs entirely on your iPhone. Hundreds / thousands of photos, ranked by your taste, in seconds. No upload. No account. No data collected from your photos.</p>
                 <div class="hero-cta-row">
                     <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
                         <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
@@ -1045,6 +1116,45 @@
                         <div class="screen"><img src="images/shot-home.png" width="589" height="1280" alt="SpectraSort home screen with City &amp; Travel profile"></div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="fast-private">
+    <div class="container">
+        <div class="copy-block" style="max-width: 920px;">
+            <span class="eyebrow">Fast &amp; Private</span>
+            <h2>Sorts in seconds. Stays on your&nbsp;phone.</h2>
+            <p class="lead">Powered by Apple's Neural Engine — the same chip as Face ID. No account, no internet, no data collected from your photos. Verified by Apple's App Privacy nutrition label.</p>
+        </div>
+        <div class="fastprivate-grid">
+            <div class="stat-block">
+                <div class="stat">
+                    <div class="num">100+</div>
+                    <div class="label">photos / second</div>
+                </div>
+                <div class="stat">
+                    <div class="num">&lt;1min</div>
+                    <div class="label">for 2,000 photos</div>
+                </div>
+                <div class="stat">
+                    <div class="num">0</div>
+                    <div class="label">cloud uploads</div>
+                </div>
+            </div>
+            <div class="fastprivate-graphic-wrap">
+                <svg class="privacy-graphic" viewBox="50 25 140 270" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <rect x="60" y="35" width="120" height="250" rx="20" fill="none" stroke="currentColor" stroke-width="2" opacity="0.85"/>
+                    <rect x="57" y="95" width="2" height="40" rx="1" fill="currentColor" opacity="0.45"/>
+                    <rect x="103" y="50" width="34" height="6" rx="3" fill="currentColor" opacity="0.45"/>
+                    <g transform="translate(120, 160)" fill="none" stroke="#D79A5C" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M -14 -10 V -22 a 14 14 0 0 1 28 0 V -10"/>
+                        <rect x="-20" y="-10" width="40" height="30" rx="4"/>
+                        <circle cx="0" cy="4" r="3" fill="#D79A5C" stroke="none"/>
+                        <rect x="-1.2" y="4" width="2.4" height="7" fill="#D79A5C" stroke="none"/>
+                    </g>
+                </svg>
             </div>
         </div>
     </div>
@@ -1118,30 +1228,6 @@
             </div>
             <div class="balance-right">
                 <p>The balance wheel decides how much subject match matters relative to raw quality. Lean toward Subject and photos that hit your chosen categories rise to the top — even if they're a stop underexposed. Lean toward Quality and the seven-dimension score takes over, regardless of what the photo is of. Anywhere in between, both signals blend in the proportion you set.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="fast">
-    <div class="container">
-        <div class="copy-block">
-            <span class="eyebrow">Fast</span>
-            <h2>Up to 100+ photos per second, on device.</h2>
-            <p class="lead">Powered by Apple's Neural Engine. A library of 2,000 photos sorts in well under a minute. No upload, no waiting on a server, no cloud round-trip.</p>
-        </div>
-        <div class="stat-block">
-            <div class="stat">
-                <div class="num">100+</div>
-                <div class="label">photos / second</div>
-            </div>
-            <div class="stat">
-                <div class="num">&lt;1min</div>
-                <div class="label">for 2,000 photos</div>
-            </div>
-            <div class="stat">
-                <div class="num">0</div>
-                <div class="label">cloud uploads</div>
             </div>
         </div>
     </div>
@@ -1235,18 +1321,6 @@
     </div>
 </section>
 
-<section id="privacy">
-    <div class="container">
-        <div class="privacy-row">
-            <div>
-                <span class="eyebrow">Privacy</span>
-                <div class="privacy-mark" style="margin-top: 18px;">Nothing leaves your phone.</div>
-            </div>
-            <p class="privacy-body">No uploads, no cloud, no accounts. Your photos never leave your phone. Sorting is local. The Taste profile is local. The whole engine is local.</p>
-        </div>
-    </div>
-</section>
-
 <section id="pricing">
     <div class="container">
         <div class="copy-block" style="max-width: 720px;">
@@ -1285,7 +1359,25 @@
             <details class="faq-item">
                 <summary>Do my photos ever leave my phone?</summary>
                 <div class="faq-answer">
-                    <p>No. Every step — sorting, scoring, the Taste profile, subject recognition — runs on your device using Apple's Neural Engine. There are no cloud uploads. The app maker never sees your photos.</p>
+                    <p>No. Every step — sorting, scoring, the Taste profile, subject recognition — runs on your iPhone's Neural Engine. There are no uploads. There is no SpectraSort server in the path.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Does SpectraSort upload my photos to the cloud?</summary>
+                <div class="faq-answer">
+                    <p>No. SpectraSort never sends your photos anywhere. The AI models run on your iPhone's Neural Engine. Every part of the sort — model inference, scoring, ranking, your Taste profile — happens on the device. The whole pipeline is local.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Does SpectraSort use my photos to train AI?</summary>
+                <div class="faq-answer">
+                    <p>No. The models that ship with SpectraSort are pre-trained and do not learn from individual users' photos. Because the AI runs entirely on your iPhone, the maker has no way to access photo content — it never leaves your device.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>What data does SpectraSort collect about me?</summary>
+                <div class="faq-answer">
+                    <p>No data about your photos or their content. The app uses anonymous usage data — taps, screens viewed, crashes — to improve the experience. You can turn this off in <strong>Settings → Privacy</strong>. These analytics never include image data or anything linked to your identity. See the App Privacy nutrition label on the App Store for the full disclosure.</p>
                 </div>
             </details>
             <details class="faq-item">
@@ -1354,6 +1446,7 @@
             <a href="/privacy">Privacy</a>
             <a href="/terms">Terms</a>
             <a href="mailto:spectrasortapp@gmail.com">Support</a>
+            <a href="#" id="theme-toggle" aria-label="Toggle preview theme">Theme</a>
         </div>
     </div>
 </footer>
@@ -1488,6 +1581,32 @@
         }, 250);
     }, { passive: true });
     recordScroll(); // initial read in case page loads already scrolled
+</script>
+
+<script>
+    // Preview-only theme cycle: system → light → dark → system. Persists via localStorage.
+    (function () {
+        const KEY = 'ss-preview-theme';
+        const body = document.body;
+        const stored = localStorage.getItem(KEY);
+        if (stored === 'light' || stored === 'dark') {
+            body.classList.add('theme-' + stored);
+        }
+        const link = document.getElementById('theme-toggle');
+        if (!link) return;
+        link.addEventListener('click', function (e) {
+            e.preventDefault();
+            const cur = localStorage.getItem(KEY);
+            const next = cur === 'light' ? 'dark' : cur === 'dark' ? 'system' : 'light';
+            body.classList.remove('theme-light', 'theme-dark');
+            if (next === 'system') {
+                localStorage.removeItem(KEY);
+            } else {
+                body.classList.add('theme-' + next);
+                localStorage.setItem(KEY, next);
+            }
+        });
+    })();
 </script>
 
 </body>
