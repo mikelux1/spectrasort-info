@@ -1469,6 +1469,16 @@
     const app = initializeApp(firebaseConfig);
     const analytics = getAnalytics(app);
 
+    // ---------- explicit page_view (fixes GA4 (not set) page paths) -----
+    // Firebase auto-fires page_view, but sometimes drops page_path on static
+    // HTML — fire explicitly so GA4 has the full attribution: location,
+    // title, path. Also surfaces utm_* params from query string.
+    logEvent(analytics, "page_view", {
+        page_location: window.location.href,
+        page_title: document.title,
+        page_path: window.location.pathname + window.location.search
+    });
+
     // ---------- helpers --------------------------------------------------
     const APP_STORE_HOST = "apps.apple.com";
     const SITE_HOST = location.hostname;
