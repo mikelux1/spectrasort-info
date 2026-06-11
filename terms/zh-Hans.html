@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户协议 - 光谱挑片</title>
+    <meta name="description" content="《光谱挑片》用户协议（软件许可及服务协议）。">
+    <link rel="icon" type="image/png" href="/images/app-icon.png">
+    <link rel="apple-touch-icon" href="/images/app-icon.png">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root {
+            --primary: #0A84FF;
+            --secondary: #8B5CF6;
+            --text-primary: #f5f5f7;
+            --text-secondary: #a1a1a6;
+            --bg-primary: #000000;
+            --bg-secondary: #1c1c1e;
+            --bg-card: #2c2c2e;
+            --border-color: #3a3a3c;
+            --max-width: 800px;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.7;
+            color: var(--text-primary);
+            background: var(--bg-primary);
+        }
+        .container { max-width: var(--max-width); margin: 0 auto; padding: 0 20px; }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border-color);
+            padding: 16px 0;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .logo-icon { width: 36px; height: 36px; border-radius: 8px; overflow: hidden; }
+        .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .logo-text { font-size: 1.25rem; font-weight: 700; }
+        .back-link { color: var(--primary); text-decoration: none; font-weight: 500; }
+        .back-link:hover { text-decoration: underline; }
+
+        .page-header {
+            text-align: center;
+            padding: 60px 0 40px;
+        }
+        .page-header h1 { font-size: 2.5rem; margin-bottom: 16px; }
+        .page-header p { color: var(--text-secondary); font-size: 1.1rem; }
+        .last-updated {
+            display: inline-block;
+            background: var(--bg-card);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 16px;
+            border: 1px solid var(--border-color);
+        }
+
+        .content {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 48px;
+            margin-bottom: 60px;
+            border: 1px solid var(--border-color);
+        }
+        .content h2 {
+            font-size: 1.5rem;
+            margin: 32px 0 16px;
+            color: var(--text-primary);
+        }
+        .content h2:first-child { margin-top: 0; }
+        .content p, .content li {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+        .content ul, .content ol {
+            margin-bottom: 16px;
+            padding-left: 24px;
+        }
+        .content li { margin-bottom: 8px; }
+        .content a { color: var(--primary); }
+        .content strong { color: var(--text-primary); }
+
+        .summary-box {
+            background: linear-gradient(135deg, rgba(10, 132, 255, 0.08), rgba(139, 92, 246, 0.08));
+            border: 1px solid rgba(10, 132, 255, 0.2);
+            border-radius: 12px;
+            padding: 24px;
+            margin: 24px 0;
+        }
+        .summary-box p:last-child { margin-bottom: 0; }
+
+        footer {
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            padding: 40px 0;
+            text-align: center;
+            border-top: 1px solid var(--border-color);
+        }
+        footer a { color: var(--text-secondary); text-decoration: none; }
+        footer a:hover { color: var(--text-primary); }
+
+        @media (max-width: 600px) {
+            .content { padding: 32px 24px; }
+            .page-header h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <img src="/images/app-icon.png" alt="光谱挑片">
+                </div>
+                <span class="logo-text">光谱挑片</span>
+            </a>
+            <a href="/" class="back-link">&larr; 返回首页</a>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="page-header">
+                <h1>用户协议</h1>
+                <p>软件许可及服务协议</p>
+                <span class="last-updated">更新日期：2026年6月5日</span>
+            </div>
+            <div class="content">
+                <h2>一、协议的接受</h2>
+                <p>《光谱挑片》软件（以下简称&quot;本软件&quot;）由个人开发者（以下简称&quot;开发者&quot;）提供。请您在使用本软件前仔细阅读本协议的全部条款。</p>
+                <p>您通过 App Store 下载、安装、启动、浏览或使用本软件，即视为您已阅读、理解并同意接受本协议的全部约束。如果您不同意本协议的任何内容，请勿下载、安装或使用本软件。</p>
+                <p>特别提示：本软件无需注册账号即可使用，不收集任何个人信息。</p>
+                <h2>二、服务内容</h2>
+                <ul>
+                <li>核心功能：本软件是一款纯本地照片挑选工具。您在设备本地相册中选取照片后，本软件按照题材与画质对照片进行自动排序，供您通过左右滑动手势决定保留或舍弃。</li>
+                <li>排序与评分的性质：本软件提供的照片排序与画质评分结果，系基于本地算法生成的参考建议，不构成对照片质量、艺术价值或任何其他事项的最终判断。您对照片的取舍享有完全、独立的决定权。</li>
+                <li>纯本地处理：本软件所有照片处理操作（包括读取、排序、评分、保留或舍弃标记）均在您的设备本地完成。照片绝不离开您的设备，本软件不设任何云端服务器，不收集、不上传任何数据。</li>
+                <li>服务的变更与终止：开发者保留随时修改、暂停或终止本软件部分功能的权利，但不会改变本软件&quot;纯本地处理、不收集个人信息&quot;的基本属性。</li>
+                </ul>
+                <h2>三、许可范围与知识产权</h2>
+                <h3>1. 软件许可</h3>
+                <p>开发者授予您一项个人的、非独占的、不可转让的、不可再许可的有限许可，允许您在您合法拥有的 Apple 品牌设备上安装、使用本软件，仅限您个人非商业用途。</p>
+                <h3>2. 知识产权归属</h3>
+                <p>本软件（包括但不限于软件源代码、目标代码、界面设计、图标、算法、排序模型、文字表述等）的一切知识产权（包括著作权、商标权、专利权、商业秘密等）均归开发者所有。</p>
+                <p>本软件所使用的中文字体、图标素材等第三方资源，均已获得合法授权。</p>
+                <p>您仅获得本软件的使用权，本协议未明示授予您的所有权利均由开发者保留。</p>
+                <h3>3. 禁止行为</h3>
+                <p>未经开发者事先书面同意，您不得：</p>
+                <ul>
+                <li>对本软件进行反向工程、反编译、反汇编、提取源代码或试图获取底层算法；</li>
+                <li>复制、修改、翻译、创作本软件的衍生作品；</li>
+                <li>将本软件再分发、出售、出租、出借、转让或用于任何商业性质的服务；</li>
+                <li>删除本软件中任何版权声明、商标或其他所有权提示。</li>
+                </ul>
+                <h2>四、用户行为规范</h2>
+                <ul>
+                <li>照片合法性保证：您使用本软件处理的照片，应当由您本人拍摄或您已获得合法权利。您不得使用本软件处理侵犯他人肖像权、著作权、隐私权或其他合法权益的照片。</li>
+                <li>合法使用：您承诺仅将本软件用于合法目的，不得利用本软件制作、复制、存储、保留或筛选任何违反中华人民共和国法律法规、危害国家安全、破坏民族团结、宣扬恐怖主义、暴力、淫秽色情、赌博、毒品、诽谤、欺诈等内容的照片。</li>
+                <li>禁止滥用：您不得以任何自动化方式（包括但不限于脚本、机器人）使用本软件，不得以任何方式干扰本软件的正常运行。</li>
+                <li>后果承担：如因您违反上述规定，导致任何第三方索赔或遭受行政处罚、刑事追诉的，您应独立承担全部法律责任，并使开发者免于因此遭受任何损失。</li>
+                </ul>
+                <h2>五、付费与退款</h2>
+                <ul>
+                <li>付费方式：本软件提供一次性买断的非消耗型应用内购买（价格：¥25 人民币），买断后您可永久使用本软件的完整功能。本软件不设订阅模式，无自动续费。</li>
+                <li>购买与退款处理：所有购买交易均由 Apple Inc. 通过 App Store 的 StoreKit 框架处理。开发者不接触、不知晓、不存储您的任何支付信息（包括银行卡信息、交易密码、Apple ID 账户信息等）。</li>
+                <li>退款政策：任何退款申请均适用 Apple App Store 的退款政策。如您需要申请退款，请通过 Apple 官方渠道（&quot;报告问题&quot;页面：reportaproblem.apple.com）向 Apple 提出。开发者无权处理或批准任何退款请求。</li>
+                <li>买断的性质：一次性买断指您支付 ¥25 后，无需再为同一 Apple ID 在同一平台上的本软件支付任何后续费用。但请注意：本软件的后续版本更新（包括大版本升级）是否需重新购买，以开发者届时在版本更新说明中的约定为准。开发者承诺不会在未明确告知的情况下将本软件改为订阅制。</li>
+                </ul>
+                <h2>六、免责声明</h2>
+                <p><strong>&quot;按现状&quot;提供：</strong> 本软件依照&quot;按现状&quot;和&quot;按可用&quot;的原则提供。开发者不提供任何明示或暗示的保证，包括但不限于：</p>
+                <ul>
+                <li>本软件将完全无错误、无中断地运行；</li>
+                <li>照片排序与评分结果完全准确、符合您的预期或适用于您的特定目的；</li>
+                <li>本软件将纠正所有缺陷或错误。</li>
+                </ul>
+                <p><strong>算法建议的性质：</strong> 本软件提供的照片排序与评分结果为算法自动生成的参考信息，不构成专业摄影建议、鉴定意见或投资决策依据。您应当根据自身判断决定保留或删除照片，并承担由此产生的一切后果（包括但不限于误删重要照片、保留低质量照片等）。</p>
+                <p><strong>本地数据风险：</strong> 由于本软件完全在设备本地运行，开发者无法也不应对您设备本身的硬件故障、系统崩溃、数据损坏、误操作、设备丢失、被盗等非本软件直接原因导致的照片丢失或损坏承担责任。建议您定期通过 iCloud 照片图库或 iTunes 等方式备份照片。</p>
+                <p><strong>法律允许的最大范围：</strong> 在适用法律允许的最大范围内，前述免责声明均属有效。</p>
+                <h2>七、责任限制</h2>
+                <ul>
+                <li>间接损失免责：在中华人民共和国法律允许的最大范围内，开发者不对任何间接的、附带的、特殊的、惩罚性的或后果性的损失（包括但不限于数据丢失、利润损失、商业机会丧失、名誉损害等）承担责任，即使开发者已被告知此类损害的可能性。</li>
+                <li>责任上限：开发者在任何情况下对您承担的全部责任总额，不超过您为本软件支付的费用（¥25）。如果您未支付任何费用，开发者的责任上限为零。</li>
+                <li>法律强制条款：如果上述责任限制因适用法律的原因被认定为无效或不可执行，则开发者的责任应限制在法律允许的最小范围内。</li>
+                </ul>
+                <h2>八、协议的变更</h2>
+                <p>开发者有权不时修订本协议。修订后的协议将通过以下方式之一公布：</p>
+                <ul>
+                <li>在本软件内（如更新说明弹窗或&quot;关于&quot;页面）；</li>
+                <li>在 App Store 版本更新描述中；</li>
+                <li>通过开发者网站（如有）发布。</li>
+                </ul>
+                <p>对于重大变更（如服务性质的根本改变、付费模式调整等），开发者会以更显著的方式（如启动弹窗）通知您。</p>
+                <p>您在协议变更后继续使用本软件，即视为您已充分阅读、理解并同意接受变更后的协议。如您不同意变更内容，请停止使用本软件。</p>
+                <h2>九、法律适用与争议解决</h2>
+                <ul>
+                <li>法律适用：本协议的订立、效力、解释、履行及争议解决，均适用中华人民共和国法律（不包括其冲突法规则）。</li>
+                <li>友好协商：因本协议产生的或与本协议有关的任何争议，双方应首先通过友好协商解决。</li>
+                <li>诉讼管辖：如果协商不成，任何一方均可将争议提交开发者所在地有管辖权的人民法院提起诉讼。</li>
+                </ul>
+                <h2>十、关于 Apple 的条款</h2>
+                <p>您确认并同意以下与 Apple Inc.（以下简称&quot;Apple&quot;）相关的事项：</p>
+                <ol>
+                <li><strong>协议的订立主体：</strong> 本协议仅由您与开发者订立，Apple 不是本协议的一方。Apple 不对本软件或本协议承担任何义务或责任。</li>
+                <li><strong>许可范围：</strong> 本协议授予您的许可范围不得宽于 Apple App Store 使用规则中规定的许可模式。本许可为不可转让的有限许可，仅限您在您拥有或控制的 Apple 品牌设备上使用本软件。</li>
+                <li><strong>维护与支持：</strong> 开发者独立负责本软件的维护、技术支持及更新。Apple 不承担任何为本软件提供维护或支持的义务。</li>
+                <li><strong>产品保证：</strong> 开发者独立承担本软件的产品保证责任。如果本软件不符合任何适用的保证，您可以通知 Apple，Apple 将向您退还本软件的购买价款（如有）；在法律允许的最大范围内，Apple 不就本软件向您承担任何其他保证义务。</li>
+                <li><strong>索赔处理：</strong> 对于您或任何第三方就本软件提出的任何索赔（包括但不限于产品责任、不遵守法律法规或消费者保护法、侵权等），均由开发者独立负责处理、辩护与解决，与 Apple 无关。</li>
+                <li><strong>知识产权侵权：</strong> 如果任何第三方主张本软件侵犯了其知识产权，由开发者（而非 Apple）独立负责调查、辩护、和解或解决该等索赔。</li>
+                <li><strong>出口管制：</strong> 您声明并保证：您不位于任何受美国政府禁运的国家或地区，也未列入美国政府的任何&quot;特别指定国民名单&quot;或其他受限方名单。</li>
+                <li><strong>开发者联系信息：</strong> 开发者名称：Xiaoxi Lu；联系邮箱：spectrasortapp@gmail.com。</li>
+                <li><strong>第三方受益人：</strong> Apple 及其子公司为本协议的第三方受益人。您同意 Apple 有权作为第三方受益人，对您强制执行本协议中的相关条款。</li>
+                </ol>
+                <h2>十一、联系方式</h2>
+                <p>如您对本协议有任何疑问、意见或建议，请通过以下方式联系开发者：</p>
+                <ul>
+                <li>开发者名称：Xiaoxi Lu</li>
+                <li>联系邮箱：spectrasortapp@gmail.com</li>
+                </ul>
+                <p>开发者将在收到您的联系信息后 <strong>15 个工作日内</strong> 予以回复。</p>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 光谱挑片（SpectraSort）。保留所有权利。</p>
+            <p style="margin-top: 8px;">
+                <a href="/">首页</a> &middot;
+                <a href="/privacy/zh-Hans">隐私政策</a> &middot;
+                <a href="mailto:spectrasortapp@gmail.com">联系我们</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
