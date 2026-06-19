@@ -48,7 +48,7 @@
         "operatingSystem": "iOS 16.0+",
         "applicationCategory": "PhotographyApplication",
         "applicationSubCategory": "Photo Sorting",
-        "softwareVersion": "2.0",
+        "softwareVersion": "2.2",
         "description": "Private AI photo sorter for iPhone. Sorts hundreds / thousands of photos in seconds by subject and quality, entirely on-device. No upload, no account, no data collected from your photos.",
         "url": "https://spectrasort.app",
         "downloadUrl": "https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134",
@@ -63,9 +63,10 @@
             "https://spectrasort.app/images/shot-review.png"
         ],
         "featureList": [
-            "Sort photos by subject across 8 built-in categories plus custom keywords",
+            "Find photos by subject (8 built-in categories), by example image, or by custom key phrase",
             "Score photos across seven quality dimensions: sharpness, exposure, contrast, noise, composition, color harmony, visual balance",
             "Up to 100+ photos per second on Apple's Neural Engine",
+            "Stack duplicates, bursts, and near-identical shots so you compare the best frame of each set",
             "Three preloaded profiles: City & Travel, The Outdoors, Faces",
             "Auto-learned Taste profile from your picks and discards",
             "Swipe Review and Grid Review modes",
@@ -81,24 +82,10 @@
             },
             {
                 "@type": "Offer",
-                "name": "Premium Weekly",
-                "price": "1.99",
+                "name": "Premium",
+                "price": "7.99",
                 "priceCurrency": "USD",
-                "description": "Premium — save, share, bulk delete. Weekly subscription."
-            },
-            {
-                "@type": "Offer",
-                "name": "Premium Monthly",
-                "price": "4.99",
-                "priceCurrency": "USD",
-                "description": "Premium — save, share, bulk delete. Monthly subscription."
-            },
-            {
-                "@type": "Offer",
-                "name": "Premium Lifetime",
-                "price": "39.99",
-                "priceCurrency": "USD",
-                "description": "Premium — save, share, bulk delete. One-time purchase, never renews."
+                "description": "Premium — save, share, bulk delete. One-time purchase, no subscription."
             }
         ],
         "author": {
@@ -184,6 +171,22 @@
             },
             {
                 "@type": "Question",
+                "name": "How do I tell SpectraSort which photos to look for?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Three ways, and you can mix them. Pick from eight built-in subjects (Urban, Nature, Portrait, Street, Travel, Food, Architecture, Night); hand it an example image and it surfaces the photos that look like it; or type a key phrase in your own words — your dog, a red bike, a beach at sunset. All of it runs on-device, so nothing about your photos or your search leaves the phone."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Why are some of my photos grouped together?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "That's stacking. SpectraSort groups exact duplicates, burst sequences, and near-identical shots of the same scene into a single stack, so you compare the best frame of a set instead of swiping past the same moment ten times. You choose what gets grouped — Duplicates, Sequence, Similar — or turn stacking off entirely in Stacking Options."
+                }
+            },
+            {
+                "@type": "Question",
                 "name": "What's the difference between the three profile types?",
                 "acceptedAnswer": {
                     "@type": "Answer",
@@ -203,7 +206,7 @@
                 "name": "What does Premium unlock?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Sorting is always free. Premium ($1.99/week, $4.99/month, or $39.99 once for life) unlocks save, share, and bulk delete — the actions you take on the results after sorting."
+                    "text": "Sorting is always free. Premium is a single one-time purchase of $7.99 — no subscription — that unlocks save, share, and bulk delete, the actions you take on the results after sorting."
                 }
             },
             {
@@ -892,6 +895,10 @@
         @media (max-width: 720px) {
             .pricing-cards { grid-template-columns: 1fr; }
         }
+        .pricing-cards.single {
+            grid-template-columns: minmax(0, 360px);
+            justify-content: center;
+        }
         .pricing-card {
             background: var(--surface);
             border: 1px solid var(--hairline);
@@ -1168,10 +1175,10 @@
         </div>
         <div class="smart-grid">
             <div class="smart-left">
-                <img width="648" height="800" class="smart-subjects" src="images/shot-smart-subjects.png" alt="Subject picker grid: Urban, Nature, Portrait, Street, Travel (selected), Food, Architecture, Night, with a keyword input below.">
+                <img width="780" height="922" class="smart-subjects" src="images/shot-smart-search.png" alt="Subject picker grid: Urban, Nature, Portrait, Street, Travel, Food, Architecture, Night, plus an Image Search tile and a keyword-or-phrase field below.">
             </div>
             <div class="smart-right">
-                <p>City scenes, nature, portraits, food, architecture, or up to 3 of any of 8 built-in subjects. Add your own keyword for anything else — your dog, your bike, that trip to Lisbon.</p>
+                <p>Three ways to tell SpectraSort what you're after: pick from eight built-in subjects, hand it an example image to find more like it, or type a key phrase for anything else — your dog, your bike, that trip to Lisbon.</p>
                 <div class="subjects-list">
                     <span class="pill">Urban</span>
                     <span class="pill">Nature</span>
@@ -1181,7 +1188,8 @@
                     <span class="pill">Architecture</span>
                     <span class="pill">Street</span>
                     <span class="pill">Night</span>
-                    <span class="pill custom">+ your keyword</span>
+                    <span class="pill custom">Image Search</span>
+                    <span class="pill custom">Key phrase</span>
                 </div>
             </div>
         </div>
@@ -1238,7 +1246,7 @@
         <div class="copy-block" style="max-width: 720px;">
             <span class="eyebrow">Picking photos</span>
             <h2>Swipe through your&nbsp;keepers.</h2>
-            <p>After sorting, your top picks are surfaced to the top of a scored grid. Tap into Review and swipe through them the way you'd expect — right to keep, left to let go. Save your keepers to a new album, share the standouts, delete the rest in bulk.</p>
+            <p>After sorting, your top picks rise to the top of a scored grid. Near-identical shots — bursts, duplicates, the same scene twice — are stacked together, so you judge the best frame of a set instead of swiping past the same moment ten times. Tap into Review and swipe the way you'd expect: right to keep, left to let go. Save your keepers to a new album, share the standouts, delete the rest in bulk.</p>
         </div>
         <div class="picking-shots">
             <figure class="picking-shot">
@@ -1247,9 +1255,9 @@
                     <span class="btn btn-vol-up"></span>
                     <span class="btn btn-vol-down"></span>
                     <span class="btn btn-power"></span>
-                    <div class="screen"><img src="images/shot-review-grid.png" width="589" height="1280" alt="Review grid showing scored thumbnails sorted from best to worst"></div>
+                    <div class="screen"><img src="images/shot-stacking-grid.png" width="589" height="1280" alt="Review grid of scored thumbnails sorted best to worst, with near-duplicate shots grouped into stacks marked by a count badge"></div>
                 </div>
-                <figcaption>The full grid, scored and sorted.</figcaption>
+                <figcaption>Scored, sorted, near-duplicates stacked.</figcaption>
             </figure>
             <figure class="picking-shot">
                 <div class="phone">
@@ -1326,26 +1334,16 @@
         <div class="copy-block" style="max-width: 720px;">
             <span class="eyebrow">Pricing</span>
             <h2>Sorting is&nbsp;free.</h2>
-            <p>Upgrade to save, share, and bulk delete.</p>
+            <p>Upgrade once to save, share, and bulk delete. No subscription.</p>
         </div>
-        <div class="pricing-cards">
-            <div class="pricing-card">
-                <div class="tier">Weekly</div>
-                <div class="price">$1.99<small>/wk</small></div>
-                <div class="desc">Try premium for a week.</div>
-            </div>
+        <div class="pricing-cards single">
             <div class="pricing-card featured">
-                <div class="tier">Monthly</div>
-                <div class="price">$4.99<small>/mo</small></div>
-                <div class="desc">Ongoing access, billed monthly.</div>
-            </div>
-            <div class="pricing-card">
                 <div class="tier">Lifetime</div>
-                <div class="price">$39.99<small>once</small></div>
-                <div class="desc">Buy once, keep forever.</div>
+                <div class="price">$7.99<small>once</small></div>
+                <div class="desc">One-time purchase — no subscription, no renewals.</div>
             </div>
         </div>
-        <div class="pricing-foot">Sorting itself is always free. Premium unlocks save / share / bulk delete.</div>
+        <div class="pricing-foot">Sorting itself is always free. A one-time $7.99 unlocks save / share / bulk delete — yours for good.</div>
     </div>
 </section>
 
@@ -1387,6 +1385,18 @@
                 </div>
             </details>
             <details class="faq-item">
+                <summary>How do I tell SpectraSort which photos to look for?</summary>
+                <div class="faq-answer">
+                    <p>Three ways, and you can mix them. Pick from eight built-in <strong>subjects</strong> — Urban, Nature, Portrait, Street, Travel, Food, Architecture, Night. Hand it an <strong>example image</strong> and it surfaces the photos that look like it. Or type a <strong>key phrase</strong> in your own words: your dog, a red bike, a beach at sunset. All of it runs on-device, so nothing about your photos or your search leaves the phone.</p>
+                </div>
+            </details>
+            <details class="faq-item">
+                <summary>Why are some of my photos grouped together?</summary>
+                <div class="faq-answer">
+                    <p>That's stacking. SpectraSort groups exact duplicates, burst sequences, and near-identical shots of the same scene into a single stack, so you compare the best frame of a set instead of swiping past the same moment ten times. You choose what gets grouped — <strong>Duplicates</strong>, <strong>Sequence</strong>, <strong>Similar</strong> — or turn stacking off entirely in Stacking Options.</p>
+                </div>
+            </details>
+            <details class="faq-item">
                 <summary>What's the difference between the three profile types?</summary>
                 <div class="faq-answer">
                     <p><strong>Bookmarked</strong> profiles (City &amp; Travel, The Outdoors, Faces) are presets — built-in, ready to use. <strong>Custom</strong> profiles let you dial in your own subjects and quality weights. The <strong>Taste</strong> profile is built automatically from your picks and discards over time — a reflection of your personal preferences.</p>
@@ -1401,7 +1411,7 @@
             <details class="faq-item">
                 <summary>What does Premium unlock?</summary>
                 <div class="faq-answer">
-                    <p>Sorting is always free. Premium ($1.99/week, $4.99/month, or $39.99 once for life) unlocks save, share, and bulk delete — the actions you take on the results after sorting.</p>
+                    <p>Sorting is always free. Premium is a single one-time purchase of $7.99 — no subscription — that unlocks save, share, and bulk delete, the actions you take on the results after sorting.</p>
                 </div>
             </details>
             <details class="faq-item">

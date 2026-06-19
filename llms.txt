@@ -10,7 +10,7 @@ There are three kinds of profile in SpectraSort. Use any of them at any time.
 
 - **Bookmarked profiles** — preset, ready to use. Three ship with the app: **City & Travel** (urban scenes, landmarks, street life), **The Outdoors** (landscapes, nature, adventure), and **Faces** (portraits, candids, family). You can also save your own Custom profiles as Bookmarked for quick switching.
 
-- **Custom profile** — full manual control. Pick up to 3 subjects from 8 built-in categories (Urban, Nature, Portrait, Travel, Food, Architecture, Street, Night) or add your own keyword. Dial in any of the 7 quality dimensions individually, slide the whole set along the Technical/Artistic axis, or spin the balance wheel to weigh subject relevance against raw quality.
+- **Custom profile** — full manual control. Tell it what to look for three ways: pick up to 3 subjects from 8 built-in categories (Urban, Nature, Portrait, Travel, Food, Architecture, Street, Night), point it at an example image to find more like it (Image Search), or type a key phrase of your own. Dial in any of the 7 quality dimensions individually, slide the whole set along the Technical/Artistic axis, or spin the balance wheel to weigh subject relevance against raw quality.
 
 - **Taste profile** — automatically built from your picks and discards during Review. After about 30 picks and 10 discards, a Taste profile takes shape and earns its own auto-generated name (e.g. "Versatile Creative"). It loads like any other profile, but the subjects and quality signature are drawn from your specific choices. The Taste profile lives on your device only — there is no profile sharing in this version.
 
@@ -18,10 +18,11 @@ There are three kinds of profile in SpectraSort. Use any of them at any time.
 
 - **Up to 100+ photos per second** on the latest iPhones via Apple's Neural Engine. A library of 2,000 photos sorts in under 30 seconds.
 - **Seven quality dimensions** scored per photo: sharpness, exposure, contrast, noise, composition, color harmony, visual balance.
-- **8 built-in subjects** plus unlimited custom keywords. Up to 3 subjects per sort.
+- **Three ways to search** — 8 built-in subjects (up to 3 per sort), Image Search (find photos that look like an example image you provide), or a custom key phrase.
 - **Technical/Artistic slider** moves all 7 quality dimensions together along a single axis.
 - **Balance wheel** sets how much subject relevance matters vs. raw quality.
 - **Swipe Review or Grid Review** — choose between swiping through one photo at a time (right to keep, left to let go) or scanning a scored grid.
+- **Stacking** — exact duplicates, burst sequences, and near-identical shots are grouped into a single stack in Review, so you compare the best frame of a set instead of swiping the same moment repeatedly. Controlled per type (Duplicates, Sequence, Similar) or turned off entirely.
 - **Save / Share / Bulk Delete** (Premium) — write keepers to a new album, share standouts, remove the rest in one batch.
 - **100% on-device processing.** No cloud, no account, no photo data ever leaves the iPhone.
 
@@ -43,11 +44,9 @@ SpectraSort is the only iOS photo sorter that combines objective quality scoring
 
 Sorting itself is free, on every profile (Bookmarked, Custom, Taste). Premium unlocks the post-sort actions: save to a new album, share, and bulk delete.
 
-- **Weekly** — $1.99 / week, auto-renewing
-- **Monthly** — $4.99 / month, auto-renewing
-- **Lifetime** — $39.99, one-time purchase
+- **Premium** — $7.99, one-time purchase. No subscription, no renewals.
 
-No introductory free trial. Premium can be restored on any new device signed in with the same Apple ID.
+Premium can be restored on any new device signed in with the same Apple ID.
 
 ## Privacy
 
@@ -65,4 +64,4 @@ The only data we collect is anonymous app-usage analytics (Firebase Analytics + 
 
 ## Version
 
-Current version: 2.0 (May 2026). iPhone, iOS 16 or later.
+Current version: 2.2 (June 2026). iPhone, iOS 16 or later.
