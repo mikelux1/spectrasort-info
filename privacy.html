@@ -154,7 +154,7 @@
             <div class="page-header">
                 <h1>Privacy Policy</h1>
                 <p>Your photos stay on your device. Period.</p>
-                <span class="last-updated">Last updated: June 2026 (v2.2 release)</span>
+                <span class="last-updated">Last updated: July 2026 (v3.0 release)</span>
             </div>
 
             <div class="content">
@@ -191,16 +191,19 @@
                 <ul>
                     <li>Photo quality analysis (sharpness, exposure, composition)</li>
                     <li>Aesthetic scoring</li>
-                    <li>Content understanding (what's in the photo)</li>
+                    <li>Content understanding and search &mdash; the "Find a Subject" and "Like This Photo" tools</li>
+                    <li>Duplicate and look-alike detection (Dedupe)</li>
+                    <li>Scene gathering &mdash; grouping trips, themes, and series from your photos' dates and metadata</li>
                     <li>Taste profile learning from the photos you keep and discard</li>
                 </ul>
+                <p>The first sort builds a one-time index of quality scores and search descriptors on your device; later sorts reuse it. The index is stored locally and never leaves your phone.</p>
                 <p>The AI models are bundled with the app. No internet connection is required for photo analysis.</p>
 
                 <h2>4. Taste Profile</h2>
-                <p>The Taste profile is a small set of preference parameters &mdash; subject weights and quality-dimension weights &mdash; built from the photos you choose to keep and the ones you discard during Review. It is stored on your device only. There is no profile-sharing feature in this version, and the profile is never transmitted to us or any third party. You can reset it any time from Settings &rarr; Reset Taste Profile.</p>
+                <p>The Taste profile is built from the photos you choose to keep and the ones you discard during Review. It consists of preference parameters &mdash; subject weights and quality-dimension weights &mdash; plus compact numerical descriptors (embeddings) of the photos you picked. These descriptors are one-way mathematical summaries: they are not images and cannot be used to reconstruct your photos. The profile is stored on your device only. There is no profile-sharing feature in this version, and the profile is never transmitted to us or any third party. You can reset it any time from Settings &rarr; Reset Taste Profile.</p>
                 <p><strong>The Taste profile does not contain:</strong></p>
                 <ul>
-                    <li>Any actual photos or image data</li>
+                    <li>Any actual photos or viewable image data</li>
                     <li>Photo metadata (locations, dates, etc.)</li>
                     <li>Personally identifiable information</li>
                 </ul>
@@ -213,7 +216,14 @@
                     <li>We only read photos - we never modify or delete without explicit confirmation</li>
                 </ul>
 
-                <h2>6. Third-Party Services</h2>
+                <h2>6. Location</h2>
+                <p>Two separate things, both on-device:</p>
+                <ul>
+                    <li><strong>GPS data in your photos</strong> &mdash; The "Photos of a location" tool and Scenes read the location coordinates already embedded in your own photos. This happens entirely on your device; the coordinates are never transmitted.</li>
+                    <li><strong>Your device's location (optional)</strong> &mdash; The location picker includes a map that can center on your current position. The app asks for while-in-use location permission only for this. If you decline, the feature still works &mdash; search for a place or drop a pin manually. Your device location is used only to position the map; it is never stored, logged, or transmitted.</li>
+                </ul>
+
+                <h2>7. Third-Party Services</h2>
                 <p>SpectraSort uses the following third-party services:</p>
                 <ul>
                     <li><strong>Apple App Store</strong> - For app distribution and in-app purchase processing</li>
@@ -222,22 +232,23 @@
                 </ul>
                 <p>We do <strong>not</strong> use advertising networks, social media SDKs, retargeting pixels, attribution SDKs, or any other tracking infrastructure.</p>
 
-                <h2>7. Data Storage</h2>
+                <h2>8. Data Storage</h2>
                 <p>All app data is stored locally on your device:</p>
                 <ul>
                     <li><strong>Taste profile</strong> - Stored locally in app storage</li>
                     <li><strong>Learning history</strong> - Stored locally, never synced</li>
+                    <li><strong>Photo index</strong> - Quality scores and search descriptors computed during the first sort; stored locally so later sorts run near-instantly</li>
                     <li><strong>Settings</strong> - Stored in iOS UserDefaults</li>
                 </ul>
                 <p>Deleting the app removes all SpectraSort data from your device.</p>
 
-                <h2>8. Children's Privacy</h2>
+                <h2>9. Children's Privacy</h2>
                 <p>SpectraSort does not knowingly collect information from children under 13. The app does not require any personal information to use.</p>
 
-                <h2>9. Changes to This Policy</h2>
+                <h2>10. Changes to This Policy</h2>
                 <p>We may update this privacy policy from time to time. We will notify you of significant changes through the app or on this page. Continued use of SpectraSort after changes constitutes acceptance of the updated policy.</p>
 
-                <h2>10. Contact Us</h2>
+                <h2>11. Contact Us</h2>
                 <p>Questions about this privacy policy? Contact us at:</p>
                 <p><a href="mailto:spectrasortapp@gmail.com">spectrasortapp@gmail.com</a></p>
             </div>
