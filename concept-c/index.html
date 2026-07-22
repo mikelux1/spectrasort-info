@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CONCEPT C — moat-led variant of Concept B (2026-07-22).
+         Hero re-centered on ranking + taste (the layer Apple Photos search
+         doesn't have) after differentiation research on iOS 18 natural-language
+         search. Search demoted to a feature; Find→Rank→Finish pipeline section
+         added. Same design language as Concept B.
+         Status: DRAFT / AWAITING_MIKE. Not linked from the live site.
+         Design rationale: ASC conversion audit (outcomes-not-interfaces,
+         photography carries contrast, message survives a skim, $19.99-once as
+         scroll-stopper) + patterns from top app sites (single CTA, press/proof
+         slots, live demo hero, sticky mobile CTA).
+         Analytics intentionally omitted until this is promoted. -->
+
+    <title>SpectraSort — Your Best Photos, Surfaced | On-Device Photo Finder for iPhone</title>
+    <meta name="description" content="Search shows you matches. SpectraSort shows you your best. SpectraSort finds your best shots — by phrase, by example, by taste — entirely on your iPhone. Free for 5 sorts a week; $19.99 once, no subscription.">
+    <meta name="robots" content="noindex">
+    <!-- noindex while concept; swap to index,follow + full OG/JSON-LD from the v3 draft if promoted -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/app-icon-flat.png">
+    <meta name="theme-color" content="#0B0B0E">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg:        #0B0B0E;
+            --bg-rise:   #141318;
+            --bg-card:   #1A1920;
+            --text:      #F4F2ED;
+            --text-mid:  #A8A4AE;
+            --text-low:  #6E6A76;
+            --hairline:  rgba(255,255,255,0.10);
+            --hairline2: rgba(255,255,255,0.22);
+            /* spectral brand gradient — carried over from the prism identity */
+            --sp-blue:   #6B7FBC;
+            --sp-rose:   #C77FB4;
+            --sp-amber:  #E8A96A;
+            --spectral:  linear-gradient(92deg, var(--sp-blue), var(--sp-rose) 52%, var(--sp-amber));
+            --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+            --font-text: 'Inter', -apple-system, system-ui, sans-serif;
+            --radius: 22px;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; }
+        html { scroll-behavior:smooth; }
+        body {
+            background:var(--bg); color:var(--text);
+            font-family:var(--font-text); font-size:17px; line-height:1.6;
+            -webkit-font-smoothing:antialiased; overflow-x:hidden;
+        }
+        .container { max-width:1140px; margin:0 auto; padding:0 24px; }
+        h1,h2,h3 { font-family:var(--font-display); font-weight:600; letter-spacing:-0.02em; }
+        h1 { font-size:clamp(44px,7vw,84px); line-height:1.02; }
+        h2 { font-size:clamp(30px,4.4vw,52px); line-height:1.08; }
+        h3 { font-size:20px; }
+        p.lead { font-size:clamp(17px,2vw,21px); color:var(--text-mid); }
+        .grad-text { background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; }
+        section { padding:96px 0; position:relative; }
+        @media (max-width:760px){ section { padding:64px 0; } }
+
+
+        /* concept-c: rank demo */
+        .demo-chips { display:flex; gap:8px; margin-bottom:14px; }
+        .dchip {
+            flex:1; border:1px solid var(--hairline2); background:var(--bg-card);
+            color:var(--text-mid); font-family:var(--font-text); font-size:12.5px; font-weight:600;
+            border-radius:999px; padding:9px 6px; cursor:pointer; transition:all .25s ease; white-space:nowrap;
+        }
+        .dchip.active { background:var(--spectral); color:#0B0B0E; border-color:transparent; }
+        .rank-grid { position:relative; height:330px; display:block !important; }
+        .rank-tile {
+            position:absolute; width:calc((100% - 16px)/3); aspect-ratio:1;
+            border-radius:12px; overflow:hidden;
+            transition:transform .7s cubic-bezier(.2,.7,.2,1), opacity .5s ease, filter .5s ease;
+        }
+        .rank-tile img, .rank-tile .t-grad { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        .rank-tile .score {
+            position:absolute; top:6px; left:6px; z-index:2;
+            background:rgba(0,0,0,0.55); backdrop-filter:blur(4px);
+            color:#fff; font-size:11px; font-weight:600; border-radius:7px; padding:2px 7px;
+            opacity:0; transition:opacity .4s ease .3s;
+        }
+        .rank-tile.scored .score { opacity:1; }
+        .rank-tile.top3 { box-shadow:0 0 0 2px var(--sp-amber); }
+        .rank-tile.dim { filter:grayscale(.9) brightness(.45); }
+        .rank-caption { text-align:center; font-size:13px; color:var(--text-mid); margin-top:14px; min-height:20px; }
+
+        /* reveal on scroll */
+        .rv { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+        .rv.in { opacity:1; transform:none; }
+        @media (prefers-reduced-motion: reduce){ .rv { opacity:1; transform:none; transition:none; } }
+
+        /* ============ nav ============ */
+        nav.top {
+            position:fixed; top:0; left:0; right:0; z-index:50;
+            background:rgba(11,11,14,0.72); backdrop-filter:blur(14px);
+            border-bottom:1px solid var(--hairline);
+        }
+        nav.top .container { display:flex; align-items:center; justify-content:space-between; height:60px; }
+        .brand { display:flex; align-items:center; gap:10px; color:var(--text); text-decoration:none; font-family:var(--font-display); font-weight:600; font-size:17px; }
+        .brand img { width:28px; height:28px; border-radius:7px; }
+        .cta, .cta-small {
+            display:inline-flex; align-items:center; gap:9px;
+            background:var(--text); color:#0B0B0E; text-decoration:none;
+            font-weight:600; border-radius:999px; transition:transform .15s ease, box-shadow .2s ease;
+        }
+        .cta:hover, .cta-small:hover { transform:translateY(-1px); box-shadow:0 6px 24px rgba(232,169,106,0.25); }
+        .cta { padding:16px 28px; font-size:17px; }
+        .cta-small { padding:9px 18px; font-size:14px; }
+        .cta svg, .cta-small svg { width:18px; height:18px; fill:currentColor; }
+        .cta.grad { background:var(--spectral); color:#0B0B0E; }
+
+        /* ============ hero ============ */
+        .hero { padding:150px 0 80px; }
+        .hero-grid { display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center; }
+        @media (max-width:900px){ .hero-grid { grid-template-columns:1fr; gap:44px; } }
+        .eyebrow { font-family:var(--font-display); font-size:13px; letter-spacing:0.14em; text-transform:uppercase; color:var(--text-low); display:block; margin-bottom:18px; }
+        .hero h1 { margin-bottom:22px; }
+        .hero p.lead { margin-bottom:30px; max-width:520px; }
+        .trust-chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+        .chip { font-size:13.5px; font-weight:500; color:var(--text-mid); border:1px solid var(--hairline2); border-radius:999px; padding:7px 14px; }
+        .chip b { color:var(--text); font-weight:600; }
+
+        /* live demo phone */
+        .demo-phone {
+            width:min(360px, 88vw); margin:0 auto;
+            background:var(--bg-rise); border:1px solid var(--hairline2);
+            border-radius:44px; padding:18px 16px 22px;
+            box-shadow:0 30px 80px rgba(0,0,0,0.5), 0 0 120px rgba(107,127,188,0.12);
+        }
+        .demo-search {
+            display:flex; align-items:center; gap:10px;
+            background:var(--bg-card); border:1px solid var(--hairline2);
+            border-radius:16px; padding:14px 16px; margin-bottom:14px;
+            font-size:16.5px; font-weight:500; min-height:52px;
+        }
+        .demo-search .mag { width:18px; height:18px; opacity:.55; flex:none; }
+        #typed { white-space:nowrap; overflow:hidden; }
+        .caret { display:inline-block; width:2px; height:1.15em; background:var(--sp-amber); vertical-align:text-bottom; animation:blink 1s steps(1) infinite; }
+        @keyframes blink { 50% { opacity:0; } }
+        .demo-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+        .demo-tile {
+            aspect-ratio:1; border-radius:12px; overflow:hidden; position:relative;
+            opacity:0; transform:scale(.92); transition:opacity .45s ease, transform .45s ease;
+            background:var(--bg-card);
+        }
+        .demo-tile.on { opacity:1; transform:none; }
+        .demo-tile img { width:100%; height:100%; object-fit:cover; display:block; }
+        .demo-tile .t-grad { position:absolute; inset:0; }
+        .demo-note { text-align:center; font-size:12.5px; color:var(--text-low); margin-top:14px; }
+
+        /* ============ proof bar (slot) ============ */
+        .proof-slot {
+            border:2px dashed var(--hairline2); border-radius:var(--radius);
+            padding:26px 22px; text-align:center; color:var(--text-low); font-size:14.5px;
+        }
+        .proof-slot b { color:var(--text-mid); font-family:var(--font-display); letter-spacing:.08em; text-transform:uppercase; font-size:12.5px; display:block; margin-bottom:6px; }
+
+        /* ============ stats strip ============ */
+        .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+        @media (max-width:700px){ .stats { grid-template-columns:1fr; } }
+        .stat {
+            background:var(--bg-rise); border:1px solid var(--hairline);
+            border-radius:var(--radius); padding:28px 26px;
+        }
+        .stat .num { font-family:var(--font-display); font-size:40px; font-weight:700; background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; }
+        .stat .label { color:var(--text-mid); font-size:15px; margin-top:4px; }
+
+        /* ============ tools row ============ */
+        .tools-scroll { display:grid; grid-template-columns:repeat(6,1fr); gap:14px; margin-top:44px; }
+        @media (max-width:1000px){ .tools-scroll { display:flex; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:10px; margin-left:-24px; margin-right:-24px; padding-left:24px; padding-right:24px; } .tool-chip { flex:0 0 220px; scroll-snap-align:start; } }
+        .tool-chip {
+            background:var(--bg-rise); border:1px solid var(--hairline);
+            border-radius:18px; padding:20px 18px;
+        }
+        .tool-chip .tname { font-family:var(--font-display); font-weight:600; font-size:16.5px; margin-bottom:6px; }
+        .tool-chip .tdesc { font-size:14px; color:var(--text-mid); line-height:1.5; }
+        .tool-chip .tick { width:26px; height:4px; border-radius:2px; background:var(--spectral); margin-bottom:14px; }
+
+        /* ============ feature blocks ============ */
+        .feature { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+        .feature.rev { direction:rtl; } .feature.rev > * { direction:ltr; }
+        @media (max-width:860px){ .feature, .feature.rev { grid-template-columns:1fr; direction:ltr; gap:36px; } }
+        .feature h2 { margin:14px 0 18px; }
+        .feature p { color:var(--text-mid); max-width:480px; }
+        .feature p + p { margin-top:14px; }
+        .shot {
+            border-radius:32px; overflow:hidden; border:1px solid var(--hairline2);
+            box-shadow:0 24px 70px rgba(0,0,0,0.45);
+            width:min(320px,80vw); margin:0 auto;
+        }
+        .shot img { width:100%; display:block; }
+        .shot-pair { display:flex; gap:20px; justify-content:center; align-items:center; flex-wrap:wrap; }
+        .shot-pair .shot { width:min(250px,42vw); }
+        .shot-pair .arrow { font-size:30px; color:var(--sp-amber); font-family:var(--font-display); }
+
+        /* dedupe stack animation */
+        .stack-wrap { position:relative; width:min(300px,74vw); aspect-ratio:3/4; margin:0 auto; }
+        .stack-card {
+            position:absolute; inset:0; border-radius:22px; border:1px solid var(--hairline2);
+            background-size:cover; background-position:center; overflow:hidden;
+            transition:transform .8s cubic-bezier(.2,.7,.2,1), opacity .8s ease;
+        }
+        .stack-wrap.collapsed .stack-card:not(.keeper) { transform:translateY(6px) rotate(0deg) scale(.96) !important; opacity:0; }
+        .stack-wrap.collapsed .keeper { transform:none !important; }
+        .keeper-badge {
+            position:absolute; top:14px; right:14px; background:var(--spectral);
+            color:#0B0B0E; font-weight:600; font-size:13px; border-radius:999px; padding:6px 12px;
+            opacity:0; transition:opacity .5s ease .5s;
+        }
+        .stack-wrap.collapsed .keeper-badge { opacity:1; }
+        .count-badge {
+            position:absolute; bottom:14px; left:14px; background:rgba(0,0,0,.55);
+            color:#fff; font-size:13px; border-radius:8px; padding:4px 10px; backdrop-filter:blur(6px);
+            transition:opacity .4s ease;
+        }
+        .stack-wrap.collapsed .count-badge { opacity:0; }
+
+        /* ============ video placeholder (draft-only) ============ */
+        .video-placeholder {
+            border:2px dashed var(--hairline2); border-radius:var(--radius);
+            background:var(--bg-rise); display:flex; flex-direction:column;
+            align-items:center; justify-content:center; gap:10px; text-align:center;
+            padding:28px 22px;
+        }
+        .vp-label { font-family:var(--font-display); font-size:12.5px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-mid); }
+        .vp-note { font-size:14px; color:var(--text-low); max-width:520px; }
+        .vp-wide { min-height:300px; max-width:880px; margin:40px auto 0; aspect-ratio:16/9; }
+        .vp-inline { min-height:170px; margin-top:24px; aspect-ratio:9/12; max-width:300px; }
+        @media (max-width:760px){ .vp-wide { aspect-ratio:auto; min-height:200px; } }
+
+        /* ============ privacy full-bleed ============ */
+        .privacy-band { position:relative; border-radius:var(--radius); overflow:hidden; min-height:520px; display:flex; align-items:flex-end; }
+        .privacy-band img.bgphoto { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+        .privacy-band .scrim { position:absolute; inset:0; background:linear-gradient(180deg, rgba(11,11,14,0.15) 30%, rgba(11,11,14,0.88) 85%); }
+        .privacy-copy { position:relative; padding:44px; max-width:560px; }
+        .privacy-copy h2 { margin-bottom:14px; }
+        .privacy-copy p { color:var(--text-mid); }
+
+        /* ============ trip strip ============ */
+        .trip-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:40px; }
+        @media (max-width:900px){ .trip-row { grid-template-columns:1fr 1fr; } }
+        @media (max-width:540px){ .trip-row { grid-template-columns:1fr; } }
+        .trip-cell { background:var(--bg-rise); border:1px solid var(--hairline); border-radius:18px; padding:22px 20px; font-size:14.5px; color:var(--text-mid); }
+        .trip-cell .n { font-family:var(--font-display); font-weight:700; font-size:15px; background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; display:block; margin-bottom:8px; }
+        .trip-cell b { color:var(--text); }
+
+        /* ============ pricing ============ */
+        .pricing-hero { text-align:center; }
+        .price-big { font-family:var(--font-display); font-weight:700; font-size:clamp(64px,11vw,132px); line-height:1; letter-spacing:-0.03em; }
+        .price-big .once { background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; }
+        .pricing-hero .sub { color:var(--text-mid); font-size:clamp(17px,2.2vw,21px); margin:18px auto 8px; max-width:560px; }
+        .pricing-hero .fine { color:var(--text-low); font-size:14.5px; margin-bottom:34px; }
+
+        /* ============ faq ============ */
+        .faq-list { max-width:760px; margin:44px auto 0; }
+        .faq-item { border-bottom:1px solid var(--hairline); }
+        .faq-item summary {
+            cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center;
+            padding:20px 4px; font-family:var(--font-display); font-weight:500; font-size:17.5px;
+        }
+        .faq-item summary::-webkit-details-marker { display:none; }
+        .faq-item summary::after { content:"+"; color:var(--text-low); font-size:22px; }
+        .faq-item[open] summary::after { content:"–"; }
+        .faq-answer { padding:0 4px 22px; color:var(--text-mid); font-size:15.5px; max-width:640px; }
+
+        /* ============ closing ============ */
+        .closing { text-align:center; padding-bottom:140px; }
+        .closing h2 { font-size:clamp(38px,6vw,68px); margin-bottom:16px; }
+        .closing p { color:var(--text-mid); margin-bottom:30px; }
+
+        /* sticky mobile CTA */
+        .sticky-cta {
+            position:fixed; left:0; right:0; bottom:0; z-index:60; display:none;
+            padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+            background:rgba(11,11,14,0.82); backdrop-filter:blur(14px);
+            border-top:1px solid var(--hairline);
+        }
+        .sticky-cta .cta { width:100%; justify-content:center; }
+        @media (max-width:760px){ .sticky-cta.show { display:block; } body { padding-bottom:76px; } }
+
+        footer { border-top:1px solid var(--hairline); padding:34px 0 44px; color:var(--text-low); font-size:14px; }
+        footer .container { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+        footer a { color:var(--text-mid); text-decoration:none; margin-left:18px; }
+    </style>
+</head>
+<body>
+
+<nav class="top">
+    <div class="container">
+        <a class="brand" href="/"><img src="../images/app-icon-flat.png" alt="">SpectraSort</a>
+        <a class="cta-small" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+            Download
+        </a>
+    </div>
+</nav>
+
+<main>
+
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-copy">
+                <span class="eyebrow">On-device photo finder for iPhone</span>
+                <h1>Your best photos. <span class="grad-text">Surfaced.</span></h1>
+                <p class="lead">Any phone can search your photos. SpectraSort ranks them — by quality, by your taste, by what you asked for — and hands you the winners, ready to keep, share, or clear. All on your iPhone.</p>
+                <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+                    Download on the App Store
+                </a>
+                <div class="trust-chips">
+                    <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
+                    <span class="chip"><b>Free</b> 5 sorts a week</span>
+                    <span class="chip"><b>$19.99 once</b> — no subscription</span>
+                </div>
+            </div>
+            <div class="hero-demo">
+                <div class="demo-phone" aria-label="Interactive demo: the same photos, re-ranked by different questions">
+                    <div class="demo-chips" id="demoChips">
+                        <button class="dchip active" data-mode="taste">Your Taste</button>
+                        <button class="dchip" data-mode="best">Best Shots</button>
+                        <button class="dchip" data-mode="search">"golden hour"</button>
+                    </div>
+                    <div class="demo-grid rank-grid" id="demoGrid"></div>
+                    <div class="rank-caption" id="rankCaption">ranked by the photos you keep</div>
+                </div>
+                <div class="demo-note">Live demo — same nine photos, re-ranked per question. Placeholder art; swap for real library captures in the DVC batch.</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="proof" style="padding-top:0;">
+    <div class="container">
+        <!-- PROOF-SLOT: reserved for press logos / App Store rating / user quotes.
+             THE GATE: nothing goes here until it's real. When press lands, this
+             becomes a logo row + one attributed quote (Flighty pattern). -->
+        <div class="proof-slot rv">
+            <b>Proof bar — reserved</b>
+            Press logos · App Store rating · a user quote. Filled only with the real thing (charter rule: no fabricated numbers). Until then this row ships hidden.
+        </div>
+    </div>
+</section>
+
+
+<section id="pipeline" style="padding-top:30px;">
+    <div class="container">
+        <div class="rv" style="text-align:center; max-width:720px; margin:0 auto;">
+            <span class="eyebrow">Why not just search?</span>
+            <h2>Search shows you matches. <span class="grad-text">SpectraSort shows you your best.</span></h2>
+            <p style="color:var(--text-mid); margin-top:16px;">Your phone's built-in search can find "beach". What it can't do is tell you which of the 87 matches are worth keeping — or learn that you would have picked the backlit one. Finding is step one of three.</p>
+        </div>
+        <div class="stats rv" style="margin-top:44px;">
+            <div class="stat"><div class="num">Find</div><div class="label">By phrase, by example photo, by place, by taste — six tools, one tap each. Duplicates arrive pre-stacked.</div></div>
+            <div class="stat"><div class="num">Rank</div><div class="label">Every result scored for sharpness, exposure, composition — and, if you ask, for how much it looks like the photos you keep. Best first, always.</div></div>
+            <div class="stat"><div class="num">Finish</div><div class="label">Swipe the winners in, then one screen: album filled, favorites starred, the rest cleared. Search apps stop where the work starts.</div></div>
+        </div>
+    </div>
+</section>
+
+<section id="tools" style="padding-top:30px;">
+    <div class="container">
+        <div class="rv">
+            <span class="eyebrow">Toolbox</span>
+            <h2>Six ways in. <span class="grad-text">One tap each.</span></h2>
+        </div>
+        <div class="tools-scroll rv">
+            <div class="tool-chip"><div class="tick"></div><div class="tname">Find a Subject</div><div class="tdesc">Search anything you can put into words — "dogs at the beach", "golden hour", "cozy".</div></div>
+            <div class="tool-chip"><div class="tick"></div><div class="tname">Like This Photo</div><div class="tdesc">Point at one photo, get everything like it.</div></div>
+            <div class="tool-chip"><div class="tick"></div><div class="tname">Your Taste</div><div class="tdesc">Built from the photos you keep and the ones you let go.</div></div>
+            <div class="tool-chip"><div class="tick"></div><div class="tname">Best Shots</div><div class="tdesc">Sharpest, best-exposed, best-composed first.</div></div>
+            <div class="tool-chip"><div class="tick"></div><div class="tname">Photos of a location</div><div class="tdesc">Pin a place, see everything shot there.</div></div>
+            <div class="tool-chip"><div class="tick"></div><div class="tname">Dedupe</div><div class="tdesc">Duplicates and look-alikes, stacked to clear.</div></div>
+        </div>
+        <!-- VIDEO-PLACEHOLDER: VP-1 · 24s master reel (site loop) -->
+        <div class="video-placeholder vp-wide rv" role="img" aria-label="Video placeholder: 24-second demo reel">
+            <div class="vp-label">Video — 24s master reel</div>
+            <div class="vp-note">Cold open: typing "dogs at the beach" → grid fills. Muted loop, on-screen captions. Same export as VP-1 in the v3 draft.</div>
+        </div>
+    </div>
+</section>
+
+<section id="taste">
+    <div class="container">
+        <div class="feature rev">
+            <div class="rv">
+                <span class="eyebrow">Your Taste — the part nobody else has</span>
+                <h2>It learns <span class="grad-text">your eye.</span></h2>
+                <p>Every review teaches it: the photos you keep and the ones you let go shape a profile of your preferences, built and stored on your phone. Run Your Taste and the top of the pile starts looking like the photos you'd have picked yourself.</p>
+                <p>Pause its learning, reset it, or let it sharpen — what it rewards is yours.</p>
+            </div>
+            <div class="rv">
+                <div class="shot"><img src="../images/v3/02-yourtaste-built-light.png" alt="Your Taste profile, built from your picks"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="find-subject">
+    <div class="container">
+        <div class="feature">
+            <div class="rv">
+                <span class="eyebrow">Find a Subject</span>
+                <h2>Search anything — and get it back <span class="grad-text">best-first.</span></h2>
+                <p>Concrete works — "roses", "swimming seals". Compound works — "dogs at the beach". Even abstract works — "cozy". And unlike a plain search, the matches come back ranked — sharpest and best-composed on top, look-alikes stacked — no Apple Intelligence required, no region locks, on any iPhone that runs iOS 18.5.</p>
+                <p>Days of wandering a city collapse into one search: type a theme, every shot of it lands in one grid. No albums, no tagging.</p>
+                <!-- VIDEO-PLACEHOLDER: VP-2 · S1 clip 8–15s -->
+                <div class="video-placeholder vp-inline" role="img" aria-label="Video placeholder: typing golden hour, grid transforms">
+                    <div class="vp-label">Video — 8–15s</div>
+                    <div class="vp-note">type "golden hour" → grid transforms</div>
+                </div>
+            </div>
+            <div class="rv">
+                <div class="shot"><img src="../images/v3/03b-findsubject-results-light.png" alt="Find a Subject results — a grid of matching photos for a typed phrase"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="like-this" style="background:var(--bg-rise);">
+    <div class="container">
+        <div class="rv" style="text-align:center; max-width:640px; margin:0 auto 44px;">
+            <span class="eyebrow">Like This Photo</span>
+            <h2>Pick one photo, <span class="grad-text">find the rest.</span></h2>
+            <p style="color:var(--text-mid); margin-top:16px;">Photograph one statue on a trip — get your whole accidental statue collection back. Similar-photo search that runs on your phone, not a server — your built-in Photos app has nothing like it.</p>
+        </div>
+        <div class="shot-pair rv">
+            <div class="shot"><img src="../images/v3/05-likethis-reference-light.png" alt="Choosing a reference photo"></div>
+            <div class="arrow">→</div>
+            <div class="shot"><img src="../images/v3/05b-likethis-results-light.png" alt="Everything like it, surfaced"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="dedupe" style="background:var(--bg-rise);">
+    <div class="container">
+        <div class="feature">
+            <div class="rv">
+                <span class="eyebrow">Dedupe</span>
+                <h2>11 shots of the same sunset → <span class="grad-text">one swipe keeps the sharpest.</span></h2>
+                <p>Duplicates, shots in a series, and look-alikes are gathered into stacks, so each repeated moment costs one decision — not ten swipes. You choose what gets grouped, or turn stacking off.</p>
+                <p style="font-size:14px; color:var(--text-low);">Stack cards below are placeholder gradients — swap for a real burst set from the DVC capture batch.</p>
+            </div>
+            <div class="rv">
+                <div class="stack-wrap" id="stackDemo">
+                    <div class="stack-card" style="transform:rotate(-7deg) translate(-16px,10px); background:linear-gradient(135deg,#31405f,#4d3550);"></div>
+                    <div class="stack-card" style="transform:rotate(5deg) translate(14px,4px); background:linear-gradient(135deg,#4d3550,#6d4a3a);"></div>
+                    <div class="stack-card" style="transform:rotate(-3deg) translate(-6px,-6px); background:linear-gradient(135deg,#3a3050,#7a5233);"></div>
+                    <div class="stack-card" style="transform:rotate(8deg) translate(20px,-12px); background:linear-gradient(135deg,#2c3a56,#8a5c36);"></div>
+                    <div class="stack-card keeper" style="background:linear-gradient(160deg,#6B7FBC,#C77FB4 55%,#E8A96A);">
+                        <span class="keeper-badge">Sharpest ✓</span>
+                        <span class="count-badge">11 photos</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- VIDEO-PLACEHOLDER: VP-3 · S4 stack-collapse clip -->
+        <div class="video-placeholder vp-wide rv" role="img" aria-label="Video placeholder: stack collapse">
+            <div class="vp-label">Video — 10–15s</div>
+            <div class="vp-note">Real capture replaces the animation above once cut (same export as VP-3 in the v3 draft).</div>
+        </div>
+    </div>
+</section>
+
+<section id="done">
+    <div class="container">
+        <div class="rv" style="text-align:center; max-width:660px; margin:0 auto 10px;">
+            <span class="eyebrow">Review → Done</span>
+            <h2>Swipe the winners in. <span class="grad-text">Finish in one screen.</span></h2>
+            <p style="color:var(--text-mid); margin-top:16px;">Best rise to the top. Right to pick, down to keep, left to let go — or let Autopick sort and just skim. Batch Process sends picks to an album or the share sheet and clears the rest. Nothing is applied until you tap; deletions always confirm through the system Photos dialog.</p>
+        </div>
+        <div class="shot-pair rv" style="margin-top:40px;">
+            <div class="shot"><img src="../images/v3/04-review-grid-light.png" alt="Review grid — best first, look-alikes stacked"></div>
+            <div class="shot"><img src="../images/v3/06-swipe-deck-light.png" alt="Swipe deck — right pick, down keep, left discard"></div>
+        </div>
+        <div class="trip-row rv">
+            <div class="trip-cell"><span class="n">A trip, start to finish — 01</span><b>Evening, hotel.</b> Timeline → today → sort with your profile.</div>
+            <div class="trip-cell"><span class="n">02</span><b>One pass of swipes.</b> Keepers kept, standouts picked, the rest let go.</div>
+            <div class="trip-cell"><span class="n">03</span><b>Batch Process.</b> Album filled, favorites starred, discards gone. One screen.</div>
+            <div class="trip-cell"><span class="n">04</span><b>Share.</b> Best Shots on the album — the top of the pile is the post.</div>
+        </div>
+    </div>
+</section>
+
+<section id="privacy" style="padding-top:40px;">
+    <div class="container">
+        <div class="privacy-band rv">
+            <img class="bgphoto" src="../images/v3/privacy-photo.jpg" alt="A brass padlock on a strapped stack of printed photographs">
+            <div class="scrim"></div>
+            <div class="privacy-copy">
+                <span class="eyebrow" style="color:rgba(244,242,237,.65);">Private</span>
+                <h2>Nothing leaves your phone.</h2>
+                <p>Scoring, search, and your taste profile all run on-device, on Apple's Neural Engine. No account, no internet, nothing collected from your photos. Verified by Apple's App Privacy label.</p>
+            </div>
+        </div>
+        <div class="stats rv" style="margin-top:18px;">
+            <div class="stat"><div class="num">100/sec</div><div class="label">photos indexed on-device — once. Every sort after runs on the index, near-instantly.</div></div>
+            <div class="stat"><div class="num">0</div><div class="label">uploads, accounts, servers. There is no SpectraSort cloud in the path.</div></div>
+            <div class="stat"><div class="num">6</div><div class="label">one-tap tools, one engine — plus Studio's full controls when you want them.</div></div>
+        </div>
+    </div>
+</section>
+
+<section id="pricing">
+    <div class="container pricing-hero rv">
+        <span class="eyebrow">Pricing</span>
+        <div class="price-big">$19.99. <span class="once">Once.</span></div>
+        <p class="sub">Five free sorts a week, for everyone, forever — not a trial. Premium removes the limit and opens Studio's full controls.</p>
+        <p class="fine">No subscription. No renewals. Saving, sharing, and deleting results is always free.</p>
+        <a class="cta grad" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+            Start free
+        </a>
+    </div>
+</section>
+
+<section id="faq" style="background:var(--bg-rise);">
+    <div class="container">
+        <div class="rv" style="text-align:center;">
+            <span class="eyebrow">FAQ</span>
+            <h2>Common questions.</h2>
+        </div>
+        <div class="faq-list rv">
+            <details class="faq-item"><summary>Do my photos ever leave my phone?</summary><div class="faq-answer">No. Every step — the scoring, the search, the taste profile — runs on your iPhone. There are no uploads. There is no SpectraSort server in the path.</div></details>
+            <details class="faq-item"><summary>Does SpectraSort use my photos to train AI?</summary><div class="faq-answer">No. The models ship pre-trained and don't learn from users' photos. Everything runs on your iPhone, so the maker has no way to access photo content.</div></details>
+            <details class="faq-item"><summary>How fast is it?</summary><div class="faq-answer">The first sort indexes your photos on Apple's Neural Engine — up to 100 a second — one time. Every sort after runs on that index and lands nearly instantly.</div></details>
+            <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Free users get 5 sorts a week — counted when the Review screen opens, reset Monday. Saving, sharing, and deleting is free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio (quality sliders, the weight wheel, saved profiles). No subscription.</div></details>
+            <details class="faq-item"><summary>I bought Premium in SpectraSort 2.x — do I keep it?</summary><div class="faq-answer">Yes — same purchase, carries over automatically. If it doesn't show, tap Restore Purchases in Settings.</div></details>
+            <details class="faq-item"><summary>Will SpectraSort delete my photos?</summary><div class="faq-answer">Only when you tell it to. Nothing is applied until you tap an action in Batch Process, and deletions go through the system Photos confirmation dialog.</div></details>
+            <details class="faq-item"><summary>What devices does it run on?</summary><div class="faq-answer">iPhone with iOS 18.5 or later. All processing runs on Apple's Neural Engine; newer chips index and sort faster.</div></details>
+            <details class="faq-item"><summary>How is this different from Apple Photos or Google Photos?</summary><div class="faq-answer">Those are built for browsing and storage. SpectraSort is built for finding — surfacing your best shots, ranked against what you asked for or what it has learned about your taste. And it's 100% local.</div></details>
+        </div>
+    </div>
+</section>
+
+<section class="closing">
+    <div class="container rv">
+        <h2>Find your <span class="grad-text">best photos.</span></h2>
+        <p>Free for five sorts a week. iPhone, iOS 18.5 or later.</p>
+        <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+            Download on the App Store
+        </a>
+    </div>
+</section>
+
+</main>
+
+<div class="sticky-cta" id="stickyCta">
+    <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Download SpectraSort — free
+    </a>
+</div>
+
+<footer>
+    <div class="container">
+        <div>© 2026 Mike Lu · SpectraSort</div>
+        <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
+    </div>
+</footer>
+
+<script>
+// ---------- hero rank demo: same photos, re-ranked per question ----------
+const ARTS = ['travel','nature','portrait','night','urban','street','food','versatile','architecture'];
+const SCORES = {
+    taste:  [9.4, 9.1, 8.8, 8.2, 7.9, 7.1, 6.4, 5.8, 5.1],
+    best:   [9.6, 9.2, 8.9, 8.5, 7.8, 7.2, 6.8, 6.1, 5.5],
+};
+const ORDERS = {
+    taste:  [2, 0, 5, 1, 7, 3, 8, 4, 6],
+    best:   [4, 6, 1, 8, 0, 2, 3, 7, 5],
+    search: [1, 3, 8, 0, 2, 4, 5, 6, 7]
+};
+const SEARCH_MATCH = [1, 3, 8];   // tiles that "match" golden hour
+const CAPTIONS = {
+    taste:  'ranked by the photos you keep',
+    best:   'ranked by sharpness, exposure, composition',
+    search: 'matches first — still ranked, not just found'
+};
+const grid = document.getElementById('demoGrid');
+const capEl = document.getElementById('rankCaption');
+const chips = Array.from(document.querySelectorAll('.dchip'));
+const tiles = [];
+
+function slotPos(slot) {
+    const col = slot % 3, row = Math.floor(slot / 3);
+    return { x: 'calc(' + col + ' * (100% + 8px))', y: 'calc(' + row + ' * (100% + 8px))' };
+}
+ARTS.forEach((name, i) => {
+    const d = document.createElement('div');
+    d.className = 'rank-tile';
+    const img = document.createElement('img');
+    img.src = '../assets/subjects/' + name + '.png';
+    img.alt = '';
+    d.appendChild(img);
+    const s = document.createElement('span');
+    s.className = 'score';
+    d.appendChild(s);
+    grid.appendChild(d);
+    tiles.push(d);
+});
+function applyMode(mode) {
+    const order = ORDERS[mode];
+    order.forEach((tileIdx, slot) => {
+        const t = tiles[tileIdx];
+        const p = slotPos(slot);
+        t.style.transform = 'translate(' + p.x + ',' + p.y + ')';
+        t.classList.toggle('top3', slot < 3 && mode !== 'search');
+        const sc = t.querySelector('.score');
+        if (mode === 'search') {
+            const match = SEARCH_MATCH.includes(tileIdx);
+            t.classList.toggle('dim', !match);
+            t.classList.toggle('top3', match && slot < 3);
+            sc.textContent = match ? '\u2713 match' : '';
+            t.classList.toggle('scored', match);
+        } else {
+            t.classList.remove('dim');
+            sc.textContent = SCORES[mode][slot].toFixed(1);
+            t.classList.add('scored');
+        }
+    });
+    capEl.textContent = CAPTIONS[mode];
+    chips.forEach(c => c.classList.toggle('active', c.dataset.mode === mode));
+}
+chips.forEach(c => c.addEventListener('click', () => { applyMode(c.dataset.mode); userTouched = true; }));
+let userTouched = false;
+applyMode('taste');
+const MODESEQ = ['taste','best','search'];
+let mi = 0;
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    setInterval(() => { if (!userTouched) { mi = (mi + 1) % MODESEQ.length; applyMode(MODESEQ[mi]); } }, 3600);
+}
+
+// ---------- scroll reveal ----------
+const ro = new IntersectionObserver((es) => {
+    es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); ro.unobserve(e.target); } });
+}, { threshold: 0.18 });
+document.querySelectorAll('.rv').forEach(el => ro.observe(el));
+
+// ---------- dedupe stack collapse on scroll ----------
+const stack = document.getElementById('stackDemo');
+if (stack) {
+    const so = new IntersectionObserver((es) => {
+        es.forEach(e => {
+            if (e.isIntersecting) {
+                setTimeout(() => stack.classList.add('collapsed'), 700);
+                setInterval(() => {
+                    stack.classList.remove('collapsed');
+                    setTimeout(() => stack.classList.add('collapsed'), 1200);
+                }, 5200);
+                so.unobserve(stack);
+            }
+        });
+    }, { threshold: 0.5 });
+    so.observe(stack);
+}
+
+// ---------- sticky mobile CTA after hero ----------
+const sticky = document.getElementById('stickyCta');
+const hero = document.querySelector('.hero');
+const ho = new IntersectionObserver((es) => {
+    es.forEach(e => sticky.classList.toggle('show', !e.isIntersecting));
+}, { threshold: 0.1 });
+ho.observe(hero);
+</script>
+
+</body>
+</html>
