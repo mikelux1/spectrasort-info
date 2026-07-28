@@ -1,58 +1,70 @@
 # SpectraSort
 
-> SpectraSort is an iOS app that sorts your iPhone photos by subject and quality, on-device. Sort through hundreds or thousands of photos in seconds. Nothing leaves the phone.
+> SpectraSort is an on-device AI photo picker for iPhone. Other apps find your photos; SpectraSort ranks them. Ask for something — by phrase, by example photo, by place, or by your own taste — and the matches come back scored best-first, ready to keep, share or clear. Everything runs on the iPhone's Neural Engine. Nothing is uploaded and there is no account.
 
-SpectraSort solves the picking problem: you have thousands of photos but no easy way to find the ones worth keeping. The app scores each photo across seven quality dimensions and ranks subject relevance to the categories you choose, all locally on your iPhone using Apple's Neural Engine.
+The problem is not finding photos. It is deciding among them. Built-in search can return 87 photos of "beach"; it cannot tell you which three are worth keeping, and it cannot learn that you would have picked the backlit one. SpectraSort scores every result for quality and, if you ask, for how closely it matches the photos you keep — then hands you a review flow to act on the answer.
 
-## Three sorting profiles
+## The Toolbox — six tools, one tap each
 
-There are three kinds of profile in SpectraSort. Use any of them at any time.
+- **Your Taste** — sorts by a profile learned from the photos you keep and the ones you let go. Built and stored on the device.
+- **Best Shots** — sharpest, best-exposed, best-composed first. Can lean technical or artistic.
+- **Find a Subject** — search anything you can put into words. Concrete ("roses", "swimming seals"), compound ("dogs at the beach"), or abstract ("cozy"). No Apple Intelligence required, no region locks.
+- **Like This Photo** — point at one photo and get everything like it. On-device similar-photo search.
+- **Dedupe** — duplicate photos, burst sequences and look-alikes gathered into stacks, so each repeated moment costs one decision instead of ten swipes.
+- **Photos of a location** — pin a place, see everything shot there.
 
-- **Bookmarked profiles** — preset, ready to use. Three ship with the app: **City & Travel** (urban scenes, landmarks, street life), **The Outdoors** (landscapes, nature, adventure), and **Faces** (portraits, candids, family). You can also save your own Custom profiles as Bookmarked for quick switching.
+## Studio — the manual controls
 
-- **Custom profile** — full manual control. Tell it what to look for three ways: pick up to 3 subjects from 8 built-in categories (Urban, Nature, Portrait, Travel, Food, Architecture, Street, Night), point it at an example image to find more like it (Image Search), or type a key phrase of your own. Dial in any of the 7 quality dimensions individually, slide the whole set along the Technical/Artistic axis, or spin the balance wheel to weigh subject relevance against raw quality.
+Studio is there when the one-tap defaults are not specific enough:
 
-- **Taste profile** — automatically built from your picks and discards during Review. After about 30 picks and 10 discards, a Taste profile takes shape and earns its own auto-generated name (e.g. "Versatile Creative"). It loads like any other profile, but the subjects and quality signature are drawn from your specific choices. The Taste profile lives on your device only — there is no profile sharing in this version.
+- Seven quality axes (sharpness, exposure, contrast, noise, composition, colour harmony, visual balance), weighted individually or moved together along a Technical/Artistic axis.
+- A balance wheel that trades subject relevance against raw quality.
+- Up to three subjects in one sort.
+- Any configuration saved as a named profile and reused.
 
-## Key features
+## Discover — facing a large library
 
-- **Up to 100+ photos per second** on the latest iPhones via Apple's Neural Engine. A library of 2,000 photos sorts in under 30 seconds.
-- **Seven quality dimensions** scored per photo: sharpness, exposure, contrast, noise, composition, color harmony, visual balance.
-- **Three ways to search** — 8 built-in subjects (up to 3 per sort), Image Search (find photos that look like an example image you provide), or a custom key phrase.
-- **Technical/Artistic slider** moves all 7 quality dimensions together along a single axis.
-- **Balance wheel** sets how much subject relevance matters vs. raw quality.
-- **Swipe Review or Grid Review** — choose between swiping through one photo at a time (right to keep, left to let go) or scanning a scored grid.
-- **Stacking** — exact duplicates, burst sequences, and near-identical shots are grouped into a single stack in Review, so you compare the best frame of a set instead of swiping the same moment repeatedly. Controlled per type (Duplicates, Sequence, Similar) or turned off entirely.
-- **Save / Share / Bulk Delete** (Premium) — write keepers to a new album, share standouts, remove the rest in one batch.
-- **100% on-device processing.** No cloud, no account, no photo data ever leaves the iPhone.
+- **Scenes** gather trips, themes and series automatically. No albums to create, no tagging.
+- **Timeline** drills from year to month to day.
+- Any slice can be sorted on its own, so a library of tens of thousands is never faced all at once.
+
+## Review and finish
+
+Results arrive scored, best first. Swipe right to pick, down to keep, left to let go — or let Autopick sort and skim what it chose. Near-identical frames arrive on a single wheel: roll between them without leaving the photo, take the one you want, and the pair costs one decision.
+
+Batch Process closes the loop in one screen: picks to a new album or the share sheet, the rest cleared. Nothing is applied until you tap, and deletions always go through the system Photos confirmation dialog.
+
+## Speed
+
+The first sort builds an on-device index. That is the one slow step and it happens once. Every sort after it runs on the index and finishes nearly instantly, even across thousands of photos.
 
 ## How it compares
 
-| Feature                       | SpectraSort | Apple Photos | Google Photos |
-|-------------------------------|-------------|--------------|---------------|
-| AI quality scoring            | Yes         | No           | Limited       |
-| Learns personal taste         | Yes (on-device) | No       | Partial (cloud) |
-| On-device processing          | Yes         | Yes          | No (cloud)    |
-| No account required           | Yes         | Yes          | No            |
-| Sort by subject + quality     | Yes (combined) | No        | No            |
-| Swipe interface for picking   | Yes         | No           | No            |
-| Bulk delete after review      | Yes         | Manual       | Manual        |
-
-SpectraSort is the only iOS photo sorter that combines objective quality scoring with personalized taste learning, entirely on-device, and surfaces the keepers in seconds.
+| | SpectraSort | Apple Photos | Google Photos |
+|---|---|---|---|
+| Built for | picking | browsing | storage + browsing |
+| Ranks results by quality | Yes | No | Limited |
+| Learns personal taste | Yes, on-device | No | Partial, cloud |
+| Similar-photo search | Yes, on-device | No | Yes, cloud |
+| Duplicate / burst stacking | Yes | Partial | Partial |
+| Runs entirely on-device | Yes | Yes | No |
+| No account required | Yes | Yes | No |
+| Review + bulk act on results | Yes | Manual | Manual |
 
 ## Pricing
 
-Sorting itself is free, on every profile (Bookmarked, Custom, Taste). Premium unlocks the post-sort actions: save to a new album, share, and bulk delete.
-
-- **Premium** — $7.99, one-time purchase. No subscription, no renewals.
-
-Premium can be restored on any new device signed in with the same Apple ID.
+- **Free** — five sorts a week, for everyone, forever. Not a trial. Saving, sharing and deleting results are free and unlimited.
+- **Premium** — **$19.99, one time.** Unlimited sorts plus Studio's full controls. No subscription and no renewals. Tied to the Apple account, so it restores on a new device.
 
 ## Privacy
 
-Everything happens on your device using Apple's Neural Engine and Core ML. There are no photo uploads, no cloud processing, no account, and no analytics on photo content.
+Every step — the search, the scoring, the taste profile — runs on the iPhone's Neural Engine. There are no photo uploads, no account, no server in the path. The models ship pre-trained and do not learn from users' photos, so the developer has no way to access photo content. This is corroborated by Apple's App Privacy label on the listing.
 
-The only data we collect is anonymous app-usage analytics (Firebase Analytics + Crashlytics) and only when the user opts in. The toggle defaults to off in the EU, UK, and EEA; it defaults to on elsewhere but can be turned off at any time in Settings → Privacy. The analytics never include photo data, locations, or anything that could identify the user — only event names like "sort started" and crash diagnostics.
+Anonymous app-usage analytics (Firebase Analytics + Crashlytics) are opt-in. The toggle defaults to off in the EU, UK and EEA and can be turned off anywhere in Settings → Privacy. Events are names like "sort started" plus crash diagnostics — never photo content, never locations.
+
+## Does it free up storage?
+
+It clears the photos you tell it to, which is where most camera-roll storage goes. One caveat stated plainly: on iOS, deleted photos move to **Recently Deleted** and stay there for 30 days before the space is actually reclaimed. SpectraSort therefore does not display a "you freed N GB" figure, because it could not honestly claim one at the moment of deletion. It only ever touches the photo library, never the rest of the phone.
 
 ## Links
 
@@ -64,4 +76,4 @@ The only data we collect is anonymous app-usage analytics (Firebase Analytics + 
 
 ## Version
 
-Current version: 2.2 (June 2026). iPhone, iOS 16 or later.
+Current version: 3.0 (July 2026). iPhone, iOS 18.5 or later.
