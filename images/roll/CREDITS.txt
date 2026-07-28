@@ -1,0 +1,36 @@
+Photo credits — rank demo images
+================================
+
+The nine photographs in this folder were downloaded individually from
+unsplash.com and are used under the Unsplash License, which grants a
+free, irrevocable, worldwide licence to use them commercially without
+permission from or attribution to the photographer.
+
+Attribution is therefore not required. It is recorded here anyway, both
+as a courtesy and so the provenance of each file is unambiguous.
+
+  file                      unsplash id     photographer
+  ------------------------  --------------  -----------------
+  roll-sunset-jump.jpg      2jA_YoQuvaA     Atharva Tulsi
+  roll-coast-golden.jpg     M7euaZTCOPM     Jack Nagz
+  roll-city-sunset.jpg      DBtgQI-9XdM     Wong Zihoo
+  roll-dog.jpg              Yb5OBk-OxJY     Giorgio Trovato
+  roll-portrait.jpg         x_-5cYSxuo0     David Hurley
+  roll-food.jpg             OSwea3yxjT0     Toa Heftiba
+  roll-blossom.jpg          8gRw4V0_XJA     Ryoji Iwata
+  roll-icebergs.jpg         dLY1k-VeY7Q     Chris Yang
+  roll-flatiron.jpg         62Lg21FWBys     Dakota Corbin
+
+Each file was fetched from https://unsplash.com/photos/<id>/download and
+cropped to a 360x360 square. Source of record: unsplash.com.
+
+IMPORTANT — do not re-source these from the Unsplash research dataset.
+The same nine photo IDs appear in the Unsplash Lite Dataset, but copies
+obtained that way are governed by the Unsplash Dataset Terms, not the
+Unsplash License. Section 3.A of those Terms forbids disclosing,
+disseminating or publishing any portion of the licensed data, and the
+Lite grant covers only internal machine-learning use. Dataset copies
+cannot lawfully ship on this website. Always re-download from
+unsplash.com.
+
+Unsplash License: https://unsplash.com/license
