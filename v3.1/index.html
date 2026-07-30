@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- SpectraSort site v3.1 — 2026-07-27.
+     Concept C design language (1-explorations/spectrasortconceptc.html) carrying
+     the v3 draft's real copy and the real v3.0 dark captures. Single page.
+     Positioning: ranking + taste led. AI leads the search surface, on-device
+     privacy closes. Dedupe is one of six tools, not the identity. -->
+
+<title>SpectraSort — AI Photo Picker for iPhone | Your Best Photos, Surfaced</title>
+<meta name="description" content="Search shows you matches. SpectraSort shows you your best. An AI photo picker that finds your best shots — by phrase, by example, by your own taste — entirely on your iPhone. Nothing uploaded, no account. Free for 5 sorts a week; $19.99 once, no subscription.">
+<meta name="keywords" content="ai photo picker, photo picker iPhone, find best photos, photo sorter, duplicate photos, similar photos, free up storage iPhone, on-device AI, private photo app, camera roll cleanup, SpectraSort">
+<meta name="author" content="Mike Lu">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://spectrasort.app">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpectraSort">
+<meta property="og:title" content="SpectraSort — Your Best Photos, Surfaced">
+<meta property="og:description" content="An AI photo picker that ranks your camera roll by quality and by your own taste — entirely on your iPhone. No uploads, no account.">
+<meta property="og:image" content="https://spectrasort.app/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="en_US">
+<meta property="og:url" content="https://spectrasort.app">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SpectraSort — Your Best Photos, Surfaced">
+<meta name="twitter:description" content="An AI photo picker that ranks your camera roll by quality and by your own taste — entirely on your iPhone.">
+<meta name="twitter:image" content="https://spectrasort.app/og-image.png">
+
+<meta name="apple-itunes-app" content="app-id=6757512134">
+<link rel="icon" type="image/png" sizes="32x32" href="images/app-icon-flat.png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/app-icon-flat.png">
+<meta name="theme-color" content="#0B0B0E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SpectraSort",
+  "alternateName": "SpectraSort — AI Photo Picker",
+  "operatingSystem": "iOS 18.5+",
+  "applicationCategory": "PhotographyApplication",
+  "applicationSubCategory": "Photo Sorting",
+  "softwareVersion": "3.0",
+  "description": "On-device AI photo picker for iPhone. Finds the photos you're looking for and ranks them — by quality, by your taste, or by what you asked for — then hands you the winners to keep, share or clear. Everything runs locally; nothing is uploaded.",
+  "url": "https://spectrasort.app",
+  "downloadUrl": "https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134",
+  "installUrl": "https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134",
+  "image": "https://spectrasort.app/images/app-icon-flat.png",
+  "featureList": [
+    "Six one-tap tools: Your Taste, Best Shots, Find a Subject, Like This Photo, Dedupe, Photos of a location",
+    "Results come back ranked, not just matched — sharpness, exposure and composition scored on-device",
+    "Your Taste: a personal profile learned from the photos you keep and the ones you let go",
+    "Scenes gather trips, themes and series on their own; a Timeline takes you year to month to day",
+    "Studio: seven quality axes, a subject/quality weight wheel, up to three subjects, saveable profiles",
+    "Index once on Apple's Neural Engine — every sort after is nearly instant",
+    "Duplicates, bursts and look-alikes stacked so each repeated moment costs one decision",
+    "100% on-device — no cloud, no account, nothing uploaded"
+  ],
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "USD",
+      "availability": "https://schema.org/InStock",
+      "description": "Free to download. Sorting is free up to five sorts a week. Saving, sharing and deleting are free for everyone." },
+    { "@type": "Offer", "name": "Premium", "price": "19.99", "priceCurrency": "USD",
+      "description": "Premium — unlimited sorts plus Studio's full controls. One-time purchase, no subscription." }
+  ],
+  "author": { "@type": "Person", "name": "Mike Lu" },
+  "publisher": { "@type": "Organization", "name": "SpectraSort", "url": "https://spectrasort.app" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "Do my photos ever leave my phone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path." } },
+    { "@type": "Question", "name": "Does SpectraSort use my photos to train AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. The models ship pre-trained and do not learn from users' photos. Everything runs on your iPhone, so the maker has no way to access photo content." } },
+    { "@type": "Question", "name": "How is this different from Apple Photos or Google Photos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for or what it has learned about your taste, then hands you a review flow to act on. And it is 100% local." } },
+    { "@type": "Question", "name": "How fast is it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The first sort builds an on-device index — that is the one slow step, and it happens once. Every sort after runs on the index and finishes nearly instantly, even across thousands of photos." } },
+    { "@type": "Question", "name": "What is free and what does Premium unlock?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Five sorts a week are free for everyone, forever — not a trial. Saving, sharing and deleting results are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio's full controls. No subscription." } },
+    { "@type": "Question", "name": "Does it free up storage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It clears the photos you tell it to, which is where most camera-roll storage goes. On iOS, deleted photos move to Recently Deleted and stay there for 30 days before the space is actually reclaimed — so SpectraSort will not show you a gigabytes-freed number it cannot honestly claim. It also only ever touches your photo library, never the rest of the phone." } },
+    { "@type": "Question", "name": "Will SpectraSort delete my photos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Only when you tell it to. Sorting and reviewing never touch your library. Nothing is applied until you tap an action in Batch Process, and deletions always go through the system Photos confirmation dialog." } },
+    { "@type": "Question", "name": "I bought Premium in SpectraSort 2.x — do I keep it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Premium is tied to your Apple account, so an earlier purchase carries over automatically. If it does not show on a new phone, tap Restore Purchases in Settings." } },
+    { "@type": "Question", "name": "What devices does it run on?",
+      "acceptedAnswer": { "@type": "Answer", "text": "iPhone with iOS 18.5 or later. All processing runs on Apple's Neural Engine; newer chips index and sort faster. No Apple Intelligence required and no region locks." } }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <a class="brand" href="#top"><img src="images/app-icon-flat.png" alt="">SpectraSort</a>
+    <div class="nav-links">
+      <a href="#tools">Toolbox</a>
+      <a href="#discover">Discover</a>
+      <a href="#studio">Studio</a>
+      <a href="#privacy">Privacy</a>
+      <a href="#pricing">Pricing</a>
+    </div>
+    <a class="cta-small" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Download
+    </a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">On-device AI photo picker · iPhone</span>
+        <h1>Your best photos. <span class="grad-text">Surfaced.</span></h1>
+        <p class="lead">Any phone can search your photos. SpectraSort ranks them — by quality, by your taste, by what you asked for — and hands you the winners, ready to keep, share, or clear. All of it on your iPhone.</p>
+        <div>
+          <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+            Download on the App Store
+          </a>
+          <span class="hero-meta">Free · iPhone · iOS 18.5+</span>
+        </div>
+        <div class="trust-chips">
+          <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
+          <span class="chip"><b>Free</b> 5 sorts a week</span>
+          <span class="chip"><b>$19.99 once</b> — no subscription</span>
+        </div>
+      </div>
+      <div class="hero-shot rv in">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:560px">
+            <img src="images/shots/toolbox.jpg" alt="The SpectraSort Toolbox — six tool cards: Your Taste, Best Shots, Find a Subject, Like This Photo, Dedupe, Photos of a location" fetchpriority="high" width="800" height="1734">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================= WHY NOT JUST SEARCH ======================= -->
+<section id="why" style="padding-top:20px;">
+  <div class="container">
+    <div class="feature rev">
+      <div class="rv">
+        <span class="eyebrow">Why not just search?</span>
+        <h2>Search shows you matches. <span class="grad-text">SpectraSort shows you your best.</span></h2>
+        <p>Your phone's built-in search can find "beach". What it can't do is tell you which of the 87 matches are worth keeping — or learn that you'd have picked the backlit one.</p>
+        <p>Finding is step one of three. Every result SpectraSort returns arrives already scored, best first.</p>
+      </div>
+      <div class="rv">
+        <div class="demo-phone" aria-label="Illustration: the same nine photos, re-ranked by three different questions">
+          <div class="demo-chips" id="demoChips">
+            <button class="dchip active" data-mode="taste" type="button">Your Taste</button>
+            <button class="dchip" data-mode="best" type="button">Best Shots</button>
+            <button class="dchip" data-mode="search" type="button">"golden hour"</button>
+          </div>
+          <div class="rank-grid" id="demoGrid"></div>
+          <div class="rank-caption" id="rankCaption">ranked by the photos you keep</div>
+        </div>
+        <p class="demo-note">Illustration — the same nine photos, re-ranked per question. Tap a chip.</p>
+      </div>
+    </div>
+
+    <div class="stats rv" style="margin-top:64px;">
+      <div class="stat"><div class="num">Find</div><div class="label">By phrase, by example photo, by place, by taste — six tools, one tap each. Duplicates arrive pre-stacked.</div></div>
+      <div class="stat"><div class="num">Rank</div><div class="label">Every result scored for sharpness, exposure and composition — and, if you ask, for how much it looks like the photos you keep.</div></div>
+      <div class="stat"><div class="num">Finish</div><div class="label">Swipe the winners in, then one screen: album filled, favorites starred, the rest cleared. Search apps stop where the work starts.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TOOLBOX ============================ -->
+<section id="tools" class="rise">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">Toolbox</span>
+      <h2>Six ways in. <span class="grad-text">One tap each.</span></h2>
+    </div>
+    <div class="tools-grid rv">
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-taste.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Your Taste</div><div class="tdesc">Built from the photos you keep and the ones you let go.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-best.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Best Shots</div><div class="tdesc">Sharpest, best-exposed, best-composed first — lean technical or artistic.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-subject.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Find a Subject</div><div class="tdesc">Search anything you can put into words — "dogs at the beach", "golden hour", "cozy".</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-image.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Like This Photo</div><div class="tdesc">Point at one photo, get everything like it.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-dedupe.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Dedupe</div><div class="tdesc">Duplicate photos, bursts and look-alikes, stacked to clear.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-place.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Photos of a location</div><div class="tdesc">Pin a place, see everything shot there.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ YOUR TASTE ============================ -->
+<section id="taste">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Your Taste — the part nobody else has</span>
+        <h2>It learns <span class="grad-text">what you'd have picked.</span></h2>
+        <p>Every review teaches it. The photos you keep and the ones you let go shape a profile of your preferences, built and stored on your phone. Run Your Taste and the top of the pile starts looking like the photos you'd have chosen yourself.</p>
+        <p>Pause its learning, reset it, or let it sharpen — what it rewards is yours. Name and save it in Studio, and keep as many as you like.</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:500px">
+            <img src="images/shots/taste-nature.jpg" alt="Your Taste — a learned profile called Nature Explorer, built from 1,082 photos reviewed" loading="lazy" width="800" height="1734">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== FIND A SUBJECT ========================== -->
+<section id="find-subject" class="rise">
+  <div class="container">
+    <div class="feature rev">
+      <div class="rv">
+        <span class="eyebrow">Find a Subject</span>
+        <h2>Search anything — and get it back <span class="grad-text">best-first.</span></h2>
+        <p>Concrete works — "roses", "swimming seals". Compound works — "dogs at the beach". Abstract works too — "cozy". And unlike a plain search, the matches come back ranked: sharpest and best-composed on top, look-alikes stacked.</p>
+        <p>No Apple Intelligence required, no region locks, on any iPhone running iOS 18.5. Days of wandering a city collapse into one search — type a theme, every shot of it lands in one grid. No albums, no tagging.</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:430px">
+            <img src="images/shots/findsubject.jpg" alt="Find a Subject with &quot;Dogs at beach&quot; typed, and template tiles below for Pets, Nature, Portrait and Street" loading="lazy" width="800" height="1734">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== LIKE THIS PHOTO =========================== -->
+<section id="like-this">
+  <div class="container">
+    <div class="section-head rv" style="margin-bottom:44px;">
+      <span class="eyebrow">Like This Photo</span>
+      <h2>Pick one photo, <span class="grad-text">find the rest.</span></h2>
+      <p>Photograph one statue on a trip and get your whole accidental statue collection back. Similar-photo search that runs on your phone, not a server — your built-in Photos app has nothing like it.</p>
+    </div>
+    <div class="shot-pair rv">
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="images/shots/likethis.jpg" alt="Choosing a reference photo — 1,708 photos ranked against this one" loading="lazy" width="800" height="1734"></div>
+      </div>
+      <div class="arrow" aria-hidden="true">&rarr;</div>
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="images/shots/review-grid.jpg" alt="The result — a review grid of look-alike photos, each scored, best first" loading="lazy" width="800" height="1734"></div>
+      </div>
+    </div>
+    <p class="shot-cap rv">One reference photo in, 1,708 photos ranked against it — scored and stacked.</p>
+  </div>
+</section>
+
+<!-- ============================== DEDUPE ============================== -->
+<section id="dedupe" class="rise">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Dedupe</span>
+        <h2>11 shots of the same sunset &rarr; <span class="grad-text">one swipe keeps the sharpest.</span></h2>
+        <p>Duplicate photos, shots in a series, and look-alikes are gathered into stacks, so each repeated moment costs one decision instead of ten swipes. You choose what gets grouped, or turn stacking off.</p>
+        <p>Clearing them is where most camera-roll storage comes back. Deletions go through the system Photos dialog and land in Recently Deleted — so nothing is gone until you say so twice.</p>
+      </div>
+      <div class="rv">
+        <div class="stack-wrap" id="stackDemo">
+          <div class="stack-card" style="transform:rotate(-7deg) translate(-16px,10px); background-image:url('images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(5deg) translate(14px,4px); background-image:url('images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(-3deg) translate(-6px,-6px); background-image:url('images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(8deg) translate(20px,-12px); background-image:url('images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card keeper" style="background-image:url('images/art/subject-sunset.jpg');">
+            <span class="keeper-badge">Sharpest &check;</span>
+            <span class="count-badge">11 photos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= DISCOVER ============================= -->
+<section id="discover">
+  <div class="container">
+    <div class="section-head rv" style="margin-bottom:44px;">
+      <span class="eyebrow">Discover</span>
+      <h2>Face the library <span class="grad-text">one piece at a time.</span></h2>
+      <p>Scenes gather your trips, themes and series on their own — no albums to make, no tagging. A Timeline takes you year to month to day. Pick any slice and sort just that.</p>
+    </div>
+    <div class="shot-pair rv">
+      <div class="shot">
+        <div class="screen-card"><img src="images/shots/discover-scenes.jpg" alt="Discover — Scenes, auto-gathered collections of trips, themes and series" loading="lazy" width="800" height="1734"></div>
+      </div>
+      <div class="shot">
+        <div class="screen-card"><img src="images/shots/discover-timeline.jpg" alt="Discover — Timeline, drilling from year to month to day" loading="lazy" width="800" height="1734"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ REVIEW → DONE ============================ -->
+<section id="done" class="rise">
+  <div class="container">
+    <div class="feature rev">
+      <div class="rv">
+        <span class="eyebrow">Review &rarr; Done</span>
+        <h2>Swipe the winners in. <span class="grad-text">Finish in one screen.</span></h2>
+        <p>Best rise to the top. Right to pick, down to keep, left to let go — or let Autopick sort and just skim what it chose.</p>
+        <p>Batch Process sends your picks to an album or the share sheet and clears the rest. Nothing is applied until you tap, and deletions always confirm through the system Photos dialog.</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card"><img src="images/shots/review-swipe.jpg" alt="The swipe deck — one photo scored 6.8, with Discard, Keep and Pick controls" loading="lazy" width="800" height="1734"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="trip-row rv">
+      <div class="trip-cell"><span class="n">A trip, start to finish — 01</span><b>Evening, hotel.</b> Timeline &rarr; today &rarr; sort with your profile.</div>
+      <div class="trip-cell"><span class="n">02</span><b>One pass of swipes.</b> Keepers kept, standouts picked, the rest let go.</div>
+      <div class="trip-cell"><span class="n">03</span><b>Batch Process.</b> Album filled, favorites starred, discards cleared. One screen.</div>
+      <div class="trip-cell"><span class="n">04</span><b>Share.</b> The top of the pile is the post.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== STUDIO ============================== -->
+<section id="studio">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Studio</span>
+        <h2>When you want <span class="grad-text">the controls.</span></h2>
+        <p>Seven quality axes to weight however you like. A wheel that trades subject match against sheer quality. Up to three subjects at once. Save any of it as a named profile and reach for it again.</p>
+        <p>None of it is required. The Toolbox runs on sensible defaults — Studio is there for the day you want something specific.</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:500px"><img src="images/shots/studio.jpg" alt="The Studio tab — quality focus axes, the weight wheel, subjects and saved profiles" loading="lazy" width="800" height="1734"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PRIVACY ============================== -->
+<section id="privacy">
+  <div class="container">
+    <div class="privacy-band rv">
+      <img class="bgphoto" src="images/shots/privacy-art.jpg" alt="A brass padlock on a strapped stack of printed photographs" loading="lazy">
+      <div class="scrim"></div>
+      <div class="privacy-copy">
+        <span class="eyebrow" style="color:rgba(244,242,237,.65);">Private</span>
+        <h2>Nothing leaves your phone.</h2>
+        <p>The search, the scoring and your taste profile all run on-device, on Apple's Neural Engine. No account, no internet, nothing collected from your photos. The models ship pre-trained and never learn from your library. Corroborated by Apple's own App Privacy label.</p>
+      </div>
+    </div>
+    <div class="stats rv" style="margin-top:18px;">
+      <div class="stat"><div class="num">Once</div><div class="label">Your library is indexed on-device one time. Every sort after runs on that index, near-instantly.</div></div>
+      <div class="stat"><div class="num">Zero</div><div class="label">uploads, accounts, servers. There is no SpectraSort cloud in the path.</div></div>
+      <div class="stat"><div class="num">Six</div><div class="label">one-tap tools on one engine — plus Studio's full controls when you want them.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== PRICING ============================== -->
+<section id="pricing" class="rise">
+  <div class="container pricing-hero rv">
+    <span class="eyebrow">Pricing</span>
+    <div class="price-big">$19.99. <span class="once">Once.</span></div>
+    <p class="sub">Five free sorts a week, for everyone, forever — not a trial. Premium removes the limit and opens Studio's full controls.</p>
+    <p class="fine">No subscription. No renewals. Saving, sharing and deleting results is always free.</p>
+    <a class="cta grad" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Start free
+    </a>
+  </div>
+</section>
+
+<!-- ================================ FAQ ================================ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Common questions.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>Do my photos ever leave my phone?</summary><div class="faq-answer">No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path.</div></details>
+      <details class="faq-item"><summary>Does SpectraSort use my photos to train AI?</summary><div class="faq-answer">No. The models ship pre-trained and don't learn from users' photos. Everything runs on your iPhone, so the maker has no way to access photo content.</div></details>
+      <details class="faq-item"><summary>How is this different from Apple Photos or Google Photos?</summary><div class="faq-answer">Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for, or against what it has learned about your taste, then hands you a review flow to act on. And it's 100% local: nothing about your library leaves the phone.</div></details>
+      <details class="faq-item"><summary>How fast is it?</summary><div class="faq-answer">The first sort builds an on-device index of your photos. That's the one slow step and it happens once. Every sort after runs on the index and finishes nearly instantly, even across thousands of photos.</div></details>
+      <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio (quality axes, the weight wheel, saved profiles). No subscription.</div></details>
+      <details class="faq-item"><summary>Does it free up storage?</summary><div class="faq-answer">It clears the photos you tell it to, which is where most camera-roll storage goes. One caveat worth stating plainly: on iOS, deleted photos move to <b>Recently Deleted</b> and sit there for 30 days before the space actually comes back — so SpectraSort won't show you a "you freed 4.2 GB" number it can't honestly claim. It also only ever touches your photo library, never the rest of the phone.</div></details>
+      <details class="faq-item"><summary>Will SpectraSort delete my photos?</summary><div class="faq-answer">Only when you tell it to. Sorting and reviewing never touch your library. Nothing is applied until you tap an action in Batch Process, and deletions always go through the system Photos confirmation dialog.</div></details>
+      <details class="faq-item"><summary>What is the Your Taste profile?</summary><div class="faq-answer">A personal profile that takes shape as you use the app, built from the photos you keep and the ones you let go — all on your device. Once it has learned enough it sorts by your own preferences. Shape it in Studio, or reset and rebuild it any time. It never leaves your phone.</div></details>
+      <details class="faq-item"><summary>I bought Premium in SpectraSort 2.x — do I keep it?</summary><div class="faq-answer">Yes — same purchase, carries over automatically. If it doesn't show on a new phone, tap Restore Purchases in Settings.</div></details>
+      <details class="faq-item"><summary>What devices does it run on?</summary><div class="faq-answer">iPhone with iOS 18.5 or later. All processing runs on Apple's Neural Engine; newer chips index and sort faster. No Apple Intelligence required and no region locks.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container rv">
+    <h2>Find your <span class="grad-text">best photos.</span></h2>
+    <p>Free for five sorts a week. iPhone, iOS 18.5 or later.</p>
+    <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Download on the App Store
+    </a>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+    Download SpectraSort — free
+  </a>
+</div>
+
+<footer>
+  <div class="container">
+    <div>&copy; 2026 Mike Lu &middot; SpectraSort</div>
+    <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
+  </div>
+</footer>
+
+<script src="assets/site.js" defer></script>
+</body>
+</html>

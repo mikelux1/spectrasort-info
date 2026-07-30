@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>v3.3 — still vs old loop vs full-width loop</title>
+<!-- THROWAWAY comparison harness. Each column is the SAME .screen-card box from
+     assets/site.css at the same measured 318px slot width and the same --cap, so
+     the only variable is the source frame. Delete with the folder. -->
+<link rel="stylesheet" href="../assets/site.css">
+<style>
+  body { background:var(--bg); color:var(--text); font-family:var(--font-text); padding:22px 26px 40px; }
+  h1 { font-size:17px; font-weight:600; margin:0 0 3px; }
+  .note { font-size:12.5px; color:var(--text-low); margin:0 0 24px; max-width:900px; line-height:1.5; }
+  .row { margin-bottom:34px; }
+  .rowhead { font-size:13px; font-weight:600; color:var(--sp-amber); margin-bottom:10px; }
+  .strip { display:flex; gap:22px; align-items:flex-start; }
+  .cell { width:318px; }
+  .lab { font-size:11.5px; margin-bottom:7px; font-weight:600; letter-spacing:.02em; }
+  .lab.was  { color:var(--text-mid); }
+  .lab.bad  { color:#E0736B; }
+  .lab.good { color:#6FBF8B; }
+  .cap { font-size:11px; color:var(--text-low); margin-top:7px; text-align:center; }
+  /* mirrors .screen-card video — these frames are already status-bar-cropped */
+  .screen-card.vid img { margin-top:0; }
+  .rise-bg { background:var(--bg-rise); --fade-to:#141318; padding:16px; border-radius:12px; }
+</style>
+</head>
+<body>
+
+<h1>Left = the still it replaces. Middle = the loop I shipped first. Right = full-width re-render.</h1>
+<p class="note">Same <code>.screen-card</code>, same 318px slot, same <code>--cap</code> in every column — the frame is the only variable.
+The middle column lost <b>39px off each side</b> of the 1320-wide capture, because the old <code>web</code> profile (640&times;1386) was a narrower aspect than the source. The right column is 660&times;1344 = exactly half of the cropped capture, so the side crop is <b>zero</b> and the framing matches the still.</p>
+
+<div class="row">
+  <div class="rowhead">HERO &middot; --cap:560px</div>
+  <div class="strip">
+    <div class="cell"><div class="lab was">WAS — toolbox.jpg</div><div class="screen-card capped" style="--cap:560px"><img src="../images/shots/toolbox.jpg"></div></div>
+    <div class="cell"><div class="lab bad">FIRST LOOP — 640&times;1386, 3% cropped per edge</div><div class="screen-card capped vid" style="--cap:560px"><img src="old-hero.jpg"></div></div>
+    <div class="cell"><div class="lab good">NEW — 660&times;1344, full width</div><div class="screen-card capped vid" style="--cap:560px"><img src="new-hero.jpg"></div></div>
+  </div>
+</div>
+
+<div class="row rise-bg">
+  <div class="rowhead">FIND A SUBJECT &middot; --cap:430px</div>
+  <div class="strip">
+    <div class="cell"><div class="lab was">WAS — findsubject.jpg</div><div class="screen-card capped" style="--cap:430px"><img src="../images/shots/findsubject.jpg"></div></div>
+    <div class="cell"><div class="lab bad">FIRST LOOP — cropped</div><div class="screen-card capped vid" style="--cap:430px"><img src="old-find.jpg"></div></div>
+    <div class="cell"><div class="lab good">NEW — full width</div><div class="screen-card capped vid" style="--cap:430px"><img src="new-find.jpg"></div></div>
+  </div>
+</div>
+
+<div class="row rise-bg">
+  <div class="rowhead">REVIEW &rarr; DONE &middot; uncapped</div>
+  <div class="strip">
+    <div class="cell"><div class="lab was">WAS — review-swipe-b.jpg</div><div class="screen-card"><img src="../images/shots/review-swipe-b.jpg"></div></div>
+    <div class="cell"><div class="lab bad">FIRST LOOP — cropped</div><div class="screen-card vid"><img src="old-review.jpg"></div></div>
+    <div class="cell"><div class="lab good">NEW — full width</div><div class="screen-card vid"><img src="new-review.jpg"></div></div>
+  </div>
+</div>
+
+</body>
+</html>

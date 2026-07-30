@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Single page plus privacy and terms in two languages.
+
+     IMPORTANT — list the FLAT .html forms, not /privacy/ and /terms/.
+     Those directories hold meta-refresh stubs whose own <link rel="canonical">
+     points back at /privacy.html and /terms.html, which is where the real
+     content lives (and where it was last updated, 2026-07-17). Listing a stub
+     here puts a non-canonical URL in the sitemap and buys a needless redirect
+     hop. The pretty /privacy and /terms URLs still work and are what the page
+     footer links to — they just are not what should be indexed.
+
+     hreflang annotations are reciprocal: every URL in a language set lists the
+     complete set, and each member appears as its own <url> entry. A one-way
+     annotation is ignored. The homepage is English-only, so it has no
+     alternates. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://spectrasort.app/</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/privacy.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spectrasort.app/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/privacy-zh.html"/>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/privacy-zh.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spectrasort.app/privacy.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/privacy-zh.html"/>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/terms.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spectrasort.app/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/terms-zh.html"/>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/terms-zh.html</loc>
+    <lastmod>2026-07-17</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spectrasort.app/terms.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/terms-zh.html"/>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/llms.txt</loc>
+    <lastmod>2026-07-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.2</priority>
+  </url>
+</urlset>

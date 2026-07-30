@@ -1,0 +1,305 @@
+/* ============================================================================
+   SpectraSort — site v3.1
+   Design language: Concept C (1-explorations/spectrasortconceptc.html, 2026-07-22)
+   Dark-only, spectral gradient accent, Space Grotesk display + Inter text.
+   ========================================================================= */
+
+:root {
+    --bg:        #0B0B0E;
+    --bg-rise:   #141318;
+    --bg-card:   #1A1920;
+    --text:      #F4F2ED;
+    --text-mid:  #A8A4AE;
+    --text-low:  #6E6A76;
+    --hairline:  rgba(255,255,255,0.10);
+    --hairline2: rgba(255,255,255,0.22);
+
+    /* spectral brand gradient — carried over from the prism identity */
+    --sp-blue:   #6B7FBC;
+    --sp-rose:   #C77FB4;
+    --sp-amber:  #E8A96A;
+    --spectral:  linear-gradient(92deg, var(--sp-blue), var(--sp-rose) 52%, var(--sp-amber));
+
+    --font-display: 'Space Grotesk', 'Inter', system-ui, sans-serif;
+    --font-text: 'Inter', -apple-system, system-ui, sans-serif;
+    --radius: 22px;
+
+    /* what a capped screenshot fades into — overridden on raised sections */
+    --fade-to: #0B0B0E;
+}
+section.rise { background:var(--bg-rise); --fade-to:#141318; }
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+    background:var(--bg); color:var(--text);
+    font-family:var(--font-text); font-size:17px; line-height:1.6;
+    -webkit-font-smoothing:antialiased; overflow-x:hidden;
+}
+img { max-width:100%; }
+
+.container { max-width:1140px; margin:0 auto; padding:0 24px; }
+h1,h2,h3 { font-family:var(--font-display); font-weight:600; letter-spacing:-0.02em; }
+h1 { font-size:clamp(42px,6.6vw,80px); line-height:1.03; }
+h2 { font-size:clamp(30px,4.4vw,52px); line-height:1.08; }
+h3 { font-size:20px; }
+p.lead { font-size:clamp(17px,2vw,21px); color:var(--text-mid); }
+.grad-text { background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; }
+section { padding:96px 0; position:relative; }
+@media (max-width:760px){ section { padding:64px 0; } }
+
+.eyebrow {
+    font-family:var(--font-display); font-size:13px; letter-spacing:0.14em;
+    text-transform:uppercase; color:var(--text-low); display:block; margin-bottom:18px;
+}
+
+/* ---------- reveal on scroll ---------- */
+.rv { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
+.rv.in { opacity:1; transform:none; }
+@media (prefers-reduced-motion: reduce){ .rv { opacity:1; transform:none; transition:none; } }
+
+/* ---------- nav ---------- */
+nav.top {
+    position:fixed; top:0; left:0; right:0; z-index:50;
+    background:rgba(11,11,14,0.72); backdrop-filter:blur(14px);
+    border-bottom:1px solid var(--hairline);
+}
+nav.top .container { display:flex; align-items:center; justify-content:space-between; height:60px; gap:16px; }
+.brand {
+    display:flex; align-items:center; gap:10px; color:var(--text); text-decoration:none;
+    font-family:var(--font-display); font-weight:600; font-size:17px;
+}
+.brand img { width:28px; height:28px; border-radius:7px; }
+.nav-links { display:flex; gap:24px; margin-left:auto; margin-right:8px; }
+.nav-links a { color:var(--text-mid); text-decoration:none; font-size:14.5px; font-weight:500; transition:color .2s ease; }
+.nav-links a:hover { color:var(--text); }
+@media (max-width:860px){ .nav-links { display:none; } }
+
+/* ---------- buttons ---------- */
+.cta, .cta-small {
+    display:inline-flex; align-items:center; gap:9px;
+    background:var(--text); color:#0B0B0E; text-decoration:none;
+    font-weight:600; border-radius:999px; transition:transform .15s ease, box-shadow .2s ease;
+}
+.cta:hover, .cta-small:hover { transform:translateY(-1px); box-shadow:0 6px 24px rgba(232,169,106,0.25); }
+.cta { padding:16px 28px; font-size:17px; }
+.cta-small { padding:9px 18px; font-size:14px; white-space:nowrap; }
+.cta svg, .cta-small svg { width:18px; height:18px; fill:currentColor; flex:none; }
+.cta.grad { background:var(--spectral); color:#0B0B0E; }
+
+/* ---------- hero ---------- */
+.hero { padding:150px 0 80px; }
+.hero-grid { display:grid; grid-template-columns:1.08fr 0.92fr; gap:56px; align-items:center; }
+@media (max-width:900px){ .hero-grid { grid-template-columns:1fr; gap:44px; } }
+.hero h1 { margin-bottom:22px; }
+.hero p.lead { margin-bottom:30px; max-width:540px; }
+.hero-meta { color:var(--text-low); font-size:14.5px; margin-left:16px; }
+@media (max-width:520px){ .hero-meta { display:block; margin:14px 0 0; } }
+.trust-chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
+.chip { font-size:13.5px; font-weight:500; color:var(--text-mid); border:1px solid var(--hairline2); border-radius:999px; padding:7px 14px; }
+.chip b { color:var(--text); font-weight:600; }
+
+/* ---------- screen cards (borderless phone captures) ----------
+   Source captures are 800x1734 with a status bar on top. The bar is cropped in
+   CSS so re-exporting new captures is a straight file swap. -12.12% of width
+   (=~97px at 800w) removes it exactly. */
+.screen-card {
+    position:relative;
+    border-radius:30px; overflow:hidden; border:1px solid var(--hairline2);
+    box-shadow:0 24px 70px rgba(0,0,0,0.5);
+    background:var(--bg-rise); line-height:0;
+}
+/* height:auto is load-bearing — the width/height attributes on the <img> (kept
+   for layout stability) are presentational hints that otherwise pin the height
+   to 1738px and defeat the crop. */
+.screen-card img { width:100%; height:auto; display:block; margin-top:-12.1212%; }
+
+/* A capture is capped when its lower half is dead weight — a keyboard, an empty
+   band, a control we're not talking about. The screen bleeds off behind a fade
+   into whatever the section background is. --cap is set per instance. */
+.screen-card.capped { max-height:var(--cap,560px); }
+.screen-card.capped::after {
+    content:""; position:absolute; left:0; right:0; bottom:0; height:110px;
+    background:linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--fade-to) 92%);
+    pointer-events:none;
+}
+.shot { width:min(320px,80vw); margin:0 auto; }
+.shot-pair { display:flex; gap:20px; justify-content:center; align-items:center; flex-wrap:wrap; }
+.shot-pair .shot { width:min(250px,42vw); }
+.shot-pair .arrow { font-size:30px; color:var(--sp-amber); font-family:var(--font-display); }
+.shot-cap { text-align:center; font-size:13px; color:var(--text-low); margin-top:14px; }
+
+/* hero shot — capped so the headline stays above the fold */
+.hero-shot { position:relative; }
+.hero-shot .shot { width:min(320px,80vw); }
+.hero-shot::before {
+    content:""; position:absolute; inset:-6% 8% 12%;
+    background:radial-gradient(60% 50% at 50% 45%, rgba(232,169,106,0.16), transparent 70%);
+    filter:blur(40px); pointer-events:none;
+}
+
+/* ---------- rank demo (the Concept C signature) ---------- */
+.demo-phone {
+    width:min(380px, 92vw); margin:0 auto;
+    background:var(--bg-rise); border:1px solid var(--hairline2);
+    border-radius:44px; padding:18px 16px 22px;
+    box-shadow:0 30px 80px rgba(0,0,0,0.5), 0 0 120px rgba(107,127,188,0.12);
+}
+.demo-chips { display:flex; gap:8px; margin-bottom:14px; }
+.dchip {
+    flex:1; border:1px solid var(--hairline2); background:var(--bg-card);
+    color:var(--text-mid); font-family:var(--font-text); font-size:12.5px; font-weight:600;
+    border-radius:999px; padding:9px 6px; cursor:pointer; transition:all .25s ease; white-space:nowrap;
+}
+.dchip.active { background:var(--spectral); color:#0B0B0E; border-color:transparent; }
+.rank-grid { position:relative; height:340px; }
+.rank-tile {
+    position:absolute; width:calc((100% - 16px)/3); aspect-ratio:1;
+    border-radius:12px; overflow:hidden;
+    transition:transform .7s cubic-bezier(.2,.7,.2,1), opacity .5s ease, filter .5s ease;
+}
+.rank-tile img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+.rank-tile .score {
+    position:absolute; top:6px; left:6px; z-index:2;
+    background:rgba(0,0,0,0.55); backdrop-filter:blur(4px);
+    color:#fff; font-size:11px; font-weight:600; border-radius:7px; padding:2px 7px;
+    opacity:0; transition:opacity .4s ease .3s;
+}
+.rank-tile.scored .score { opacity:1; }
+.rank-tile.top3 { box-shadow:0 0 0 2px var(--sp-amber); }
+.rank-tile.dim { filter:grayscale(.9) brightness(.45); }
+.rank-caption { text-align:center; font-size:13px; color:var(--text-mid); margin-top:14px; min-height:20px; }
+.demo-note { text-align:center; font-size:12.5px; color:var(--text-low); margin-top:14px; max-width:380px; margin-left:auto; margin-right:auto; }
+
+/* ---------- stats strip ---------- */
+.stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+@media (max-width:700px){ .stats { grid-template-columns:1fr; } }
+.stat { background:var(--bg-rise); border:1px solid var(--hairline); border-radius:var(--radius); padding:28px 26px; }
+.stat .num {
+    font-family:var(--font-display); font-size:40px; font-weight:700;
+    background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent;
+    line-height:1.1;
+}
+.stat .label { color:var(--text-mid); font-size:15px; margin-top:6px; }
+
+/* ---------- tools row ---------- */
+.tools-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:44px; }
+@media (max-width:860px){ .tools-grid { grid-template-columns:repeat(2,1fr); } }
+@media (max-width:520px){ .tools-grid { grid-template-columns:1fr; } }
+.tool-chip {
+    background:var(--bg-rise); border:1px solid var(--hairline);
+    border-radius:18px; overflow:hidden; display:flex; flex-direction:column;
+}
+.tool-chip .tcover { aspect-ratio:16/9; overflow:hidden; line-height:0; }
+.tool-chip .tcover img { width:100%; height:100%; object-fit:cover; }
+.tool-chip .tbody { padding:18px 18px 20px; }
+.tool-chip .tname { font-family:var(--font-display); font-weight:600; font-size:16.5px; margin-bottom:6px; }
+.tool-chip .tdesc { font-size:14px; color:var(--text-mid); line-height:1.5; }
+
+/* ---------- feature blocks ---------- */
+.feature { display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center; }
+.feature.rev { direction:rtl; } .feature.rev > * { direction:ltr; }
+@media (max-width:860px){ .feature, .feature.rev { grid-template-columns:1fr; direction:ltr; gap:36px; } }
+.feature h2 { margin:14px 0 18px; }
+.feature p { color:var(--text-mid); max-width:480px; }
+.feature p + p { margin-top:14px; }
+
+.section-head { text-align:center; max-width:720px; margin:0 auto; }
+.section-head p { color:var(--text-mid); margin-top:16px; }
+
+/* ---------- dedupe stack ---------- */
+.stack-wrap { position:relative; width:min(300px,74vw); aspect-ratio:3/4; margin:0 auto; }
+.stack-card {
+    position:absolute; inset:0; border-radius:22px; border:1px solid var(--hairline2);
+    background-size:cover; background-position:center; overflow:hidden;
+    transition:transform .8s cubic-bezier(.2,.7,.2,1), opacity .8s ease;
+    box-shadow:0 14px 40px rgba(0,0,0,0.45);
+}
+.stack-wrap.collapsed .stack-card:not(.keeper) { transform:translateY(6px) scale(.96) !important; opacity:0; }
+.stack-wrap.collapsed .keeper { transform:none !important; }
+.keeper-badge {
+    position:absolute; top:14px; right:14px; background:var(--spectral);
+    color:#0B0B0E; font-weight:600; font-size:13px; border-radius:999px; padding:6px 12px;
+    opacity:0; transition:opacity .5s ease .5s;
+}
+.stack-wrap.collapsed .keeper-badge { opacity:1; }
+.count-badge {
+    position:absolute; bottom:14px; left:14px; background:rgba(0,0,0,.55);
+    color:#fff; font-size:13px; border-radius:8px; padding:4px 10px; backdrop-filter:blur(6px);
+    transition:opacity .4s ease;
+}
+.stack-wrap.collapsed .count-badge { opacity:0; }
+
+/* ---------- privacy full-bleed ---------- */
+.privacy-band { position:relative; border-radius:var(--radius); overflow:hidden; min-height:520px; display:flex; align-items:flex-end; }
+/* The source art is a 800x1733 portrait, so a wide band crops it hard. Pull the
+   focal point up off the padlock, and lay a left-to-right scrim under the copy
+   so the text has something to sit on. */
+.privacy-band img.bgphoto {
+    position:absolute; inset:0; width:100%; height:100%;
+    object-fit:cover; object-position:center 38%;
+}
+.privacy-band .scrim {
+    position:absolute; inset:0;
+    background:
+      linear-gradient(180deg, rgba(11,11,14,0.10) 15%, rgba(11,11,14,0.92) 90%),
+      linear-gradient(90deg, rgba(11,11,14,0.82) 0%, rgba(11,11,14,0.45) 45%, rgba(11,11,14,0) 78%);
+}
+@media (max-width:700px){
+    .privacy-band .scrim { background:linear-gradient(180deg, rgba(11,11,14,0.30) 10%, rgba(11,11,14,0.94) 70%); }
+}
+.privacy-copy { position:relative; padding:44px; max-width:600px; }
+.privacy-copy h2 { margin-bottom:14px; }
+.privacy-copy p { color:var(--text-mid); }
+@media (max-width:600px){ .privacy-copy { padding:28px 24px; } .privacy-band { min-height:440px; } }
+
+/* ---------- trip strip ---------- */
+.trip-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:40px; }
+@media (max-width:900px){ .trip-row { grid-template-columns:1fr 1fr; } }
+@media (max-width:540px){ .trip-row { grid-template-columns:1fr; } }
+.trip-cell { background:var(--bg-rise); border:1px solid var(--hairline); border-radius:18px; padding:22px 20px; font-size:14.5px; color:var(--text-mid); }
+.trip-cell .n {
+    font-family:var(--font-display); font-weight:700; font-size:15px;
+    background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent;
+    display:block; margin-bottom:8px;
+}
+.trip-cell b { color:var(--text); }
+
+/* ---------- pricing ---------- */
+.pricing-hero { text-align:center; }
+.price-big { font-family:var(--font-display); font-weight:700; font-size:clamp(58px,10vw,124px); line-height:1; letter-spacing:-0.03em; }
+.price-big .once { background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.pricing-hero .sub { color:var(--text-mid); font-size:clamp(17px,2.2vw,21px); margin:18px auto 8px; max-width:580px; }
+.pricing-hero .fine { color:var(--text-low); font-size:14.5px; margin-bottom:34px; }
+
+/* ---------- faq ---------- */
+.faq-list { max-width:760px; margin:44px auto 0; }
+.faq-item { border-bottom:1px solid var(--hairline); }
+.faq-item summary {
+    cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; gap:18px;
+    padding:20px 4px; font-family:var(--font-display); font-weight:500; font-size:17.5px;
+}
+.faq-item summary::-webkit-details-marker { display:none; }
+.faq-item summary::after { content:"+"; color:var(--text-low); font-size:22px; flex:none; }
+.faq-item[open] summary::after { content:"\2013"; }
+.faq-answer { padding:0 4px 22px; color:var(--text-mid); font-size:15.5px; max-width:660px; }
+
+/* ---------- closing ---------- */
+.closing { text-align:center; padding-bottom:140px; }
+.closing h2 { font-size:clamp(38px,6vw,68px); margin-bottom:16px; }
+.closing p { color:var(--text-mid); margin-bottom:30px; }
+
+/* ---------- sticky mobile CTA ---------- */
+.sticky-cta {
+    position:fixed; left:0; right:0; bottom:0; z-index:60; display:none;
+    padding:12px 16px calc(12px + env(safe-area-inset-bottom));
+    background:rgba(11,11,14,0.82); backdrop-filter:blur(14px);
+    border-top:1px solid var(--hairline);
+}
+.sticky-cta .cta { width:100%; justify-content:center; }
+@media (max-width:760px){ .sticky-cta.show { display:block; } body { padding-bottom:76px; } }
+
+footer { border-top:1px solid var(--hairline); padding:34px 0 44px; color:var(--text-low); font-size:14px; }
+footer .container { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+footer a { color:var(--text-mid); text-decoration:none; margin-left:18px; }
+footer a:hover { color:var(--text); }

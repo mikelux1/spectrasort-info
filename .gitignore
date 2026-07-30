@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Scratch
+tmp/
+
+# Raw camera/screen-recording source for the site's promo loops.
+# 428 MB, and video/v2demo-1.mov alone is 191 MB — over GitHub's hard 100 MB
+# per-file limit, so this can never be pushed. The ENCODED deliverables these
+# produce (video/web-*.mp4) ARE tracked; masters live on local disk only.
+video/v2demo-*
