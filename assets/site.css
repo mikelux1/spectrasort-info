@@ -114,12 +114,25 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
    to 1738px and defeat the crop. */
 .screen-card img { width:100%; height:auto; display:block; margin-top:-12.1212%; }
 
+/* ---------- screen loops (v3.3) ----------
+   The web-profile cuts are exported ALREADY status-bar-cropped (crop_top:180 on
+   a 1320x2868 capture), so they must not inherit the -12.1212% pull above — that
+   would slice a second time, into the app UI. margin-top:0 is the whole rule.
+   The poster is frame 1 of the same file, so poster -> first frame is seamless
+   and there is nothing to fade between. */
+.screen-card video { width:100%; height:auto; display:block; margin-top:0; }
+
 /* A capture is capped when its lower half is dead weight — a keyboard, an empty
    band, a control we're not talking about. The screen bleeds off behind a fade
    into whatever the section background is. --cap is set per instance. */
 .screen-card.capped { max-height:var(--cap,560px); }
+/* v3.3: fade was a hard-wired 110px. On a 560px card that dimmed 20% of the frame,
+   which cost real legibility at the bottom of every capped shot — the Toolbox's
+   last row of tool descriptions was barely readable. 70px keeps the bleed-off
+   without the tax. --fade-h stays tunable for any instance that needs a shorter
+   one; --cap is the tool for content that must NOT be dimmed at all. */
 .screen-card.capped::after {
-    content:""; position:absolute; left:0; right:0; bottom:0; height:110px;
+    content:""; position:absolute; left:0; right:0; bottom:0; height:var(--fade-h,70px);
     background:linear-gradient(180deg, rgba(0,0,0,0) 0%, var(--fade-to) 92%);
     pointer-events:none;
 }
@@ -128,6 +141,61 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 .shot-pair .shot { width:min(250px,42vw); }
 .shot-pair .arrow { font-size:30px; color:var(--sp-amber); font-family:var(--font-display); }
 .shot-cap { text-align:center; font-size:13px; color:var(--text-low); margin-top:14px; }
+
+/* ---------- taste-fan: three alternative profiles as one image (v3.3) ----------
+   Staged like ASC screenshot 02-yourtaste.png — the named profile in front, two
+   differently-named ones angled back and clipped by the frame edge. The point is
+   that a profile is personal, so one screenshot cannot make the argument.
+   The wrapper is the positioning context AND reserves the height, since both side
+   cards are absolutely positioned and contribute nothing to layout. */
+/* GEOMETRY IS THE WHOLE TRICK. A profile's NAME sits centred in its card, so a side
+   card only earns its place if enough of it shows to read that name — otherwise you
+   get two anonymous dark slivers and the section is back to arguing from one shot.
+   ASC 02-yourtaste.png solves it with a canvas 2.56x the front card's width
+   (1320 / 515). Reproducing that ratio is why the front card here is 39% and the fan
+   is wide: at 63% the names fell underneath the front card and vanished. */
+.taste-fan {
+    position:relative;
+    width:min(520px, 96vw);
+    margin:0 auto;
+    /* bottom padding reserves the space the side cards occupy but do not contribute:
+       they are absolutely positioned, sit 42px lower than the front card, and their
+       5deg rotation adds ~18px more. Without it the .shot-cap below rides over them. */
+    padding:20px 0 62px;
+    display:flex; justify-content:center;
+}
+.taste-fan .screen-card { width:39%; border-radius:22px; }
+/* Dimmed enough to sit back, bright enough to still read the name — one pass of
+   opacity, not opacity AND a heavy brightness cut, which buried them. */
+.taste-fan .tf-side {
+    position:absolute; top:42px;
+    opacity:0.68; filter:brightness(0.86) saturate(0.9);
+    box-shadow:0 16px 44px rgba(0,0,0,0.5);
+}
+.taste-fan .tf-left  { left:0;  transform:rotate(-5deg); transform-origin:bottom right; }
+.taste-fan .tf-right { right:0; transform:rotate(5deg);  transform-origin:bottom left; }
+.taste-fan .tf-front {
+    position:relative; z-index:2;
+    box-shadow:0 28px 74px rgba(0,0,0,0.7);
+}
+/* Below the .feature single-column breakpoint the fan has the full container width,
+   so it can grow rather than squeeze the ratio that makes the names legible. */
+@media (max-width:860px){
+    .taste-fan { width:min(560px, 96vw); }
+}
+@media (max-width:560px){
+    /* No width left to keep 2.56 — drop the side cards rather than ship three
+       unreadable slivers, and let the front card take the space it needs. */
+    .taste-fan .tf-side { display:none; }
+    .taste-fan { width:min(320px, 84vw); padding-top:0; }
+    .taste-fan .screen-card { width:100%; }
+}
+/* The fan is composition, not motion — it stays fanned under reduced-motion. Only
+   the rotation is dropped, matching how .stack-pair behaves. */
+@media (prefers-reduced-motion: reduce){
+    .taste-fan .tf-left  { transform:none; }
+    .taste-fan .tf-right { transform:none; }
+}
 
 /* ---------- stack-pair: two near-identical frames as one choice ----------
    Staged like the App Store review shot — the keeper in front, its twin
@@ -207,7 +275,10 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 /* ---------- stats strip ---------- */
 .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
 @media (max-width:700px){ .stats { grid-template-columns:1fr; } }
-.stat { background:var(--bg-rise); border:1px solid var(--hairline); border-radius:var(--radius); padding:28px 26px; }
+/* v3.3: the only .stats row left is the three-step summary, which now sits inside
+   the raised pricing band — so the old var(--bg-rise) fill made the cards the exact
+   colour of their own section and they vanished. --bg-card keeps them readable. */
+.stat { background:var(--bg-card); border:1px solid var(--hairline); border-radius:var(--radius); padding:28px 26px; }
 .stat .num {
     font-family:var(--font-display); font-size:40px; font-weight:700;
     background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent;
@@ -265,12 +336,14 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 
 /* ---------- privacy full-bleed ---------- */
 .privacy-band { position:relative; border-radius:var(--radius); overflow:hidden; min-height:520px; display:flex; align-items:flex-end; }
-/* The source art is a 800x1733 portrait, so a wide band crops it hard. Pull the
-   focal point up off the padlock, and lay a left-to-right scrim under the copy
-   so the text has something to sit on. */
+/* The source art is a 800x1733 portrait, so a wide band crops it hard. The
+   padlock's centre sits at ~50% of the source height; 45% lands the whole lock
+   inside the visible slice instead of clipping its lower body (was 38%, which
+   deliberately pulled UP off the padlock — reversed 2026-07-29 on Mike's note).
+   A left-to-right scrim gives the copy something to sit on. */
 .privacy-band img.bgphoto {
     position:absolute; inset:0; width:100%; height:100%;
-    object-fit:cover; object-position:center 38%;
+    object-fit:cover; object-position:center 45%;
 }
 .privacy-band .scrim {
     position:absolute; inset:0;
@@ -287,7 +360,8 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 @media (max-width:600px){ .privacy-copy { padding:28px 24px; } .privacy-band { min-height:440px; } }
 
 /* ---------- trip strip ---------- */
-.trip-row { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; margin-top:40px; }
+/* three stages now (Sort / Review / Batch Process), was a four-cell trip narrative */
+.trip-row { display:grid; grid-template-columns:repeat(3,1fr); gap:14px; margin-top:40px; }
 @media (max-width:900px){ .trip-row { grid-template-columns:1fr 1fr; } }
 @media (max-width:540px){ .trip-row { grid-template-columns:1fr; } }
 .trip-cell { background:var(--bg-rise); border:1px solid var(--hairline); border-radius:18px; padding:22px 20px; font-size:14.5px; color:var(--text-mid); }
@@ -300,10 +374,15 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 
 /* ---------- pricing ---------- */
 .pricing-hero { text-align:center; }
-.price-big { font-family:var(--font-display); font-weight:700; font-size:clamp(58px,10vw,124px); line-height:1; letter-spacing:-0.03em; }
-.price-big .once { background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; }
-.pricing-hero .sub { color:var(--text-mid); font-size:clamp(17px,2.2vw,21px); margin:18px auto 8px; max-width:580px; }
-.pricing-hero .fine { color:var(--text-low); font-size:14.5px; margin-bottom:34px; }
+/* v3.3: hierarchy reversed. The price was a 124px display number with the CTA tucked
+   underneath; that sells the number rather than the app. The button is the hero now
+   and the price is a single supporting line beneath it. The old .price-big / .once /
+   .sub / .fine rules went with it — nothing else on the page used them. */
+.cta.cta-xl { padding:24px 52px; font-size:23px; gap:12px; margin-top:8px; }
+.cta.cta-xl svg { width:23px; height:23px; }
+@media (max-width:520px){ .cta.cta-xl { padding:20px 34px; font-size:19px; } }
+.price-line { color:var(--text-mid); font-size:15.5px; line-height:1.55; margin:24px auto 0; max-width:500px; }
+.price-line b { color:var(--text); font-weight:600; }
 
 /* ---------- faq ---------- */
 .faq-list { max-width:760px; margin:44px auto 0; }
