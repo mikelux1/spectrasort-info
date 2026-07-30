@@ -142,6 +142,12 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 .shot-pair .arrow { font-size:30px; color:var(--sp-amber); font-family:var(--font-display); }
 .shot-cap { text-align:center; font-size:13px; color:var(--text-low); margin-top:14px; }
 
+/* ---------- wheel-shot: Studio's balance wheel (v3.3) ----------
+   Not a phone capture — a 920x852 cropped UI panel, so it needs a wider slot than
+   the 320px .shot and no cap/fade, since nothing is being cut off. */
+.wheel-shot { width:min(460px, 92vw); margin:0 auto; }
+.wheel-shot .screen-card { border-radius:24px; }
+
 /* ---------- taste-fan: three alternative profiles as one image (v3.3) ----------
    Staged like ASC screenshot 02-yourtaste.png — the named profile in front, two
    differently-named ones angled back and clipped by the frame edge. The point is

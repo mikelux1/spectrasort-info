@@ -29,7 +29,7 @@
      off each edge and clipped "Undo", "Select" and the 4th template tile. See
      _cmp/ for the three-way comparison. -->
 
-<title>SpectraSort — AI Photo Picker for iPhone | Your Best Photos, Found</title>
+<title>SpectraSort — On-Device AI Photo Picker for iPhone | Your Best Photos, Found</title>
 <meta name="description" content="Search shows you matches. SpectraSort shows you your best. An AI photo picker that finds your best shots — by phrase, by example, by your own taste — entirely on your iPhone. Nothing uploaded, no account. Free for 5 sorts a week; $19.99 once, no subscription.">
 <meta name="keywords" content="ai photo picker, photo picker iPhone, find best photos, photo sorter, duplicate photos, similar photos, free up storage iPhone, on-device AI, private photo app, camera roll cleanup, SpectraSort">
 <meta name="author" content="Mike Lu">
@@ -193,7 +193,7 @@
 <section id="tools" class="rise">
   <div class="container">
     <div class="rv">
-      <span class="eyebrow">Toolbox</span>
+      <span class="eyebrow">AI photo toolbox</span>
       <h2>Six ways in. <span class="grad-text">One tap each.</span></h2>
     </div>
     <div class="tools-grid rv">
@@ -230,7 +230,7 @@
   <div class="container">
     <div class="feature">
       <div class="rv">
-        <span class="eyebrow">Your Taste — the part nobody else has</span>
+        <span class="eyebrow">Your Taste — the only app that does this</span>
         <h2>It learns <span class="grad-text">what you'd have picked.</span></h2>
         <p>Every review teaches it. The app builds a personalized profile around your taste. What it picks starts to look like what you'd have picked yourself.</p>
         <p>Pause its learning, reset it, or sharpen it. Save as many profiles as you like.</p>
@@ -348,7 +348,7 @@
 <section id="discover">
   <div class="container">
     <div class="section-head rv" style="margin-bottom:44px;">
-      <span class="eyebrow">Discover</span>
+      <span class="eyebrow">Discover — scenes &amp; timeline</span>
       <h2>Face the library <span class="grad-text">one piece at a time.</span></h2>
       <p>Scenes gather your trips, themes and series on their own. A Timeline takes you through your days, months and years.</p>
     </div>
@@ -401,13 +401,27 @@
   <div class="container">
     <div class="feature">
       <div class="rv">
-        <span class="eyebrow">Studio</span>
+        <span class="eyebrow">Studio — custom controls</span>
         <h2>When you want <span class="grad-text">the controls.</span></h2>
         <p>Seven quality axes to adjust. Up to three subjects. A balance wheel to trade subject match against quality. Bookmark as customized sort profiles.</p>
       </div>
       <div class="rv">
-        <div class="shot">
-          <div class="screen-card capped" style="--cap:500px"><img src="images/shots/studio.jpg" alt="The Studio tab — quality focus axes, the weight wheel, subjects and saved profiles" loading="lazy" width="800" height="1734"></div>
+        <!-- The balance wheel from the v2 site, re-encoded for v3.3. Studio's copy is
+             about a wheel that trades subject match against quality, and this is the
+             only asset that shows the trade happening: Top Subjects falls 70% -> 20%
+             while the Quality Signature radar grows 30% -> 80%. A still of the Studio
+             tab could only show one position of it.
+             Not a phone-shaped capture — it is a cropped UI panel at 920x852, so it
+             gets its own wider wrapper instead of the 320px .shot slot, and no cap or
+             fade (nothing is being cut off). -->
+        <div class="wheel-shot">
+          <div class="screen-card">
+            <video class="screen-loop" src="video/web-studio-wheel.mp4"
+                   poster="images/shots/studio-wheel-poster.jpg"
+                   loop muted playsinline preload="none"
+                   width="920" height="852"
+                   aria-label="Studio's balance wheel being turned: the Top Subjects weight falls from 70% to 20% while the Quality Signature radar grows from 30% to 80%"></video>
+          </div>
         </div>
       </div>
     </div>
