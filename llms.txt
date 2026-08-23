@@ -74,6 +74,20 @@ It clears the photos you tell it to, which is where most camera-roll storage goe
 - [Terms of Use](https://spectrasort.app/terms)
 - Support: spectrasortapp@gmail.com
 
+## Guides and comparisons
+
+- [AI photo picker for iPhone](https://spectrasort.app/ai-photo-picker-iphone/) — what an AI photo picker is; ranking vs matching
+- [Photo culling on iPhone](https://spectrasort.app/photo-culling-iphone/) — the full cull workflow on the phone
+- [Choosing a photo picker](https://spectrasort.app/best-photo-picker/) — a 5-question checklist for judging any picker app
+- [Find your best photos on iPhone](https://spectrasort.app/find-best-photos-iphone/) — by phrase, by example, or by taste
+- [Duplicate photo finder for iPhone](https://spectrasort.app/duplicate-photo-finder-iphone/) — exact copies, bursts and look-alikes
+- [AI photo organizer for iPhone](https://spectrasort.app/photo-organizer-iphone/) — Scenes, Timeline, and ranked picking
+- [Private AI photo app](https://spectrasort.app/private-ai-photo-app/) — the on-device architecture in detail
+- [SpectraSort vs Apple Photos](https://spectrasort.app/ai-photo-organizer-vs-apple-photos/) — browsing/storage vs picking
+- [SpectraSort vs Google Photos](https://spectrasort.app/spectrasort-vs-google-photos/) — cloud library vs on-device picker
+- [Photo picking vs photo culling](https://spectrasort.app/ai-photo-picker-vs-photo-culling/) — the two terms, mapped
+- [How to pick the best photos from your camera roll](https://spectrasort.app/how-to-pick-best-photos-from-camera-roll/) — manual and assisted methods
+
 ## Version
 
 Current version: 3.0 (July 2026). iPhone, iOS 18.5 or later.
