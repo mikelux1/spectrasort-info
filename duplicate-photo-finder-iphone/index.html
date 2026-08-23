@@ -60,7 +60,7 @@
       "name": "How is this different from Apple's built-in duplicate finder?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Apple Photos' Duplicates album merges exact and near-exact copies of the same shot. SpectraSort also stacks bursts, retakes and look-alikes — frames that are different files of the same moment — and flags the sharpest in each stack. That's where most of the clutter actually is."
+        "text": "Apple Photos' Duplicates album merges exact and near-exact copies of the same shot. SpectraSort also stacks bursts, retakes and look-alikes, which are different files of the same moment, and flags the sharpest in each stack. Those account for most of the clutter."
       }
     },
     {
@@ -76,7 +76,7 @@
       "name": "Does deleting duplicates free up storage right away?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Not immediately — that's an iOS behavior, not an app choice. Deleted photos sit in Recently Deleted for up to 30 days before the space is reclaimed, unless you empty that album yourself. SpectraSort is upfront about this instead of showing an inflated “GB freed” figure."
+        "text": "Not immediately, and that's iOS behavior rather than an app choice. Deleted photos sit in Recently Deleted for up to 30 days before the space is reclaimed, unless you empty that album yourself. SpectraSort says so up front instead of showing an inflated number."
       }
     },
     {
@@ -84,7 +84,7 @@
       "name": "Can it find similar photos, not just duplicates?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes — that's the same engine. Point Like This Photo at any picture to rank the whole library by similarity to it."
+        "text": "Yes, it's the same engine. Point Like This Photo at any picture to rank the whole library by similarity to it."
       }
     },
     {
@@ -126,7 +126,7 @@
   <div class="container">
     <div class="crumbs"><a href="/">SpectraSort</a><span class="sep">&#8250;</span>Duplicate photo finder</div>
     <h1>The duplicate finder that sees <span class="grad-text">near-misses.</span></h1>
-    <p class="lead">Exact duplicates are the easy part — iOS already merges those. The real clutter is the eleven takes of the same sunset. SpectraSort stacks duplicates, bursts and look-alikes together, flags the sharpest, and lets you clear a whole stack in one decision.</p>
+    <p class="lead">Exact duplicates are the easy part; iOS already merges those. The real clutter is the fifth, ninth and nineteenth take of the same shot. SpectraSort stacks duplicates, bursts and look-alikes together, flags the sharpest in each stack, and lets you clear the rest in one decision.</p>
     <div>
       <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
         Download on the App Store
@@ -143,11 +143,11 @@
 
 <section class="slab">
   <div class="container prose rv">
-    <h2>Three kinds of "duplicate" — only one gets found by default</h2>
+    <h2>Three kinds of "duplicate"</h2>
     <ul>
       <li><b>Exact copies</b> — same file saved twice. Apple Photos' built-in Duplicates album detects and merges these (and near-exact variants) already.</li>
-      <li><b>Bursts and retakes</b> — eleven frames of the same moment, seconds apart, none of them byte-identical. Built-in tools leave these alone; they're most of the clutter.</li>
-      <li><b>Look-alikes</b> — the same shot of the same skyline, taken months apart. Invisible to any exact-match scan.</li>
+      <li><b>Bursts and retakes</b>: many frames of the same moment, seconds apart, none of them byte-identical. Built-in tools leave these alone, and they make up most of the clutter.</li>
+      <li><b>Look-alikes</b>: the same shot of the same skyline, taken months apart. No exact-match scan will ever connect them.</li>
     </ul>
     <p>SpectraSort's Dedupe tool targets all three, because it compares what's <em>in</em> the photos, not the files.</p>
   </div>
@@ -159,9 +159,9 @@
       <div class="rv prose">
         <span class="eyebrow">Stacked, scored, settled</span>
         <h2>Each repeated moment <span class="grad-text">costs one decision.</span></h2>
-        <p>Duplicates, bursts and look-alikes arrive already grouped into stacks with the sharpest frame flagged. You pick the keeper — or accept the flag — and the stack is settled.</p>
-        <p>The capture here is a real pass, not a mockup: 315 photos gathered into stacks — &times;2s, &times;12s, and one rose photographed <b>19 times</b> — each stack wearing its count and its top score.</p>
-        <p>Near-identical frames sit on a single wheel: roll between them without leaving the photo, compare, take the one you want. Then one batch: keepers stay, the rest cleared through the system confirmation dialog. Nothing is ever deleted without your tap.</p>
+        <p>Dedupe hands you stacks, not a list. Each group of repeats comes with the sharpest frame flagged; you accept the flag or pick a different keeper, and the stack is settled.</p>
+        <p>The screenshot is from a real pass: 315 photos pulled into stacks, most of them pairs, a few a dozen deep, and one rose photographed <b>19 times</b>. Each stack shows its count and its top score.</p>
+        <p>Inside a stack, the takes sit on a wheel, so you can roll through them without leaving the photo. When you're done, one batch clears the rejects through the system confirmation dialog. Nothing is deleted without your tap.</p>
       </div>
       <div class="rv">
         <div class="shot">
@@ -186,14 +186,14 @@
 <section class="slab">
   <div class="container prose rv">
     <h2>Straight answers about storage</h2>
-    <p>Cleaning apps love a big “you freed 4.2 GB!” number. On iOS it isn't true at the moment of deletion: deleted photos move to <b>Recently Deleted</b> and the space comes back when that album empties — after 30 days, or when you empty it yourself. SpectraSort tells you that instead of showing a number it can't stand behind.</p>
-    <p>It also only ever touches your photo library — never the rest of your phone. And the comparing happens on the iPhone's Neural Engine: your photos are never uploaded to be scanned.</p>
+    <p>Cleaning apps love a big “you freed 4.2 GB!” number. On iOS that number isn't true at the moment of deletion. Deleted photos move to <b>Recently Deleted</b>, and the space comes back when that album empties, either after 30 days or when you empty it yourself. SpectraSort tells you that instead of showing a figure it can't stand behind.</p>
+    <p>It also touches only your photo library, never the rest of your phone. The comparison itself runs on the iPhone's Neural Engine, so your photos are never uploaded to be scanned.</p>
     <div class="callout">
-      <div class="co-title">Where it doesn't help — honestly</div>
+      <div class="co-title">Where it won't help</div>
       <ul>
         <li>iPhone only, iOS 18.5 or later. No iPad, Android or desktop version.</li>
-        <li>The first index of a very large library takes a while — it's a one-time cost.</li>
-        <li>Deleted photos sit in iOS's Recently Deleted for 30 days, so storage comes back later — SpectraSort won't show a fake “GB freed” number.</li>
+        <li>The first index of a big library takes a while. It only happens once.</li>
+        <li>Deleted photos spend 30 days in iOS's Recently Deleted album, so the storage comes back later, not right away. SpectraSort doesn't show a “GB freed” number because it would be a guess.</li>
       </ul>
     </div>
   </div>
@@ -204,7 +204,7 @@
     <div class="rv">
       <span class="eyebrow">Pricing</span>
       <h2>Free to try. <span class="grad-text">$19.99 once</span> to keep.</h2>
-      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five full sorts a week, free forever — no account, no credit card. Premium is a single purchase for unlimited sorts and Studio's controls. No subscription. Ever. Built by an indie dev who uses it daily.</p>
+      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five sorts a week are free, forever, with no account and no credit card. Premium is a single $19.99 purchase that removes the cap and unlocks Studio. No subscription, ever. Built by an indie dev who uses it daily.</p>
       <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
         Download on the App Store
       </a>
@@ -219,10 +219,10 @@
       <h2>Duplicate questions.</h2>
     </div>
     <div class="faq-list rv">
-      <details class="faq-item"><summary>How is this different from Apple's built-in duplicate finder?</summary><div class="faq-answer">Apple Photos' Duplicates album merges exact and near-exact copies of the same shot. SpectraSort also stacks bursts, retakes and look-alikes — frames that are different files of the same moment — and flags the sharpest in each stack. That's where most of the clutter actually is.</div></details>
+      <details class="faq-item"><summary>How is this different from Apple's built-in duplicate finder?</summary><div class="faq-answer">Apple Photos' Duplicates album merges exact and near-exact copies of the same shot. SpectraSort also stacks bursts, retakes and look-alikes, which are different files of the same moment, and flags the sharpest in each stack. Those account for most of the clutter.</div></details>
       <details class="faq-item"><summary>Can it delete photos without asking?</summary><div class="faq-answer">No. Nothing is applied until you tap, and every deletion goes through the system Photos confirmation dialog into Recently Deleted, where it stays for 30 days.</div></details>
-      <details class="faq-item"><summary>Does deleting duplicates free up storage right away?</summary><div class="faq-answer">Not immediately — that's an iOS behavior, not an app choice. Deleted photos sit in Recently Deleted for up to 30 days before the space is reclaimed, unless you empty that album yourself. SpectraSort is upfront about this instead of showing an inflated “GB freed” figure.</div></details>
-      <details class="faq-item"><summary>Can it find similar photos, not just duplicates?</summary><div class="faq-answer">Yes — that's the same engine. Point <b>Like This Photo</b> at any picture to rank the whole library by similarity to it. <a href="/find-best-photos-iphone/">Three ways to find your best photos →</a></div></details>
+      <details class="faq-item"><summary>Does deleting duplicates free up storage right away?</summary><div class="faq-answer">Not immediately, and that's iOS behavior rather than an app choice. Deleted photos sit in Recently Deleted for up to 30 days before the space is reclaimed, unless you empty that album yourself. SpectraSort says so up front instead of showing an inflated number.</div></details>
+      <details class="faq-item"><summary>Can it find similar photos, not just duplicates?</summary><div class="faq-answer">Yes, it's the same engine. Point <b>Like This Photo</b> at any picture to rank the whole library by similarity to it. <a href="/find-best-photos-iphone/">Three ways to find your best photos →</a></div></details>
       <details class="faq-item"><summary>Is the duplicate finder free?</summary><div class="faq-answer">Dedupe is one of the six tools, and five sorts a week are free forever. Premium ($19.99 once, no subscription) removes the weekly cap.</div></details>
     </div>
   </div>
@@ -258,7 +258,7 @@
     <div class="foot-grid">
       <div class="foot-col">
         <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">SpectraSort</div>
-        <p>An AI photo picker and photo culling app for iPhone. Runs entirely on your device — nothing uploaded, no account, no subscription.</p>
+        <p>An AI photo picker and culling app for iPhone. It runs entirely on your device: nothing uploaded, no account, no subscription.</p>
       </div>
       <div class="foot-col">
         <div class="fc-title">Guides</div>

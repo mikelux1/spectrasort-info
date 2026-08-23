@@ -60,7 +60,7 @@
       "name": "How long does it take to cull thousands of photos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The one slow step is the first index — up to 100 photos a second on recent iPhones, done once. After that every sort returns near-instantly, and your review time is the real cost. Ranked results and stacked similars are what shrink it: you review winners and settle whole stacks in one gesture."
+        "text": "The only slow step is the first index, which runs at up to 100 photos a second on recent iPhones and only happens once. After that, sorts come back right away and your own review time is the real cost. Ranking and stacking are what cut it down: you spend your attention on the likely keepers, and each stack takes one gesture."
       }
     },
     {
@@ -68,7 +68,7 @@
       "name": "Can it cull automatically?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Autopick will sort a slice for you so you only skim its choices. But nothing is ever applied until you tap, and deletions always go through the system Photos confirmation dialog."
+        "text": "Autopick will make the picks for a slice so you only have to skim them. Nothing is applied until you tap, and deletions go through the system Photos confirmation dialog."
       }
     },
     {
@@ -76,7 +76,7 @@
       "name": "Is culling just deleting photos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — it's deciding. Deleting is the last, optional step. SpectraSort's Batch Process can just as well save your picks to an album or the share sheet and leave everything else untouched. See photo picking vs culling for the full distinction."
+        "text": "No. Culling is deciding; deleting is an optional last step. Batch Process can just as easily save your picks to an album or the share sheet and leave everything else alone. See photo picking vs culling for more on the distinction."
       }
     },
     {
@@ -84,7 +84,7 @@
       "name": "Does deleting culled photos free up storage immediately?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "On iOS, deleted photos move to Recently Deleted and stay there for 30 days before the space is actually reclaimed (or until you empty that album yourself). SpectraSort doesn't display a “you freed N GB” figure because it couldn't honestly claim one at the moment of deletion."
+        "text": "On iOS, deleted photos move to Recently Deleted and stay there for 30 days before the space is reclaimed, unless you empty that album yourself. SpectraSort doesn't show a “you freed N GB” figure, because at the moment of deletion it wouldn't be true yet."
       }
     },
     {
@@ -92,7 +92,7 @@
       "name": "What does it cost?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Five sorts a week are free, forever. Premium is $19.99 once — unlimited sorts plus Studio's full controls. No subscription."
+        "text": "Five sorts a week are free, forever. Premium is $19.99 once, and covers unlimited sorts plus Studio's full controls. No subscription."
       }
     }
   ]
@@ -126,7 +126,7 @@
   <div class="container">
     <div class="crumbs"><a href="/">SpectraSort</a><span class="sep">&#8250;</span>Photo culling on iPhone</div>
     <h1>Photo culling, <span class="grad-text">on your iPhone.</span></h1>
-    <p class="lead">Culling — keeping the best, letting go of the rest — used to mean a desktop, an import and an evening. SpectraSort brings the whole workflow to the phone the photos are already on, and ranks every frame before you swipe a single one.</p>
+    <p class="lead">Culling means keeping the best and letting go of the rest. It used to require a desktop, an import, and a free evening. SpectraSort runs the whole workflow on the phone your photos are already on, and it ranks every frame before you swipe a single one.</p>
     <div>
       <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
         Download on the App Store
@@ -143,9 +143,9 @@
 
 <section class="slab">
   <div class="container prose rv">
-    <h2>Culling is a deciding problem, not a finding problem</h2>
-    <p>Photographers invented culling because every shoot produces far more frames than it should deliver: shoot 500, hand over 40. The camera roll has the same math with none of the tooling — a two-week trip comes home as 1,200 photos, and the only built-in workflow is scrolling.</p>
-    <p>Desktop culling tools solved this for professionals with ratings, side-by-side compare and keyboard-speed review. But your camera roll doesn't live on a desktop. SpectraSort rebuilds that workflow for the phone — and adds the thing desktop cullers never had: the frames arrive <b>already ranked</b>.</p>
+    <h2>Why culling exists</h2>
+    <p>Photographers cull because a shoot always produces more frames than it should deliver. You shoot 500 and hand over 40. A camera roll has the same math and none of the tooling: a two-week trip comes home as 1,200 photos, and the built-in way to deal with them is scrolling.</p>
+    <p>Desktop tools solved this for working photographers, with ratings, side-by-side compares, and keyboard-speed review. Your camera roll lives somewhere else. SpectraSort rebuilds that workflow for the phone, and adds something the desktop tools never had: the frames show up <b>already ranked</b>.</p>
   </div>
 </section>
 
@@ -155,9 +155,9 @@
       <div class="rv prose">
         <span class="eyebrow">Ranked before you review</span>
         <h2>The review starts at the <span class="grad-text">top of the pile.</span></h2>
-        <p>Point a sort at a trip, a scene or a search and every frame comes back scored — sharpness, exposure, composition, and (if you ask) how much it looks like the photos you usually keep. The winners are at the top before you've made a single decision.</p>
-        <p>The first sort builds an on-device index at up to 100 photos a second on recent iPhones. Every sort after runs on that index and finishes near-instantly, even across thousands of photos.</p>
-        <p>Want different criteria? <b>Studio</b> exposes seven quality axes, a wheel that trades subject match against quality, and saveable sort profiles.</p>
+        <p>Point a sort at a trip, a scene, or a search, and every frame comes back scored for sharpness, exposure and composition. Ask it to, and it will also weigh how much each photo looks like the ones you usually keep. The strongest frames are on top before you've made a single decision.</p>
+        <p>The first sort builds an index on the phone, at up to 100 photos a second on recent iPhones. Later sorts run against that index and finish in a moment, even across thousands of photos.</p>
+        <p>If you want different criteria, <b>Studio</b> has seven quality axes, a wheel that trades subject match against quality, and profiles you can save.</p>
       </div>
       <div class="rv">
         <div class="shot">
@@ -174,8 +174,8 @@
       <div class="rv prose">
         <span class="eyebrow">Bursts and retakes</span>
         <h2>Nineteen takes of one moment <span class="grad-text">cost one decision.</span></h2>
-        <p>The most expensive part of a manual cull is the near-identicals: take after take of the same shot, each demanding a full-price comparison. SpectraSort stacks duplicates, bursts and look-alikes before the review starts.</p>
-        <p>Near-identical frames arrive on a single wheel — roll between them without leaving the photo, keep the one you want, and the whole stack is settled. The capture here is real: the same rose, 19 takes, one wheel — <em>Similar 1 of 19</em>.</p>
+        <p>Near-identical shots are what make manual culls slow, because every extra take is another comparison. SpectraSort groups duplicates, bursts and look-alikes into stacks before the review starts.</p>
+        <p>A stack sits on a single wheel. You roll through the takes without leaving the photo, keep the one you want, and the stack is done. The screenshot is from a real pass: the same rose, 19 takes, one wheel.</p>
         <p>Then the swipes: right to pick, down to keep, left to let go. Or let Autopick sort the slice and just skim what it chose.</p>
       </div>
       <div class="rv">
@@ -191,24 +191,24 @@
   <div class="container">
     <div class="rv" style="text-align:center;"><span class="eyebrow">The culling loop</span></div>
     <div class="stats rv" style="margin-top:18px;">
-      <div class="stat"><div class="num">Slice</div><div class="label">Never face the whole library. Scenes gather trips and themes automatically; the Timeline drills year to month to day.</div></div>
+      <div class="stat"><div class="num">Slice</div><div class="label">Don't start with the whole library. Scenes gathers trips and themes on its own, and the Timeline goes year to month to day.</div></div>
       <div class="stat"><div class="num">Swipe</div><div class="label">Ranked results, stacked similars, three gestures. Autopick if you'd rather skim than swipe.</div></div>
-      <div class="stat"><div class="num">Finish</div><div class="label">Batch Process in one screen: picks to an album or the share sheet, the rest cleared — with the system confirmation dialog.</div></div>
+      <div class="stat"><div class="num">Finish</div><div class="label">Batch Process puts your picks in an album or the share sheet and clears the rest, behind the system confirmation dialog.</div></div>
     </div>
   </div>
 </section>
 
 <section class="slab">
   <div class="container prose rv">
-    <h2>Private, and honest about the details</h2>
-    <p>The entire pipeline — indexing, scoring, your taste profile — runs on the iPhone's Neural Engine. Nothing is uploaded and there's no account. <a href="/private-ai-photo-app/">How the on-device architecture works →</a></p>
+    <h2>The fine print</h2>
+    <p>Indexing, scoring and the taste profile all run on the iPhone's Neural Engine. Nothing gets uploaded and there's no account. <a href="/private-ai-photo-app/">More on how that works →</a></p>
     <div class="callout">
-      <div class="co-title">Where it doesn't help — honestly</div>
+      <div class="co-title">Where it won't help</div>
       <ul>
-        <li>Culling speed is still bounded by your decisions — SpectraSort shortens the review, it doesn't replace your judgment (unless you use Autopick, and even then nothing is applied until you tap).</li>
+        <li>Your decisions are still the slow part. SpectraSort shortens the review; it doesn't make the calls for you unless you use Autopick, and even then nothing happens until you tap.</li>
         <li>iPhone only, iOS 18.5 or later. No iPad, Android or desktop version.</li>
-        <li>The first index of a very large library takes a while — it's a one-time cost.</li>
-        <li>Deleted photos sit in iOS's Recently Deleted for 30 days, so storage comes back later — SpectraSort won't show a fake “GB freed” number.</li>
+        <li>The first index of a big library takes a while. It only happens once.</li>
+        <li>Deleted photos spend 30 days in iOS's Recently Deleted album, so the storage comes back later, not right away. SpectraSort doesn't show a “GB freed” number because it would be a guess.</li>
       </ul>
     </div>
   </div>
@@ -219,7 +219,7 @@
     <div class="rv">
       <span class="eyebrow">Pricing</span>
       <h2>Free to try. <span class="grad-text">$19.99 once</span> to keep.</h2>
-      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five full sorts a week, free forever — no account, no credit card. Premium is a single purchase for unlimited sorts and Studio's controls. No subscription. Ever. Built by an indie dev who uses it daily.</p>
+      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five sorts a week are free, forever, with no account and no credit card. Premium is a single $19.99 purchase that removes the cap and unlocks Studio. No subscription, ever. Built by an indie dev who uses it daily.</p>
       <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
         Download on the App Store
       </a>
@@ -234,11 +234,11 @@
       <h2>Photo culling questions.</h2>
     </div>
     <div class="faq-list rv">
-      <details class="faq-item"><summary>How long does it take to cull thousands of photos?</summary><div class="faq-answer">The one slow step is the first index — up to 100 photos a second on recent iPhones, done once. After that every sort returns near-instantly, and your review time is the real cost. Ranked results and stacked similars are what shrink it: you review winners and settle whole stacks in one gesture.</div></details>
-      <details class="faq-item"><summary>Can it cull automatically?</summary><div class="faq-answer">Autopick will sort a slice for you so you only skim its choices. But nothing is ever applied until you tap, and deletions always go through the system Photos confirmation dialog.</div></details>
-      <details class="faq-item"><summary>Is culling just deleting photos?</summary><div class="faq-answer">No — it's deciding. Deleting is the last, optional step. SpectraSort's Batch Process can just as well save your picks to an album or the share sheet and leave everything else untouched. See <a href="/ai-photo-picker-vs-photo-culling/">photo picking vs culling</a> for the full distinction.</div></details>
-      <details class="faq-item"><summary>Does deleting culled photos free up storage immediately?</summary><div class="faq-answer">On iOS, deleted photos move to Recently Deleted and stay there for 30 days before the space is actually reclaimed (or until you empty that album yourself). SpectraSort doesn't display a “you freed N GB” figure because it couldn't honestly claim one at the moment of deletion.</div></details>
-      <details class="faq-item"><summary>What does it cost?</summary><div class="faq-answer">Five sorts a week are free, forever. Premium is $19.99 once — unlimited sorts plus Studio's full controls. No subscription.</div></details>
+      <details class="faq-item"><summary>How long does it take to cull thousands of photos?</summary><div class="faq-answer">The only slow step is the first index, which runs at up to 100 photos a second on recent iPhones and only happens once. After that, sorts come back right away and your own review time is the real cost. Ranking and stacking are what cut it down: you spend your attention on the likely keepers, and each stack takes one gesture.</div></details>
+      <details class="faq-item"><summary>Can it cull automatically?</summary><div class="faq-answer">Autopick will make the picks for a slice so you only have to skim them. Nothing is applied until you tap, and deletions go through the system Photos confirmation dialog.</div></details>
+      <details class="faq-item"><summary>Is culling just deleting photos?</summary><div class="faq-answer">No. Culling is deciding; deleting is an optional last step. Batch Process can just as easily save your picks to an album or the share sheet and leave everything else alone. See <a href="/ai-photo-picker-vs-photo-culling/">photo picking vs culling</a> for more on the distinction.</div></details>
+      <details class="faq-item"><summary>Does deleting culled photos free up storage immediately?</summary><div class="faq-answer">On iOS, deleted photos move to Recently Deleted and stay there for 30 days before the space is reclaimed, unless you empty that album yourself. SpectraSort doesn't show a “you freed N GB” figure, because at the moment of deletion it wouldn't be true yet.</div></details>
+      <details class="faq-item"><summary>What does it cost?</summary><div class="faq-answer">Five sorts a week are free, forever. Premium is $19.99 once, and covers unlimited sorts plus Studio's full controls. No subscription.</div></details>
     </div>
   </div>
 </section>
@@ -248,9 +248,9 @@
     <div class="rv">
       <span class="eyebrow">Keep reading</span>
       <div class="related-grid">
-        <a href="/ai-photo-picker-vs-photo-culling/">Photo picking vs culling<span>Two directions, one decision</span></a>
+        <a href="/ai-photo-picker-vs-photo-culling/">Photo picking vs culling<span>Which one you actually need</span></a>
         <a href="/duplicate-photo-finder-iphone/">Duplicate photo finder<span>Bursts and look-alikes, stacked</span></a>
-        <a href="/ai-photo-picker-iphone/">AI photo picker for iPhone<span>The category, defined</span></a>
+        <a href="/ai-photo-picker-iphone/">AI photo picker for iPhone<span>What a picker actually does</span></a>
       </div>
     </div>
   </div>
@@ -273,7 +273,7 @@
     <div class="foot-grid">
       <div class="foot-col">
         <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">SpectraSort</div>
-        <p>An AI photo picker and photo culling app for iPhone. Runs entirely on your device — nothing uploaded, no account, no subscription.</p>
+        <p>An AI photo picker and culling app for iPhone. It runs entirely on your device: nothing uploaded, no account, no subscription.</p>
       </div>
       <div class="foot-col">
         <div class="fc-title">Guides</div>
