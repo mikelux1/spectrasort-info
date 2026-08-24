@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Educational page: picker vs culling — category-defining query.
+     Part of the v4 SEO landing-page cluster (2026-08-23); template shared
+     with the other /<slug>/ pages, generated alongside them. -->
+
+<title>AI Photo Picker vs Photo Culling: What's the Difference?</title>
+<meta name="description" content="Culling is the photographer's word for subtracting the failures from a shoot. Picking means surfacing the winners from a library. Which tool you need, and what AI changes about both.">
+<meta name="author" content="Mike Lu">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://spectrasort.app/ai-photo-picker-vs-photo-culling/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpectraSort">
+<meta property="og:title" content="AI Photo Picker vs Photo Culling">
+<meta property="og:description" content="Two names for the same decision, and what AI changes about each.">
+<meta property="og:image" content="https://spectrasort.app/og-image.png?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpectraSort — Your best photos, found. A row of nine photos with the top three ringed and scored.">
+<meta property="og:url" content="https://spectrasort.app/ai-photo-picker-vs-photo-culling/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="AI Photo Picker vs Photo Culling">
+<meta name="twitter:description" content="Two names for the same decision, and what AI changes about each.">
+<meta name="twitter:image" content="https://spectrasort.app/og-image.png?v=3">
+
+<meta name="apple-itunes-app" content="app-id=6757512134">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/app-icon-flat.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/app-icon-flat.png">
+<meta name="theme-color" content="#0B0B0E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SpectraSort",
+      "item": "https://spectrasort.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Picking vs culling",
+      "item": "https://spectrasort.app/ai-photo-picker-vs-photo-culling/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is culling just deleting photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Culling is deciding, and deletion is an optional last step. A cull can end in an album of keepers with nothing deleted at all."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a culling tool if I'm not a photographer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The camera roll is the largest unculled photo archive most people own. If your library has thousands of photos and repeated moments, you have a photographer's problem without the photographer's tooling. That's the situation these apps exist for."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does AI actually do in culling?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Three things. It ranks frames before you look, so review starts at the top of the pile. It stacks near-identicals, so a burst is one decision. And in SpectraSort's case it learns your taste from your keeps and rejects, so the ranking gets personal over time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can one app do both?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "That's how SpectraSort is built: rank first, swipe second, batch to finish. Five sorts a week are free, and $19.99 once removes the cap. No subscription."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <a class="brand" href="/"><img src="/images/app-icon-flat.png" alt="">SpectraSort</a>
+    <div class="nav-links">
+      <a href="/">Overview</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="cta-small" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Download
+    </a>
+  </div>
+</nav>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/">SpectraSort</a><span class="sep">&#8250;</span>Picking vs culling</div>
+    <h1>Photo picking vs <span class="grad-text">photo culling.</span></h1>
+    <p class="lead">They're two names for the same decision, approached from opposite ends. Culling is the photographer's word, and it means subtracting the failures. Picking is the everyday version, and it means surfacing the winners. The difference is worth understanding, because it tells you what kind of tool you need.</p>
+    <div>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Download on the App Store
+      </a>
+      <span class="hero-meta">Free &middot; iPhone &middot; iOS 18.5+</span>
+    </div>
+    <div class="trust-chips">
+      <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
+      <span class="chip"><b>Free</b> 5 sorts a week</span>
+      <span class="chip"><b>$19.99 once</b> — no subscription</span>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>Culling: the subtractive tradition</h2>
+    <p>Culling comes out of professional workflow, where a shoot produces 500 frames and the client gets 40. The work is <b>subtractive</b>: find and remove the failures, the soft focus and the closed eyes and the redundant takes, until what's left is the deliverable. Traditionally it happens on a desktop, in a rating tool, working through the shoot in order like a contact sheet.</p>
+    <h2 style="margin-top:34px;">Picking: the additive question</h2>
+    <p>Picking starts from the other end and asks which photos, out of everything here, are <b>worth keeping</b>. It's the camera-roll version of the problem. There's no client and no deliverable, just a library to live with, and you don't need every failure removed. You need the winners surfaced, which makes it a <em>ranking</em> problem.</p>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="prose rv"><h2>The same decision, mapped</h2></div>
+    <div class="cmp-wrap rv">
+      <table class="cmp">
+        <thead><tr><th></th><th>Culling</th><th>Picking</th></tr></thead>
+        <tbody>
+          <tr><th>Direction</th><td>Subtractive — remove failures</td><td>Additive — surface winners</td></tr>
+          <tr><th>Unit of work</th><td>A shoot or a trip</td><td>A whole library</td></tr>
+          <tr><th>The question</th><td>“What fails?”</td><td>“What wins?”</td></tr>
+          <tr><th>Traditional tools</th><td>Desktop rating apps</td><td>Search + favorites, by hand</td></tr>
+          <tr><th>What AI changes</th><td>Frames arrive pre-ranked and stacked, so the review is short</td><td>Scoring — including scoring against <em>your</em> taste, not a generic model's</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>Where they converge</h2>
+    <p>In practice the two are one loop, and SpectraSort runs it as one loop:</p>
+    <ol>
+      <li><b>Pick first:</b> the slice comes back ranked by quality, your learned taste, or what you asked for. The surfacing half is done before you start.</li>
+      <li><b>Cull second:</b> swipe through the ranked review, right to pick, down to keep, left to let go. Duplicates, bursts and look-alikes come stacked, so each repeated moment is one decision.</li>
+      <li><b>Finish:</b> Batch Process files the picks to an album or the share sheet and clears the rest, through the system dialog.</li>
+    </ol>
+    <p>If you're wondering which one you need, the usual answer is both halves, in that order. <a href="/photo-culling-iphone/">The culling workflow in detail →</a> · <a href="/ai-photo-picker-iphone/">The picking side →</a></p>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container" style="text-align:center;">
+    <div class="rv">
+      <span class="eyebrow">Pricing</span>
+      <h2>Free to try. <span class="grad-text">$19.99 once</span> to keep.</h2>
+      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five sorts a week are free, forever, with no account and no credit card. Premium is a single $19.99 purchase that removes the cap and unlocks Studio. No subscription, ever. Built by an indie dev who uses it daily.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Download on the App Store
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="slab">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Picking &amp; culling.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>Is culling just deleting photos?</summary><div class="faq-answer">No. Culling is deciding, and deletion is an optional last step. A cull can end in an album of keepers with nothing deleted at all.</div></details>
+      <details class="faq-item"><summary>Do I need a culling tool if I'm not a photographer?</summary><div class="faq-answer">The camera roll is the largest unculled photo archive most people own. If your library has thousands of photos and repeated moments, you have a photographer's problem without the photographer's tooling. That's the situation these apps exist for.</div></details>
+      <details class="faq-item"><summary>What does AI actually do in culling?</summary><div class="faq-answer">Three things. It ranks frames before you look, so review starts at the top of the pile. It stacks near-identicals, so a burst is one decision. And in SpectraSort's case it learns your taste from your keeps and rejects, so the ranking gets personal over time.</div></details>
+      <details class="faq-item"><summary>Can one app do both?</summary><div class="faq-answer">That's how SpectraSort is built: rank first, swipe second, batch to finish. Five sorts a week are free, and $19.99 once removes the cap. No subscription.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">Keep reading</span>
+      <div class="related-grid">
+        <a href="/photo-culling-iphone/">Photo culling on iPhone<span>The workflow in detail</span></a>
+        <a href="/ai-photo-picker-iphone/">AI photo picker for iPhone<span>What a picker actually does</span></a>
+        <a href="/how-to-pick-best-photos-from-camera-roll/">Pick your camera roll's best<span>Step-by-step method</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container rv">
+    <h2>Your best photos. <span class="grad-text">Found.</span></h2>
+    <p>iPhone, iOS 18.5 or later.</p>
+    <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Download on the App Store
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">SpectraSort</div>
+        <p>An AI photo picker and culling app for iPhone. It runs entirely on your device: nothing uploaded, no account, no subscription.</p>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Guides</div>
+        <a href="/ai-photo-picker-iphone/">AI photo picker for iPhone</a>
+        <a href="/photo-culling-iphone/">Photo culling on iPhone</a>
+        <a href="/find-best-photos-iphone/">Find your best photos</a>
+        <a href="/how-to-pick-best-photos-from-camera-roll/">Pick the best of your camera roll</a>
+        <a href="/ai-photo-picker-vs-photo-culling/">Photo picking vs culling</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Compare</div>
+        <a href="/best-photo-picker/">Choosing a photo picker</a>
+        <a href="/ai-photo-organizer-vs-apple-photos/">SpectraSort vs Apple Photos</a>
+        <a href="/spectrasort-vs-google-photos/">SpectraSort vs Google Photos</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Tools</div>
+        <a href="/duplicate-photo-finder-iphone/">Duplicate photo finder</a>
+        <a href="/photo-organizer-iphone/">AI photo organizer</a>
+        <a href="/private-ai-photo-app/">Private AI photo app</a>
+        <a href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">Download on the App Store</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div>&copy; 2026 Mike Lu &middot; SpectraSort</div>
+      <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+<script type="module" src="/assets/analytics.js"></script>
+</body>
+</html>

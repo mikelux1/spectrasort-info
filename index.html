@@ -4,34 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- SpectraSort site v3.3-video — 2026-07-29.
-     v3.2 with three static captures replaced by real screen loops cut from the
-     v3.0 device footage (../../spectrasort/4-branding and promo/Video intro/
-     v3.0-cut/). Everything else is byte-identical to v3.2 / the live root.
+<!-- SpectraSort site v4 — 2026-08-23. SEO restructure over v3.3-video.
+     What changed and why (per the Aug 2026 SEO review):
+       - <title>/description name the categories in plain English: AI photo
+         picker + photo culling. The brand line stays in the H1; the semantic
+         label lives here, where Google reads it.
+       - Your Taste moved directly under the hero, and the hero lead now makes
+         the taste argument ("Would YOU keep it?") — it is the differentiator,
+         so it goes first, not fifth.
+       - Pricing is two cards (Try it free / Premium $19.99 once) instead of a
+         single line — the no-subscription proposition is the conversion weapon.
+       - New "People use SpectraSort to…" section: four scenario cards, each
+         linking to a matching landing page. Quote slots stay empty until there
+         are REAL reviews to put in them — nothing on this site is invented.
+       - Footer is now link columns: every landing page is one hop from every
+         page, which is most of the internal-linking work.
+     The landing pages themselves live in /<slug>/index.html (11 of them, see
+     sitemap.xml) and share assets/site.css.
 
-     Why these three and no others: each one is a section whose copy claims a
-     MOTION a screenshot cannot show.
-       hero          #top          a tool opening and a library re-ranking
-       find-subject  #find-subject the act of typing, and a grid filling
-       done          #done         the Similar wheel rolling between two takes
-     The other captures (taste, like-this, discover, studio, privacy) are all
-     arguing about a STATE, which a still shows perfectly well — and three
-     autoplaying loops on one page is already the ceiling before the page reads
-     as noisy. 588 KB of video total.
+     v3.3 video notes still apply: three screen loops (hero, find-subject,
+     done), 660x1344 = half a 1320x2868 capture minus the 180px status bar,
+     silent, poster-backed, play only in view, still under
+     prefers-reduced-motion. See assets/site.js. -->
 
-     Each loop is silent, captionless, poster-backed, plays only in view, and
-     stays a still frame under prefers-reduced-motion. See assets/site.js.
-
-     The loops are 660x1344 = exactly half of a 1320x2868 device capture minus
-     its 180px status bar, so the side crop is ZERO and the framing matches the
-     800x1738 stills these cards were designed around. An earlier pass used
-     660 -> 640x1386, a narrower aspect than the source, which silently took 39px
-     off each edge and clipped "Undo", "Select" and the 4th template tile. See
-     _cmp/ for the three-way comparison. -->
-
-<title>SpectraSort — On-Device AI Photo Picker for iPhone | Your Best Photos, Found</title>
-<meta name="description" content="Search shows you matches. SpectraSort shows you your best. An AI photo picker that finds your best shots — by phrase, by example, by your own taste — entirely on your iPhone. Nothing uploaded, no account. Free for 5 sorts a week; $19.99 once, no subscription.">
-<meta name="keywords" content="ai photo picker, photo picker iPhone, find best photos, photo sorter, duplicate photos, similar photos, free up storage iPhone, on-device AI, private photo app, camera roll cleanup, SpectraSort">
+<title>SpectraSort — AI Photo Picker &amp; Photo Culling App for iPhone</title>
+<meta name="description" content="Find your best photos automatically with on-device AI. SpectraSort learns your taste, finds similar shots, removes duplicates and ranks your camera roll. Private, no subscription.">
+<meta name="keywords" content="ai photo picker, photo culling iPhone, photo culling app, find best photos iPhone, photo organizer iPhone, duplicate photo finder, similar photos, on-device AI, private photo app, camera roll cleanup, SpectraSort">
 <meta name="author" content="Mike Lu">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://spectrasort.app">
@@ -39,7 +37,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SpectraSort">
 <meta property="og:title" content="SpectraSort — Your Best Photos, Found">
-<meta property="og:description" content="An AI photo picker that ranks your camera roll by quality and by your own taste — entirely on your iPhone. No uploads, no account.">
+<meta property="og:description" content="An AI photo picker and culling app that ranks your camera roll by quality and by your own taste — entirely on your iPhone. No uploads, no account, no subscription.">
 <meta property="og:image" content="https://spectrasort.app/og-image.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -62,7 +60,7 @@
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
   "name": "SpectraSort",
-  "alternateName": "SpectraSort — AI Photo Picker",
+  "alternateName": "SpectraSort — AI Photo Picker & Photo Culling for iPhone",
   "operatingSystem": "iOS 18.5+",
   "applicationCategory": "PhotographyApplication",
   "applicationSubCategory": "Photo Sorting",
@@ -154,9 +152,9 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">On-device AI photo picker · iPhone</span>
+        <span class="eyebrow">AI photo picker &amp; photo culling · iPhone</span>
         <h1>Your best photos. <span class="grad-text">Found.</span></h1>
-        <p class="lead">Any phone can search your photos. SpectraSort ranks them — by quality, by your taste, by what you asked for — and hands you the winners.</p>
+        <p class="lead">Most photo apps ask “is this a good photo?” SpectraSort asks “would <em>you</em> keep it?” Every time you keep or reject a photo, it learns — and your camera roll comes back ranked, winners first.</p>
         <div>
           <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
@@ -189,44 +187,12 @@
   </div>
 </section>
 
-<!-- ============================ TOOLBOX ============================ -->
-<section id="tools" class="rise">
-  <div class="container">
-    <div class="rv">
-      <span class="eyebrow">AI photo toolbox</span>
-      <h2>Six ways in. <span class="grad-text">One tap each.</span></h2>
-    </div>
-    <div class="tools-grid rv">
-      <div class="tool-chip">
-        <div class="tcover"><img src="images/art/cover-taste.jpg" alt="" loading="lazy"></div>
-        <div class="tbody"><div class="tname">Your Taste</div><div class="tdesc">Built from the photos you keep and the ones you don't.</div></div>
-      </div>
-      <div class="tool-chip">
-        <div class="tcover"><img src="images/art/cover-best.jpg" alt="" loading="lazy"></div>
-        <div class="tbody"><div class="tname">Best Shots</div><div class="tdesc">Sharpest, best-exposed, best-composed first. Lean technical or artistic.</div></div>
-      </div>
-      <div class="tool-chip">
-        <div class="tcover"><img src="images/art/cover-subject.jpg" alt="" loading="lazy"></div>
-        <div class="tbody"><div class="tname">Find a Subject</div><div class="tdesc">Search anything you can put into words, such as "hot air balloons".</div></div>
-      </div>
-      <div class="tool-chip">
-        <div class="tcover"><img src="images/art/cover-image.jpg" alt="" loading="lazy"></div>
-        <div class="tbody"><div class="tname">Like This Photo</div><div class="tdesc">Point at one photo, get everything like it.</div></div>
-      </div>
-      <div class="tool-chip">
-        <div class="tcover"><img src="images/art/cover-dedupe.jpg" alt="" loading="lazy"></div>
-        <div class="tbody"><div class="tname">Dedupe</div><div class="tdesc">Duplicates, bursts and look-alikes, stacked to clear.</div></div>
-      </div>
-      <div class="tool-chip">
-        <div class="tcover"><img src="images/art/cover-place.jpg" alt="" loading="lazy"></div>
-        <div class="tbody"><div class="tname">Photos of a location</div><div class="tdesc">Pin a place, see everything shot there.</div></div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- ============================ YOUR TASTE ============================ -->
-<section id="taste">
+<!-- v4: moved from fifth position to directly under the hero. It is the one
+     thing no other app does, and the hero lead now sets it up — so the first
+     section has to pay the claim off. Takes .rise so the hero/taste boundary
+     reads; the Toolbox below drops .rise to keep the bands alternating. -->
+<section id="taste" class="rise">
   <div class="container">
     <div class="feature">
       <div class="rv">
@@ -261,6 +227,42 @@
           </div>
         </div>
         <p class="shot-cap">Your taste profile learns what you pick, then sorts your photos that way.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ TOOLBOX ============================ -->
+<section id="tools">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">AI photo toolbox</span>
+      <h2>Six ways in. <span class="grad-text">One tap each.</span></h2>
+    </div>
+    <div class="tools-grid rv">
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-taste.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Your Taste</div><div class="tdesc">Built from the photos you keep and the ones you don't.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-best.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Best Shots</div><div class="tdesc">Sharpest, best-exposed, best-composed first. Lean technical or artistic.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-subject.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Find a Subject</div><div class="tdesc">Search anything you can put into words, such as "hot air balloons".</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-image.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Like This Photo</div><div class="tdesc">Point at one photo, get everything like it.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-dedupe.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Dedupe</div><div class="tdesc">Duplicates, bursts and look-alikes, stacked to clear.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="images/art/cover-place.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Photos of a location</div><div class="tdesc">Pin a place, see everything shot there.</div></div>
       </div>
     </div>
   </div>
@@ -350,7 +352,7 @@
     <div class="section-head rv" style="margin-bottom:44px;">
       <span class="eyebrow">Discover — scenes &amp; timeline</span>
       <h2>Face the library <span class="grad-text">one piece at a time.</span></h2>
-      <p>Scenes gather your trips, themes and series on their own. A Timeline takes you through your days, months and years.</p>
+      <p>Scenes gather your trips, themes and series on their own. A Timeline takes you through your days, months and years. <a href="/photo-organizer-iphone/" style="color:var(--sp-amber);text-decoration:none;">How the organizing works &rarr;</a></p>
     </div>
     <div class="shot-pair rv">
       <div class="shot">
@@ -443,6 +445,49 @@
   </div>
 </section>
 
+<!-- =========================== USE CASES (v4) =========================== -->
+<!-- The "proof machine". Four jobs people hire the app for, each linking to
+     the landing page that works that job in full — so this section is also
+     the homepage's internal-linking hub for the guide cluster.
+     NO invented quotes. When real App Store reviews exist, each card gets a
+     one-line quote under its copy; until then the scenario is written in
+     second person, which claims nothing about any specific user. -->
+<section id="uses">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">What people use it for</span>
+      <h2>Four jobs. <span class="grad-text">One app.</span></h2>
+      <p>The captures on this page and in the guides are real sorts, not mockups: 1,708 photos ranked against one example, a taste profile built from 1,082 reviews, and a dedupe pass that caught the same rose 19 times.</p>
+    </div>
+    <div class="usecase-grid rv">
+      <a class="usecase" href="/photo-culling-iphone/">
+        <span class="uc-kicker">Cull a trip</span>
+        <h3>1,200 vacation photos &rarr; the album worth showing</h3>
+        <p>Point a sort at the trip and review the winners instead of swiping through every take. Duplicates and bursts come pre-stacked, so each moment is one decision.</p>
+        <span class="uc-more">How photo culling works on iPhone &rarr;</span>
+      </a>
+      <a class="usecase" href="/find-best-photos-iphone/">
+        <span class="uc-kicker">Find old favorites</span>
+        <h3>The photo you know exists, but can't find</h3>
+        <p>Describe it in words, or point at a photo like it. Matches come back ranked best-first, including ones buried three years deep.</p>
+        <span class="uc-more">How to find your best photos &rarr;</span>
+      </a>
+      <a class="usecase" href="/duplicate-photo-finder-iphone/">
+        <span class="uc-kicker">Clear duplicates</span>
+        <h3>19 versions of the same shot, one keeper</h3>
+        <p>Exact duplicates, bursts and near-identical takes come grouped, with the sharpest flagged. In the demo library one rose turned up 19 times; one decision settled the whole stack.</p>
+        <span class="uc-more">How the duplicate finder works &rarr;</span>
+      </a>
+      <a class="usecase" href="/ai-photo-picker-iphone/">
+        <span class="uc-kicker">Build your collection</span>
+        <h3>A camera roll that learns what you like</h3>
+        <p>Every keep and reject sharpens your taste profile. After a while, sorting by Your Taste starts producing the album you'd have hand-picked.</p>
+        <span class="uc-more">What an AI photo picker does &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- =========================== THREE-STEP SUMMARY =========================== -->
 <!-- Moved here 2026-07-29. It used to close the "Why not just search?" section,
      which is gone. Sitting directly above the price it does a different and better
@@ -464,14 +509,43 @@
 <section id="pricing" class="rise">
   <div class="container pricing-hero rv">
     <span class="eyebrow">Pricing</span>
-    <!-- Hierarchy reversed 2026-07-29. The 124px price used to be the hero and the
-         CTA was an afterthought below it — which sells the number, not the app. The
-         button is the hero now; the price is supporting detail under it. -->
-    <a class="cta grad cta-xl" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
-      Start free
-    </a>
-    <p class="price-line"><b>$19.99 once.</b> Premium lets you sort more than five times a week, and unlocks Studio’s full controls. No subscription.</p>
+    <!-- v4: two cards instead of one line (SEO review rec 10). The free tier is
+         sold as "Try it free" with its actual terms spelled out, and Premium's
+         whole pitch is the absence of a subscription. Both cards say what the
+         reader is afraid of: account, credit card, uploads, renewals. -->
+    <h2>Try it free. Keep it for <span class="grad-text">$19.99, once.</span></h2>
+    <div class="price-cards">
+      <div class="price-card">
+        <span class="plan">Try it free</span>
+        <div class="amount">5 full sorts, every week</div>
+        <ul>
+          <li><b>Not a trial</b> — five sorts a week, forever</li>
+          <li>No account, no credit card</li>
+          <li>Saving, sharing and deleting — unlimited</li>
+          <li>Your photos stay on your phone</li>
+        </ul>
+        <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+          Start free
+        </a>
+        <p class="plan-note">iPhone · iOS 18.5+</p>
+      </div>
+      <div class="price-card featured">
+        <span class="plan">Premium</span>
+        <div class="amount"><span class="grad-text">$19.99 once</span></div>
+        <ul>
+          <li><b>Unlimited sorts</b></li>
+          <li>Studio's full controls — seven quality axes, the balance wheel, saved profiles</li>
+          <li>One purchase, tied to your Apple account — restores on a new phone</li>
+          <li><b>No subscription. Ever.</b></li>
+        </ul>
+        <a class="cta grad" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+          Get the app
+        </a>
+        <p class="plan-note">Built by an indie dev who uses it daily. Upgrade inside the app whenever the free tier feels small.</p>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -516,10 +590,42 @@
   </a>
 </div>
 
+<!-- v4 footer: link columns. Every landing page reachable from every page —
+     this carries most of the site's internal linking, so the guide cluster is
+     one hop from the homepage and from each other. -->
 <footer>
   <div class="container">
-    <div>&copy; 2026 Mike Lu &middot; SpectraSort</div>
-    <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">SpectraSort</div>
+        <p>An AI photo picker and culling app for iPhone. It runs entirely on your device: nothing uploaded, no account, no subscription.</p>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Guides</div>
+        <a href="/ai-photo-picker-iphone/">AI photo picker for iPhone</a>
+        <a href="/photo-culling-iphone/">Photo culling on iPhone</a>
+        <a href="/find-best-photos-iphone/">Find your best photos</a>
+        <a href="/how-to-pick-best-photos-from-camera-roll/">Pick the best of your camera roll</a>
+        <a href="/ai-photo-picker-vs-photo-culling/">Photo picking vs culling</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Compare</div>
+        <a href="/best-photo-picker/">Choosing a photo picker</a>
+        <a href="/ai-photo-organizer-vs-apple-photos/">SpectraSort vs Apple Photos</a>
+        <a href="/spectrasort-vs-google-photos/">SpectraSort vs Google Photos</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Tools</div>
+        <a href="/duplicate-photo-finder-iphone/">Duplicate photo finder</a>
+        <a href="/photo-organizer-iphone/">AI photo organizer</a>
+        <a href="/private-ai-photo-app/">Private AI photo app</a>
+        <a href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">Download on the App Store</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div>&copy; 2026 Mike Lu &middot; SpectraSort</div>
+      <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
+    </div>
   </div>
 </footer>
 

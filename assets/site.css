@@ -421,3 +421,151 @@ footer { border-top:1px solid var(--hairline); padding:34px 0 44px; color:var(--
 footer .container { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; }
 footer a { color:var(--text-mid); text-decoration:none; margin-left:18px; }
 footer a:hover { color:var(--text); }
+
+/* ============================================================================
+   v4 (2026-08-23) — SEO redesign.
+   New components: pricing cards (rec 10), use-case cards (rec 12), link-column
+   footer (internal linking to the landing pages), and the landing-page
+   template styles (article prose, comparison tables, breadcrumb, callouts).
+   Everything above this line is untouched v3.3.
+   ========================================================================= */
+
+/* ---------- pricing cards ---------- */
+.price-cards {
+    display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px;
+    max-width:860px; margin:44px auto 0; text-align:left;
+}
+@media (max-width:700px){ .price-cards { grid-template-columns:1fr; } }
+.price-card {
+    background:var(--bg-card); border:1px solid var(--hairline);
+    border-radius:var(--radius); padding:30px 28px;
+    display:flex; flex-direction:column;
+}
+/* Premium card carries the spectral border — the gradient painted into the
+   border-box behind a transparent border, so it works on the rounded corners. */
+.price-card.featured {
+    border:1px solid transparent;
+    background:linear-gradient(var(--bg-card),var(--bg-card)) padding-box, var(--spectral) border-box;
+}
+.price-card .plan {
+    font-family:var(--font-display); font-size:14px; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--text-low);
+}
+.price-card .amount {
+    font-family:var(--font-display); font-size:clamp(30px,4vw,40px); font-weight:700;
+    line-height:1.15; margin-top:10px;
+}
+.price-card .amount .grad-text { white-space:nowrap; }
+.price-card ul { list-style:none; margin:20px 0 26px; display:grid; gap:10px; }
+.price-card li { position:relative; padding-left:28px; color:var(--text-mid); font-size:15px; line-height:1.5; }
+.price-card li::before {
+    content:"\2713"; position:absolute; left:0; top:0;
+    color:var(--sp-amber); font-weight:700;
+}
+.price-card li b { color:var(--text); font-weight:600; }
+.price-card .cta { justify-content:center; margin-top:auto; }
+.price-card .plan-note { font-size:13px; color:var(--text-low); margin-top:14px; text-align:center; }
+
+/* ---------- use-case cards (“People use SpectraSort to…”) ---------- */
+.usecase-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:44px; }
+@media (max-width:760px){ .usecase-grid { grid-template-columns:1fr; } }
+.usecase {
+    display:block; background:var(--bg-card); border:1px solid var(--hairline);
+    border-radius:18px; padding:26px 24px; text-decoration:none; color:var(--text);
+    transition:border-color .2s ease, transform .15s ease;
+}
+.usecase:hover { border-color:var(--hairline2); transform:translateY(-2px); }
+.usecase .uc-kicker {
+    font-family:var(--font-display); font-size:12.5px; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase;
+    background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent;
+    display:block; margin-bottom:10px;
+}
+.usecase h3 { font-size:19px; margin-bottom:8px; }
+.usecase p { color:var(--text-mid); font-size:14.5px; line-height:1.55; }
+.usecase .uc-more { display:inline-block; margin-top:14px; font-size:14px; font-weight:600; color:var(--sp-amber); }
+
+/* ---------- link-column footer ---------- */
+.foot-grid {
+    display:grid; grid-template-columns:1.3fr 1fr 1fr 1fr; gap:32px;
+    padding-bottom:34px; margin-bottom:26px; border-bottom:1px solid var(--hairline);
+}
+@media (max-width:860px){ .foot-grid { grid-template-columns:1fr 1fr; } }
+@media (max-width:480px){ .foot-grid { grid-template-columns:1fr; } }
+.foot-col .fc-title {
+    font-family:var(--font-display); font-size:13px; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--text-low); margin-bottom:14px;
+}
+.foot-col a { display:block; margin:0 0 10px; font-size:14px; color:var(--text-mid); }
+.foot-col p { font-size:14px; color:var(--text-low); max-width:280px; line-height:1.55; }
+.foot-brand { display:flex; align-items:center; gap:10px; color:var(--text); font-family:var(--font-display); font-weight:600; font-size:16px; margin-bottom:12px; }
+.foot-brand img { width:24px; height:24px; border-radius:6px; }
+.foot-meta { display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px; }
+
+/* ---------- landing pages ---------- */
+.page-hero { padding:140px 0 40px; }
+.page-hero h1 { font-size:clamp(34px,5vw,58px); margin:0 0 20px; }
+.page-hero p.lead { max-width:640px; margin-bottom:28px; }
+.crumbs { font-size:13.5px; color:var(--text-low); margin-bottom:22px; }
+.crumbs a { color:var(--text-mid); text-decoration:none; }
+.crumbs a:hover { color:var(--text); }
+.crumbs .sep { margin:0 8px; color:var(--text-low); }
+
+/* Article prose — landing-page body copy. Wider than .feature p, narrower than
+   the container, so long-form text stays readable. */
+.prose { max-width:720px; }
+.prose h2 { font-size:clamp(24px,3.2vw,34px); margin:0 0 18px; }
+.prose h3 { font-size:19px; margin:26px 0 10px; }
+.prose p { color:var(--text-mid); margin-bottom:16px; }
+.prose p b, .prose li b { color:var(--text); font-weight:600; }
+.prose ul, .prose ol { margin:0 0 16px 22px; color:var(--text-mid); }
+.prose li { margin-bottom:8px; }
+.prose li::marker { color:var(--text-low); }
+.prose a { color:var(--sp-amber); text-decoration:none; }
+.prose a:hover { text-decoration:underline; }
+section.slab { padding:56px 0; }
+.split { display:grid; grid-template-columns:1.1fr 0.9fr; gap:56px; align-items:center; }
+.split.rev { direction:rtl; } .split.rev > * { direction:ltr; }
+@media (max-width:860px){ .split, .split.rev { grid-template-columns:1fr; direction:ltr; gap:36px; } }
+
+/* comparison tables — must scroll inside their own container on small screens */
+.cmp-wrap { overflow-x:auto; margin:34px 0; border:1px solid var(--hairline); border-radius:16px; }
+table.cmp { width:100%; min-width:560px; border-collapse:collapse; font-size:15px; }
+table.cmp th, table.cmp td { padding:14px 18px; text-align:left; border-bottom:1px solid var(--hairline); vertical-align:top; }
+table.cmp tr:last-child th, table.cmp tr:last-child td { border-bottom:none; }
+table.cmp thead th { font-family:var(--font-display); font-size:14px; background:var(--bg-card); color:var(--text); white-space:nowrap; }
+table.cmp td { color:var(--text-mid); }
+table.cmp td.yes { color:var(--text); font-weight:600; }
+table.cmp td .sub { display:block; font-size:13px; color:var(--text-low); font-weight:400; }
+table.cmp tbody th { font-weight:500; color:var(--text); font-size:14.5px; }
+
+/* callout — used for the privacy note and the honest-limitations block */
+.callout {
+    border:1px solid var(--hairline); border-left:3px solid var(--sp-amber);
+    border-radius:14px; background:var(--bg-card);
+    padding:22px 24px; margin:28px 0; max-width:720px;
+}
+.callout .co-title { font-family:var(--font-display); font-weight:600; font-size:15.5px; margin-bottom:8px; }
+.callout p, .callout li { color:var(--text-mid); font-size:15px; }
+.callout p:last-child { margin-bottom:0; }
+.callout ul { margin:0 0 0 20px; }
+.callout li { margin-bottom:6px; }
+.callout li:last-child { margin-bottom:0; }
+
+/* related-pages strip at the foot of each landing page */
+.related-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; margin-top:34px; }
+@media (max-width:760px){ .related-grid { grid-template-columns:1fr; } }
+.related-grid a {
+    display:block; background:var(--bg-card); border:1px solid var(--hairline);
+    border-radius:14px; padding:18px 18px; text-decoration:none;
+    font-size:14.5px; font-weight:500; color:var(--text);
+    transition:border-color .2s ease;
+}
+.related-grid a:hover { border-color:var(--hairline2); }
+.related-grid a span { display:block; font-size:13px; color:var(--text-low); font-weight:400; margin-top:6px; }
+
+/* inline pricing block reused on landing pages */
+.price-inline {
+    display:flex; flex-wrap:wrap; gap:14px; align-items:center; margin:26px 0;
+}
+.price-inline .chip { font-size:14px; }
