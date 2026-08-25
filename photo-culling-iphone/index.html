@@ -63,7 +63,7 @@
       "name": "How long does it take to cull thousands of photos?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "The only slow step is the first index, which runs at up to 100 photos a second on recent iPhones and only happens once. After that, sorts come back right away and your own review time is the real cost. Ranking and stacking are what cut it down: you spend your attention on the likely keepers, and each stack takes one gesture."
+        "text": "Sorts come back in a moment, because they run on an index the app builds once and then keeps current automatically — new photos are picked up as they appear. Even the initial index moves at up to 100 photos a second on recent iPhones. Your own review time is the real cost, and ranking and stacking are what cut it down: you spend your attention on the likely keepers, and each stack takes one gesture."
       }
     },
     {
@@ -159,7 +159,7 @@
         <span class="eyebrow">Ranked before you review</span>
         <h2>The review starts at the <span class="grad-text">top of the pile.</span></h2>
         <p>Point a sort at a trip, a scene, or a search, and every frame comes back scored for sharpness, exposure and composition. Ask it to, and it will also weigh how much each photo looks like the ones you usually keep. The strongest frames are on top before you've made a single decision.</p>
-        <p>The capture here is a real pass: a 650-photo architecture slice, every frame scored, strongest first. The first sort builds an index on the phone, at up to 100 photos a second on recent iPhones; later sorts finish in a moment.</p>
+        <p>The capture here is a real pass: a 650-photo architecture slice, every frame scored, strongest first — and it came back in a moment, because the library was already indexed from earlier sorts. Indexing happens once and then keeps itself current: the app picks up new photos as they appear, at up to 100 photos a second on recent iPhones.</p>
         <p>If you want different criteria, <b>Studio</b> has seven quality axes, a wheel that trades subject match against quality, and profiles you can save.</p>
       </div>
       <div class="rv">
@@ -183,7 +183,7 @@
       </div>
       <div class="rv">
         <div class="shot">
-          <div class="screen-card capped" style="--cap:480px"><img src="/images/shots/dedupe-wheel.jpg" alt="Nineteen takes of the same rose on SpectraSort's Similar wheel — Similar 1 of 19, with Discard, Keep and Pick below" loading="lazy" width="800" height="1734"></div>
+          <div class="screen-card"><img src="/images/shots/dedupe-wheel.jpg" alt="Nineteen takes of the same rose on SpectraSort's Similar wheel — Similar 1 of 19, with Discard, Keep and Pick below" loading="lazy" width="800" height="1734"></div>
         </div>
       </div>
     </div>
@@ -210,7 +210,7 @@
       <ul>
         <li>Your attention is still the slow part. The ranking already does the judging — winners on top, and Autopick can file the whole queue by score in one tap — but skimming the result is still on you, and nothing touches your library until you act.</li>
         <li>iPhone only, iOS 18.5 or later. No iPad, Android or desktop version.</li>
-        <li>The first index of a big library takes a while. It only happens once.</li>
+        <li>The very first index of a big library takes some time. After that it's automatic — new photos are indexed as they appear, so you don't wait again.</li>
         <li>Deleted photos go through iOS's own trash: they land in Recently Deleted, and the storage comes back the moment you empty that album there — or automatically after 30 days. SpectraSort doesn't show a “GB freed” number because iOS controls that timing.</li>
       </ul>
     </div>
@@ -237,7 +237,7 @@
       <h2>Photo culling questions.</h2>
     </div>
     <div class="faq-list rv">
-      <details class="faq-item"><summary>How long does it take to cull thousands of photos?</summary><div class="faq-answer">The only slow step is the first index, which runs at up to 100 photos a second on recent iPhones and only happens once. After that, sorts come back right away and your own review time is the real cost. Ranking and stacking are what cut it down: you spend your attention on the likely keepers, and each stack takes one gesture.</div></details>
+      <details class="faq-item"><summary>How long does it take to cull thousands of photos?</summary><div class="faq-answer">Sorts come back in a moment, because they run on an index the app builds once and then keeps current automatically — new photos are picked up as they appear. Even the initial index moves at up to 100 photos a second on recent iPhones. Your own review time is the real cost, and ranking and stacking are what cut it down: you spend your attention on the likely keepers, and each stack takes one gesture.</div></details>
       <details class="faq-item"><summary>Can it cull automatically?</summary><div class="faq-answer">Yes, largely. The ranking already judges every frame, and Autopick files the whole queue by those scores in one tap: best to Picked, middle to Kept, weakest to Discarded. You skim the result, and nothing is applied to your library until you tap an action.</div></details>
       <details class="faq-item"><summary>Is culling just deleting photos?</summary><div class="faq-answer">No. Culling is deciding; deleting is an optional last step. Batch Process can just as easily save your picks to an album or the share sheet and leave everything else alone. See <a href="/ai-photo-picker-vs-photo-culling/">photo picking vs culling</a> for more on the distinction.</div></details>
       <details class="faq-item"><summary>Does deleting culled photos free up storage immediately?</summary><div class="faq-answer">As fast as you want it to. Deleted photos land in iOS's Recently Deleted album; empty it there and the storage comes back immediately, or leave it and iOS clears it after 30 days. That timing belongs to iOS, which is why SpectraSort doesn't show a “you freed N GB” figure at the moment of deletion.</div></details>
