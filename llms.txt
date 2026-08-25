@@ -36,7 +36,7 @@ Batch Process closes the loop in one screen: picks to a new album or the share s
 
 ## Speed
 
-The first sort builds an on-device index. That is the one slow step and it happens once. Every sort after it runs on the index and finishes nearly instantly, even across thousands of photos.
+Sorts finish nearly instantly, even across thousands of photos, because they run on an on-device index. The index is built on the first sort — the one slow step, and it happens once — then kept current automatically as new photos appear in the library.
 
 ## How it compares
 
@@ -64,7 +64,7 @@ Anonymous app-usage analytics (Firebase Analytics + Crashlytics) are opt-in. The
 
 ## Does it free up storage?
 
-It clears the photos you tell it to, which is where most camera-roll storage goes. One caveat stated plainly: on iOS, deleted photos move to **Recently Deleted** and stay there for 30 days before the space is actually reclaimed. SpectraSort therefore does not display a "you freed N GB" figure, because it could not honestly claim one at the moment of deletion. It only ever touches the photo library, never the rest of the phone.
+It clears the photos you tell it to, which is where most camera-roll storage goes. Deletion runs through iOS's own flow: photos move to the system's **Recently Deleted** album, and the space comes back the moment that album is emptied — or automatically after 30 days. Because iOS controls that timing, SpectraSort does not display a "you freed N GB" figure at the moment of deletion. It only ever touches the photo library, never the rest of the phone.
 
 ## Links
 
