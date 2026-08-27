@@ -68,10 +68,10 @@
     },
     {
       "@type": "Question",
-      "name": "Can it read RAW files straight off a memory card?",
+      "name": "Does it work with RAW files?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "No — it's not a card-ingest tool. It culls the photo library on your iPhone, so the workflow is import first, cull second. If you need in-the-field triage directly from cards, pair it with a dedicated ingest app and cull the imported set here."
+        "text": "Yes, once they're in your library. iOS's own import brings in RAW or JPG+RAW — a pair is treated as a single photo — and SpectraSort indexes and ranks those like any other frame. What it doesn't do is read cards directly: the workflow is import first, cull second."
       }
     },
     {
@@ -79,7 +79,7 @@
       "name": "How do my selects get to Lightroom or my desktop?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "As library structure, not sidecar files: Batch Process puts picks in an album and can star favorites, and those carry through iCloud Photos into Apple Photos everywhere and any tool that reads your library. There's no XMP export."
+        "text": "As library structure, not sidecar files: Batch Process puts picks in an album and can mark favorites, and those carry through iCloud Photos into Apple Photos everywhere and any tool that reads your library. In Lightroom on iPhone, a favorited photo comes through with its select flag already on. There's no XMP export."
       }
     },
     {
@@ -190,17 +190,17 @@
   <div class="container prose rv">
     <h2>The workflow, end to end</h2>
     <ol>
-      <li><b>Import as you already do.</b> AirDrop, SD-card reader, or your camera maker's app — once the frames are in the photo library, they're indexed automatically.</li>
+      <li><b>Import as you already do.</b> AirDrop, SD-card reader, or your camera maker's app — RAW or JPG+RAW both come in through iOS's own import, and a pair shows up as one photo. Once the frames are in the photo library, they're indexed automatically.</li>
       <li><b>Filter to the import album</b> so the sort sees only the shoot.</li>
       <li><b>Load your profile</b> for that shoot type — or tune one and save it, once.</li>
       <li><b>Sort.</b> The ranked review comes back in a moment, strongest frames first, near-identicals stacked.</li>
       <li><b>Review like a cull:</b> right to pick, down to keep, left to let go. Stacks settle on one wheel; Autopick files everything by score if you'd rather skim.</li>
-      <li><b>Batch Process:</b> selects to an album (visible in Apple Photos and anything that syncs with it), favorites starred, rejects cleared through the system dialog.</li>
+      <li><b>Batch Process:</b> selects to an album (visible in Apple Photos and anything that syncs with it), favorites marked, rejects cleared through the system dialog.</li>
     </ol>
     <div class="callout">
       <div class="co-title">What this is not — so you're not surprised</div>
       <ul>
-        <li>It culls your <b>photo library</b>, not memory cards — import first, cull second. For card-direct RAW triage in the field, dedicated ingest apps do that job.</li>
+        <li>It culls your <b>photo library</b>, not memory cards — import first, cull second. iOS's own import handles the files fine, RAW included; the cull just happens after they're in the library, not off the card.</li>
         <li>Selections come out as <b>albums, favorites and deletions</b> in your library — not XMP sidecars. Albums and favorites do carry through iCloud into anything that reads your library.</li>
         <li>iPhone only, iOS 18.5 or later.</li>
       </ul>
@@ -236,8 +236,8 @@
     </div>
     <div class="faq-list rv">
       <details class="faq-item"><summary>Does it work with photos from my mirrorless or DSLR?</summary><div class="faq-answer">It works with whatever is in your iPhone photo library. If your camera's frames land there — AirDrop, an SD-card reader, or the camera maker's transfer app — SpectraSort indexes and ranks them like any other photo, and the album filter can restrict a sort to just those imports.</div></details>
-      <details class="faq-item"><summary>Can it read RAW files straight off a memory card?</summary><div class="faq-answer">No — it's not a card-ingest tool. It culls the photo library on your iPhone, so the workflow is import first, cull second. If you need in-the-field triage directly from cards, pair it with a dedicated ingest app and cull the imported set here.</div></details>
-      <details class="faq-item"><summary>How do my selects get to Lightroom or my desktop?</summary><div class="faq-answer">As library structure, not sidecar files: Batch Process puts picks in an album and can star favorites, and those carry through iCloud Photos into Apple Photos everywhere and any tool that reads your library. There's no XMP export.</div></details>
+      <details class="faq-item"><summary>Does it work with RAW files?</summary><div class="faq-answer">Yes, once they're in your library. iOS's own import brings in RAW or JPG+RAW — a pair is treated as a single photo — and SpectraSort indexes and ranks those like any other frame. What it doesn't do is read cards directly: the workflow is import first, cull second.</div></details>
+      <details class="faq-item"><summary>How do my selects get to Lightroom or my desktop?</summary><div class="faq-answer">As library structure, not sidecar files: Batch Process puts picks in an album and can mark favorites, and those carry through iCloud Photos into Apple Photos everywhere and any tool that reads your library. In Lightroom on iPhone, a favorited photo comes through with its select flag already on. There's no XMP export.</div></details>
       <details class="faq-item"><summary>Is it fast enough for a 2,000-frame shoot?</summary><div class="faq-answer">Sorting is near-instant once frames are indexed, and indexing is automatic — up to 100 photos a second on recent iPhones, picked up as imports appear. The review is the real work, and ranking plus stacked near-identicals is what keeps it short.</div></details>
       <details class="faq-item"><summary>Is the free tier enough for shoot work?</summary><div class="faq-answer">Five full sorts a week, free forever — fine for the occasional shoot. If you're culling regularly, Premium is $19.99 once for unlimited sorts plus <a href="/studio/">Studio's full controls</a>, which is the half built for camera work. No subscription.</div></details>
     </div>
