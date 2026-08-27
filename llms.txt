@@ -87,6 +87,8 @@ It clears the photos you tell it to, which is where most camera-roll storage goe
 - [SpectraSort vs Google Photos](https://spectrasort.app/spectrasort-vs-google-photos/) — cloud library vs on-device picker
 - [Photo picking vs photo culling](https://spectrasort.app/ai-photo-picker-vs-photo-culling/) — the two terms, mapped
 - [How to pick the best photos from your camera roll](https://spectrasort.app/how-to-pick-best-photos-from-camera-roll/) — manual and assisted methods
+- [SpectraSort Studio](https://spectrasort.app/studio/) — the pro controls: seven axes, balance wheel, saved profiles
+- [Photo culling app for photographers](https://spectrasort.app/photo-culling-app-for-photographers/) — the camera-to-iPhone culling workflow
 
 ## Version
 

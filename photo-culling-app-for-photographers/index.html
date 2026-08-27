@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Intent page: "photo culling app for photographers" — the pro/camera audience. Wedge vs desktop cullers: your imports already live in the iPhone library; cull them there, tunable, no subscription. Honest about what it is not (no card ingestion, no XMP).
+     Part of the v4 SEO landing-page cluster (2026-08-23); template shared
+     with the other /<slug>/ pages, generated alongside them. -->
+
+<title>A Photo Culling App for Photographers, on iPhone | SpectraSort</title>
+<meta name="description" content="Shot on a real camera? Your imports already live in your iPhone's photo library. Cull them there: tunable criteria, saved profiles, and on-device AI ranking. No desktop, no subscription.">
+<meta name="author" content="Mike Lu">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://spectrasort.app/photo-culling-app-for-photographers/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SpectraSort">
+<meta property="og:title" content="A Photo Culling App for Photographers, on iPhone">
+<meta property="og:description" content="Your camera imports already live in your iPhone's photo library. Cull them there — tunable criteria, saved profiles, on-device ranking.">
+<meta property="og:image" content="https://spectrasort.app/og-image.png?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="SpectraSort — Your best photos, found. A row of nine photos with the top three ringed and scored.">
+<meta property="og:url" content="https://spectrasort.app/photo-culling-app-for-photographers/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="A Photo Culling App for Photographers, on iPhone">
+<meta name="twitter:description" content="Your camera imports already live in your iPhone's photo library. Cull them there — tunable criteria, saved profiles, on-device ranking.">
+<meta name="twitter:image" content="https://spectrasort.app/og-image.png?v=3">
+
+<meta name="apple-itunes-app" content="app-id=6757512134">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/app-icon-flat.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/app-icon-flat.png">
+<meta name="theme-color" content="#0B0B0E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "SpectraSort",
+      "item": "https://spectrasort.app/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Culling for photographers",
+      "item": "https://spectrasort.app/photo-culling-app-for-photographers/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Does it work with photos from my mirrorless or DSLR?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It works with whatever is in your iPhone photo library. If your camera's frames land there — AirDrop, an SD-card reader, or the camera maker's transfer app — SpectraSort indexes and ranks them like any other photo, and the album filter can restrict a sort to just those imports."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can it read RAW files straight off a memory card?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No — it's not a card-ingest tool. It culls the photo library on your iPhone, so the workflow is import first, cull second. If you need in-the-field triage directly from cards, pair it with a dedicated ingest app and cull the imported set here."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do my selects get to Lightroom or my desktop?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "As library structure, not sidecar files: Batch Process puts picks in an album and can star favorites, and those carry through iCloud Photos into Apple Photos everywhere and any tool that reads your library. There's no XMP export."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is it fast enough for a 2,000-frame shoot?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sorting is near-instant once frames are indexed, and indexing is automatic — up to 100 photos a second on recent iPhones, picked up as imports appear. The review is the real work, and ranking plus stacked near-identicals is what keeps it short."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the free tier enough for shoot work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five full sorts a week, free forever — fine for the occasional shoot. If you're culling regularly, Premium is $19.99 once for unlimited sorts plus Studio's full controls, which is the half built for camera work. No subscription."
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <a class="brand" href="/"><img src="/images/app-icon-flat.png" alt="">SpectraSort</a>
+    <div class="nav-links">
+      <a href="/">Overview</a>
+      <a href="/#pricing">Pricing</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a class="cta-small" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Download
+    </a>
+  </div>
+</nav>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/">SpectraSort</a><span class="sep">&#8250;</span>Culling for photographers</div>
+    <h1>Culling for people who shoot <span class="grad-text">on a real camera.</span></h1>
+    <p class="lead">If your frames come off a mirrorless or DSLR and land on your iPhone, you have a photographer's culling problem in a camera-roll world. SpectraSort's Studio gives it a photographer's answer: criteria you tune, profiles you reuse, and a ranked review that starts where the strongest frames are.</p>
+    <div>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Download on the App Store
+      </a>
+      <span class="hero-meta">Free &middot; iPhone &middot; iOS 18.5+</span>
+    </div>
+    <div class="trust-chips">
+      <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
+      <span class="chip"><b>Free</b> 5 sorts a week</span>
+      <span class="chip"><b>$19.99 once</b> — no subscription</span>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>The gap the desktop tools leave</h2>
+    <p>Serious culling software lives on the desktop, and much of it is good — genre-trained AI, tethered workflows, XMP handoff to Lightroom. It also assumes the desk: a laptop in the loop, an import step before you can even look, and in many cases a subscription running whether you shot this month or not.</p>
+    <p>Meanwhile the actual photos are often already on your phone — AirDropped from the camera, pulled through an SD-card reader, or synced by the camera's own app. iPhone is where you look at them first. SpectraSort's argument is simple: the first cull should happen right there, and it shouldn't cost a monthly fee.</p>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">The working surface</span>
+        <h2>A contact sheet that arrives <span class="grad-text">already ranked.</span></h2>
+        <p>Point a sort at your import album and every frame comes back scored against your criteria, strongest first — a contact sheet where the top row is the shortlist.</p>
+        <p>The capture here is a real pass over a 650-frame architecture shoot. It came back in a moment: sorts run on an on-device index that's built once and kept current as new photos appear.</p>
+        <p>From there it's a photographer's review: swipe the selects in, roll through near-identical takes on one wheel, or let Autopick file the whole set by score and skim the result.</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:480px"><img src="/images/shots/review-architecture.jpg" alt="A 650-frame architecture shoot, scored and ranked strongest-first" loading="lazy" width="800" height="1734"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>Why Studio is the photographer's half of the app</h2>
+    <p>One-tap scoring is built for the average camera roll. A shoot isn't average — you know the subject, you know the look, and "keeper" has a definition. <a href="/studio/">Studio</a> lets you write that definition down:</p>
+    <ul>
+      <li><b>Seven quality axes</b>, hand-tuned on a radar — or slid together from Technical to Artistic. Your noise tolerance, your composition bar.</li>
+      <li><b>Up to three subjects per sort</b>, so a street shoot can weigh Portrait + Street + Night at once.</li>
+      <li><b>The balance wheel</b>, dialing how much subject match counts against raw execution.</li>
+      <li><b>Saved profiles</b> — the part that makes it a system. Tune once per shoot type; every future shoot gets identical standards.</li>
+      <li><b>An album filter</b>, so the sort judges only your imports, not the whole roll.</li>
+    </ul>
+    <p>In the developer's own camera workflow, this combination — tuned radar, named subjects, balance set, saved as a profile — is what turns good-enough picks into reliable ones.</p>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container prose rv">
+    <h2>The workflow, end to end</h2>
+    <ol>
+      <li><b>Import as you already do.</b> AirDrop, SD-card reader, or your camera maker's app — once the frames are in the photo library, they're indexed automatically.</li>
+      <li><b>Filter to the import album</b> so the sort sees only the shoot.</li>
+      <li><b>Load your profile</b> for that shoot type — or tune one and save it, once.</li>
+      <li><b>Sort.</b> The ranked review comes back in a moment, strongest frames first, near-identicals stacked.</li>
+      <li><b>Review like a cull:</b> right to pick, down to keep, left to let go. Stacks settle on one wheel; Autopick files everything by score if you'd rather skim.</li>
+      <li><b>Batch Process:</b> selects to an album (visible in Apple Photos and anything that syncs with it), favorites starred, rejects cleared through the system dialog.</li>
+    </ol>
+    <div class="callout">
+      <div class="co-title">What this is not — so you're not surprised</div>
+      <ul>
+        <li>It culls your <b>photo library</b>, not memory cards — import first, cull second. For card-direct RAW triage in the field, dedicated ingest apps do that job.</li>
+        <li>Selections come out as <b>albums, favorites and deletions</b> in your library — not XMP sidecars. Albums and favorites do carry through iCloud into anything that reads your library.</li>
+        <li>iPhone only, iOS 18.5 or later.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>And the no-subscription part</h2>
+    <p>Culling tools have drifted to subscriptions priced for wedding-volume professionals. SpectraSort is priced like a tool: five full sorts a week free, forever — roughly a shoot a day costs nothing — and <b>$19.99 once</b> for unlimited sorts plus Studio's full controls. Shoot nothing for a month and it costs you nothing; it's still there for the next shoot.</p>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container" style="text-align:center;">
+    <div class="rv">
+      <span class="eyebrow">Pricing</span>
+      <h2>Free to try. <span class="grad-text">$19.99 once</span> to keep.</h2>
+      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five sorts a week are free, forever, with no account and no credit card. Premium is a single $19.99 purchase that removes the cap and unlocks Studio. No subscription, ever. Built by an indie dev who uses it daily.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Download on the App Store
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="slab">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Photographer questions.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>Does it work with photos from my mirrorless or DSLR?</summary><div class="faq-answer">It works with whatever is in your iPhone photo library. If your camera's frames land there — AirDrop, an SD-card reader, or the camera maker's transfer app — SpectraSort indexes and ranks them like any other photo, and the album filter can restrict a sort to just those imports.</div></details>
+      <details class="faq-item"><summary>Can it read RAW files straight off a memory card?</summary><div class="faq-answer">No — it's not a card-ingest tool. It culls the photo library on your iPhone, so the workflow is import first, cull second. If you need in-the-field triage directly from cards, pair it with a dedicated ingest app and cull the imported set here.</div></details>
+      <details class="faq-item"><summary>How do my selects get to Lightroom or my desktop?</summary><div class="faq-answer">As library structure, not sidecar files: Batch Process puts picks in an album and can star favorites, and those carry through iCloud Photos into Apple Photos everywhere and any tool that reads your library. There's no XMP export.</div></details>
+      <details class="faq-item"><summary>Is it fast enough for a 2,000-frame shoot?</summary><div class="faq-answer">Sorting is near-instant once frames are indexed, and indexing is automatic — up to 100 photos a second on recent iPhones, picked up as imports appear. The review is the real work, and ranking plus stacked near-identicals is what keeps it short.</div></details>
+      <details class="faq-item"><summary>Is the free tier enough for shoot work?</summary><div class="faq-answer">Five full sorts a week, free forever — fine for the occasional shoot. If you're culling regularly, Premium is $19.99 once for unlimited sorts plus <a href="/studio/">Studio's full controls</a>, which is the half built for camera work. No subscription.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">Keep reading</span>
+      <div class="related-grid">
+        <a href="/studio/">SpectraSort Studio<span>The pro controls, in detail</span></a>
+        <a href="/photo-culling-iphone/">Photo culling on iPhone<span>The core workflow</span></a>
+        <a href="/ai-photo-picker-vs-photo-culling/">Picking vs culling<span>Which one you actually need</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container rv">
+    <h2>Your best photos. <span class="grad-text">Found.</span></h2>
+    <p>iPhone, iOS 18.5 or later.</p>
+    <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Download on the App Store
+    </a>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">SpectraSort</div>
+        <p>An AI photo picker and culling app for iPhone. It runs entirely on your device: nothing uploaded, no account, no subscription.</p>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Guides</div>
+        <a href="/ai-photo-picker-iphone/">AI photo picker for iPhone</a>
+        <a href="/photo-culling-iphone/">Photo culling on iPhone</a>
+        <a href="/find-best-photos-iphone/">Find your best photos</a>
+        <a href="/how-to-pick-best-photos-from-camera-roll/">Pick the best of your camera roll</a>
+        <a href="/photo-culling-app-for-photographers/">Culling for photographers</a>
+        <a href="/ai-photo-picker-vs-photo-culling/">Photo picking vs culling</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Compare</div>
+        <a href="/best-photo-picker/">Choosing a photo picker</a>
+        <a href="/ai-photo-organizer-vs-apple-photos/">SpectraSort vs Apple Photos</a>
+        <a href="/spectrasort-vs-google-photos/">SpectraSort vs Google Photos</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">Tools</div>
+        <a href="/studio/">SpectraSort Studio</a>
+        <a href="/duplicate-photo-finder-iphone/">Duplicate photo finder</a>
+        <a href="/photo-organizer-iphone/">AI photo organizer</a>
+        <a href="/private-ai-photo-app/">Private AI photo app</a>
+        <a href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">Download on the App Store</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div>&copy; 2026 Mike Lu &middot; SpectraSort</div>
+      <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+<script type="module" src="/assets/analytics.js"></script>
+</body>
+</html>
