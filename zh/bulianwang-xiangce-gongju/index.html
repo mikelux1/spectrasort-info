@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="content-language" content="zh-cn">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- CN guide page — part of the /zh/ v2 guide cluster (2026-08-30).
+     Copy drafted by DeepSeek from a fact-bank brief (DS-first workflow),
+     facts verified against 5-cn/cn-appstore-listing-v3.0.md. Template mirrors
+     the EN /<slug>/ guide template with the zh conventions: no Google Fonts,
+     site-zh.css CJK stack, CN icon, zh sticky bar, WeChat mask. -->
+
+<title>不联网、不上传的相册工具是怎么做到的｜光谱挑片</title>
+<meta name="description" content="“本机处理”不是营销话术：排序、搜索、建索引都在 iPhone 芯片上完成，飞行模式也能用。三个自查方法，任何 App 都可以验证。">
+<meta name="keywords" content="不联网的相册软件,不用登录的相册,照片隐私app,本机处理,照片不上传,光谱挑片">
+<meta name="author" content="Mike Lu">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://spectrasort.app/zh/bulianwang-xiangce-gongju/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="光谱挑片">
+<meta property="og:title" content="不联网、不上传的相册工具是怎么做到的">
+<meta property="og:description" content="“本机处理”不是营销话术：排序、搜索、建索引都在 iPhone 芯片上完成，飞行模式也能用。三个自查方法，任何 App 都可以验证。">
+<meta property="og:image" content="https://spectrasort.app/og-image.png?v=3">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://spectrasort.app/zh/bulianwang-xiangce-gongju/">
+
+<meta name="apple-itunes-app" content="app-id=6776902965">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/app-icon-flat-cn.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/app-icon-flat-cn.png">
+<meta name="theme-color" content="#0B0B0E">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "光谱挑片", "item": "https://spectrasort.app/zh/" },
+    { "@type": "ListItem", "position": 2, "name": "不联网的相册工具", "item": "https://spectrasort.app/zh/bulianwang-xiangce-gongju/" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "换手机了，品味档案能迁移吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "档案只存在本机，不经过开发者的服务器。换机时它和其他 App 数据一样，跟随 iOS 的整机备份或「快速开始」迁移；删掉 App 则档案一起删除。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "飞行模式下真的都能用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "排序、搜索、滑动挑选、去重，都不依赖网络。下载 App 本身需要网络，之后可完全离线使用。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不需要账号，那怎么识别我是谁？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "不需要识别。它只是你手机上的一个工具，不对接任何身份体系。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "1,082 次挑选的品味档案，存在哪？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "存在 iPhone 本机，不上传、不联网，不经过开发者的服务器。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不上传照片，排序质量够用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "排序在本机完成，用的是本机芯片算力。芯片越新越快，首批索引每秒约 100 张，之后增量索引几乎立刻出结果。"
+      }
+    }
+  ]
+}
+</script>
+
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-zh.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <a class="brand" href="/zh/"><img src="/images/app-icon-flat-cn.png" alt="">光谱挑片</a>
+    <div class="nav-links">
+      <a href="/zh/">首页</a>
+      <a href="/zh/#pricing">价格</a>
+      <a href="#faq">常见问题</a>
+    </div>
+    <a class="cta-small" href="https://apps.apple.com/cn/app/id6776902965">下载</a>
+  </div>
+</nav>
+
+<main>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/zh/">光谱挑片</a><span class="sep">&#8250;</span>不联网的相册工具</div>
+    <h1>不联网、不上传的相册工具，<span class="grad-text">是怎么做到的</span></h1>
+    <p class="lead">看到“本机处理”“不上传”这些说法，怀疑是营销话术，合理。这篇讲清楚“本机处理”具体意味着什么，以及你自己怎么验证。</p>
+    <div>
+      <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">App Store 免费下载</a>
+      <span class="hero-meta">仅 iPhone · iOS 18.5+ · 不需要账号</span>
+    </div>
+    <div class="trust-chips">
+      <span class="chip"><b>全程本机运行</b>——照片不上传</span>
+      <span class="chip"><b>排序、浏览、挑选</b>永久免费</span>
+      <span class="chip"><b>¥18 一次买断</b>——没有订阅</span>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>本机处理，不只是不联网</h2>
+    <p>“照片不上传”这句话，很多人理解成“它没有网盘功能”。但本机处理是更彻底的事：排序、搜索、建索引、品味档案，所有计算都在 iPhone 的芯片上完成，数据不出手机。</p>
+    <p>具体来说，当你第一次打开光谱挑片，它要做的事是建索引——给整个相册的照片在本机生成可供排序和搜索的数据。这个过程的处理速度是每秒约 100 张，之后新照片自动增量索引，排序几乎立刻出结果。这一切发生在 iPhone 的芯片上，不依赖任何服务器。</p>
+    <p>你的个人品味档案也存在本机。一份由 1,082 次真实挑选养成的品味档案，不经过开发者的任何服务器。删掉 App，这份档案也一起删除。</p>
+    <p>飞行模式下打开它，所有功能照常工作。这是最直接的证明。</p>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">意味着什么</span>
+        <h2>照片不上传，<span class="grad-text">意味着什么。</span></h2>
+        <p>照片不上传，意味着开发者看不到你的照片，没有东西可以被拿去训练，也没有东西会在某个服务器泄露的事件里被波及。</p>
+        <p>很多照片工具的商业模式依赖云端：免费提供服务，但照片上传后用于训练或分析。光谱挑片选择了一条更简单的路：不碰照片。你用它的排序结果，它不碰你的原始数据，照片本体始终只存在于系统相册里。</p>
+        <p>不需要账号是这件事的自然结果。没有账号系统，就没有你的身份信息可收集。没有广告也是自然结果：不靠数据变现，就不需要在产品里塞广告位。</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:480px"><img src="/images/shots-zh/taste-versatile.jpg" alt="个人品味档案——只存在你的 iPhone 本机" loading="lazy" width="800" height="1738"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>怎么自查一个 App 是不是真的不联网</h2>
+    <p>不只听它说，三个测试可以自己动手做。</p>
+    <ul>
+      <li><b>飞行模式测试。</b>关掉 Wi-Fi 和蜂窝数据，打开 App，完整走一遍它的核心功能。排序、搜索、滑动挑选都能正常用，说明核心计算确实在本机。如果某个功能提示“网络不可用”，那它至少部分依赖云端。</li>
+      <li><b>看账号。</b>打开 App，如果第一步就是登录、注册、绑定手机号，那它一定有云端身份体系，照片也大概率会同步。真正本机的工具，从第一次打开就直接进入功能。</li>
+      <li><b>看设置。</b>翻设置页，有没有“同步”“备份”“云”相关的选项。有这些选项不代表它一定上传照片，但说明它有上传通道。没有这些选项的，更接近纯本机。</li>
+    </ul>
+    <p>光谱挑片：飞行模式可用，不需要账号，设置里没有云相关选项。</p>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="rv" style="text-align:center;"><span class="eyebrow">三步</span></div>
+    <div class="stats rv" style="margin-top:18px;">
+      <div class="stat"><div class="num">开飞行模式</div><div class="label">排序、搜索、挑选全部照常，本机完成。</div></div>
+      <div class="stat"><div class="num">看第一次打开</div><div class="label">没有注册流程，直接进入相册排序。</div></div>
+      <div class="stat"><div class="num">翻设置页</div><div class="label">没有云同步、备份、账号相关选项。</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <div class="callout">
+      <div class="co-title">哪里帮不上</div>
+      <ul>
+        <li>不提供云备份，换机时照片不通过它转移。</li>
+        <li>不像网盘类 App 一样能跨设备访问照片。</li>
+        <li>目前没有安卓版，仅 iPhone，iOS 18.5 以上。</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container" style="text-align:center;">
+    <div class="rv">
+      <span class="eyebrow">价格</span>
+      <h2>免费用。要全部，<span class="grad-text">¥18 一次买断。</span></h2>
+      <p class="lead" style="max-width:620px;margin:16px auto 28px;">排序、浏览、滑动挑选永久免费、不限次数，不需要账号。¥18 一次买断解锁批量操作和完整的专业模式，没有订阅。独立开发，我自己每天在用。</p>
+      <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">App Store 免费下载</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="slab">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">常见问题</span>
+      <h2>隐私与离线，你可能想问。</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>换手机了，品味档案能迁移吗？</summary><div class="faq-answer">档案只存在本机，不经过开发者的服务器。换机时它和其他 App 数据一样，跟随 iOS 的整机备份或「快速开始」迁移；删掉 App 则档案一起删除。</div></details>
+      <details class="faq-item"><summary>飞行模式下真的都能用吗？</summary><div class="faq-answer">排序、搜索、滑动挑选、去重，都不依赖网络。下载 App 本身需要网络，之后可完全离线使用。</div></details>
+      <details class="faq-item"><summary>不需要账号，那怎么识别我是谁？</summary><div class="faq-answer">不需要识别。它只是你手机上的一个工具，不对接任何身份体系。</div></details>
+      <details class="faq-item"><summary>1,082 次挑选的品味档案，存在哪？</summary><div class="faq-answer">存在 iPhone 本机，不上传、不联网，不经过开发者的服务器。</div></details>
+      <details class="faq-item"><summary>不上传照片，排序质量够用吗？</summary><div class="faq-answer">排序在本机完成，用的是本机芯片算力。芯片越新越快，首批索引每秒约 100 张，之后增量索引几乎立刻出结果。</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">接着读</span>
+      <div class="related-grid">
+        <a href="/zh/zhaopian-shaixuan-ruanjian/">照片筛选软件怎么挑<span>五个判断标准</span></a>
+        <a href="/zh/guangpu-vs-pingguo-xiangce/">和苹果相册的区别<span>各管一件事</span></a>
+        <a href="/zh/zhaopian-taiduo-shebude-shan/">照片太多又舍不得删<span>先挑，再决定</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container rv">
+    <h2>找出你<span class="grad-text">最好的照片。</span></h2>
+    <p>仅 iPhone，iOS 18.5 或更新版本。</p>
+    <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">App Store 免费下载</a>
+  </div>
+</section>
+
+</main>
+
+<div class="zh-stickybar">
+  <div class="sb-t"><b>光谱挑片</b>免费下载 · ¥18 一次买断</div>
+  <a class="cta grad" href="https://apps.apple.com/cn/app/id6776902965">下载</a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand"><img src="/images/app-icon-flat-cn.png" alt="">光谱挑片</div>
+        <p>完全在 iPhone 本机运行的挑片工具。照片不上传，没有账号，没有订阅。独立开发者出品。</p>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">指南</div>
+        <a href="/zh/zhaopian-taiduo-shebude-shan/">照片太多又舍不得删</a>
+        <a href="/zh/iphone-xiangce-zhengli/">iPhone 相册整理归类</a>
+        <a href="/zh/chongfu-zhaopian-qingli/">重复照片和连拍清理</a>
+        <a href="/zh/zhaopian-shaixuan-ruanjian/">照片筛选软件怎么挑</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">对比与隐私</div>
+        <a href="/zh/guangpu-vs-pingguo-xiangce/">和苹果相册的区别</a>
+        <a href="/zh/bulianwang-xiangce-gongju/">不联网的相册工具</a>
+        <a href="/privacy-zh.html">隐私政策</a>
+        <a href="/terms-zh.html">用户协议</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">更多</div>
+        <a href="https://apps.apple.com/cn/app/id6776902965">在 App Store 下载</a>
+        <a href="mailto:spectrasortapp@gmail.com">联系与支持</a>
+        <a href="/" onclick="try{localStorage.setItem('ss-lang','en')}catch(e){}">English</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div>&copy; 2026 Mike Lu &middot; 光谱挑片</div>
+      <div><a href="/privacy-zh.html">隐私</a><a href="/terms-zh.html">条款</a><a href="mailto:spectrasortapp@gmail.com">支持</a></div>
+    </div>
+  </div>
+</footer>
+
+<div class="wx-mask" id="wxMask" role="dialog" aria-label="请在浏览器中打开">
+  <div class="arrow-up" aria-hidden="true">↗</div>
+  <p>微信内无法打开 App Store<br>请点击右上角 「···」<br>选择<b>「在 Safari 中打开」</b></p>
+</div>
+<script>
+(function(){
+  if (!/MicroMessenger/i.test(navigator.userAgent)) return;
+  var mask = document.getElementById('wxMask');
+  mask.addEventListener('click', function(){ mask.classList.remove('show'); });
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+    if (a) { e.preventDefault(); mask.classList.add('show'); }
+  }, true);
+})();
+</script>
+
+<script src="/assets/site.js" defer></script>
+<script type="module" src="/assets/analytics.js"></script>
+</body>
+</html>

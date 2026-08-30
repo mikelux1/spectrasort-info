@@ -36,7 +36,7 @@
      hero, couplet headline rhythm, minimal EN switch. Approved by Mike
      2026-08-30 (decisions ①–⑤; platform line kept soft, no GB-freed line).
      Desktop QR box present but hidden until /images/qr-appstore-cn.png exists.
-     Guide links commented (GUIDE-TODO) until each of the 6 CN guides ships. -->
+     All 6 CN guides live under /zh/<slug>/ (2026-08-30, DeepSeek-first drafts). -->
 <title>光谱挑片 —— 找出值得发的那张照片</title>
 <meta name="description" content="按个人品味、画质、题材、地点和相似度整理你的相册，替你挑出值得发的那张照片。全程 iPhone 本机运行，照片不上传。¥18 一次买断，没有订阅。">
 <meta name="keywords" content="光谱挑片,选照片,挑照片,选片,相册整理,清理相册,重复照片,照片去重,找照片,以图搜图,照片排序,连拍,相似照片,本地运行,买断制,iPhone相册">
@@ -63,8 +63,8 @@
 <meta property="og:url" content="https://spectrasort.app/zh/">
 
 <meta name="apple-itunes-app" content="app-id=6776902965">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/app-icon-flat.png">
-<link rel="apple-touch-icon" sizes="180x180" href="/images/app-icon-flat.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/app-icon-flat-cn.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/app-icon-flat-cn.png">
 <meta name="theme-color" content="#0B0B0E">
 
 <script>
@@ -89,7 +89,7 @@
   "url": "https://spectrasort.app/zh/",
   "downloadUrl": "https://apps.apple.com/cn/app/id6776902965",
   "installUrl": "https://apps.apple.com/cn/app/id6776902965",
-  "image": "https://spectrasort.app/images/app-icon-flat.png",
+  "image": "https://spectrasort.app/images/app-icon-flat-cn.png",
   "inLanguage": "zh-Hans",
   "featureList": [
     "六个工具：个人品味、最佳照片、找题材、以图找图、找地点、去重",
@@ -146,7 +146,7 @@
 
 <nav class="top">
   <div class="container">
-    <a class="brand" href="#top"><img src="/images/app-icon-flat.png" alt="">光谱挑片</a>
+    <a class="brand" href="#top"><img src="/images/app-icon-flat-cn.png" alt="">光谱挑片</a>
     <div class="nav-links">
       <a href="#uses">能帮你做什么</a>
       <a href="#tools">工具箱</a>
@@ -170,7 +170,11 @@
     <div class="hero-grid">
       <div class="hero-copy">
         <span class="eyebrow">挑片工具 · 仅 iPhone</span>
-        <h1>几千张照片里，<br><span class="grad-text">找出值得发的那张。</span></h1>
+        <!-- Hero H1: DeepSeek's top 成语 candidate (Mike asked for cultural hooks
+             2026-08-30). Runner-ups if Mike wants to swap:
+               弱水三千，只取一张发。 / 千里挑一，本来就该这样。
+               previous: 几千张照片里，找出值得发的那张。 -->
+        <h1>千里挑一，<br><span class="grad-text">不如挑得对味。</span></h1>
         <p class="lead">按个人品味、画质、题材、地点和相似度替你把相册排好——全程在 iPhone 本机完成，照片不上传。</p>
         <div>
           <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
@@ -217,28 +221,28 @@
   <div class="container">
     <div class="rv">
       <span class="eyebrow">能帮你做什么</span>
-      <h2>挑照片这件事，<span class="grad-text">它替你做了四件。</span></h2>
+      <h2>找照片、清重复、理相册、下决定——<span class="grad-text">四件事，它先做。</span></h2>
     </div>
     <div class="uses-grid rv">
       <div class="use-card">
         <div class="un">值得发的那一张</div>
         <p>发朋友圈、发小红书之前，先让它把最好的几张排到最前面。挑得越多，排序越接近你的眼光。</p>
-        <!-- GUIDE-TODO: <a class="ug" href="/zh/zhaopian-shaixuan-ruanjian/">照片筛选软件怎么挑：五个判断标准 →</a> -->
+        <a class="ug" href="/zh/zhaopian-shaixuan-ruanjian/">照片筛选软件怎么挑：五个判断标准 →</a>
       </div>
       <div class="use-card">
         <div class="un">相册里那张，翻不到</div>
         <p>记得拍过，就是找不到。输入一个词，或者选一张相似的照片，它替你翻出来——按相关度排好，三年没看过的也能找到。</p>
-        <!-- GUIDE-TODO: <a class="ug" href="/zh/iphone-xiangce-zhengli/">iPhone 相册太乱怎么整理归类 →</a> -->
+        <a class="ug" href="/zh/iphone-xiangce-zhengli/">iPhone 相册太乱怎么整理归类 →</a>
       </div>
       <div class="use-card">
         <div class="un">重复、连拍、看着差不多的</div>
         <p>同一个瞬间十几张，自动归成一堆，最清楚的那张已经标好。示例相册里同一朵玫瑰出现了 19 次——挑一张，剩下的不用管。</p>
-        <!-- GUIDE-TODO: <a class="ug" href="/zh/chongfu-zhaopian-qingli/">重复照片和连拍怎么一次清干净 →</a> -->
+        <a class="ug" href="/zh/chongfu-zhaopian-qingli/">重复照片和连拍怎么一次清干净 →</a>
       </div>
       <div class="use-card">
         <div class="un">舍不得删的那几万张</div>
         <p>相册几万张下不去手，是因为没人替你先挑一遍。一次旅行回来三千张也一样：先把值得留的挑出来，剩下的就好决定了。</p>
-        <!-- GUIDE-TODO: <a class="ug" href="/zh/zhaopian-taiduo-shebude-shan/">照片太多又舍不得删，怎么办 →</a> -->
+        <a class="ug" href="/zh/zhaopian-taiduo-shebude-shan/">照片太多又舍不得删，怎么办 →</a>
       </div>
     </div>
   </div>
@@ -359,7 +363,7 @@
     <div class="feature">
       <div class="rv">
         <span class="eyebrow">去重</span>
-        <h2>同一个日落拍了 11 张？<span class="grad-text">留下最清楚的那张。</span></h2>
+        <h2>同一个日落拍了 11 张？<span class="grad-text">百里挑一，留最清楚的那张。</span></h2>
         <p>重复、连拍、看着差不多的，自动归成一堆。同一个瞬间，只做一次决定。</p>
       </div>
       <div class="rv">
@@ -409,7 +413,7 @@
          pair: full-view review with score + the 批量操作 finish screen. -->
     <div class="shot-pair rv">
       <div class="shot">
-        <div class="screen-card capped" style="--cap:400px"><img src="/images/shots-zh/review-swipe.jpg" alt="逐张挑选——评分 8.4，丢弃、保留、选中三个按钮" loading="lazy" width="800" height="1738"></div>
+        <div class="swipe-demo"><div class="screen-card capped" style="--cap:400px"><img src="/images/shots-zh/review-swipe.jpg" alt="逐张挑选——右滑选中的滑动手势演示" loading="lazy" width="800" height="1738"></div></div>
       </div>
       <div class="arrow" aria-hidden="true">&rarr;</div>
       <div class="shot">
@@ -425,7 +429,7 @@
     <div class="feature">
       <div class="rv">
         <span class="eyebrow">专业模式</span>
-        <h2>想自己掌控？<span class="grad-text">都给你。</span></h2>
+        <h2>七个维度，<span class="grad-text">按你的来。</span></h2>
         <p>七个画质维度单独调：清晰度、曝光、对比度、噪点、构图、色彩、画面平衡。题材自己定义，最多同时 3 个。调好的参数存成排序方案，随时切换。</p>
       </div>
       <div class="rv">
@@ -447,12 +451,13 @@
   <div class="container">
     <div class="safety-band rv">
       <span class="eyebrow">删除安全</span>
-      <h2>删除这件事，<span class="grad-text">永远由你确认。</span></h2>
+      <h2>删除照片，<span class="grad-text">永远由你确认。</span></h2>
+      <p style="margin-top:10px">光谱挑片不直接删照片。删除动作走 iOS 系统「照片」的删除流程，和你在系统相册里删照片是同一条路径。</p>
       <div class="safety-steps">
-        <div class="safety-step"><b>系统弹窗确认</b><span>每次删除都经过系统「照片」的确认弹窗。</span></div>
-        <div class="safety-step"><b>先进「最近删除」</b><span>不会直接消失，先进系统的最近删除。</span></div>
-        <div class="safety-step"><b>30 天可恢复</b><span>30 天内随时整批恢复。</span></div>
-        <div class="safety-step"><b>不静默删除</b><span>App 不会在你不知情时删除任何一张。</span></div>
+        <div class="safety-step"><b>系统弹窗确认</b><span>每次删除照片，都要经过系统「照片」的确认弹窗。</span></div>
+        <div class="safety-step"><b>先进「最近删除」</b><span>删掉的照片不会直接消失，先进入系统相册的「最近删除」。</span></div>
+        <div class="safety-step"><b>30 天可恢复</b><span>30 天内随时可以在「最近删除」里整批找回照片。</span></div>
+        <div class="safety-step"><b>不静默删除</b><span>App 不会在你不知情时删除任何一张照片。</span></div>
       </div>
     </div>
   </div>
@@ -465,7 +470,7 @@
       <img class="bgphoto" src="/images/shots/privacy-art.jpg" alt="一摞捆好的照片上放着一把铜锁" loading="lazy">
       <div class="scrim"></div>
       <div class="privacy-copy">
-        <span class="eyebrow" style="color:rgba(244,242,237,.65);">放心</span>
+        <span class="eyebrow" style="color:rgba(244,242,237,.65);">隐私</span>
         <h2>照片从不离开你的手机。</h2>
         <p>评分、搜索、个人品味，全部在你的 iPhone 本机完成。不上传，不联网，不需要账号，没有广告。连按意思搜索，也在本机运行。</p>
       </div>
@@ -594,7 +599,7 @@
   <div class="container">
     <div class="foot-grid">
       <div class="foot-col">
-        <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">光谱挑片</div>
+        <div class="foot-brand"><img src="/images/app-icon-flat-cn.png" alt="">光谱挑片</div>
         <p>完全在 iPhone 本机运行的挑片工具。照片不上传，没有账号，没有订阅。独立开发者出品。</p>
         <p style="opacity:.6">当前版本 3.0 · 2026 年 8 月更新</p>
       </div>
@@ -603,6 +608,15 @@
         <a href="https://apps.apple.com/cn/app/id6776902965">在 App Store 下载</a>
         <a href="#pricing">价格</a>
         <a href="#faq">常见问题</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">指南</div>
+        <a href="/zh/zhaopian-taiduo-shebude-shan/">照片太多又舍不得删</a>
+        <a href="/zh/iphone-xiangce-zhengli/">iPhone 相册整理归类</a>
+        <a href="/zh/chongfu-zhaopian-qingli/">重复照片和连拍清理</a>
+        <a href="/zh/zhaopian-shaixuan-ruanjian/">照片筛选软件怎么挑</a>
+        <a href="/zh/guangpu-vs-pingguo-xiangce/">和苹果相册的区别</a>
+        <a href="/zh/bulianwang-xiangce-gongju/">不联网的相册工具</a>
       </div>
       <div class="foot-col">
         <div class="fc-title">条款</div>
