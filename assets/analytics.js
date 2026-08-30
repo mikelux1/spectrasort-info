@@ -41,7 +41,7 @@ const SITE_HOST = location.hostname;
 function getSection(el) {
     if (el.closest("nav.top")) return "nav";
     if (el.closest("footer")) return "footer";
-    if (el.closest(".sticky-cta")) return "sticky_cta";
+    if (el.closest(".sticky-cta") || el.closest(".zh-stickybar")) return "sticky_cta";
     if (el.closest(".closing")) return "closing";
     const s = el.closest("section[id]");
     return s ? s.id : "unknown";
@@ -60,11 +60,12 @@ function classifyLink(href) {
 }
 function ctaLocation(el) {
     if (el.closest("nav.top")) return "nav";
-    if (el.closest(".hero")) return "hero";
-    if (el.closest(".sticky-cta")) return "sticky";
+    if (el.closest(".hero") || el.closest(".page-hero")) return "hero";
+    if (el.closest(".sticky-cta") || el.closest(".zh-stickybar")) return "sticky";
     if (el.closest("#pricing")) return "pricing";
     if (el.closest(".closing")) return "closing";
-    return null;
+    const s = el.closest("section[id]");
+    return s ? s.id : null;
 }
 
 /* ---------- delegated link clicks + CTA + outbound ---------------------- */
@@ -94,14 +95,8 @@ document.addEventListener("click", (e) => {
     }
 });
 
-/* ---------- rank demo engagement ---------------------------------------
-   The demo is the page's central argument. Knowing whether anyone touches it
-   is the difference between "the section works" and "the section is wallpaper". */
-document.addEventListener("click", (e) => {
-    const chip = e.target.closest(".dchip");
-    if (!chip) return;
-    logEvent(analytics, "demo_chip_click", { demo_mode: chip.dataset.mode || "unknown" });
-}, { once: false });
+/* demo_chip_click handler removed 2026-08-30 — the rank demo (.dchip) left the
+   page in the v4 rewrite and the event never fired again (analytics review). */
 
 /* ---------- FAQ opens ---------------------------------------------------- */
 document.querySelectorAll(".faq-item").forEach((d) => {
