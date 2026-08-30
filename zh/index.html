@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- 光谱挑片 zh page v1 — 2026-08-30. Adapted from the EN v4 homepage, NOT a
+     translation of it: copy source is the CN App Store listing v3.0
+     (photomatcher repo, 5-cn/cn-appstore-listing-v3.0.md), DeepSeek-polished
+     whole-page 2026-08-30. Deviations from the EN page, on purpose:
+       - CN gate model in Pricing: sorting/browsing/swiping free UNLIMITED,
+         ¥18 one-time unlocks 批量操作 + 专业模式. The global "5 sorts a week"
+         meter DOES NOT EXIST in the CN build — never copy those cards here.
+       - No Google Fonts (blocked in the mainland) — assets/site-zh.css swaps
+         the font tokens for the system CJK stack.
+       - Static CN screenshots (images/shots-zh/) instead of the three EN
+         video loops. VIDEO PLACEHOLDERS are marked with ZH-VIDEO-TODO comments
+         at the exact slots; specs in 5-cn/cn-website-xhs-plan.md §4 (W-A2).
+       - No "AI" anywhere in visible copy (2026 CN convention), no absolute
+         superlatives (广告法), price shown as entitlement (一次买断), never
+         "永远只要¥18".
+       - Links go to the CN App Store record (id6776902965 — the CN app is a
+         separate listing), legal links to the zh pages, no EN guide cluster.
+     Language switch: /index.html auto-redirects zh browsers here unless the
+     visitor chose EN; the nav EN link stores that choice. See inline script. -->
+
+<title>光谱挑片 —— 找出值得发的那张照片</title>
+<meta name="description" content="按个人品味、画质、题材、地点和相似度整理你的相册，替你挑出值得发的那张照片。全程 iPhone 本机运行，照片不上传。¥18 一次买断，没有订阅。">
+<meta name="keywords" content="光谱挑片,选照片,挑照片,选片,相册整理,清理相册,重复照片,照片去重,找照片,以图搜图,照片排序,连拍,相似照片,本地运行,买断制,iPhone相册">
+<meta name="author" content="Mike Lu">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<!-- ZH-SEO-TODO: baidu-site-verification meta goes here once Mike registers
+     ziyuan.baidu.com (see cn-website-xhs-plan.md — may require a mainland
+     phone number; verify with the Baidu/DeepSeek indexing research notes). -->
+<link rel="canonical" href="https://spectrasort.app/zh/">
+<link rel="alternate" hreflang="en" href="https://spectrasort.app/">
+<link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/zh/">
+<link rel="alternate" hreflang="x-default" href="https://spectrasort.app/">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="光谱挑片">
+<meta property="og:title" content="光谱挑片 —— 找出值得发的那张照片">
+<meta property="og:description" content="按个人品味、画质、题材、地点和相似度整理你的相册。全程 iPhone 本机运行，照片不上传。¥18 一次买断，没有订阅。">
+<!-- ZH-ASSET-TODO: CN og-image (1200×630, zh headline) not made yet — reusing
+     the EN card so shares aren't imageless. Spec: plan §4 W-A3. -->
+<meta property="og:image" content="https://spectrasort.app/og-image.png?v=3">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:url" content="https://spectrasort.app/zh/">
+
+<meta name="apple-itunes-app" content="app-id=6776902965">
+<link rel="icon" type="image/png" sizes="32x32" href="/images/app-icon-flat.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/app-icon-flat.png">
+<meta name="theme-color" content="#0B0B0E">
+
+<script>
+/* Manual language choice wins over auto-detect. The EN homepage stores
+   ss-lang and redirects zh-preference browsers here; this side only needs to
+   honour an explicit EN choice (direct /zh/ links must not bounce). */
+(function () { try {
+  if (localStorage.getItem('ss-lang') === 'en') { location.replace('/'); }
+} catch (e) {} })();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "光谱挑片",
+  "alternateName": "SpectraSort",
+  "operatingSystem": "iOS 18.5+",
+  "applicationCategory": "PhotographyApplication",
+  "softwareVersion": "3.0",
+  "description": "完全在 iPhone 本机运行的挑片工具。按个人品味、画质、题材、地点和相似度整理相册，替你挑出值得发的那张照片。照片不上传，不需要账号。",
+  "url": "https://spectrasort.app/zh/",
+  "downloadUrl": "https://apps.apple.com/cn/app/id6776902965",
+  "installUrl": "https://apps.apple.com/cn/app/id6776902965",
+  "image": "https://spectrasort.app/images/app-icon-flat.png",
+  "inLanguage": "zh-Hans",
+  "featureList": [
+    "六个工具：个人品味、最佳照片、找题材、以图找图、找地点、去重",
+    "个人品味：从你选中和丢弃的照片里学习你的眼光，越用越准",
+    "找题材：输入文字搜照片，相关照片按相关度排好",
+    "场景自动归拢旅行、主题、系列；时间轴按年、月、日展开",
+    "专业模式：七个画质维度、题材组合、平衡转盘、排序方案",
+    "首次排序本机建索引（每秒 100 张以上），之后几乎立刻出结果",
+    "重复、连拍、相似照片自动归堆，一次清完",
+    "全程本机运行——不上传、不联网、不需要账号"
+  ],
+  "offers": [
+    { "@type": "Offer", "price": "0", "priceCurrency": "CNY",
+      "availability": "https://schema.org/InStock",
+      "description": "免费下载。排序、浏览、滑动挑选永久免费、不限次数。" },
+    { "@type": "Offer", "name": "高级版", "price": "18", "priceCurrency": "CNY",
+      "description": "¥18 一次买断：解锁批量操作和完整的专业模式。没有订阅。" }
+  ],
+  "author": { "@type": "Person", "name": "Mike Lu" },
+  "publisher": { "@type": "Organization", "name": "SpectraSort", "url": "https://spectrasort.app" }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    { "@type": "Question", "name": "照片会离开我的手机吗？",
+      "acceptedAnswer": { "@type": "Answer", "text": "不会。评分、搜索、个人品味全部在 iPhone 本机完成。不上传，没有账号，也没有开发者的服务器参与。" } },
+    { "@type": "Question", "name": "会用我的照片训练模型吗？",
+      "acceptedAnswer": { "@type": "Answer", "text": "不会。照片不上传，也就没有东西可以拿去训练。开发者永远看不到你的照片。" } },
+    { "@type": "Question", "name": "和系统相册有什么区别？",
+      "acceptedAnswer": { "@type": "Answer", "text": "系统相册是用来存和看的；光谱挑片是用来挑的——按你要找的、按你的品味把照片排好，再给你一套顺手的挑选流程。而且全程本机。" } },
+    { "@type": "Question", "name": "免费和付费的边界在哪里？",
+      "acceptedAnswer": { "@type": "Answer", "text": "排序、浏览、滑动挑选永久免费、不限次数。¥18 一次买断，解锁批量操作（存进相册、加入收藏、分享、删除）和完整的专业模式。没有订阅。" } },
+    { "@type": "Question", "name": "删掉的照片能恢复吗？",
+      "acceptedAnswer": { "@type": "Answer", "text": "删除一律经过系统相册的确认弹窗，先进入「最近删除」，30 天内随时可以恢复。App 不会静默删除任何照片。" } },
+    { "@type": "Question", "name": "速度怎么样？",
+      "acceptedAnswer": { "@type": "Answer", "text": "第一次排序会在本机建一次索引，每秒 100 张以上，只建这一次。之后每次排序，几乎立刻出结果。" } },
+    { "@type": "Question", "name": "需要什么设备？",
+      "acceptedAnswer": { "@type": "Answer", "text": "iPhone，iOS 18.5 或更新版本。芯片越新，建索引和排序越快。" } },
+    { "@type": "Question", "name": "换了手机，买断还在吗？",
+      "acceptedAnswer": { "@type": "Answer", "text": "在。买断绑定你的 Apple 账号，新手机上装好 App，在设置里点「恢复购买」就能拿回来。" } }
+  ]
+}
+</script>
+
+<link rel="preload" as="image" href="/images/shots-zh/hero.jpg" fetchpriority="high">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="/assets/site-zh.css">
+</head>
+<body>
+
+<nav class="top">
+  <div class="container">
+    <a class="brand" href="#top"><img src="/images/app-icon-flat.png" alt="">光谱挑片</a>
+    <div class="nav-links">
+      <a href="#tools">工具箱</a>
+      <a href="#discover">发现</a>
+      <a href="#studio">专业模式</a>
+      <a href="#privacy">隐私</a>
+      <a href="#pricing">价格</a>
+      <a href="/" onclick="try{localStorage.setItem('ss-lang','en')}catch(e){}">EN</a>
+    </div>
+    <a class="cta-small" href="https://apps.apple.com/cn/app/id6776902965">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      下载
+    </a>
+  </div>
+</nav>
+
+<main id="top">
+
+<!-- ============================= HERO ============================= -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">挑片工具 · iPhone</span>
+        <h1>几千张照片里，<br><span class="grad-text">找出值得发的那张。</span></h1>
+        <p class="lead">你相册里最好的照片，其实早就拍到了。光谱挑片按个人品味、画质、题材、地点和相似度，帮你把它们找出来——全程在 iPhone 本机完成。</p>
+        <div>
+          <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+            在 App Store 下载
+          </a>
+          <span class="hero-meta">免费下载 · iPhone · iOS 18.5+</span>
+        </div>
+        <div class="trust-chips">
+          <span class="chip"><b>全程本机运行</b>——照片不上传</span>
+          <span class="chip"><b>排序、浏览、挑选</b>永久免费</span>
+          <span class="chip"><b>¥18 一次买断</b>——没有订阅</span>
+        </div>
+      </div>
+      <div class="hero-shot rv in">
+        <div class="shot">
+          <!-- ZH-VIDEO-TODO (W-A2): the EN hero is a video loop (Toolbox →
+               Your Taste → taste-sorted grid). CN equivalent needs a 660×1344
+               silent loop recorded off the CN sim build. Until then: static
+               工具箱 home screen, which is the same opening frame. -->
+          <div class="screen-card capped" style="--cap:560px">
+            <img src="/images/shots-zh/hero.jpg" alt="光谱挑片工具箱：个人品味、最佳照片、找题材、以图找图、去重、找地点，六个工具" width="800" height="1738">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 个人品味 ============================ -->
+<section id="taste" class="rise">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">个人品味</span>
+        <h2>它学的是<span class="grad-text">你的眼光。</span></h2>
+        <p>每挑一次，它就更懂你一点。选中的、丢掉的，慢慢就成了你的眼光，越用越准。</p>
+        <p>想暂停就暂停，想重建就重建。方案存几个都行，专业模式里还能微调。</p>
+      </div>
+      <div class="rv">
+        <!-- Same taste-fan staging as the EN page: three named profiles say
+             "the profile is YOURS" without a word of copy. Front card is the
+             多元创作者 profile; sides are 人像创作者 / 宠物知音, decorative. -->
+        <div class="taste-fan">
+          <div class="screen-card tf-side tf-left" aria-hidden="true">
+            <img src="/images/shots-zh/taste-portrait.jpg" alt="" loading="lazy" width="800" height="1738">
+          </div>
+          <div class="screen-card tf-side tf-right" aria-hidden="true">
+            <img src="/images/shots-zh/taste-pets.jpg" alt="" loading="lazy" width="800" height="1738">
+          </div>
+          <div class="screen-card tf-front">
+            <img src="/images/shots-zh/taste-versatile.jpg" alt="个人品味——由浏览过的 40 张照片生成的档案「多元创作者」，可以继续学习、重置并重建" loading="lazy" width="800" height="1738">
+          </div>
+        </div>
+        <p class="shot-cap">个人品味从你的挑选里学会你的眼光，再按它替你排照片。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 工具箱 ============================ -->
+<section id="tools">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">工具箱</span>
+      <h2>六个工具。<span class="grad-text">点一下就用。</span></h2>
+    </div>
+    <div class="tools-grid rv">
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-taste.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">个人品味</div><div class="tdesc">按你浏览时的选择来定义。</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-best.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">最佳照片</div><div class="tdesc">按清晰度、曝光、构图来排。可以偏技术，也可以偏艺术。</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-subject.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">找题材</div><div class="tdesc">想找什么直接输入，"海边的狗"也行。</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-image.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">以图找图</div><div class="tdesc">选一张，找出和它相似的所有照片。</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-dedupe.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">去重</div><div class="tdesc">找出重复、连拍和相似照片。</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-place.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">找地点</div><div class="tdesc">同一地点拍的所有照片，聚在一起。</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== 找题材 ========================== -->
+<section id="find-subject" class="rise">
+  <div class="container">
+    <div class="feature rev">
+      <div class="rv">
+        <span class="eyebrow">找题材</span>
+        <h2>想找什么，<span class="grad-text">直接输入。</span></h2>
+        <p>"海边的狗""黄昏""有氛围感的"，都可以搜。输入一个词，相关照片排进一格——不只是找到，顺序也替你排好了。</p>
+      </div>
+      <div class="rv">
+        <!-- ZH-VIDEO-TODO (W-A2): EN shows a typing loop. CN static shows the
+             找题材 sheet with template chips, which carries the same claim. -->
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:470px">
+            <img src="/images/shots-zh/find-subject.jpg" alt="找题材——输入一个题材，或点宠物、自然、人像、街拍等模板，一键开搜" loading="lazy" width="800" height="1738">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== 以图找图 =========================== -->
+<section id="like-this">
+  <div class="container">
+    <div class="section-head rv" style="margin-bottom:44px;">
+      <span class="eyebrow">以图找图</span>
+      <h2>选一张，<span class="grad-text">找出全部相似的。</span></h2>
+      <p>看中某一张，顺手找出所有和它相似的——最像的排最前。</p>
+    </div>
+    <div class="shot-pair rv">
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="/images/shots-zh/likethis-ref.jpg" alt="选一张照片作基准，为 1000 张照片排序" loading="lazy" width="800" height="1738"></div>
+      </div>
+      <div class="arrow" aria-hidden="true">&rarr;</div>
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="/images/shots-zh/likethis-grid.jpg" alt="排好的结果——每张都有评分，最像的在最前" loading="lazy" width="800" height="1738"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 去重 ============================== -->
+<section id="dedupe" class="rise">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">去重</span>
+        <h2>同一个日落拍了 11 张？<span class="grad-text">留下最清楚的那张。</span></h2>
+        <p>重复、连拍、看着差不多的，自动归成一堆。同一个瞬间，只做一次决定。</p>
+      </div>
+      <div class="rv">
+        <div class="stack-wrap" id="stackDemo">
+          <div class="stack-card" style="transform:rotate(-7deg) translate(-16px,10px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(5deg) translate(14px,4px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(-3deg) translate(-6px,-6px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(8deg) translate(20px,-12px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card keeper" style="background-image:url('/images/art/subject-sunset.jpg');">
+            <span class="keeper-badge">最清楚 &check;</span>
+            <span class="count-badge">11 张</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================= 发现 ============================= -->
+<section id="discover">
+  <div class="container">
+    <div class="section-head rv" style="margin-bottom:44px;">
+      <span class="eyebrow">发现——场景与时间轴</span>
+      <h2>相册再大，<span class="grad-text">也能一段一段理。</span></h2>
+      <p>场景会把一次旅行、一个主题、一个系列自动收成一张卡片。时间轴按年、月、日展开——点一下任意一段，就能单独整理。</p>
+    </div>
+    <div class="shot-pair rv">
+      <div class="shot">
+        <div class="screen-card"><img src="/images/shots-zh/discover-scenes.jpg" alt="发现·场景——自动归拢的旅行、题材、系列卡片，每张都能直接整理" loading="lazy" width="800" height="1738"></div>
+      </div>
+      <div class="shot">
+        <div class="screen-card"><img src="/images/shots-zh/discover-timeline.jpg" alt="发现·时间轴——按年、月、日展开，任意一段单独整理" loading="lazy" width="800" height="1738"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ 挑选 → 批量操作 ============================ -->
+<section id="done" class="rise">
+  <div class="container">
+    <div class="section-head rv" style="margin-bottom:44px;">
+      <span class="eyebrow">挑选</span>
+      <h2>右滑选中，<span class="grad-text">左滑丢弃。</span></h2>
+      <p>排完之后，好照片会浮到上面。右滑选中，下滑保留，左滑丢弃。最后用批量操作一次收尾。你没确认之前，相册不会动。</p>
+    </div>
+    <!-- ZH-VIDEO-TODO (W-A2): EN shows the similar-wheel swipe loop. CN static
+         pair: full-view review with score + the 批量操作 finish screen. -->
+    <div class="shot-pair rv">
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="/images/shots-zh/review-swipe.jpg" alt="逐张挑选——评分 8.4，丢弃、保留、选中三个按钮" loading="lazy" width="800" height="1738"></div>
+      </div>
+      <div class="arrow" aria-hidden="true">&rarr;</div>
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="/images/shots-zh/batch.jpg" alt="批量操作：存进相册、加入收藏、分享、删除，一次收尾" loading="lazy" width="800" height="1738"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 专业模式 ============================== -->
+<section id="studio">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">专业模式</span>
+        <h2>想自己掌控？<span class="grad-text">都给你。</span></h2>
+        <p>七个画质维度单独调：清晰度、曝光、对比度、噪点、构图、色彩、画面平衡。题材自己定义，最多同时 3 个。调好的参数存成排序方案，随时切换。</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:470px">
+            <img src="/images/shots-zh/studio.jpg" alt="专业模式——主要题材与品质偏好各占比重，七个维度的雷达图，技术到艺术的滑杆" loading="lazy" width="800" height="1738">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 隐私 ============================== -->
+<section id="privacy">
+  <div class="container">
+    <div class="privacy-band rv">
+      <img class="bgphoto" src="/images/shots/privacy-art.jpg" alt="一摞捆好的照片上放着一把铜锁" loading="lazy">
+      <div class="scrim"></div>
+      <div class="privacy-copy">
+        <span class="eyebrow" style="color:rgba(244,242,237,.65);">放心</span>
+        <h2>照片从不离开你的手机。</h2>
+        <p>评分、搜索、个人品味，全部在你的 iPhone 本机完成。不上传，不联网，不需要账号。连按意思搜索，也在本机运行。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================== 三步 =========================== -->
+<section id="how" class="rise" style="padding-bottom:0;">
+  <div class="container">
+    <div class="rv" style="text-align:center;">
+      <span class="eyebrow">每次整理，三步</span>
+    </div>
+    <div class="stats rv" style="margin-top:18px;">
+      <div class="stat"><div class="num">找</div><div class="label">六个工具，点一下：一个词、一张照片、一个地点、你的品味。</div></div>
+      <div class="stat"><div class="num">排</div><div class="label">按清晰度、曝光、构图打分，也按你的眼光。</div></div>
+      <div class="stat"><div class="num">挑</div><div class="label">一个屏幕收尾：右滑选中，批量处理，完成。</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================== 价格 ============================== -->
+<!-- CN gate model — deliberately different from the EN page. Free tier here is
+     unlimited sorting (no weekly meter exists in the CN build); the paid
+     unlock is 批量操作 + 专业模式. -->
+<section id="pricing" class="rise">
+  <div class="container pricing-hero rv">
+    <span class="eyebrow">价格</span>
+    <h2>免费用。要全部，<span class="grad-text">¥18 一次买断。</span></h2>
+    <div class="price-cards">
+      <div class="price-card">
+        <span class="plan">免费</span>
+        <div class="amount">排序、浏览、挑选——不限次数</div>
+        <ul>
+          <li><b>永久免费</b>，不是限时试用</li>
+          <li>不需要账号，没有广告</li>
+          <li>场景、时间轴、六个工具全部开放</li>
+          <li>照片不出你的手机</li>
+        </ul>
+        <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+          免费下载
+        </a>
+        <p class="plan-note">iPhone · iOS 18.5+</p>
+      </div>
+      <div class="price-card featured">
+        <span class="plan">高级版</span>
+        <div class="amount"><span class="grad-text">¥18 一次买断</span></div>
+        <ul>
+          <li><b>批量操作</b>：存进相册、加入收藏、分享、删除</li>
+          <li>完整的<b>专业模式</b>：七个维度、平衡转盘、排序方案</li>
+          <li>绑定 Apple 账号，换手机自动恢复</li>
+          <li><b>没有订阅，没有自动续费</b></li>
+        </ul>
+        <a class="cta grad" href="https://apps.apple.com/cn/app/id6776902965">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+          获取 App
+        </a>
+        <p class="plan-note">独立开发，我自己每天在用。觉得够用了，再升级就好。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================================ FAQ ================================ -->
+<section id="faq">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">常见问题</span>
+      <h2>你可能想问。</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>照片会离开我的手机吗？</summary><div class="faq-answer">不会。评分、搜索、个人品味全部在 iPhone 本机完成。不上传，没有账号，也没有开发者的服务器参与。</div></details>
+      <details class="faq-item"><summary>会用我的照片训练模型吗？</summary><div class="faq-answer">不会。照片不上传，也就没有东西可以拿去训练。开发者永远看不到你的照片。</div></details>
+      <details class="faq-item"><summary>和系统相册有什么区别？</summary><div class="faq-answer">系统相册是用来存和看的；光谱挑片是用来挑的——按你要找的、按你的品味把照片排好，再给你一套顺手的挑选流程。而且全程本机。</div></details>
+      <details class="faq-item"><summary>免费和付费的边界在哪里？</summary><div class="faq-answer">排序、浏览、滑动挑选永久免费、不限次数。¥18 一次买断，解锁批量操作（存进相册、加入收藏、分享、删除）和完整的专业模式。没有订阅。</div></details>
+      <details class="faq-item"><summary>删掉的照片能恢复吗？</summary><div class="faq-answer">删除一律经过系统相册的确认弹窗，先进入「最近删除」，30 天内随时可以恢复。App 不会静默删除任何照片。</div></details>
+      <details class="faq-item"><summary>速度怎么样？</summary><div class="faq-answer">第一次排序会在本机建一次索引，每秒 100 张以上，只建这一次。之后每次排序，几乎立刻出结果。</div></details>
+      <details class="faq-item"><summary>需要什么设备？</summary><div class="faq-answer">iPhone，iOS 18.5 或更新版本。芯片越新，建索引和排序越快。</div></details>
+      <details class="faq-item"><summary>换了手机，买断还在吗？</summary><div class="faq-answer">在。买断绑定你的 Apple 账号，新手机上装好 App，在设置里点「恢复购买」就能拿回来。</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container rv">
+    <h2>找出你<span class="grad-text">最好的照片。</span></h2>
+    <p>iPhone，iOS 18.5 或更新版本。</p>
+    <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      在 App Store 下载
+    </a>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-cta" id="stickyCta">
+  <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+    免费下载光谱挑片
+  </a>
+</div>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div class="foot-col">
+        <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">光谱挑片</div>
+        <p>完全在 iPhone 本机运行的挑片工具。照片不上传，没有账号，没有订阅。</p>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">App</div>
+        <a href="https://apps.apple.com/cn/app/id6776902965">在 App Store 下载</a>
+        <a href="#pricing">价格</a>
+        <a href="#faq">常见问题</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">条款</div>
+        <a href="/privacy-zh.html">隐私政策</a>
+        <a href="/terms-zh.html">用户协议</a>
+      </div>
+      <div class="foot-col">
+        <div class="fc-title">更多</div>
+        <a href="mailto:spectrasortapp@gmail.com">联系与支持</a>
+        <a href="/" onclick="try{localStorage.setItem('ss-lang','en')}catch(e){}">English</a>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div>&copy; 2026 Mike Lu &middot; 光谱挑片</div>
+      <div><a href="/privacy-zh.html">隐私</a><a href="/terms-zh.html">条款</a><a href="mailto:spectrasortapp@gmail.com">支持</a></div>
+    </div>
+  </div>
+</footer>
+
+<script src="/assets/site.js" defer></script>
+<script type="module" src="/assets/analytics.js"></script>
+</body>
+</html>

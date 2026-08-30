@@ -1,0 +1,28 @@
+/* SpectraSort /zh/ overrides — loaded AFTER site.css on the Chinese page only.
+   Why this file exists:
+   - Google Fonts (Space Grotesk / Inter) is BLOCKED in mainland China; the zh
+     page must not reference fonts.googleapis.com at all. We override the two
+     font tokens with the system CJK stack (PingFang SC on iOS/macOS, Noto/YaHei
+     elsewhere). Latin glyphs fall back to the system UI face, which is fine.
+   - Space Grotesk's negative letter-spacing looks wrong on CJK; reset it.
+   All other tokens/layout come from site.css unchanged. */
+
+:root {
+    --font-display: -apple-system, BlinkMacSystemFont, "PingFang SC",
+        "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    --font-text: -apple-system, BlinkMacSystemFont, "PingFang SC",
+        "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+}
+
+h1, h2, h3 { letter-spacing: 0; }
+
+/* CJK glyphs run wider than Latin at the same size; step the hero headline
+   down so 找出值得发的那张。 holds one line instead of orphaning 张。 */
+h1 { font-size: clamp(34px, 4.7vw, 58px); line-height: 1.16; }
+h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 1.2; }
+
+/* Tracked all-caps eyebrows don't exist in CJK; keep a light spread only. */
+.eyebrow { letter-spacing: 0.08em; }
+
+/* CJK reads better with a touch more line height at body sizes. */
+body { line-height: 1.7; }

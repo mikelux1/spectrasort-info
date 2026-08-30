@@ -34,6 +34,23 @@
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="google-site-verification" content="OG5ej7GPr8diDvd7zSt3IGmCHw3LVzQqQuNKduJOf-s">
 <link rel="canonical" href="https://spectrasort.app">
+<link rel="alternate" hreflang="en" href="https://spectrasort.app/">
+<link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/zh/">
+<link rel="alternate" hreflang="x-default" href="https://spectrasort.app/">
+
+<script>
+/* Language routing (v1, 2026-08-30): a stored manual choice always wins; with
+   no choice stored, browsers preferring Chinese are sent to /zh/. JS-only on
+   purpose — GitHub Pages is static, and the hreflang pair above keeps search
+   engines indexing both variants regardless of this redirect. */
+(function () { try {
+  var l = localStorage.getItem('ss-lang');
+  if (l === 'zh') { location.replace('/zh/'); return; }
+  if (!l && ((navigator.languages && navigator.languages[0]) || navigator.language || '').toLowerCase().indexOf('zh') === 0) {
+    location.replace('/zh/');
+  }
+} catch (e) {} })();
+</script>
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SpectraSort">
@@ -138,6 +155,7 @@
       <a href="#studio">Studio</a>
       <a href="#privacy">Privacy</a>
       <a href="#pricing">Pricing</a>
+      <a href="/zh/" lang="zh-Hans" onclick="try{localStorage.setItem('ss-lang','zh')}catch(e){}">中文</a>
     </div>
     <a class="cta-small" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>

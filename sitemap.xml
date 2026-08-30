@@ -11,15 +11,27 @@
 
      hreflang annotations are reciprocal: every URL in a language set lists the
      complete set, and each member appears as its own <url> entry. A one-way
-     annotation is ignored. The homepage is English-only, so it has no
-     alternates. -->
+     annotation is ignored. The homepage has a zh-Hans twin at /zh/
+     (2026-08-30); the guide cluster stays English-only. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://spectrasort.app/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spectrasort.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spectrasort.app/"/>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/zh/</loc>
+    <lastmod>2026-08-30</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://spectrasort.app/"/>
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/zh/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://spectrasort.app/"/>
   </url>
 
   <!-- v4 landing-page cluster (2026-08-23). These are directories with an
