@@ -75,6 +75,19 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 .nav-links a:hover { color:var(--text); }
 @media (max-width:860px){ .nav-links { display:none; } }
 
+/* Explicit language switch (2026-08-30, /zh/ launch). Lives OUTSIDE .nav-links
+   on purpose: that list dies under 860px, and the switch must survive on
+   phones. Ghost pill + globe glyph so it reads as a control, not a menu item. */
+.lang-switch {
+    display:inline-flex; align-items:center; gap:7px; white-space:nowrap;
+    padding:7px 14px; border:1px solid var(--hairline2); border-radius:30px;
+    color:var(--text-mid); text-decoration:none; font-size:13.5px; font-weight:600;
+    transition:color .2s ease, border-color .2s ease;
+}
+.lang-switch:hover { color:var(--text); border-color:rgba(255,255,255,0.45); }
+.lang-switch svg { width:15px; height:15px; }
+@media (max-width:860px){ .lang-switch { margin-left:auto; } }
+
 /* ---------- buttons ---------- */
 .cta, .cta-small {
     display:inline-flex; align-items:center; gap:9px;
