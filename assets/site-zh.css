@@ -26,3 +26,66 @@ h2 { font-size: clamp(26px, 3.6vw, 44px); line-height: 1.2; }
 
 /* CJK reads better with a touch more line height at body sizes. */
 body { line-height: 1.7; }
+
+/* ══════════ /zh/ v2 components (2026-08-30, per cn-website research) ══════════ */
+
+/* 场景卡 — CN use-case cards */
+.uses-grid{display:grid; grid-template-columns:repeat(2,1fr); gap:14px; margin-top:34px}
+.use-card{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08);
+  border-radius:16px; padding:22px 20px}
+.use-card .un{font-size:19px; font-weight:600; color:#f2f0eb; margin-bottom:8px}
+.use-card p{font-size:15px; line-height:1.75; color:rgba(242,240,235,.78); margin:0}
+.use-card .ug{display:inline-block; margin-top:12px; font-size:13.5px;
+  color:rgba(242,240,235,.6); text-decoration:none;
+  border-bottom:1px solid rgba(242,240,235,.25)}
+.use-card .ug:hover{color:#f2f0eb}
+@media (max-width:720px){.uses-grid{grid-template-columns:1fr; gap:10px}}
+
+/* 删除安全 band */
+.safety-band{background:rgba(255,255,255,.035); border:1px solid rgba(255,255,255,.08);
+  border-radius:20px; padding:36px 30px}
+.safety-steps{display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-top:24px}
+.safety-step{border-left:2px solid rgba(255,255,255,.18); padding-left:14px}
+.safety-step b{display:block; font-size:15.5px; color:#f2f0eb; margin-bottom:5px}
+.safety-step span{font-size:14px; line-height:1.7; color:rgba(242,240,235,.68)}
+@media (max-width:820px){.safety-steps{grid-template-columns:repeat(2,1fr)}}
+
+/* 我们不擅长 — honesty block */
+.nope-list{display:grid; grid-template-columns:repeat(2,1fr); gap:12px 26px; margin-top:26px}
+.nope{font-size:15px; line-height:1.75; color:rgba(242,240,235,.78)}
+.nope b{color:#f2f0eb}
+.nope::before{content:"✕"; color:rgba(242,240,235,.42); margin-right:9px; font-size:13px}
+@media (max-width:720px){.nope-list{grid-template-columns:1fr}}
+
+/* desktop QR beside the hero CTA (hidden on mobile) */
+.qr-box{display:flex; align-items:center; gap:12px; margin-top:18px}
+.qr-box img{width:88px; height:88px; border-radius:10px; background:#fff; padding:5px; flex:none}
+.qr-box span{font-size:13px; color:rgba(242,240,235,.6); line-height:1.6}
+@media (max-width:900px){.qr-box{display:none}}
+
+/* mobile sticky download bar (replaces the EN sticky-cta on this page) */
+.zh-stickybar{display:none}
+@media (max-width:900px){
+  .zh-stickybar{display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60;
+    align-items:center; justify-content:space-between; gap:12px;
+    padding:10px 16px calc(10px + env(safe-area-inset-bottom));
+    background:rgba(14,14,17,.92); backdrop-filter:blur(14px);
+    -webkit-backdrop-filter:blur(14px);
+    border-top:1px solid rgba(255,255,255,.1)}
+  .zh-stickybar .sb-t{font-size:13px; color:rgba(242,240,235,.8); line-height:1.4}
+  .zh-stickybar .sb-t b{display:block; font-size:14.5px; color:#f2f0eb}
+  .zh-stickybar .cta{padding:10px 18px; font-size:15px; flex:none}
+  body{padding-bottom:64px}
+  .sticky-cta{display:none !important}
+}
+
+/* WeChat 引导蒙层 — shown when the UA is WeChat and a store link is tapped */
+.wx-mask{position:fixed; inset:0; z-index:99; background:rgba(0,0,0,.82); display:none;
+  padding:26px 22px; text-align:right}
+.wx-mask.show{display:block}
+.wx-mask .arrow-up{font-size:44px; color:#fff; line-height:1}
+.wx-mask p{color:#fff; font-size:17px; line-height:1.8; text-align:center; margin-top:24vh}
+
+/* keep 一次买断 unbreakable in the pricing headline */
+.pricing-hero h2 .grad-text{white-space:nowrap}
+@media (max-width:720px){.pricing-hero h2 .pbreak{display:block}}

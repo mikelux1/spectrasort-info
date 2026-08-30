@@ -28,6 +28,15 @@
      Language switch: /index.html auto-redirects zh browsers here unless the
      visitor chose EN; the nav EN link stores that choice. See inline script. -->
 
+<!-- v2 (2026-08-30, after Mike rejected v1 as translation-not-localization):
+     research-driven rebuild per 5-cn/cn-website-design-research.md +
+     cn-website-localization-research.md. Adds: 场景 job cards (#uses, above the
+     tool tour), 删除安全 band (#safety), 我们不擅长 block (#nope), mobile
+     sticky download bar, WeChat 引导蒙层, rich footer, denser bodies, terser
+     hero, couplet headline rhythm, minimal EN switch. Approved by Mike
+     2026-08-30 (decisions ①–⑤; platform line kept soft, no GB-freed line).
+     Desktop QR box present but hidden until /images/qr-appstore-cn.png exists.
+     Guide links commented (GUIDE-TODO) until each of the 6 CN guides ships. -->
 <title>光谱挑片 —— 找出值得发的那张照片</title>
 <meta name="description" content="按个人品味、画质、题材、地点和相似度整理你的相册，替你挑出值得发的那张照片。全程 iPhone 本机运行，照片不上传。¥18 一次买断，没有订阅。">
 <meta name="keywords" content="光谱挑片,选照片,挑照片,选片,相册整理,清理相册,重复照片,照片去重,找照片,以图搜图,照片排序,连拍,相似照片,本地运行,买断制,iPhone相册">
@@ -139,16 +148,13 @@
   <div class="container">
     <a class="brand" href="#top"><img src="/images/app-icon-flat.png" alt="">光谱挑片</a>
     <div class="nav-links">
+      <a href="#uses">能帮你做什么</a>
       <a href="#tools">工具箱</a>
-      <a href="#discover">发现</a>
-      <a href="#studio">专业模式</a>
+      <a href="#safety">删除安全</a>
       <a href="#privacy">隐私</a>
       <a href="#pricing">价格</a>
     </div>
-    <a class="lang-switch" href="/" lang="en" hreflang="en" aria-label="Switch to English" onclick="try{localStorage.setItem('ss-lang','en')}catch(e){}">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.7-3.8 9s1.3 6.4 3.8 9"/></svg>
-      English
-    </a>
+    <a class="lang-switch" href="/" lang="en" hreflang="en" aria-label="Switch to English" onclick="try{localStorage.setItem('ss-lang','en')}catch(e){}">EN</a>
     <a class="cta-small" href="https://apps.apple.com/cn/app/id6776902965">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
       下载
@@ -163,20 +169,28 @@
   <div class="container">
     <div class="hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">挑片工具 · iPhone</span>
+        <span class="eyebrow">挑片工具 · 仅 iPhone</span>
         <h1>几千张照片里，<br><span class="grad-text">找出值得发的那张。</span></h1>
-        <p class="lead">你相册里最好的照片，其实早就拍到了。光谱挑片按个人品味、画质、题材、地点和相似度，帮你把它们找出来——全程在 iPhone 本机完成。</p>
+        <p class="lead">按个人品味、画质、题材、地点和相似度替你把相册排好——全程在 iPhone 本机完成，照片不上传。</p>
         <div>
           <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
-            在 App Store 下载
+            App Store 免费下载
           </a>
-          <span class="hero-meta">免费下载 · iPhone · iOS 18.5+</span>
+          <span class="hero-meta">仅 iPhone · iOS 18.5+ · 不需要账号</span>
         </div>
         <div class="trust-chips">
-          <span class="chip"><b>全程本机运行</b>——照片不上传</span>
+          <span class="chip"><b>全程本机运行</b>——不上传、不联网</span>
           <span class="chip"><b>排序、浏览、挑选</b>永久免费</span>
           <span class="chip"><b>¥18 一次买断</b>——没有订阅</span>
+          <span class="chip"><b>每秒约 100 张</b>建索引，本机完成</span>
+        </div>
+        <!-- ZH-ASSET-TODO: real QR PNG of https://apps.apple.com/cn/app/id6776902965
+             (any QR generator, ~600px, black on white) → /images/qr-appstore-cn.png.
+             Until it exists the box is hidden via the inline style below. -->
+        <div class="qr-box" style="display:none">
+          <img src="/images/qr-appstore-cn.png" alt="App Store 下载二维码" width="88" height="88" loading="lazy">
+          <span>电脑上看到这页？<br>扫码直达 App Store</span>
         </div>
       </div>
       <div class="hero-shot rv in">
@@ -194,6 +208,42 @@
   </div>
 </section>
 
+<!-- ============================ 场景 (v2) ============================
+     Four CN job cards, ABOVE the tool tour — the CN reader enters through a
+     job, not a feature argument (localization research §1: Baidu-suggest
+     evidence). Guide links activate as each guide page ships (plan: 6 CN
+     guides, 2/fortnight after the homepage). -->
+<section id="uses" class="rise">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">能帮你做什么</span>
+      <h2>挑照片这件事，<span class="grad-text">它替你做了四件。</span></h2>
+    </div>
+    <div class="uses-grid rv">
+      <div class="use-card">
+        <div class="un">值得发的那一张</div>
+        <p>发朋友圈、发小红书之前，先让它把最好的几张排到最前面。挑得越多，排序越接近你的眼光。</p>
+        <!-- GUIDE-TODO: <a class="ug" href="/zh/zhaopian-shaixuan-ruanjian/">照片筛选软件怎么挑：五个判断标准 →</a> -->
+      </div>
+      <div class="use-card">
+        <div class="un">相册里那张，翻不到</div>
+        <p>记得拍过，就是找不到。输入一个词，或者选一张相似的照片，它替你翻出来——按相关度排好，三年没看过的也能找到。</p>
+        <!-- GUIDE-TODO: <a class="ug" href="/zh/iphone-xiangce-zhengli/">iPhone 相册太乱怎么整理归类 →</a> -->
+      </div>
+      <div class="use-card">
+        <div class="un">重复、连拍、看着差不多的</div>
+        <p>同一个瞬间十几张，自动归成一堆，最清楚的那张已经标好。示例相册里同一朵玫瑰出现了 19 次——挑一张，剩下的不用管。</p>
+        <!-- GUIDE-TODO: <a class="ug" href="/zh/chongfu-zhaopian-qingli/">重复照片和连拍怎么一次清干净 →</a> -->
+      </div>
+      <div class="use-card">
+        <div class="un">舍不得删的那几万张</div>
+        <p>相册几万张下不去手，是因为没人替你先挑一遍。一次旅行回来三千张也一样：先把值得留的挑出来，剩下的就好决定了。</p>
+        <!-- GUIDE-TODO: <a class="ug" href="/zh/zhaopian-taiduo-shebude-shan/">照片太多又舍不得删，怎么办 →</a> -->
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================ 个人品味 ============================ -->
 <section id="taste" class="rise">
   <div class="container">
@@ -201,7 +251,7 @@
       <div class="rv">
         <span class="eyebrow">个人品味</span>
         <h2>它学的是<span class="grad-text">你的眼光。</span></h2>
-        <p>每挑一次，它就更懂你一点。选中的、丢掉的，慢慢就成了你的眼光，越用越准。</p>
+        <p>每挑一次，它就更懂你一点。选中的、丢掉的，慢慢就成了你的眼光，越用越准。示例档案来自 1,082 次真实挑选。</p>
         <p>想暂停就暂停，想重建就重建。方案存几个都行，专业模式里还能微调。</p>
       </div>
       <div class="rv">
@@ -219,7 +269,7 @@
             <img src="/images/shots-zh/taste-versatile.jpg" alt="个人品味——由浏览过的 40 张照片生成的档案「多元创作者」，可以继续学习、重置并重建" loading="lazy" width="800" height="1738">
           </div>
         </div>
-        <p class="shot-cap">个人品味从你的挑选里学会你的眼光，再按它替你排照片。</p>
+        <p class="shot-cap">页面里的截图都是真实排序结果，不是效果图。</p>
       </div>
     </div>
   </div>
@@ -230,7 +280,7 @@
   <div class="container">
     <div class="rv">
       <span class="eyebrow">工具箱</span>
-      <h2>六个工具。<span class="grad-text">点一下就用。</span></h2>
+      <h2>六个工具，<span class="grad-text">打开即用。</span></h2>
     </div>
     <div class="tools-grid rv">
       <div class="tool-chip">
@@ -268,7 +318,7 @@
       <div class="rv">
         <span class="eyebrow">找题材</span>
         <h2>想找什么，<span class="grad-text">直接输入。</span></h2>
-        <p>"海边的狗""黄昏""有氛围感的"，都可以搜。输入一个词，相关照片排进一格——不只是找到，顺序也替你排好了。</p>
+        <p>"海边的狗""黄昏""有氛围感的"，都可以搜。输入一个词，相关照片排进一格——不只是找到，顺序也替你排好了。示例里对 1,708 张照片一次排完。</p>
       </div>
       <div class="rv">
         <!-- ZH-VIDEO-TODO (W-A2): EN shows a typing loop. CN static shows the
@@ -389,6 +439,25 @@
   </div>
 </section>
 
+<!-- ============================ 删除安全 (v2) ============================
+     Promoted out of the FAQ: recovery anxiety is the #1 CN trust issue in this
+     category (localization research §4 — every cleaning query has a 怎么恢复
+     sibling in Baidu suggest). All four claims are mechanically true. -->
+<section id="safety" class="rise">
+  <div class="container">
+    <div class="safety-band rv">
+      <span class="eyebrow">删除安全</span>
+      <h2>删除这件事，<span class="grad-text">永远由你确认。</span></h2>
+      <div class="safety-steps">
+        <div class="safety-step"><b>系统弹窗确认</b><span>每次删除都经过系统「照片」的确认弹窗。</span></div>
+        <div class="safety-step"><b>先进「最近删除」</b><span>不会直接消失，先进系统的最近删除。</span></div>
+        <div class="safety-step"><b>30 天可恢复</b><span>30 天内随时整批恢复。</span></div>
+        <div class="safety-step"><b>不静默删除</b><span>App 不会在你不知情时删除任何一张。</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ============================== 隐私 ============================== -->
 <section id="privacy">
   <div class="container">
@@ -398,8 +467,26 @@
       <div class="privacy-copy">
         <span class="eyebrow" style="color:rgba(244,242,237,.65);">放心</span>
         <h2>照片从不离开你的手机。</h2>
-        <p>评分、搜索、个人品味，全部在你的 iPhone 本机完成。不上传，不联网，不需要账号。连按意思搜索，也在本机运行。</p>
+        <p>评分、搜索、个人品味，全部在你的 iPhone 本机完成。不上传，不联网，不需要账号，没有广告。连按意思搜索，也在本机运行。</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========================== 我们不擅长 (v2) ==========================
+     flomo-style honesty block. Every line is true; platform line kept soft on
+     purpose (Mike 2026-08-30: may go multi-platform later, 不要写得那么绝). -->
+<section id="nope" class="rise">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">我们不擅长</span>
+      <h2>它只挑片，<span class="grad-text">不碰这些。</span></h2>
+    </div>
+    <div class="nope-list rv">
+      <div class="nope"><b>不做云备份</b>——照片不上传，不产生云端副本。</div>
+      <div class="nope"><b>不做修图</b>——只帮你挑，不动你的照片。</div>
+      <div class="nope"><b>没有安卓版，也没有 iPad 版</b>——目前只做 iPhone。</div>
+      <div class="nope"><b>不做订阅</b>——¥18 一次买断，没有自动续费。</div>
     </div>
   </div>
 </section>
@@ -425,7 +512,7 @@
 <section id="pricing" class="rise">
   <div class="container pricing-hero rv">
     <span class="eyebrow">价格</span>
-    <h2>免费用。要全部，<span class="grad-text">¥18 一次买断。</span></h2>
+    <h2>免费用。要全部，<span class="pbreak"></span><span class="grad-text">¥18 一次买断。</span></h2>
     <div class="price-cards">
       <div class="price-card">
         <span class="plan">免费</span>
@@ -484,7 +571,7 @@
 <section class="closing">
   <div class="container rv">
     <h2>找出你<span class="grad-text">最好的照片。</span></h2>
-    <p>iPhone，iOS 18.5 或更新版本。</p>
+    <p>仅 iPhone，iOS 18.5 或更新版本。</p>
     <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
       在 App Store 下载
@@ -494,19 +581,22 @@
 
 </main>
 
-<div class="sticky-cta" id="stickyCta">
-  <a class="cta" href="https://apps.apple.com/cn/app/id6776902965">
-    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
-    免费下载光谱挑片
-  </a>
+<!-- mobile sticky download bar (CN-native pattern; .sticky-cta is display:none'd
+     under 900px by site-zh.css so the two never coexist) -->
+<div class="zh-stickybar">
+  <div class="sb-t"><b>光谱挑片</b>免费下载 · ¥18 一次买断</div>
+  <a class="cta grad" href="https://apps.apple.com/cn/app/id6776902965">下载</a>
 </div>
 
+<!-- Rich footer — no ICP and deliberately nothing ICP-shaped (overseas indie
+     convention, see design research §4); fullness IS the trust substitute. -->
 <footer>
   <div class="container">
     <div class="foot-grid">
       <div class="foot-col">
         <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">光谱挑片</div>
-        <p>完全在 iPhone 本机运行的挑片工具。照片不上传，没有账号，没有订阅。</p>
+        <p>完全在 iPhone 本机运行的挑片工具。照片不上传，没有账号，没有订阅。独立开发者出品。</p>
+        <p style="opacity:.6">当前版本 3.0 · 2026 年 8 月更新</p>
       </div>
       <div class="foot-col">
         <div class="fc-title">App</div>
@@ -522,6 +612,7 @@
       <div class="foot-col">
         <div class="fc-title">更多</div>
         <a href="mailto:spectrasortapp@gmail.com">联系与支持</a>
+        <!-- XHS-TODO: 小红书 @光谱挑片 link goes here once the account exists -->
         <a href="/" onclick="try{localStorage.setItem('ss-lang','en')}catch(e){}">English</a>
       </div>
     </div>
@@ -531,6 +622,25 @@
     </div>
   </div>
 </footer>
+
+<!-- WeChat 引导蒙层: WeChat's in-app browser cannot open App Store links (design
+     research §2). UA-detect + intercept every store link; the mask tells the
+     user to reopen in Safari. Standard, instantly-recognized CN pattern. -->
+<div class="wx-mask" id="wxMask" role="dialog" aria-label="请在浏览器中打开">
+  <div class="arrow-up" aria-hidden="true">↗</div>
+  <p>微信内无法打开 App Store<br>请点击右上角 「···」<br>选择<b>「在 Safari 中打开」</b></p>
+</div>
+<script>
+(function(){
+  if (!/MicroMessenger/i.test(navigator.userAgent)) return;
+  var mask = document.getElementById('wxMask');
+  mask.addEventListener('click', function(){ mask.classList.remove('show'); });
+  document.addEventListener('click', function(e){
+    var a = e.target.closest && e.target.closest('a[href*="apps.apple.com"]');
+    if (a) { e.preventDefault(); mask.classList.add('show'); }
+  }, true);
+})();
+</script>
 
 <script src="/assets/site.js" defer></script>
 <script type="module" src="/assets/analytics.js"></script>
