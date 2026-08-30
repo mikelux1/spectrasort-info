@@ -35,4 +35,22 @@ Allow: /
 User-agent: Bytespider
 Allow: /
 
+# Chinese search engines — the /zh/ page depends on these (2026-08-30).
+# NOTE: GitHub Pages itself 403s Baiduspider at the origin; a Cloudflare
+# cache layer is required before Baidu can actually fetch (see the CN
+# website plan in the photomatcher repo). These records cost nothing and
+# remove any doubt on our side.
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: Sogou web spider
+Allow: /
+
+User-agent: 360Spider
+Allow: /
+
+User-agent: bingbot
+Allow: /
+
 Sitemap: https://spectrasort.app/sitemap.xml
