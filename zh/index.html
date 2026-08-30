@@ -409,11 +409,14 @@
       <h2>右滑选中，<span class="grad-text">左滑丢弃。</span></h2>
       <p>排完之后，好照片会浮到上面。右滑选中，下滑保留，左滑丢弃。最后用批量操作一次收尾。你没确认之前，相册不会动。</p>
     </div>
-    <!-- ZH-VIDEO-TODO (W-A2): EN shows the similar-wheel swipe loop. CN static
-         pair: full-view review with score + the 批量操作 finish screen. -->
+    <!-- W-A2 partially DONE 2026-08-30: real swipe loop below (cut from App
+         Preview flow-a 46.30–49.80). Hero + 找题材 loops still TODO. -->
     <div class="shot-pair rv">
       <div class="shot">
-        <div class="swipe-demo"><div class="screen-card capped" style="--cap:400px"><img src="/images/shots-zh/review-swipe.jpg" alt="逐张挑选——右滑选中的滑动手势演示" loading="lazy" width="800" height="1738"></div></div>
+        <!-- Real swipe recorded off the CN build (same take as App Preview shot 7:
+             right-swipe → green 选中 heart → next photo). Exported status-bar-
+             cropped, so no margin pull applies (site.css .screen-card video). -->
+        <div class="screen-card"><video autoplay muted loop playsinline preload="metadata" poster="/video/web-zh-review-swipe.jpg" width="660" height="1344" aria-label="逐张挑选——真实右滑选中演示"><source src="/video/web-zh-review-swipe.mp4" type="video/mp4"></video></div>
       </div>
       <div class="arrow" aria-hidden="true">&rarr;</div>
       <div class="shot">

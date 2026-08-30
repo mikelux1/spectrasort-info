@@ -90,16 +90,5 @@ body { line-height: 1.7; }
 .pricing-hero h2 .grad-text{white-space:nowrap}
 @media (max-width:720px){.pricing-hero h2 .pbreak{display:block}}
 
-/* 挑选 section: looping right-swipe gesture hint on the review screenshot.
-   Real recorded loop still tracked as ZH-VIDEO-TODO; this reads as the gesture
-   without fabricating UI. Card drifts right + tilts, fades, resets. */
-.swipe-demo{position:relative}
-.swipe-demo .screen-card{animation:zhswipe 4.2s ease-in-out infinite; transform-origin:50% 85%}
-@keyframes zhswipe{
-  0%,52%{transform:none; opacity:1}
-  68%{transform:translateX(54px) rotate(5deg); opacity:.92}
-  78%{transform:translateX(150px) rotate(10deg); opacity:0}
-  78.01%{transform:translateX(-36px) rotate(-2deg); opacity:0}
-  92%,100%{transform:none; opacity:1}
-}
-@media (prefers-reduced-motion: reduce){.swipe-demo .screen-card{animation:none}}
+/* 挑选 section swipe: was a CSS gesture-hint loop; replaced 2026-08-30 by a
+   real recorded loop (/video/web-zh-review-swipe.mp4) per Mike. */
