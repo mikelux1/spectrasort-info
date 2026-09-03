@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio / Pro — section + page draft</title>
+<!-- DRAFT (2026-09-03). Two things on one page, both rendered with the live
+     site.css so what you see is what would ship:
+       A. the replacement for the homepage #studio section
+       B. a new /studio/ landing page
+     Nothing here is deployed. The wheel loop and the City & Urban capture are
+     the existing real assets; no new captures were made. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/site.css?v=20260830">
+<style>
+  /* draft scaffolding only — never ships */
+  .rv { opacity:1; transform:none; }
+  .draft-bar {
+      position:sticky; top:0; z-index:60; background:#E8A96A; color:#0B0B0E;
+      font:600 13px/1.4 var(--font-display); letter-spacing:.06em; text-transform:uppercase;
+      padding:10px 24px; display:flex; gap:18px; align-items:center; flex-wrap:wrap;
+  }
+  .draft-bar a { color:#0B0B0E; }
+  .draft-label {
+      max-width:1140px; margin:56px auto 0; padding:0 24px;
+      font:600 12.5px/1.4 var(--font-display); letter-spacing:.14em; text-transform:uppercase; color:#E8A96A;
+  }
+  .draft-label span { color:var(--text-low); letter-spacing:.02em; text-transform:none; font-weight:400; font-size:13px; margin-left:12px; }
+  .draft-cut { border:0; border-top:1px dashed rgba(232,169,106,.45); margin:56px 0 0; }
+
+  /* candidate styles for the /studio/ page — would move into site.css on ship */
+  .axes { list-style:none; margin:36px 0 0; display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:0 40px; border-top:1px solid var(--hairline); }
+  @media (max-width:700px){ .axes { grid-template-columns:1fr; } }
+  .axes li { display:grid; grid-template-columns:130px 1fr; gap:14px; padding:14px 0; border-bottom:1px solid var(--hairline); font-size:15px; color:var(--text-mid); line-height:1.5; }
+  .axes li b { font-family:var(--font-display); color:var(--text); font-weight:600; font-size:16px; }
+  .axes .side { display:block; font-size:12px; letter-spacing:.12em; text-transform:uppercase; color:var(--text-low); margin-top:2px; }
+  .setups { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:16px; margin-top:40px; }
+  @media (max-width:760px){ .setups { grid-template-columns:1fr; } }
+  .setup { background:var(--bg-card); border:1px solid var(--hairline); border-radius:18px; padding:24px 22px; }
+  .setup .uc-kicker {
+      font-family:var(--font-display); font-size:12.5px; font-weight:600; letter-spacing:0.12em; text-transform:uppercase;
+      background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent;
+      display:block; margin-bottom:8px;
+  }
+  .setup h3 { font-size:19px; margin-bottom:10px; }
+  .setup p { color:var(--text-mid); font-size:14.5px; line-height:1.55; }
+  .setup .dial { margin-top:14px; display:flex; flex-wrap:wrap; gap:6px; }
+  .setup .dial span { font:500 12.5px/1 var(--font-display); letter-spacing:.02em; padding:6px 10px; border-radius:999px; border:1px solid var(--hairline2); color:var(--text-mid); }
+  .setup .dial span.up { border-color:transparent; background:linear-gradient(var(--bg-card),var(--bg-card)) padding-box, var(--spectral) border-box; color:var(--text); }
+  .setup .dial span.down { opacity:.55; }
+  .studio-link { display:inline-block; margin-top:18px; font-size:15px; font-weight:600; color:var(--sp-amber); text-decoration:none; }
+  .studio-link:hover { text-decoration:underline; }
+  .shot-pro { width:min(320px,80vw); margin:0 auto; }
+  .pro-pricing { text-align:center; max-width:640px; margin:0 auto; }
+  .pro-pricing h2 { margin:14px 0 16px; }
+  .pro-pricing p { color:var(--text-mid); }
+  .pro-pricing .cta { margin-top:26px; }
+</style>
+</head>
+<body>
+
+<div class="draft-bar">Draft · not deployed <span style="font-weight:400;text-transform:none;letter-spacing:0">A = homepage #studio replacement · B = new /studio/ page · rendered with the live site.css</span></div>
+
+<!-- =====================================================================
+     A. HOMEPAGE — replaces the current #studio section
+     ===================================================================== -->
+<div class="draft-label">A · Homepage #studio, replacement <span>same slot, same wheel loop, one link out</span></div>
+<section id="studio">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Studio — for photographers</span>
+        <h2>Set what counts. <span class="grad-text">Sort by it.</span></h2>
+        <p>Seven quality axes, weighted one by one or all at once on a Technical / Artistic slider. Up to three subjects — a photo can be one of them. A wheel to trade subject match against quality. Save the setup as a profile and switch per shoot.</p>
+        <p>A wedding profile that forgives noise. A product profile that forgives nothing. A street profile that puts composition first.</p>
+        <a class="studio-link" href="/studio/">Studio, in full &rarr;</a>
+      </div>
+      <div class="rv">
+        <div class="wheel-shot">
+          <div class="screen-card">
+            <video class="screen-loop" src="../video/web-studio-wheel.mp4"
+                   poster="../images/shots/studio-wheel-poster.jpg"
+                   loop muted playsinline autoplay preload="none"
+                   width="920" height="852"
+                   aria-label="Studio's balance wheel being turned back and forth: the Top Subjects weight falls from 75% to 25% while the Quality Focus radar grows from 25% to 75%, then returns"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="draft-cut">
+
+<!-- =====================================================================
+     B. NEW PAGE — /studio/
+     title: Studio — Manual Photo Culling Controls for iPhone | SpectraSort
+     description: Weight seven quality axes, set up to three subjects, save
+     it as a profile. SpectraSort's Studio gives photographers the culling
+     controls, entirely on the iPhone.
+     ===================================================================== -->
+<div class="draft-label">B · New page: /studio/ <span>guide-page skeleton (page-hero → sections → limits → pricing → FAQ), same as the eleven that rank</span></div>
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/">SpectraSort</a><span class="sep">&#8250;</span>Studio</div>
+    <span class="eyebrow">Studio · for photographers</span>
+    <h1>Set what counts. <span class="grad-text">Sort by it.</span></h1>
+    <p class="lead">The one-tap tools decide what a good photo is. Studio hands that decision back: weight seven quality axes, set up to three subjects, save it as a profile — and every sort runs your rules, on your phone.</p>
+    <div>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Download on the App Store
+      </a>
+      <span class="hero-meta">Free &middot; iPhone &middot; iOS 18.5+</span>
+    </div>
+    <div class="trust-chips">
+      <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
+      <span class="chip"><b>Studio</b> included with Premium</span>
+      <span class="chip"><b>$19.99 once</b> — no subscription</span>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <span class="eyebrow">Seven axes</span>
+    <h2>Your definition of sharp, exposed and composed.</h2>
+    <p>Every photo is scored on seven axes. In the one-tap tools the weights are fixed. In Studio each one is yours to set — or slide all seven at once from Technical to Artistic.</p>
+  </div>
+  <div class="container">
+    <ul class="axes rv">
+      <li><b>Sharpness<span class="side">Technical</span></b>Focus and fine detail where it matters — eyes, edges, texture.</li>
+      <li><b>Composition<span class="side">Artistic</span></b>Where the subject sits in the frame and how the frame is filled.</li>
+      <li><b>Exposure<span class="side">Technical</span></b>Highlights held, shadows open, nothing clipped.</li>
+      <li><b>Color<span class="side">Artistic</span></b>How the colors in the frame work with each other.</li>
+      <li><b>Contrast<span class="side">Technical</span></b>Separation between light and dark, tone by tone.</li>
+      <li><b>Balance<span class="side">Artistic</span></b>The visual weight of the frame, left to right and top to bottom.</li>
+      <li><b>Noise<span class="side">Technical</span></b>Grain and sensor noise, most visible in the shadows.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Subjects and the wheel</span>
+        <h2>Three subjects. <span class="grad-text">One balance.</span></h2>
+        <p>Put up to three subjects on a sort — a word, a theme, or a photo. Then turn the wheel: at 75% it hunts the subject and forgives the frame; at 25% it wants the best frame and only nods at the subject.</p>
+        <p>The loop is a real sort: Portrait, Street and Nature over 650 photos, the wheel turned from 75 / 25 to 25 / 75 and back.</p>
+      </div>
+      <div class="rv">
+        <div class="wheel-shot">
+          <div class="screen-card">
+            <video class="screen-loop" src="../video/web-studio-wheel.mp4"
+                   poster="../images/shots/studio-wheel-poster.jpg"
+                   loop muted playsinline autoplay preload="none"
+                   width="920" height="852"
+                   aria-label="The balance wheel turning: Top Subjects from 75% to 25% while Quality Focus grows from 25% to 75%"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="feature rev">
+      <div class="rv">
+        <span class="eyebrow">Profiles</span>
+        <h2>One setup per kind of shoot.</h2>
+        <p>Save any Studio setup as a named profile. Bookmark the ones you reach for, pick one per sort, and the Your Taste profile the app learned from your own keeps opens here too — nudge its axes like any other.</p>
+        <p>The capture: a City &amp; Urban profile — Architecture, Street, Night at 82% subject weight — pointed at one album of 1,708 photos.</p>
+      </div>
+      <div class="rv">
+        <div class="shot-pro">
+          <div class="screen-card capped" style="--cap:600px">
+            <img src="../images/shots/studio.jpg" width="800" height="1734" alt="Studio with a City & Urban profile: three subjects at 82% and a seven-axis quality radar at 18%, 1,708 photos ready to sort">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">Example setups</span>
+      <h2>Three shoots. <span class="grad-text">Three rulebooks.</span></h2>
+      <p>What the same seven axes look like when the job changes. Starting points, not presets — each is a minute in Studio and a saved profile after that.</p>
+    </div>
+    <div class="setups rv">
+      <div class="setup">
+        <span class="uc-kicker">Event · wedding</span>
+        <h3>A sharp face in a dark room beats a clean wall.</h3>
+        <p>Noise forgiven, exposure and composition up. Three subjects: the couple, the guests, the details.</p>
+        <div class="dial"><span class="up">Sharpness ↑</span><span class="up">Composition ↑</span><span class="down">Noise ↓</span><span>3 subjects</span></div>
+      </div>
+      <div class="setup">
+        <span class="uc-kicker">Product · real estate</span>
+        <h3>The frame is the frame. Only the technical side counts.</h3>
+        <p>Sharpness, exposure and contrast all the way up. Composition barely weighted — the client already chose the angle.</p>
+        <div class="dial"><span class="up">Sharpness ↑</span><span class="up">Exposure ↑</span><span class="up">Contrast ↑</span><span class="down">Composition ↓</span></div>
+      </div>
+      <div class="setup">
+        <span class="uc-kicker">Street · travel</span>
+        <h3>Composition first. Grain is part of it.</h3>
+        <p>Balance and composition lead, noise is forgiven, the wheel leans toward the subject so the moment outranks the clean frame.</p>
+        <div class="dial"><span class="up">Composition ↑</span><span class="up">Balance ↑</span><span class="down">Noise ↓</span><span>Wheel → subject</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>Where it fits in a working cull</h2>
+    <p>Studio sorts whatever is in the iPhone's Photos library — the phone's own shots, and camera files that have been imported or synced into it. Picks end as an album, as Favorites, or in the share sheet, so they show up wherever that library already does.</p>
+    <div class="callout">
+      <div class="co-title">Where it won't help</div>
+      <ul>
+        <li>iPhone only, iOS 18.5 or later. No Mac, Windows or iPad version, and no tethered capture.</li>
+        <li>No ratings or color labels are written back into a desktop catalog. The hand-off is an album or a Favorites star.</li>
+        <li>Photos have to be in the Photos library first. A card still in the camera is out of reach.</li>
+        <li>The very first index of a big library takes some time. After that it's automatic — new photos are indexed as they appear.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container pro-pricing rv">
+    <span class="eyebrow">Pricing</span>
+    <h2>Included with Premium. <span class="grad-text">$19.99, once.</span></h2>
+    <p>Anyone can open Studio and set up a sort. Running it is Premium — one purchase, unlimited sorts, no subscription. Built by an indie dev who uses it daily.</p>
+    <a class="cta grad" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Get the app
+    </a>
+  </div>
+</section>
+
+<section class="slab" id="faq">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Studio questions.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>What does the Technical / Artistic slider actually move?</summary><div class="faq-answer">All seven axes at once. Technical pulls weight toward sharpness, exposure, contrast and noise; Artistic pulls it toward composition, color and balance. Any single axis can still be set on its own afterwards.</div></details>
+      <details class="faq-item"><summary>Can a photo be a subject?</summary><div class="faq-answer">Yes. A subject is a word, a theme, or a photo — up to three per sort. With a photo, the sort ranks by resemblance to it, the same engine as Like This Photo.</div></details>
+      <details class="faq-item"><summary>Does Studio work on the profile the app learned from me?</summary><div class="faq-answer">Yes. Your Taste opens in Studio like any saved profile, so you can see what it learned and adjust the axes. Changes save as a new profile; the learned one keeps learning.</div></details>
+      <details class="faq-item"><summary>Is Studio free?</summary><div class="faq-answer">Opening it and setting up a sort is free. Running a Studio sort is Premium — $19.99 once, which also removes the five-sorts-a-week limit. No subscription.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="closing">
+  <div class="container rv">
+    <h2>Your rules. <span class="grad-text">Every sort.</span></h2>
+    <p>iPhone, iOS 18.5 or later.</p>
+    <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+      Download on the App Store
+    </a>
+  </div>
+</section>
+
+</body>
+</html>
