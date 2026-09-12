@@ -63,13 +63,13 @@
   </url>
   <url>
     <loc>https://spectrasort.app/duplicate-photo-finder-iphone/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://spectrasort.app/photo-organizer-iphone/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-09-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -167,5 +167,35 @@
   <url>
     <loc>https://spectrasort.app/zh/bulianwang-xiangce-gongju/</loc>
     <lastmod>2026-08-30</lastmod>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/features/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/pricing/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/studio/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/changelog/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://spectrasort.app/vacation-photos-iphone/</loc>
+    <lastmod>2026-09-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 </urlset>
