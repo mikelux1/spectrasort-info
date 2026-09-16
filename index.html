@@ -115,30 +115,22 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "Do my photos ever leave my phone?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How is this different from Apple Photos or Google Photos?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for or what it has learned about your taste, then hands you a review flow to act on. And it is 100% local."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What is free and what does Premium unlock?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio. No subscription."
-      }
-    }
+    { "@type": "Question", "name": "Do my photos ever leave my phone?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path." } },
+    { "@type": "Question", "name": "Does SpectraSort use my photos to train AI?",
+      "acceptedAnswer": { "@type": "Answer", "text": "No. Nothing is uploaded, so there is nothing to train on. Everything happens on your iPhone, and the maker never sees your photos." } },
+    { "@type": "Question", "name": "How is this different from Apple Photos or Google Photos?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for or what it has learned about your taste, then hands you a review flow to act on. And it is 100% local." } },
+    { "@type": "Question", "name": "How fast is it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Near-instant once the on-device index exists, even across thousands of photos. The index is built on the first sort — up to 100 photos a second on recent iPhones — and kept current automatically as new photos appear." } },
+    { "@type": "Question", "name": "What is free and what does Premium unlock?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Five sorts a week are free for everyone, forever — not a trial. Saving, sharing and deleting results are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio's full controls. No subscription." } },
+    { "@type": "Question", "name": "Does it free up storage?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It clears the photos you tell it to, through iOS's own delete flow: they go to Recently Deleted, and the storage comes back the moment you empty that album — or automatically after 30 days. SpectraSort only ever touches your photo library, never the rest of your phone." } },
+    { "@type": "Question", "name": "I bought Premium in SpectraSort 2.x — do I keep it?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Premium is tied to your Apple account, so an earlier purchase carries over automatically. If it does not show on a new phone, tap Restore Purchases in Settings." } },
+    { "@type": "Question", "name": "What devices does it run on?",
+      "acceptedAnswer": { "@type": "Answer", "text": "iPhone with iOS 18.5 or later. All processing runs on Apple's Neural Engine; newer chips index and sort faster. No Apple Intelligence required and no region locks." } }
   ]
 }
 </script>
@@ -598,8 +590,14 @@
     </div>
     <div class="faq-list rv">
       <details class="faq-item"><summary>Do my photos ever leave my phone?</summary><div class="faq-answer">No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path.</div></details>
-      <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio. No subscription.</div></details>
+      <details class="faq-item"><summary>Does SpectraSort use my photos to train AI?</summary><div class="faq-answer">No. Nothing is uploaded, so there is nothing to train on. Everything happens on your iPhone, and the maker never sees your photos.</div></details>
       <details class="faq-item"><summary>How is this different from Apple Photos or Google Photos?</summary><div class="faq-answer">Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for, or against what it has learned about your taste, then hands you a review flow to act on. And it's 100% local: nothing about your library leaves the phone.</div></details>
+      <details class="faq-item"><summary>How fast is it?</summary><div class="faq-answer">Near-instant once the on-device index exists, even across thousands of photos. The index is built on the first sort — up to 100 photos a second on recent iPhones — and kept current automatically as new photos appear.</div></details>
+      <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio (quality axes, the weight wheel, saved profiles). No subscription.</div></details>
+      <details class="faq-item"><summary>Does it free up storage?</summary><div class="faq-answer">It clears the photos you tell it to, through iOS's own delete flow: they go to <b>Recently Deleted</b>, and the storage comes back the moment you empty that album — or automatically after 30 days. SpectraSort only ever touches your photo library, never the rest of your phone.</div></details>
+      <details class="faq-item"><summary>What is the Your Taste profile?</summary><div class="faq-answer">A personal profile that takes shape as you use the app, built from the photos you keep and the ones you let go — all on your device. Once it has learned enough it sorts by your own preferences. Shape it in Studio, or reset and rebuild it any time. It never leaves your phone.</div></details>
+      <details class="faq-item"><summary>I bought Premium in SpectraSort 2.x — do I keep it?</summary><div class="faq-answer">Yes — same purchase, carries over automatically. If it doesn't show on a new phone, tap Restore Purchases in Settings.</div></details>
+      <details class="faq-item"><summary>What devices does it run on?</summary><div class="faq-answer">iPhone with iOS 18.5 or later. All processing runs on Apple's Neural Engine; newer chips index and sort faster. No Apple Intelligence required and no region locks.</div></details>
     </div>
     <div class="rv" style="text-align:center;margin-top:28px;"><a class="learn-more" href="/features/">More questions? Every detail is on the features page <span aria-hidden="true">&rsaquo;</span></a></div>
   </div>
