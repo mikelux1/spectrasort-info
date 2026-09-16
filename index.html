@@ -115,22 +115,30 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-    { "@type": "Question", "name": "Do my photos ever leave my phone?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path." } },
-    { "@type": "Question", "name": "Does SpectraSort use my photos to train AI?",
-      "acceptedAnswer": { "@type": "Answer", "text": "No. Nothing is uploaded, so there is nothing to train on. Everything happens on your iPhone, and the maker never sees your photos." } },
-    { "@type": "Question", "name": "How is this different from Apple Photos or Google Photos?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for or what it has learned about your taste, then hands you a review flow to act on. And it is 100% local." } },
-    { "@type": "Question", "name": "How fast is it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Near-instant once the on-device index exists, even across thousands of photos. The index is built on the first sort — up to 100 photos a second on recent iPhones — and kept current automatically as new photos appear." } },
-    { "@type": "Question", "name": "What is free and what does Premium unlock?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Five sorts a week are free for everyone, forever — not a trial. Saving, sharing and deleting results are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio's full controls. No subscription." } },
-    { "@type": "Question", "name": "Does it free up storage?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It clears the photos you tell it to, through iOS's own delete flow: they go to Recently Deleted, and the storage comes back the moment you empty that album — or automatically after 30 days. SpectraSort only ever touches your photo library, never the rest of your phone." } },
-    { "@type": "Question", "name": "I bought Premium in SpectraSort 2.x — do I keep it?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. Premium is tied to your Apple account, so an earlier purchase carries over automatically. If it does not show on a new phone, tap Restore Purchases in Settings." } },
-    { "@type": "Question", "name": "What devices does it run on?",
-      "acceptedAnswer": { "@type": "Answer", "text": "iPhone with iOS 18.5 or later. All processing runs on Apple's Neural Engine; newer chips index and sort faster. No Apple Intelligence required and no region locks." } }
+    {
+      "@type": "Question",
+      "name": "Do my photos ever leave my phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How is this different from Apple Photos or Google Photos?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for or what it has learned about your taste, then hands you a review flow to act on. And it is 100% local."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is free and what does Premium unlock?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio. No subscription."
+      }
+    }
   ]
 }
 </script>
@@ -142,7 +150,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20260830">
+<link rel="stylesheet" href="assets/site.css?v=20260915">
 </head>
 <body>
 
@@ -222,6 +230,7 @@
         <h2>It learns <span class="grad-text">what you'd have picked.</span></h2>
         <p>Every review teaches it. The app builds a personalized profile around your taste. What it picks starts to look like what you'd have picked yourself.</p>
         <p>Pause its learning, reset it, or sharpen it. Save as many profiles as you like.</p>
+        <a class="learn-more" href="/ai-photo-picker-iphone/">How the picking works <span aria-hidden="true">&rsaquo;</span></a>
       </div>
       <div class="rv">
         <!-- Three profiles fanned, staged like ASC screenshot 02-yourtaste.png:
@@ -287,6 +296,7 @@
         <div class="tbody"><div class="tname">Photos of a location</div><div class="tdesc">Pin a place, see everything shot there.</div></div>
       </div>
     </div>
+    <div class="rv" style="text-align:center;margin-top:28px;"><a class="learn-more" href="/features/">Every tool, control and limit on one page <span aria-hidden="true">&rsaquo;</span></a></div>
   </div>
 </section>
 
@@ -298,6 +308,7 @@
         <span class="eyebrow">Find a Subject</span>
         <h2>Search anything — and get it back <span class="grad-text">best-first.</span></h2>
         <p>"Roses" works. "Dogs at the beach" works. "Cozy" works. Type a theme, every shot lands in one grid — ranked, not just found.</p>
+        <a class="learn-more" href="/find-best-photos-iphone/">Three ways to find a photo <span aria-hidden="true">&rsaquo;</span></a>
       </div>
       <div class="rv">
         <div class="shot">
@@ -330,6 +341,7 @@
       <span class="eyebrow">Like This Photo</span>
       <h2>Pick one photo, <span class="grad-text">find the rest.</span></h2>
       <p>Pick one photo and get back others like it, ranked most similar first.</p>
+        <a class="learn-more" href="/find-best-photos-iphone/">Search by example, explained <span aria-hidden="true">&rsaquo;</span></a>
     </div>
     <div class="shot-pair rv">
       <div class="shot">
@@ -351,6 +363,7 @@
         <span class="eyebrow">Dedupe</span>
         <h2>11 shots of the same sunset &rarr; <span class="grad-text">one swipe keeps the sharpest.</span></h2>
         <p>Duplicates, bursts and near-identical shots arrive already grouped, so you pick the one you like and move on.</p>
+        <a class="learn-more" href="/duplicate-photo-finder-iphone/">How the duplicate finder works <span aria-hidden="true">&rsaquo;</span></a>
       </div>
       <div class="rv">
         <div class="stack-wrap" id="stackDemo">
@@ -374,7 +387,8 @@
     <div class="section-head rv" style="margin-bottom:44px;">
       <span class="eyebrow">Discover — scenes &amp; timeline</span>
       <h2>Face the library <span class="grad-text">one piece at a time.</span></h2>
-      <p>Scenes gather your trips, themes and series on their own. A Timeline takes you through your days, months and years. <a href="/photo-organizer-iphone/" style="color:var(--sp-amber);text-decoration:none;">How the organizing works &rarr;</a></p>
+      <p>Scenes gather your trips, themes and series on their own. A Timeline takes you through your days, months and years.</p>
+      <a class="learn-more" href="/photo-organizer-iphone/">How the organizing works <span aria-hidden="true">&rsaquo;</span></a>
     </div>
     <div class="shot-pair rv">
       <div class="shot">
@@ -395,6 +409,7 @@
         <span class="eyebrow">Review &rarr; Done</span>
         <h2>Swipe the winners in. <span class="grad-text">Finish in one screen.</span></h2>
         <p>Best rise to the top. Right to pick, down to keep, left to let go. Use the wheel to compare similar photos.</p>
+        <a class="learn-more" href="/photo-culling-iphone/">The full review workflow <span aria-hidden="true">&rsaquo;</span></a>
       </div>
       <div class="rv">
         <!-- Was a two-card .stack-pair faking the wheel with CSS rotation. The
@@ -428,6 +443,7 @@
         <span class="eyebrow">Studio — custom controls</span>
         <h2>When you want <span class="grad-text">the controls.</span></h2>
         <p>Seven quality axes to adjust. Up to three subjects. A balance wheel to trade subject match against quality. Bookmark as customized sort profiles.</p>
+        <a class="learn-more" href="/studio/">Explore Studio <span aria-hidden="true">&rsaquo;</span></a>
       </div>
       <div class="rv">
         <!-- v4.7: fresh v3.0 device recording (Mike, 2026-08-25), replacing the
@@ -462,6 +478,7 @@
         <span class="eyebrow" style="color:rgba(244,242,237,.65);">Private</span>
         <h2>Nothing leaves your phone.</h2>
         <p>Search, scoring and your taste profile all run on your phone. Your photos are never uploaded anywhere.</p>
+        <a class="learn-more" href="/private-ai-photo-app/">How on-device works <span aria-hidden="true">&rsaquo;</span></a>
       </div>
     </div>
   </div>
@@ -482,11 +499,11 @@
       <p>The captures on this page and in the guides are real sorts, not mockups: 1,708 photos ranked against one example, a taste profile built from 1,082 reviews, and a 650-photo cull that ended 4 picked, 484 kept, 162 let go.</p>
     </div>
     <div class="usecase-grid rv">
-      <a class="usecase" href="/photo-culling-iphone/">
+      <a class="usecase" href="/vacation-photos-iphone/">
         <span class="uc-kicker">Cull a trip</span>
         <h3>1,200 vacation photos &rarr; the album worth showing</h3>
         <p>Point a sort at the trip and review the winners instead of swiping through every take. Duplicates and bursts come pre-stacked, so each moment is one decision.</p>
-        <span class="uc-more">How photo culling works on iPhone &rarr;</span>
+        <span class="uc-more">The trip, in three steps &rarr;</span>
       </a>
       <a class="usecase" href="/find-best-photos-iphone/">
         <span class="uc-kicker">Find old favorites</span>
@@ -566,6 +583,7 @@
           Get the app
         </a>
         <p class="plan-note">Built by an indie dev who uses it daily. Upgrade inside the app whenever the free tier feels small.</p>
+        <p class="plan-note"><a class="learn-more" href="/pricing/">What counts as a sort, and what Premium adds <span aria-hidden="true">&rsaquo;</span></a></p>
       </div>
     </div>
   </div>
@@ -580,15 +598,10 @@
     </div>
     <div class="faq-list rv">
       <details class="faq-item"><summary>Do my photos ever leave my phone?</summary><div class="faq-answer">No. Every step — the search, the scoring, the taste profile — runs on your iPhone's Neural Engine. There are no uploads, no account, and no SpectraSort server in the path.</div></details>
-      <details class="faq-item"><summary>Does SpectraSort use my photos to train AI?</summary><div class="faq-answer">No. Nothing is uploaded, so there is nothing to train on. Everything happens on your iPhone, and the maker never sees your photos.</div></details>
+      <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio. No subscription.</div></details>
       <details class="faq-item"><summary>How is this different from Apple Photos or Google Photos?</summary><div class="faq-answer">Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for, or against what it has learned about your taste, then hands you a review flow to act on. And it's 100% local: nothing about your library leaves the phone.</div></details>
-      <details class="faq-item"><summary>How fast is it?</summary><div class="faq-answer">Near-instant once the on-device index exists, even across thousands of photos. The index is built on the first sort — up to 100 photos a second on recent iPhones — and kept current automatically as new photos appear.</div></details>
-      <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio (quality axes, the weight wheel, saved profiles). No subscription.</div></details>
-      <details class="faq-item"><summary>Does it free up storage?</summary><div class="faq-answer">It clears the photos you tell it to, through iOS's own delete flow: they go to <b>Recently Deleted</b>, and the storage comes back the moment you empty that album — or automatically after 30 days. SpectraSort only ever touches your photo library, never the rest of your phone.</div></details>
-      <details class="faq-item"><summary>What is the Your Taste profile?</summary><div class="faq-answer">A personal profile that takes shape as you use the app, built from the photos you keep and the ones you let go — all on your device. Once it has learned enough it sorts by your own preferences. Shape it in Studio, or reset and rebuild it any time. It never leaves your phone.</div></details>
-      <details class="faq-item"><summary>I bought Premium in SpectraSort 2.x — do I keep it?</summary><div class="faq-answer">Yes — same purchase, carries over automatically. If it doesn't show on a new phone, tap Restore Purchases in Settings.</div></details>
-      <details class="faq-item"><summary>What devices does it run on?</summary><div class="faq-answer">iPhone with iOS 18.5 or later. All processing runs on Apple's Neural Engine; newer chips index and sort faster. No Apple Intelligence required and no region locks.</div></details>
     </div>
+    <div class="rv" style="text-align:center;margin-top:28px;"><a class="learn-more" href="/features/">More questions? Every detail is on the features page <span aria-hidden="true">&rsaquo;</span></a></div>
   </div>
 </section>
 
