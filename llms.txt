@@ -76,6 +76,11 @@ It clears the photos you tell it to, which is where most camera-roll storage goe
 
 ## Guides and comparisons
 
+- [Features — every tool, control and limit](https://spectrasort.app/features/) — the reference page, current version
+- [Pricing](https://spectrasort.app/pricing/) — what a sort is, what Premium adds, one-time purchase details
+- [Studio](https://spectrasort.app/studio/) — the manual controls: seven quality axes, three subjects, balance wheel, saved profiles
+- [Changelog](https://spectrasort.app/changelog/) — release notes for every version
+- [Vacation photos → one album](https://spectrasort.app/vacation-photos-iphone/) — a trip's 1,200 photos to the album worth showing
 - [AI photo picker for iPhone](https://spectrasort.app/ai-photo-picker-iphone/) — what an AI photo picker is; ranking vs matching
 - [Photo culling on iPhone](https://spectrasort.app/photo-culling-iphone/) — the full cull workflow on the phone
 - [Choosing a photo picker](https://spectrasort.app/best-photo-picker/) — a 5-question checklist for judging any picker app
@@ -90,7 +95,7 @@ It clears the photos you tell it to, which is where most camera-roll storage goe
 
 ## Version
 
-Current version: 3.0 (July 2026). iPhone, iOS 18.5 or later.
+Current version: 3.0.5 (September 2026). Full release history: https://spectrasort.app/changelog/ iPhone, iOS 18.5 or later.
 
 ## 中文（简体）— 光谱挑片
 

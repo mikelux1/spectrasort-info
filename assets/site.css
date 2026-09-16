@@ -327,6 +327,14 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 .feature p { color:var(--text-mid); max-width:480px; }
 .feature p + p { margin-top:14px; }
 
+/* v4.9: Apple-style "Learn more ›" under a section's copy, pointing at the
+   topic page. Same amber as .prose a; the chevron nudges on hover. */
+.learn-more { display:inline-block; margin-top:18px; font-size:16px; font-weight:600; color:var(--sp-amber); text-decoration:none; }
+.learn-more span { display:inline-block; transition:transform .15s ease; }
+.learn-more:hover span { transform:translateX(3px); }
+.learn-more:hover { text-decoration:underline; text-underline-offset:3px; }
+.plan-note .learn-more { margin-top:4px; font-size:14px; }
+
 .section-head { text-align:center; max-width:720px; margin:0 auto; }
 .section-head p { color:var(--text-mid); margin-top:16px; }
 
