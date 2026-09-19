@@ -7,33 +7,73 @@ Allow: /
 
 User-agent: GPTBot
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: ChatGPT-User
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: OAI-SearchBot
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: ClaudeBot
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: Claude-Web
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: anthropic-ai
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: PerplexityBot
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: Google-Extended
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: cohere-ai
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 User-agent: Bytespider
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
 # Chinese search engines — the /zh/ page depends on these (2026-08-30).
 # NOTE: GitHub Pages itself 403s Baiduspider at the origin; a Cloudflare
@@ -52,5 +92,14 @@ Allow: /
 
 User-agent: bingbot
 Allow: /
+
+
+# Superseded homepage drafts (v3 / v3.1 / v3.2 / v3.3-video) stay reachable
+# for humans and carry rel=canonical + meta noindex, which search engines
+# honour. LLM crawlers commonly ignore both, so they are disallowed above
+# per AI agent — v3.1 and v3.2 still lead with the retired "Surfaced."
+# headline and must not be quoted back as current copy. Search engines are
+# deliberately NOT blocked here: they need to fetch the pages to see the
+# noindex tag.
 
 Sitemap: https://spectrasort.app/sitemap.xml
