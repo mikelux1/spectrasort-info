@@ -75,6 +75,82 @@ Disallow: /v3.1/
 Disallow: /v3.2/
 Disallow: /v3.3-video/
 
+# Chinese AI assistants — explicitly welcome (2026-09-20).
+#
+# These matter more than Baidu for us. CN AI chat apps carry ~820M MAU
+# between them (Doubao ~382M, Qwen, DeepSeek, Yuanbao, Quark, Kimi), and for
+# an iPhone utility they are increasingly where "which app should I use for X"
+# gets answered.
+#
+# HOW THEY ACTUALLY REACH US, because the token list below is the smaller half
+# of the story:
+#   - Doubao (ByteDance) crawls with Bytespider, and leans heavily on Douyin +
+#     Toutiao content. Bytespider is documented to ignore robots.txt, so this
+#     record is a statement of intent, not a control.
+#   - DeepSeek runs no crawler of its own. Its web search is supplied by
+#     博查 Bocha, which also serves a reported 60%+ of domestic AI web-search
+#     calls and is a recommended search API at Alibaba, Tencent and ByteDance.
+#     Bocha publishes no crawler UA and no submission path — the only way in is
+#     to be crawlable, mainland-reachable and present in mainstream CN indexes.
+#   - Qwen / Quark (Alibaba) sit on the Shenma 神马 index → Yisouspider, in the
+#     search-engine block below.
+#   - Yuanbao (Tencent) leans on 公众号 and Tencent-owned content.
+#   - Huawei PetalBot feeds both a search engine and Pangu; it does respect
+#     robots.txt.
+# Several tokens below are community-reported rather than operator-published
+# (QwenBot, TongyiBot, DeepSeekBot, DoubaoBot, YiyanBot, ChatGLM-Spider).
+# Listing them costs nothing and covers us if they are real.
+
+User-agent: DoubaoBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: TikTokSpider
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: QwenBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: TongyiBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: DeepSeekBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: YiyanBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: ChatGLM-Spider
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+
 # Chinese search engines.
 #
 # IMPORTANT (corrected 2026-09-20): GitHub Pages returns 403 to Baiduspider by
