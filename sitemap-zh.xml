@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- zh-only sitemap, for submission to Baidu 站长平台 / Sogou / 360 / Shenma.
+     The main sitemap.xml carries all 29 URLs, 22 of them English. A new
+     offshore site gets a small crawl budget from the CN engines, so this
+     subset points them at the seven pages that are actually in Chinese.
+     Keep in sync with the /zh/ entries in sitemap.xml. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://spectrasort.app/zh/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/zh/zhaopian-taiduo-shebude-shan/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/zh/iphone-xiangce-zhengli/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/zh/chongfu-zhaopian-qingli/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/zh/guangpu-vs-pingguo-xiangce/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/zh/zhaopian-shaixuan-ruanjian/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/zh/bulianwang-xiangce-gongju/</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/privacy-zh.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://spectrasort.app/terms-zh.html</loc>
+    <lastmod>2026-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>
