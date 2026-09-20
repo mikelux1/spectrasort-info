@@ -75,19 +75,150 @@ Disallow: /v3.1/
 Disallow: /v3.2/
 Disallow: /v3.3-video/
 
-# Chinese search engines — the /zh/ page depends on these (2026-08-30).
-# NOTE: GitHub Pages itself 403s Baiduspider at the origin; a Cloudflare
-# cache layer is required before Baidu can actually fetch (see the CN
-# website plan in the photomatcher repo). These records cost nothing and
-# remove any doubt on our side.
+# Chinese AI assistants — explicitly welcome (2026-09-20).
+#
+# These matter more than Baidu for us. CN AI chat apps carry ~820M MAU
+# between them (Doubao ~382M, Qwen, DeepSeek, Yuanbao, Quark, Kimi), and for
+# an iPhone utility they are increasingly where "which app should I use for X"
+# gets answered.
+#
+# HOW THEY ACTUALLY REACH US, because the token list below is the smaller half
+# of the story:
+#   - Doubao (ByteDance) crawls with Bytespider, and leans heavily on Douyin +
+#     Toutiao content. Bytespider is documented to ignore robots.txt, so this
+#     record is a statement of intent, not a control.
+#   - DeepSeek runs no crawler of its own. Its web search is supplied by
+#     博查 Bocha, which also serves a reported 60%+ of domestic AI web-search
+#     calls and is a recommended search API at Alibaba, Tencent and ByteDance.
+#     Bocha publishes no crawler UA and no submission path — the only way in is
+#     to be crawlable, mainland-reachable and present in mainstream CN indexes.
+#   - Qwen / Quark (Alibaba) sit on the Shenma 神马 index → Yisouspider, in the
+#     search-engine block below.
+#   - Yuanbao (Tencent) leans on 公众号 and Tencent-owned content.
+#   - Huawei PetalBot feeds both a search engine and Pangu; it does respect
+#     robots.txt.
+# Several tokens below are community-reported rather than operator-published
+# (QwenBot, TongyiBot, DeepSeekBot, DoubaoBot, YiyanBot, ChatGLM-Spider).
+# Listing them costs nothing and covers us if they are real.
+
+User-agent: DoubaoBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: TikTokSpider
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: QwenBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: TongyiBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: DeepSeekBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: YiyanBot
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: ChatGLM-Spider
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+
+# Chinese search engines.
+#
+# IMPORTANT (corrected 2026-09-20): GitHub Pages returns 403 to Baiduspider by
+# User-Agent at the origin, and a Cloudflare "Cache Everything" layer alone
+# does NOT fix it — on a cache MISS Cloudflare forwards the original
+# User-Agent to the origin and gets the same 403. Baiduspider is usually the
+# first visitor to a given URL at a given PoP, so misses are the normal case.
+# The working fix is either a Cloudflare Transform Rule that rewrites
+# User-Agent on the origin fetch, or moving off GitHub Pages. Until one of
+# those ships, every record below is a no-op on Baidu's side.
+# See photomatcher repo, 5-cn/baidu-indexing-runbook.md
+#
+# The superseded homepage drafts are disallowed explicitly for these crawlers:
+# they carry meta noindex, but Baidu's honouring of that tag is unreliable and
+# four near-duplicate homepages is exactly the pattern its dedup penalises.
 
 User-agent: Baiduspider
 Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
 
+User-agent: Baiduspider-render
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: Baiduspider-image
+Allow: /
+
+# Sogou ships three UAs; the web spider is the one that feeds 微信搜一搜.
 User-agent: Sogou web spider
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: Sogou inst spider
+Allow: /
+
+User-agent: Sogou spider2
 Allow: /
 
 User-agent: 360Spider
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+User-agent: HaoSouSpider
+Allow: /
+
+# Shenma 神马 (UC/Alibaba) — the #2 mobile search engine in the mainland and
+# the one our audience actually has on their phone. Was missing entirely.
+User-agent: Yisouspider
+Allow: /
+Disallow: /v3/
+Disallow: /v3.1/
+Disallow: /v3.2/
+Disallow: /v3.3-video/
+
+# Huawei 花瓣搜索 — preinstalled search on HarmonyOS devices.
+User-agent: PetalBot
 Allow: /
 
 User-agent: bingbot
@@ -95,11 +226,18 @@ Allow: /
 
 
 # Superseded homepage drafts (v3 / v3.1 / v3.2 / v3.3-video) stay reachable
-# for humans and carry rel=canonical + meta noindex, which search engines
-# honour. LLM crawlers commonly ignore both, so they are disallowed above
-# per AI agent — v3.1 and v3.2 still lead with the retired "Surfaced."
-# headline and must not be quoted back as current copy. Search engines are
-# deliberately NOT blocked here: they need to fetch the pages to see the
-# noindex tag.
+# for humans and carry rel=canonical + meta noindex. LLM crawlers commonly
+# ignore both, so they are disallowed per AI agent above — v3.1 and v3.2
+# still lead with the retired "Surfaced." headline and must not be quoted
+# back as current copy.
+# Western search engines are deliberately NOT blocked from them: Google and
+# Bing need to fetch the page to see its noindex tag, and blocking in
+# robots.txt would leave a URL-only entry in the index instead of removing it.
+# The CN engines ARE blocked from them (records above) because Baidu's
+# handling of meta noindex is unreliable and a URL-only entry costs us
+# nothing there — we have no CN index presence to protect.
 
 Sitemap: https://spectrasort.app/sitemap.xml
+# zh-only subset, for Baidu/Sogou/360/Shenma submission — keeps their
+# limited crawl budget on the 7 pages that are actually in Chinese.
+Sitemap: https://spectrasort.app/sitemap-zh.xml

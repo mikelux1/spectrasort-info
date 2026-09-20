@@ -33,6 +33,21 @@
 <meta name="author" content="Mike Lu">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <meta name="google-site-verification" content="OG5ej7GPr8diDvd7zSt3IGmCHw3LVzQqQuNKduJOf-s">
+
+<!-- CN search-engine site verification.
+     Baidu / Sogou / 360 / Shenma all verify the SITE ROOT (https://spectrasort.app/),
+     so their tokens belong on THIS page, not on /zh/ — the slot that used to sit
+     in zh/index.html would never have been read by the verifier.
+     Paste the issued token, uncomment the line you need, push, then press the
+     console's verify button. Baidu also accepts file verification (drop the
+     issued baidu_verify_<code>.html at the repo root) — for a static site that
+     is the lower-risk route; use whichever the console offers first.
+     Full runbook: photomatcher repo, 5-cn/baidu-indexing-runbook.md
+<meta name="baidu-site-verification" content="PASTE_BAIDU_TOKEN">
+<meta name="sogou_site_verification" content="PASTE_SOGOU_TOKEN">
+<meta name="360-site-verification" content="PASTE_360_TOKEN">
+<meta name="shenma-site-verification" content="PASTE_SHENMA_TOKEN">
+-->
 <link rel="canonical" href="https://spectrasort.app">
 <link rel="alternate" hreflang="en" href="https://spectrasort.app/">
 <link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/zh/">
@@ -77,6 +92,7 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
+  "@id": "https://spectrasort.app/#app",
   "name": "SpectraSort",
   "alternateName": "SpectraSort — AI Photo Picker & Photo Culling for iPhone",
   "operatingSystem": "iOS 18.5+",
