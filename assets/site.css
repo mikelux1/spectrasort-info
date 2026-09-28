@@ -494,6 +494,11 @@ footer a:hover { color:var(--text); }
     .price-card .cta { align-self:start; margin-top:0; }
 }
 
+/* One download button under both cards: Premium is bought inside the app,
+   so a second button would open the same App Store page. */
+.price-cta { text-align:center; margin-top:28px; }
+.price-cta .plan-note { font-size:13px; color:var(--text-low); margin-top:14px; }
+
 /* ---------- use-case cards (“People use SpectraSort to…”) ---------- */
 .usecase-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:44px; }
 @media (max-width:760px){ .usecase-grid { grid-template-columns:1fr; } }
