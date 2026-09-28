@@ -486,6 +486,13 @@ footer a:hover { color:var(--text); }
 .price-card li b { color:var(--text); font-weight:600; }
 .price-card .cta { justify-content:center; margin-top:auto; }
 .price-card .plan-note { font-size:13px; color:var(--text-low); margin-top:14px; text-align:center; }
+/* Both cards share one set of rows (label, amount, list, CTA, notes), so the
+   two CTAs sit on the same line however long each list or note is. */
+@supports (grid-template-rows: subgrid) {
+    .price-card { display:grid; grid-row:span 6; grid-template-rows:subgrid; row-gap:0; }
+    .price-card ul { align-self:start; }
+    .price-card .cta { align-self:start; margin-top:0; }
+}
 
 /* ---------- use-case cards (“People use SpectraSort to…”) ---------- */
 .usecase-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:44px; }

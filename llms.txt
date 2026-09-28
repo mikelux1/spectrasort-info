@@ -53,7 +53,7 @@ Sorts finish nearly instantly, even across thousands of photos, because they run
 
 ## Pricing
 
-- **Free** — five actions a week, for everyone, forever. Not a trial. An action is one tap on Share, Favorite, Add to album or Delete, however many photos it covers; the count refills Monday. Sorting and reviewing are unlimited.
+- **Free** — five actions a week, for everyone, forever. Not a trial. An action is a share, favorite, add to album or delete, and counts once however many photos it covers; the count refills Monday. Sorting and reviewing are unlimited.
 - **Premium** — **$19.99, one time.** Unlimited actions plus Studio's full controls. No subscription and no renewals. Tied to the Apple account, so it restores on a new device.
 
 ## Privacy
