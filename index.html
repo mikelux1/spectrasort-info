@@ -12,8 +12,9 @@
        - Your Taste moved directly under the hero, and the hero lead now makes
          the taste argument ("Would YOU keep it?") — it is the differentiator,
          so it goes first, not fifth.
-       - Pricing is two cards (Try it free / Premium $19.99 once) instead of a
-         single line — the no-subscription proposition is the conversion weapon.
+       - Pricing is one panel with two tiers (Free / Premium $19.99 once) and a
+         single Download button — the no-subscription proposition is the
+         conversion weapon; Premium is bought inside the app (v3.1, 2026-09-28).
        - New "People use SpectraSort to…" section: four scenario cards, each
          linking to a matching landing page. Quote slots stay empty until there
          are REAL reviews to put in them — nothing on this site is invented.
@@ -214,7 +215,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20260928b">
+<link rel="stylesheet" href="assets/site.css?v=20260928c">
 </head>
 <body>
 
@@ -612,39 +613,43 @@
 <section id="pricing" class="rise">
   <div class="container pricing-hero rv">
     <span class="eyebrow">Pricing</span>
-    <!-- v4: two cards instead of one line (SEO review rec 10). The free tier is
-         sold as "Try it free" with its actual terms spelled out, and Premium's
-         whole pitch is the absence of a subscription. Both cards say what the
-         reader is afraid of: account, credit card, uploads, renewals. -->
+    <!-- v3.1 (2026-09-28): one panel, two tiers, ONE button. Both tiers used to
+         carry a button, but both opened the same App Store page — Premium is
+         bought inside the app. Each column still names what the reader is
+         afraid of: account, credit card, uploads, renewals. Styles: .plan-panel
+         in site.css. Same markup on /pricing/. -->
     <h2>Five free actions a week. <span class="grad-text">Pay once</span> for unlimited.</h2>
-    <div class="price-cards">
-      <div class="price-card">
-        <span class="plan">Free</span>
-        <div class="amount">5 actions a week</div>
-        <ul>
-          <li><b>Not a trial</b> — free forever</li>
-          <li>No account, no credit card</li>
-          <li>Your photos stay on your phone</li>
-        </ul>
+    <div class="plan-panel">
+      <div class="plan-cols">
+        <div class="plan-col">
+          <span class="plan">Free</span>
+          <div class="amount">5 actions a week</div>
+          <ul>
+            <li><b>Unlimited sorting</b> — all six tools, Discover, every filter</li>
+            <li>Share, favorite, add to album, delete — each counts once</li>
+            <li>No account, no credit card</li>
+            <li>Your photos stay on your phone</li>
+          </ul>
+        </div>
+        <div class="plan-col featured">
+          <span class="plan">Premium</span>
+          <div class="amount"><span class="grad-text">$19.99 once</span></div>
+          <ul>
+            <li><b>Unlimited actions</b></li>
+            <li>Studio's full controls — seven quality axes, the balance wheel, saved profiles</li>
+            <li>One purchase, tied to your Apple account — restores on a new phone</li>
+            <li><b>No subscription. Ever.</b></li>
+          </ul>
+        </div>
       </div>
-      <div class="price-card featured">
-        <span class="plan">Premium</span>
-        <div class="amount"><span class="grad-text">$19.99 once</span></div>
-        <ul>
-          <li><b>Unlimited actions</b></li>
-          <li>Studio's full controls — seven quality axes, the balance wheel, saved profiles</li>
-          <li>One purchase, tied to your Apple account — restores on a new phone</li>
-          <li><b>No subscription. Ever.</b></li>
-        </ul>
-      </div>
-    </div>
-    <div class="price-cta">
-      <a class="cta grad" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+      <div class="plan-foot">
+        <a class="cta grad" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
           Download free
         </a>
-      <p class="plan-note">iPhone · iOS 18.5+ · Upgrade to Premium inside the app, any time.</p>
-      <p class="plan-note"><a class="learn-more" href="/pricing/">What counts as an action, and what Premium adds <span aria-hidden="true">&rsaquo;</span></a></p>
+        <p class="plan-note">iPhone · iOS 18.5+ · Upgrade to Premium inside the app, any time.</p>
+        <p class="plan-note"><a class="learn-more" href="/pricing/">What counts as an action, and what Premium adds <span aria-hidden="true">&rsaquo;</span></a></p>
+      </div>
     </div>
   </div>
 </section>

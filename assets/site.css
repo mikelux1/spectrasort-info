@@ -486,18 +486,41 @@ footer a:hover { color:var(--text); }
 .price-card li b { color:var(--text); font-weight:600; }
 .price-card .cta { justify-content:center; margin-top:auto; }
 .price-card .plan-note { font-size:13px; color:var(--text-low); margin-top:14px; text-align:center; }
-/* Both cards share one set of rows (label, amount, list, CTA, notes), so the
-   two CTAs sit on the same line however long each list or note is. */
-@supports (grid-template-rows: subgrid) {
-    .price-card { display:grid; grid-row:span 6; grid-template-rows:subgrid; row-gap:0; }
-    .price-card ul { align-self:start; }
-    .price-card .cta { align-self:start; margin-top:0; }
-}
 
-/* One download button under both cards: Premium is bought inside the app,
-   so a second button would open the same App Store page. */
-.price-cta { text-align:center; margin-top:28px; }
-.price-cta .plan-note { font-size:13px; color:var(--text-low); margin-top:14px; }
+/* ---------- plan panel (Home + Pricing) ----------
+   One panel, two tiers, one button. Premium is bought inside the app, so a
+   button per tier would open the same App Store page twice. The spectral
+   border wraps the whole offer; the Premium column carries the gradient. */
+.plan-panel {
+    max-width:860px; margin:44px auto 0; text-align:left;
+    border:1px solid transparent; border-radius:var(--radius); overflow:hidden;
+    background:linear-gradient(var(--bg-card),var(--bg-card)) padding-box, var(--spectral) border-box;
+}
+.plan-cols { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); }
+.plan-col { padding:30px 28px 26px; }
+.plan-col + .plan-col { border-left:1px solid var(--hairline); }
+.plan-col .plan {
+    font-family:var(--font-display); font-size:14px; font-weight:600;
+    letter-spacing:0.12em; text-transform:uppercase; color:var(--text-low);
+}
+.plan-col.featured .plan { background:var(--spectral); -webkit-background-clip:text; background-clip:text; color:transparent; }
+.plan-col .amount {
+    font-family:var(--font-display); font-size:clamp(28px,3.6vw,36px); font-weight:700;
+    line-height:1.15; margin-top:10px; white-space:nowrap;
+}
+.plan-col ul { list-style:none; margin:20px 0 0; display:grid; gap:10px; }
+.plan-col li { position:relative; padding-left:28px; color:var(--text-mid); font-size:15px; line-height:1.5; }
+.plan-col li::before { content:"\2713"; position:absolute; left:0; top:0; color:var(--sp-amber); font-weight:700; }
+.plan-col li b { color:var(--text); font-weight:600; }
+.plan-foot { border-top:1px solid var(--hairline); background:var(--bg-rise); padding:24px 28px 26px; text-align:center; }
+.plan-foot .cta { justify-content:center; }
+.plan-foot .plan-note { font-size:13px; color:var(--text-low); margin-top:14px; }
+.plan-foot .plan-note + .plan-note { margin-top:6px; }
+@media (max-width:700px){
+    .plan-cols { grid-template-columns:1fr; }
+    .plan-col + .plan-col { border-left:0; border-top:1px solid var(--hairline); }
+    .plan-col .amount { white-space:normal; }
+}
 
 /* ---------- use-case cards (“People use SpectraSort to…”) ---------- */
 .usecase-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; margin-top:44px; }
