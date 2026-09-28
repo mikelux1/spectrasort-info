@@ -135,7 +135,7 @@
       "name": "Is there really no subscription?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Really. Five sorts a week are free forever; Premium is $19.99 exactly once, tied to your Apple account so it restores on a new phone."
+        "text": "Really. Five actions a week are free forever; Premium is $19.99 exactly once, tied to your Apple account so it restores on a new phone."
       }
     }
   ]
@@ -179,8 +179,8 @@
     </div>
     <div class="trust-chips">
       <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
-      <span class="chip"><b>Free</b> 5 sorts a week</span>
-      <span class="chip"><b>$19.99 once</b> — no subscription</span>
+      <span class="chip"><b>Free</b> 5 actions a week</span>
+      <span class="chip"><b>$19.99 once</b> — unlimited actions</span>
     </div>
   </div>
 </section>
@@ -220,7 +220,7 @@
 <section class="slab">
   <div class="container prose rv">
     <h2>The one network feature</h2>
-    <p>The app has optional anonymous usage analytics, using Firebase Analytics and Crashlytics. What it sends are events like “sort started” and crash reports, never photo content and never locations. It's <b>opt-in</b>, defaults to <b>off in the EU, UK and EEA</b>, and can be switched off anywhere in Settings → Privacy.</p>
+    <p>The app has optional anonymous usage analytics, using Firebase Analytics, Crashlytics and PostHog. What it sends are events like “sort started” and crash reports, never photo content and never locations. It's <b>opt-in</b>, defaults to <b>off in the EU, UK and EEA</b>, and can be switched off anywhere in Settings → Privacy.</p>
     <p>That's the entire network footprint.</p>
   </div>
 </section>
@@ -231,7 +231,7 @@
     <ul>
       <li><b>No account.</b> Download it and sort.</li>
       <li><b>No connection needed.</b> The sorting pipeline runs locally, on a plane or in a dead zone.</li>
-      <li><b>No subscription.</b> There are no server costs to pass on to you monthly. Five sorts a week are free, and $19.99 once removes the cap.</li>
+      <li><b>No subscription.</b> There are no server costs to pass on to you monthly. Five actions a week are free, and $19.99 once makes them unlimited.</li>
       <li><b>Speed.</b> Sorts are near-instant, because they run against a local index — built once at up to 100 photos a second on recent iPhones, then updated automatically as you shoot.</li>
     </ul>
     <div class="callout">
@@ -240,7 +240,7 @@
         <li>On-device also means the work happens on your chip, so newer iPhones index noticeably faster than older ones.</li>
         <li>iPhone only, iOS 18.5 or later. No iPad, Android or desktop version.</li>
         <li>The very first index of a big library takes some time. After that it's automatic — new photos are indexed as they appear, so you don't wait again.</li>
-        <li>Deleted photos go through iOS's own trash: they land in Recently Deleted, and the storage comes back the moment you empty that album there — or automatically after 30 days. SpectraSort doesn't show a “GB freed” number because iOS controls that timing.</li>
+        <li>Deleted photos go through iOS's own trash: they land in Recently Deleted, and the storage comes back the moment you empty that album there — or automatically after 30 days. Each Delete in SpectraSort shows the storage it frees before you confirm.</li>
       </ul>
     </div>
   </div>
@@ -250,8 +250,8 @@
   <div class="container" style="text-align:center;">
     <div class="rv">
       <span class="eyebrow">Pricing</span>
-      <h2>Free to try. <span class="grad-text">$19.99 once</span> to keep.</h2>
-      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five sorts a week are free, forever, with no account and no credit card. Premium is a single $19.99 purchase that removes the cap and unlocks Studio. No subscription, ever. Built by an indie dev who uses it daily.</p>
+      <h2>Five free actions a week. <span class="grad-text">Pay once</span> for unlimited.</h2>
+      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Five free actions a week, with no account and no credit card. Pay $19.99 once for unlimited actions. No subscription, ever. Built by an indie dev who uses it daily.</p>
       <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
         Download on the App Store
       </a>
@@ -270,7 +270,7 @@
       <details class="faq-item"><summary>Does SpectraSort use my photos to train AI?</summary><div class="faq-answer">No. Nothing is uploaded, so there is nothing to train on. The models ship pre-trained, and the maker never sees your photos.</div></details>
       <details class="faq-item"><summary>Can the developer see my photos?</summary><div class="faq-answer">No. Processing is local and there's no account, so there's no path for it. Apple's App Privacy label on the listing backs this up.</div></details>
       <details class="faq-item"><summary>Does it work without an internet connection?</summary><div class="faq-answer">Sorting works offline, since the pipeline is local. You need a connection to download the app or buy Premium.</div></details>
-      <details class="faq-item"><summary>Is there really no subscription?</summary><div class="faq-answer">Really. Five sorts a week are free forever; Premium is $19.99 exactly once, tied to your Apple account so it restores on a new phone.</div></details>
+      <details class="faq-item"><summary>Is there really no subscription?</summary><div class="faq-answer">Really. Five actions a week are free forever; Premium is $19.99 exactly once, tied to your Apple account so it restores on a new phone.</div></details>
     </div>
   </div>
 </section>

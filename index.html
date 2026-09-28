@@ -98,7 +98,7 @@
   "operatingSystem": "iOS 18.5+",
   "applicationCategory": "PhotographyApplication",
   "applicationSubCategory": "Photo Sorting",
-  "softwareVersion": "3.0",
+  "softwareVersion": "3.1",
   "description": "On-device AI photo picker for iPhone. Finds the photos you're looking for and ranks them — by quality, by your taste, or by what you asked for — then hands you the winners to keep, share or clear. Everything runs locally; nothing is uploaded.",
   "url": "https://spectrasort.app",
   "downloadUrl": "https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134",
@@ -117,9 +117,9 @@
   "offers": [
     { "@type": "Offer", "price": "0", "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "description": "Free to download. Sorting is free up to five sorts a week. Saving, sharing and deleting are free for everyone." },
+      "description": "Free to download. Five free actions a week — share, favorite, add to album, delete. Sorting is unlimited." },
     { "@type": "Offer", "name": "Premium", "price": "19.99", "priceCurrency": "USD",
-      "description": "Premium — unlimited sorts plus Studio's full controls. One-time purchase, no subscription." }
+      "description": "Premium — pay once for unlimited actions, plus Studio's full controls. No subscription." }
   ],
   "author": { "@type": "Person", "name": "Mike Lu" },
   "publisher": { "@type": "Organization", "name": "SpectraSort", "url": "https://spectrasort.app" }
@@ -168,7 +168,7 @@
       "name": "What is free and what does Premium unlock?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Five sorts a week are free for everyone, forever — not a trial. Saving, sharing and deleting results are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio's full controls. No subscription."
+        "text": "Five actions a week are free for everyone, forever — share, favorite, add to album or delete, one tap each however many photos, refilled Monday. Sorting and reviewing are free and unlimited. Pay $19.99 once for unlimited actions plus Studio (quality axes, the weight wheel, saved profiles). No subscription."
       }
     },
     {
@@ -258,8 +258,8 @@
         </div>
         <div class="trust-chips">
           <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
-          <span class="chip"><b>Free</b> 5 sorts a week</span>
-          <span class="chip"><b>$19.99 once</b> — no subscription</span>
+          <span class="chip"><b>Free</b> 5 actions a week</span>
+          <span class="chip"><b>$19.99 once</b> — unlimited actions</span>
         </div>
       </div>
       <div class="hero-shot rv in">
@@ -616,16 +616,15 @@
          sold as "Try it free" with its actual terms spelled out, and Premium's
          whole pitch is the absence of a subscription. Both cards say what the
          reader is afraid of: account, credit card, uploads, renewals. -->
-    <h2>Try it free. Keep it for <span class="grad-text">$19.99, once.</span></h2>
+    <h2>Five free actions a week. <span class="grad-text">Pay once</span> for unlimited.</h2>
     <div class="price-cards">
       <div class="price-card">
-        <span class="plan">Try it free</span>
-        <div class="amount">5 full sorts, every week</div>
+        <span class="plan">Free</span>
+        <div class="amount">5 actions a week</div>
         <ul>
-          <li><b>Not a trial</b> — five sorts a week, forever</li>
+          <li><b>Not a trial</b> — free forever</li>
           <li>No account, no credit card</li>
-          <li>Saving, sharing and deleting — unlimited</li>
-          <li>Your photos stay on your phone</li>
+                    <li>Your photos stay on your phone</li>
         </ul>
         <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
           <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
@@ -637,7 +636,7 @@
         <span class="plan">Premium</span>
         <div class="amount"><span class="grad-text">$19.99 once</span></div>
         <ul>
-          <li><b>Unlimited sorts</b></li>
+          <li><b>Unlimited actions</b></li>
           <li>Studio's full controls — seven quality axes, the balance wheel, saved profiles</li>
           <li>One purchase, tied to your Apple account — restores on a new phone</li>
           <li><b>No subscription. Ever.</b></li>
@@ -647,7 +646,7 @@
           Get the app
         </a>
         <p class="plan-note">Built by an indie dev who uses it daily. Upgrade inside the app whenever the free tier feels small.</p>
-        <p class="plan-note"><a class="learn-more" href="/pricing/">What counts as a sort, and what Premium adds <span aria-hidden="true">&rsaquo;</span></a></p>
+        <p class="plan-note"><a class="learn-more" href="/pricing/">What counts as an action, and what Premium adds <span aria-hidden="true">&rsaquo;</span></a></p>
       </div>
     </div>
   </div>
@@ -665,7 +664,7 @@
       <details class="faq-item"><summary>Does SpectraSort use my photos to train AI?</summary><div class="faq-answer">No. Nothing is uploaded, so there is nothing to train on. Everything happens on your iPhone, and the maker never sees your photos.</div></details>
       <details class="faq-item"><summary>How is this different from Apple Photos or Google Photos?</summary><div class="faq-answer">Those are built for browsing and storage. SpectraSort is built for picking — it ranks what it finds against what you asked for, or against what it has learned about your taste, then hands you a review flow to act on. And it's 100% local: nothing about your library leaves the phone.</div></details>
       <details class="faq-item"><summary>How fast is it?</summary><div class="faq-answer">Near-instant once the on-device index exists, even across thousands of photos. The index is built on the first sort — up to 100 photos a second on recent iPhones — and kept current automatically as new photos appear.</div></details>
-      <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Five sorts a week are free for everyone, forever — counted when the Review screen opens, reset Monday. Saving, sharing and deleting are free and unlimited. Premium is $19.99 once: unlimited sorts plus Studio (quality axes, the weight wheel, saved profiles). No subscription.</div></details>
+      <details class="faq-item"><summary>What's free and what does Premium unlock?</summary><div class="faq-answer">Five actions a week are free for everyone, forever — share, favorite, add to album or delete, one tap each however many photos, refilled Monday. Sorting and reviewing are free and unlimited. Pay $19.99 once for unlimited actions plus Studio (quality axes, the weight wheel, saved profiles). No subscription.</div></details>
       <details class="faq-item"><summary>Does it free up storage?</summary><div class="faq-answer">It clears the photos you tell it to, through iOS's own delete flow: they go to <b>Recently Deleted</b>, and the storage comes back the moment you empty that album — or automatically after 30 days. SpectraSort only ever touches your photo library, never the rest of your phone.</div></details>
       <details class="faq-item"><summary>What is the Your Taste profile?</summary><div class="faq-answer">A personal profile that takes shape as you use the app, built from the photos you keep and the ones you let go — all on your device. Once it has learned enough it sorts by your own preferences. Shape it in Studio, or reset and rebuild it any time. It never leaves your phone.</div></details>
       <details class="faq-item"><summary>I bought Premium in SpectraSort 2.x — do I keep it?</summary><div class="faq-answer">Yes — same purchase, carries over automatically. If it doesn't show on a new phone, tap Restore Purchases in Settings.</div></details>
