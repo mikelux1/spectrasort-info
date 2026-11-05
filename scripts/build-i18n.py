@@ -314,6 +314,50 @@ def build_closing(cfg, lang):
 </section>'''
 
 
+# Campaign codes for App Store links, mirroring CT_BY_PATH in assets/site.js.
+CT_BY_PATH = {
+    '/': 'web_home',
+    '/ai-photo-picker-iphone/': 'web_aipicker',
+    '/photo-culling-iphone/': 'web_culling',
+    '/best-photo-picker/': 'web_bestpicker',
+    '/find-best-photos-iphone/': 'web_findbest',
+    '/duplicate-photo-finder-iphone/': 'web_dupe',
+    '/photo-organizer-iphone/': 'web_organizer',
+    '/private-ai-photo-app/': 'web_privacy',
+    '/ai-photo-organizer-vs-apple-photos/': 'web_vs_apple',
+    '/spectrasort-vs-google-photos/': 'web_vs_google',
+    '/ai-photo-picker-vs-photo-culling/': 'web_picker_vs_culling',
+    '/how-to-pick-best-photos-from-camera-roll/': 'web_camera_roll',
+    '/vacation-photos-iphone/': 'web_vacation',
+    '/features/': 'web_features',
+    '/pricing/': 'web_pricing',
+    '/studio/': 'web_studio',
+    '/changelog/': 'web_changelog',
+    '/documents-receipts-iphone/': 'web_documents',
+    '/press/': 'web_press',
+}
+
+
+def localise_store_links(html, cfg, slug):
+    """Point every App Store link at this language's storefront, in the HTML.
+
+    The shared chrome and the translated fragments were written with the US
+    URL. site.js rewrites it in the browser, but crawlers and no-JS visitors
+    only see the raw href, so the storefront and the campaign code are set
+    here at build time instead.
+    """
+    ct = CT_BY_PATH.get('/' + slug + '/' if slug else '/',
+                        'web_' + (slug.replace('-', '_') if slug else 'home'))
+
+    def fix(m):
+        url = m.group(0).replace('/us/', '/' + cfg['store'] + '/', 1)
+        if 'ct=' not in url:
+            url += ('&' if '?' in url else '?') + 'ct=' + ct
+        return url
+
+    return re.sub(r'https://apps\.apple\.com/us/app/[^"\s]+', fix, html)
+
+
 def main():
     chrome = json.loads((I18N / 'chrome.json').read_text(encoding='utf-8'))
     missing = []
@@ -347,6 +391,7 @@ def main():
                 page = page.replace('</head>', schema_faq + '</head>')
             page += '\n\n</main>\n\n' + build_footer(lang, cfg, slug)
             page += '\n\n<script src="/assets/site.js?v=20261101" defer></script>\n<script type="module" src="/assets/analytics.js"></script>\n</body>\n</html>\n'
+            page = localise_store_links(page, cfg, slug)
             target = outdir / (slug + '/index.html' if slug else 'index.html')
             target.parent.mkdir(parents=True, exist_ok=True)
             target.write_text(page, encoding='utf-8')
