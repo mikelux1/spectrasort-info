@@ -1,0 +1,148 @@
+---
+title: Sélecteur de photos IA pour iPhone — Classé, pas seulement trouvé | SpectraSort
+description: Un sélecteur de photos IA décide quelles photos méritent d'être gardées. SpectraSort classe votre pellicule iPhone selon la qualité et vos goûts, entièrement en local. Gratuit à essayer ; un seul paiement.
+ogTitle: Sélecteur de photos IA pour iPhone — Classé, pas seulement trouvé
+ogDescription: SpectraSort classe votre pellicule selon la qualité et vos goûts, entièrement sur votre iPhone. Aucun envoi, aucun compte, aucun abonnement.
+breadcrumb: Sélecteur de photos IA pour iPhone
+---
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/fr/">SpectraSort</a><span class="sep">›</span>Sélecteur de photos IA pour iPhone</div>
+    <h1>Le sélecteur de photos IA <span class="grad-text">pour iPhone.</span></h1>
+    <p class="lead">La recherche peut retrouver toutes les photos de plage que vous avez prises. Elle ne peut pas vous dire lesquelles trois méritent d'être gardées. C'est à cette deuxième question que répond SpectraSort : il note vos photos selon la qualité, apprend vos goûts à partir de celles que vous gardez, et place les gagnantes en tête.</p>
+    <div>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Télécharger sur l'App Store
+      </a>
+      <span class="hero-meta">Gratuit · iPhone · iOS 18.5+ · Mis à jour le 31 octobre 2026</span>
+    </div>
+    <div class="trust-chips">
+      <span class="chip"><b>100 % sur l'appareil</b> — rien n'est envoyé</span>
+      <span class="chip"><b>Gratuit</b> 5 actions par semaine</span>
+      <span class="chip"><b>Un seul paiement</b> — actions illimitées</span>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>Ce qu'est un sélecteur de photos</h2>
+    <p>Le terme est employé un peu à tout propos ; il est donc utile de distinguer trois types d'app :</p>
+    <ul>
+      <li><b>La recherche de photos</b> trouve des correspondances. Demandez « plage » et vous obtenez les 87 photos de plage que vous avez prises, dans une longue grille, par ordre de date.</li>
+      <li><b>Les nettoyeurs de photos</b> cherchent les déchets : doublons, captures d'écran, photos floues. Utile, mais ils ne peuvent vous dire que ce qui est mauvais.</li>
+      <li><b>Un sélecteur de photos</b> tranche. Il note chaque photo sur la netteté, l'exposition, la composition et sa correspondance avec ce que vous avez demandé, puis vous rend l'ensemble <em>classé, du meilleur au moins bon</em>, avec de quoi agir.</li>
+    </ul>
+    <p>La plupart des gens n'ont pas de mal à trouver leurs photos. Ils ont du mal à choisir entre elles. SpectraSort est fait pour le choix.</p>
+  </div>
+</section>
+
+<section id="ranked-not-just-matched" class="slab rise">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">Classé, pas seulement trouvé</span>
+        <h2>Chaque résultat revient <span class="grad-text">du meilleur au moins bon.</span></h2>
+        <p>Il y a six outils, un geste chacun : <b>Vos goûts</b>, <b>Meilleurs clichés</b>, <b>Trouver un sujet</b>, <b>Comme cette photo</b>, <b>Doublons</b> et <b>Photos d'un lieu</b>.</p>
+        <p>Quel que soit l'outil utilisé, les résultats reviennent notés et ordonnés. La capture ici est un vrai tri : une tranche de 650 photos de rue, chaque image notée, de la meilleure à la moins bonne.</p>
+        <p>Les tris reviennent presque instantanément, parce qu'ils s'appuient sur un index local. Il est construit une fois — jusqu'à 100 photos par seconde sur les iPhone récents — puis tenu à jour automatiquement à mesure que de nouvelles photos arrivent.</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:480px"><img src="/images/shots/review-street.jpg" alt="Un vrai tri — une tranche de 650 photos de rue notées et ordonnées, de la meilleure à la moins bonne" loading="lazy" width="800" height="1738"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="your-taste" class="slab">
+  <div class="container">
+    <div class="split rev">
+      <div class="rv prose">
+        <span class="eyebrow">Ce qu'aucune autre app ne fait</span>
+        <h2>Il apprend quelles photos <span class="grad-text">vous garderiez.</span></h2>
+        <p>La plupart des IA photo notent selon une idée universelle de la bonne photo : nette, bien éclairée, centrée. Vos préférées ne correspondent pas toujours à ce moule. Peut-être aimez-vous celle à contre-jour, le chien au milieu d'un mouvement, ou une image un peu douce que vous imprimeriez quand même.</p>
+        <p>SpectraSort observe donc ce que vous gardez et ce que vous écartez pendant la vérification, et en construit un <b>profil de goût</b>. Après assez de vérifications, un tri par Vos goûts commence à ressembler à un album que vous auriez composé à la main. Vous pouvez mettre l'apprentissage en pause, le réinitialiser ou garder plusieurs profils ; tout reste sur votre téléphone.</p>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:480px"><img src="/images/shots/taste-nature.jpg" alt="Un profil de goût appris, « Nature Explorer », construit à partir de 1 082 photos vérifiées" loading="lazy" width="800" height="1738"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how-a-sort-works" class="slab rise">
+  <div class="container">
+    <div class="rv" style="text-align:center;"><span class="eyebrow">Comment se déroule un tri</span></div>
+    <div class="stats rv" style="margin-top:18px;">
+      <div class="stat"><div class="num">Trouver</div><div class="label">Choisissez un outil : une phrase, une photo d'exemple, un lieu ou vos goûts.</div></div>
+      <div class="stat"><div class="num">Classer</div><div class="label">Tout est noté sur l'appareil — netteté, exposition, composition, ressemblance.</div></div>
+      <div class="stat"><div class="num">Terminer</div><div class="label">Balayez les gagnantes, puis en un écran, enregistrez en lot, partagez ou supprimez le reste.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container prose rv">
+    <h2>Rien ne quitte le téléphone</h2>
+    <p>Tout le classement se fait sur le Neural Engine de votre iPhone. Vos photos ne sont envoyées nulle part, il n'y a pas de compte, et les modèles sont livrés déjà entraînés : rien de votre photothèque n'atteint jamais personne d'autre. <a href="/fr/private-ai-photo-app/">En savoir plus sur le fonctionnement en local →</a></p>
+
+    <div class="callout">
+      <div class="co-title">Là où ça ne vous aidera pas</div>
+      <ul>
+        <li>iPhone uniquement, iOS 18.5 ou ultérieur. Pas de version iPad, Android ni ordinateur.</li>
+        <li>Le tout premier index d'une grande photothèque prend du temps. Ensuite, c'est automatique : les nouvelles photos sont indexées à leur arrivée, vous n'attendez plus.</li>
+        <li>Le profil de goût ne vaut que ce que valent les vérifications que vous lui avez données. Il démarre générique.</li>
+        <li>Les photos supprimées passent par la corbeille d'iOS : elles arrivent dans Supprimés récemment, et l'espace revient dès que vous videz cet album — ou automatiquement après 30 jours. Chaque suppression dans SpectraSort affiche l'espace libéré avant que vous confirmiez.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="slab rise">
+  <div class="container" style="text-align:center;">
+    <div class="rv">
+      <span class="eyebrow">Tarifs</span>
+      <h2>Cinq actions gratuites par semaine. <span class="grad-text">Un seul paiement</span> pour l'illimité.</h2>
+      <p class="lead" style="max-width:620px;margin:16px auto 28px;">Cinq actions gratuites par semaine, pour toujours — sans compte, sans carte bancaire. Un seul paiement pour des actions illimitées. Sans abonnement. Jamais.</p>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Télécharger sur l'App Store
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="slab">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions sur le sélecteur de photos IA.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>Qu'est-ce qu'un sélecteur de photos IA ?</summary><div class="faq-answer">Une app qui décide quelles de vos photos méritent d'être gardées, pas seulement lesquelles correspondent à une recherche. Elle note chaque photo sur la netteté, l'exposition, la composition ou sa ressemblance avec les photos que vous gardez d'habitude, et les rend classées de la meilleure à la moins bonne, avec un flux pour garder, partager ou supprimer le reste.</div></details>
+      <details class="faq-item"><summary>En quoi est-ce différent de la recherche de photos ?</summary><div class="faq-answer">La recherche vous dit quelles photos correspondent : une requête « plage » renvoie les 87 photos de plage. Un sélecteur classe ces 87 et met les meilleures en tête. SpectraSort fait les deux ; chaque recherche revient classée. Voir <a href="/fr/ai-photo-picker-vs-photo-culling/">sélection vs tri de photos</a> pour le détail complet.</div></details>
+      <details class="faq-item"><summary>SpectraSort envoie-t-il mes photos pour les sélectionner ?</summary><div class="faq-answer">Non. La recherche, le classement et le profil de goût tournent tous sur le Neural Engine de votre iPhone. Aucun envoi, aucun compte, aucun serveur SpectraSort sur le chemin.</div></details>
+      <details class="faq-item"><summary>Va-t-il supprimer des photos tout seul ?</summary><div class="faq-answer">Non. Rien n'est appliqué tant que vous ne touchez pas, et les suppressions passent toujours par la boîte de confirmation de Photos, vers l'album Supprimés récemment d'iOS — récupérables pendant 30 jours, ou effacées dès que vous le videz.</div></details>
+      <details class="faq-item"><summary>Combien ça coûte ?</summary><div class="faq-answer">Cinq actions par semaine sont gratuites, pour toujours — ce n'est pas un essai. Un seul paiement pour des actions illimitées et tous les réglages de Studio. Sans abonnement.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">À lire aussi</span>
+      <div class="related-grid">
+        <a href="/fr/photo-culling-iphone/">Tri de photos sur iPhone<span>Le flux du photographe, sur le téléphone</span></a>
+        <a href="/fr/best-photo-picker/">Choisir un sélecteur de photos<span>Ce qui distingue ces apps</span></a>
+        <a href="/fr/how-to-pick-best-photos-from-camera-roll/">Choisir les meilleures photos de votre pellicule<span>Méthode pas à pas, avec ou sans app</span></a>
+      </div>
+    </div>
+  </div>
+</section>

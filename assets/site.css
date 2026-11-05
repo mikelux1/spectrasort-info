@@ -57,6 +57,9 @@ section { padding:96px 0; position:relative; }
 .rv { opacity:0; transform:translateY(26px); transition:opacity .7s ease, transform .7s ease; }
 .rv.in { opacity:1; transform:none; }
 @media (prefers-reduced-motion: reduce){ .rv { opacity:1; transform:none; transition:none; } }
+/* No JavaScript: reveal everything. Without this, a JS failure leaves the
+   whole page at opacity 0 — the changelog was the worst case. */
+@media (scripting: none){ .rv { opacity:1; transform:none; transition:none; } }
 
 /* ---------- nav ---------- */
 nav.top {
@@ -75,18 +78,41 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 .nav-links a:hover { color:var(--text); }
 @media (max-width:860px){ .nav-links { display:none; } }
 
-/* Explicit language switch (2026-08-30, /zh/ launch). Lives OUTSIDE .nav-links
-   on purpose: that list dies under 860px, and the switch must survive on
-   phones. Ghost pill + globe glyph so it reads as a control, not a menu item. */
-.lang-switch {
-    display:inline-flex; align-items:center; white-space:nowrap;
-    padding:0; margin:0 14px 0 4px; border:none;
-    color:var(--text-mid); text-decoration:none; font-size:11px; font-weight:500;
-    letter-spacing:.04em; opacity:.55; transition:opacity .2s ease;
+/* Language menu (2026-11-01). One globe control for all six website languages,
+   replacing the single EN/中文 link. Details/summary keeps it working without
+   JavaScript; site.js only adds outside-click and Escape close. Lives OUTSIDE
+   .nav-links because that list dies under 860px; the switch must survive. */
+.lang-menu { position:relative; margin:0 4px 0 0; }
+.lang-menu summary {
+    display:inline-flex; align-items:center; gap:7px; cursor:pointer;
+    padding:7px 11px; border:1px solid var(--hairline2); border-radius:999px;
+    color:var(--text-mid); font-size:12px; font-weight:500; letter-spacing:.04em;
+    line-height:1; list-style:none; user-select:none; transition:color .2s, border-color .2s;
 }
-.lang-switch:hover { color:var(--text); opacity:.9; }
-.lang-switch svg { display:none; }
-@media (max-width:860px){ .lang-switch { margin-left:auto; } }
+.lang-menu summary::-webkit-details-marker { display:none; }
+.lang-menu summary:hover, .lang-menu[open] summary { color:var(--text); border-color:var(--text-mid); }
+.lang-menu summary svg { width:14px; height:14px; flex:none; }
+.lang-menu .chev { width:8px; height:8px; opacity:.6; transition:transform .2s; }
+.lang-menu[open] .chev { transform:rotate(180deg); }
+.lang-menu-panel {
+    position:absolute; right:0; top:calc(100% + 10px); z-index:80; min-width:176px;
+    padding:6px; background:var(--bg-rise); border:1px solid var(--hairline2);
+    border-radius:12px; box-shadow:0 18px 48px rgba(0,0,0,.45);
+}
+.lang-menu-panel a {
+    display:block; padding:9px 11px; border-radius:8px; color:var(--text-mid);
+    text-decoration:none; font-size:14px; line-height:1.2;
+}
+.lang-menu-panel a:hover { background:var(--hairline); color:var(--text); }
+.lang-menu-panel a[aria-current="page"] { color:var(--text); font-weight:600; }
+@media (max-width:860px){ .lang-menu { margin-left:auto; } }
+/* Under 520px the brand + globe + CTA no longer fit on one row. Keep the
+   globe as the control and drop the visible language code; the menu itself
+   still lists every language, and the aria-label stays. */
+@media (max-width:520px){
+  .lang-menu summary { font-size:0; padding:8px 10px; gap:0; }
+  .lang-menu summary svg { width:16px; height:16px; }
+}
 
 /* ---------- buttons ---------- */
 .cta, .cta-small {
@@ -107,6 +133,13 @@ nav.top .container { display:flex; align-items:center; justify-content:space-bet
 .hero h1 { margin-bottom:22px; }
 .hero p.lead { margin-bottom:30px; max-width:540px; }
 .hero-meta { color:var(--text-low); font-size:14.5px; margin-left:16px; }
+.hero-def { max-width:640px; color:var(--text-mid); font-size:15px; line-height:1.6; margin:0 0 22px; }
+.also-in { margin-top:10px; font-size:12.5px; color:var(--text-low); }
+.also-in a { color:var(--text-mid); margin:0 4px; text-decoration:none; }
+.also-in a:hover { color:var(--text); text-decoration:underline; }
+footer .lang-switch { margin-top:6px; font-size:12.5px; color:var(--text-low); }
+footer .lang-switch a { color:var(--text-mid); margin:0 4px; text-decoration:none; }
+footer .lang-switch a:hover { color:var(--text); text-decoration:underline; }
 @media (max-width:520px){ .hero-meta { display:block; margin:14px 0 0; } }
 .trust-chips { display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; }
 .chip { font-size:13.5px; font-weight:500; color:var(--text-mid); border:1px solid var(--hairline2); border-radius:999px; padding:7px 14px; }

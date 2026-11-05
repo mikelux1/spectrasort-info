@@ -1,0 +1,282 @@
+{
+  "fr": {
+    "htmlLang": "fr",
+    "ogLocale": "fr_FR",
+    "store": "fr",
+    "nav": {
+      "overview": "Aperçu",
+      "features": "Fonctionnalités",
+      "pricing": "Tarifs",
+      "changelog": "Nouveautés",
+      "download": "Télécharger"
+    },
+    "footer": {
+      "blurb": "Une app de sélection et de tri de photos pour iPhone. Tout tourne sur votre appareil : rien n'est envoyé, pas de compte, pas d'abonnement.",
+      "guides": "Guides",
+      "compare": "Comparer",
+      "product": "Produit",
+      "guideLinks": [
+        ["Sélecteur de photos IA pour iPhone", "ai-photo-picker-iphone"],
+        ["Tri de photos sur iPhone", "photo-culling-iphone"],
+        ["Trouver vos meilleures photos", "find-best-photos-iphone"],
+        ["Choisir les meilleures photos de votre pellicule", "how-to-pick-best-photos-from-camera-roll"],
+        ["Photos de vacances → un album", "vacation-photos-iphone"],
+        ["Sélection vs tri de photos", "ai-photo-picker-vs-photo-culling"]
+      ],
+      "compareLinks": [
+        ["Choisir un sélecteur de photos", "best-photo-picker"],
+        ["SpectraSort vs Photos Apple", "ai-photo-organizer-vs-apple-photos"],
+        ["SpectraSort vs Google Photos", "spectrasort-vs-google-photos"],
+        ["App photo IA privée", "private-ai-photo-app"]
+      ],
+      "productLinks": [
+        ["Fonctionnalités", "features"],
+        ["Studio", "studio"],
+        ["Tarifs", "pricing"],
+        ["Nouveautés", "changelog"],
+        ["Détecteur de doublons", "duplicate-photo-finder-iphone"],
+        ["Organisateur de photos IA", "photo-organizer-iphone"],
+        ["Documents et reçus", "documents-receipts-iphone"],
+        ["Dossier de presse", "press"]
+      ],
+      "appStore": "Télécharger sur l'App Store",
+      "updated": "Mis à jour le 31 octobre 2026",
+      "privacy": "Confidentialité",
+      "terms": "Conditions",
+      "support": "Assistance",
+      "alsoIn": "Aussi sur",
+      "language": "Langue"
+    },
+    "closing": {
+      "h2": "Vos meilleures photos.",
+      "grad": "Trouvées.",
+      "sub": "iPhone, iOS 18.5 ou ultérieur.",
+      "cta": "Télécharger sur l'App Store"
+    },
+    "ogImageAlt": "SpectraSort — Vos meilleures photos, trouvées. Une rangée de neuf photos, les trois meilleures entourées et notées."
+  },
+  "de": {
+    "htmlLang": "de",
+    "ogLocale": "de_DE",
+    "store": "de",
+    "nav": {
+      "overview": "Überblick",
+      "features": "Funktionen",
+      "pricing": "Preise",
+      "changelog": "Neuigkeiten",
+      "download": "Laden"
+    },
+    "footer": {
+      "blurb": "Eine KI-Fotoauswahl und -Sortier-App für iPhone. Alles läuft auf deinem Gerät: nichts wird hochgeladen, kein Konto, kein Abo.",
+      "guides": "Ratgeber",
+      "compare": "Vergleiche",
+      "product": "Produkt",
+      "guideLinks": [
+        ["KI-Fotoauswahl für iPhone", "ai-photo-picker-iphone"],
+        ["Fotos aussortieren auf dem iPhone", "photo-culling-iphone"],
+        ["Deine besten Fotos finden", "find-best-photos-iphone"],
+        ["Die besten Fotos aus der Mediathek wählen", "how-to-pick-best-photos-from-camera-roll"],
+        ["Urlaubsfotos → ein Album", "vacation-photos-iphone"],
+        ["Fotoauswahl vs. Aussortieren", "ai-photo-picker-vs-photo-culling"]
+      ],
+      "compareLinks": [
+        ["Eine Fotoauswahl-App wählen", "best-photo-picker"],
+        ["SpectraSort vs. Apple Fotos", "ai-photo-organizer-vs-apple-photos"],
+        ["SpectraSort vs. Google Fotos", "spectrasort-vs-google-photos"],
+        ["Private KI-Foto-App", "private-ai-photo-app"]
+      ],
+      "productLinks": [
+        ["Funktionen", "features"],
+        ["Studio", "studio"],
+        ["Preise", "pricing"],
+        ["Neuigkeiten", "changelog"],
+        ["Duplikatfinder", "duplicate-photo-finder-iphone"],
+        ["KI-Foto-Organizer", "photo-organizer-iphone"],
+        ["Dokumente & Belege", "documents-receipts-iphone"],
+        ["Pressemappe", "press"]
+      ],
+      "appStore": "Im App Store laden",
+      "updated": "Aktualisiert am 31. Oktober 2026",
+      "privacy": "Datenschutz",
+      "terms": "Nutzungsbedingungen",
+      "support": "Support",
+      "alsoIn": "Auch in",
+      "language": "Sprache"
+    },
+    "closing": {
+      "h2": "Deine besten Fotos.",
+      "grad": "Gefunden.",
+      "sub": "iPhone, iOS 18.5 oder neuer.",
+      "cta": "Im App Store laden"
+    },
+    "ogImageAlt": "SpectraSort — Deine besten Fotos, gefunden. Eine Reihe aus neun Fotos, die drei besten umkreist und bewertet."
+  },
+  "it": {
+    "htmlLang": "it",
+    "ogLocale": "it_IT",
+    "store": "it",
+    "nav": {
+      "overview": "Panoramica",
+      "features": "Funzioni",
+      "pricing": "Prezzi",
+      "changelog": "Novità",
+      "download": "Scarica"
+    },
+    "footer": {
+      "blurb": "Un'app per scegliere e selezionare le foto su iPhone. Tutto gira sul tuo dispositivo: niente caricamenti, nessun account, nessun abbonamento.",
+      "guides": "Guide",
+      "compare": "Confronti",
+      "product": "Prodotto",
+      "guideLinks": [
+        ["Selettore foto IA per iPhone", "ai-photo-picker-iphone"],
+        ["Selezione foto su iPhone", "photo-culling-iphone"],
+        ["Trova le tue foto migliori", "find-best-photos-iphone"],
+        ["Scegli le foto migliori dal rullino", "how-to-pick-best-photos-from-camera-roll"],
+        ["Foto delle vacanze → un album", "vacation-photos-iphone"],
+        ["Selezione vs scrematura delle foto", "ai-photo-picker-vs-photo-culling"]
+      ],
+      "compareLinks": [
+        ["Scegliere un selettore di foto", "best-photo-picker"],
+        ["SpectraSort vs Foto di Apple", "ai-photo-organizer-vs-apple-photos"],
+        ["SpectraSort vs Google Foto", "spectrasort-vs-google-photos"],
+        ["App foto IA privata", "private-ai-photo-app"]
+      ],
+      "productLinks": [
+        ["Funzioni", "features"],
+        ["Studio", "studio"],
+        ["Prezzi", "pricing"],
+        ["Novità", "changelog"],
+        ["Ricerca duplicati", "duplicate-photo-finder-iphone"],
+        ["Organizzatore foto IA", "photo-organizer-iphone"],
+        ["Documenti e ricevute", "documents-receipts-iphone"],
+        ["Cartella stampa", "press"]
+      ],
+      "appStore": "Scarica sull'App Store",
+      "updated": "Aggiornato il 31 ottobre 2026",
+      "privacy": "Privacy",
+      "terms": "Termini",
+      "support": "Supporto",
+      "alsoIn": "Anche su",
+      "language": "Lingua"
+    },
+    "closing": {
+      "h2": "Le tue foto migliori.",
+      "grad": "Trovate.",
+      "sub": "iPhone, iOS 18.5 o successivo.",
+      "cta": "Scarica sull'App Store"
+    },
+    "ogImageAlt": "SpectraSort — Le tue foto migliori, trovate. Una fila di nove foto, le tre migliori cerchiate e valutate."
+  },
+  "es": {
+    "htmlLang": "es",
+    "ogLocale": "es_ES",
+    "store": "es",
+    "nav": {
+      "overview": "Resumen",
+      "features": "Funciones",
+      "pricing": "Precios",
+      "changelog": "Novedades",
+      "download": "Descargar"
+    },
+    "footer": {
+      "blurb": "Una app para elegir y seleccionar fotos en iPhone. Todo funciona en tu dispositivo: nada se sube, sin cuenta, sin suscripción.",
+      "guides": "Guías",
+      "compare": "Comparativas",
+      "product": "Producto",
+      "guideLinks": [
+        ["Selector de fotos con IA para iPhone", "ai-photo-picker-iphone"],
+        ["Selección de fotos en iPhone", "photo-culling-iphone"],
+        ["Encuentra tus mejores fotos", "find-best-photos-iphone"],
+        ["Elige las mejores fotos del carrete", "how-to-pick-best-photos-from-camera-roll"],
+        ["Fotos de vacaciones → un álbum", "vacation-photos-iphone"],
+        ["Seleccionar vs descartar fotos", "ai-photo-picker-vs-photo-culling"]
+      ],
+      "compareLinks": [
+        ["Elegir un selector de fotos", "best-photo-picker"],
+        ["SpectraSort vs Fotos de Apple", "ai-photo-organizer-vs-apple-photos"],
+        ["SpectraSort vs Google Fotos", "spectrasort-vs-google-photos"],
+        ["App de fotos con IA privada", "private-ai-photo-app"]
+      ],
+      "productLinks": [
+        ["Funciones", "features"],
+        ["Studio", "studio"],
+        ["Precios", "pricing"],
+        ["Novedades", "changelog"],
+        ["Buscador de duplicados", "duplicate-photo-finder-iphone"],
+        ["Organizador de fotos con IA", "photo-organizer-iphone"],
+        ["Documentos y recibos", "documents-receipts-iphone"],
+        ["Kit de prensa", "press"]
+      ],
+      "appStore": "Descargar en el App Store",
+      "updated": "Actualizado el 31 de octubre de 2026",
+      "privacy": "Privacidad",
+      "terms": "Términos",
+      "support": "Soporte",
+      "alsoIn": "También en",
+      "language": "Idioma"
+    },
+    "closing": {
+      "h2": "Tus mejores fotos.",
+      "grad": "Encontradas.",
+      "sub": "iPhone, iOS 18.5 o posterior.",
+      "cta": "Descargar en el App Store"
+    },
+    "ogImageAlt": "SpectraSort — Tus mejores fotos, encontradas. Una fila de nueve fotos, las tres mejores marcadas y puntuadas."
+  },
+  "pt": {
+    "htmlLang": "pt-BR",
+    "ogLocale": "pt_BR",
+    "store": "br",
+    "nav": {
+      "overview": "Visão geral",
+      "features": "Recursos",
+      "pricing": "Preços",
+      "changelog": "Novidades",
+      "download": "Baixar"
+    },
+    "footer": {
+      "blurb": "Um app para escolher e classificar fotos no iPhone. Tudo roda no seu aparelho: nada é enviado, sem conta, sem assinatura.",
+      "guides": "Guias",
+      "compare": "Comparações",
+      "product": "Produto",
+      "guideLinks": [
+        ["Seletor de fotos com IA para iPhone", "ai-photo-picker-iphone"],
+        ["Seleção de fotos no iPhone", "photo-culling-iphone"],
+        ["Encontre suas melhores fotos", "find-best-photos-iphone"],
+        ["Escolha as melhores fotos da galeria", "how-to-pick-best-photos-from-camera-roll"],
+        ["Fotos de férias → um álbum", "vacation-photos-iphone"],
+        ["Selecionar vs descartar fotos", "ai-photo-picker-vs-photo-culling"]
+      ],
+      "compareLinks": [
+        ["Escolher um seletor de fotos", "best-photo-picker"],
+        ["SpectraSort vs Fotos da Apple", "ai-photo-organizer-vs-apple-photos"],
+        ["SpectraSort vs Google Fotos", "spectrasort-vs-google-photos"],
+        ["App de fotos com IA privado", "private-ai-photo-app"]
+      ],
+      "productLinks": [
+        ["Recursos", "features"],
+        ["Studio", "studio"],
+        ["Preços", "pricing"],
+        ["Novidades", "changelog"],
+        ["Localizador de duplicatas", "duplicate-photo-finder-iphone"],
+        ["Organizador de fotos com IA", "photo-organizer-iphone"],
+        ["Documentos e recibos", "documents-receipts-iphone"],
+        ["Kit de imprensa", "press"]
+      ],
+      "appStore": "Baixar na App Store",
+      "updated": "Atualizado em 31 de outubro de 2026",
+      "privacy": "Privacidade",
+      "terms": "Termos",
+      "support": "Suporte",
+      "alsoIn": "Também na",
+      "language": "Idioma"
+    },
+    "closing": {
+      "h2": "Suas melhores fotos.",
+      "grad": "Encontradas.",
+      "sub": "iPhone, iOS 18.5 ou posterior.",
+      "cta": "Baixar na App Store"
+    },
+    "ogImageAlt": "SpectraSort — Suas melhores fotos, encontradas. Uma fileira de nove fotos, as três melhores circuladas e pontuadas."
+  }
+}

@@ -1,0 +1,367 @@
+---
+title: SpectraSort — KI-Fotoauswahl & Aussortieren für iPhone
+description: Finde deine besten Fotos automatisch mit KI direkt auf dem Gerät. SpectraSort lernt deinen Geschmack, findet ähnliche Aufnahmen, entfernt Duplikate und sortiert deine Mediathek. Privat, kein Abo.
+ogTitle: SpectraSort — Deine besten Fotos, gefunden.
+ogDescription: Eine KI-Fotoauswahl zum Aussortieren, die deine Mediathek nach Qualität und deinem eigenen Geschmack sortiert — komplett auf deinem iPhone. Keine Uploads, kein Konto, kein Abo.
+---
+
+<section class="hero">
+  <div class="container">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <span class="eyebrow">KI-Fotoauswahl &amp; Aussortieren · iPhone</span>
+        <h1>Deine besten Fotos. <span class="grad-text">Gefunden.</span></h1>
+        <p class="lead">Die meisten Foto-Apps fragen: „Ist das ein gutes Foto?“ SpectraSort fragt: „Würdest <em>du</em> es behalten?“ Jedes Mal, wenn du ein Foto behältst oder verwirfst, lernt die App — und deine Mediathek kommt sortiert zurück, die besten zuerst.</p>
+        <p class="hero-def">SpectraSort ist eine KI-Fotoauswahl fürs iPhone, die deine Mediathek nach Qualität und deinem eigenen Geschmack sortiert. Sie sortiert auch aus, entfernt Duplikate und räumt auf. Einmal zahlen, kein Abo.</p>
+        <div>
+          <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+            Im App Store laden
+          </a>
+          <span class="hero-meta">Kostenlos · iPhone · iOS 18.5+<br>Aktualisiert am 31. Oktober 2026</span>
+        </div>
+        <div class="trust-chips">
+          <span class="chip"><b>100 % auf dem Gerät</b> — nichts wird hochgeladen</span>
+          <span class="chip"><b>Kostenlos</b> 5 Aktionen pro Woche</span>
+          <span class="chip"><b>Einmal zahlen</b> — unbegrenzte Aktionen</span>
+        </div>
+      </div>
+      <div class="hero-shot rv in">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:560px">
+            <video class="screen-loop" src="/video/web-hero.mp4"
+                   poster="/images/shots/hero-poster.jpg"
+                   loop muted playsinline preload="metadata"
+                   width="660" height="1344"
+                   aria-label="Die SpectraSort-Toolbox öffnet Dein Geschmack, zeigt ein gelerntes Profil namens Nature Explorer und dann ein Raster aus Landschaften, bewertet 8.7, 8.6, 8.6 — die besten zuerst"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="taste" class="rise">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Dein Geschmack — die einzige App, die das kann</span>
+        <h2>Sie lernt, <span class="grad-text">was du gewählt hättest.</span></h2>
+        <p>Jede Überprüfung bringt ihr etwas bei. Die App baut ein persönliches Profil um deinen Geschmack. Was sie auswählt, sieht bald so aus, als hättest du selbst gewählt.</p>
+        <p>Pausiere das Lernen, setze es zurück oder schärfe es. Speichere so viele Profile, wie du willst.</p>
+        <a class="learn-more" href="/de/ai-photo-picker-iphone/">So funktioniert die Auswahl <span aria-hidden="true">&rsaquo;</span></a>
+      </div>
+      <div class="rv">
+        <div class="taste-fan">
+          <div class="screen-card tf-side tf-left" aria-hidden="true">
+            <img src="/images/shots/taste-portrait.jpg" alt="" loading="lazy" width="800" height="1738">
+          </div>
+          <div class="screen-card tf-side tf-right" aria-hidden="true">
+            <img src="/images/shots/taste-pets.jpg" alt="" loading="lazy" width="800" height="1738">
+          </div>
+          <div class="screen-card tf-front">
+            <img src="/images/shots/taste-nature.jpg" alt="Dein Geschmack — drei gelernte Profile nebeneinander: Portrait Creative, Nature Explorer aus 1.082 überprüften Fotos und Pet Whisperer" loading="lazy" width="800" height="1738">
+          </div>
+        </div>
+        <p class="shot-cap">Dein Geschmacksprofil lernt, was du auswählst, und sortiert deine Fotos dann genau so.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tools">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">KI-Foto-Toolbox</span>
+      <h2>Sechs Wege rein. <span class="grad-text">Je ein Tippen.</span></h2>
+    </div>
+    <div class="tools-grid rv">
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-taste.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Dein Geschmack</div><div class="tdesc">Gebaut aus den Fotos, die du behältst, und denen, die du verwirfst.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-best.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Beste Aufnahmen</div><div class="tdesc">Am schärfsten, am besten belichtet, am besten komponiert zuerst. Eher technisch oder künstlerisch.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-subject.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Motiv finden</div><div class="tdesc">Tippe eine Vorlage an wie „Porträt“ oder „Nacht“ — die Texteingabe funktioniert vorerst auf Englisch.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-image.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Wie dieses Foto</div><div class="tdesc">Zeig auf ein Foto und bekomme alles, was ihm ähnlich ist.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-dedupe.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Duplikate</div><div class="tdesc">Duplikate, Serien und Ähnliche, gestapelt zum Aufräumen.</div></div>
+      </div>
+      <div class="tool-chip">
+        <div class="tcover"><img src="/images/art/cover-place.jpg" alt="" loading="lazy"></div>
+        <div class="tbody"><div class="tname">Fotos von einem Ort</div><div class="tdesc">Markiere einen Ort und sieh alles, was dort aufgenommen wurde.</div></div>
+      </div>
+    </div>
+    <div class="rv" style="text-align:center;margin-top:28px;"><a class="learn-more" href="/de/features/">Jedes Werkzeug, jede Einstellung und jedes Limit auf einer Seite <span aria-hidden="true">&rsaquo;</span></a></div>
+  </div>
+</section>
+
+<section id="find-subject" class="rise">
+  <div class="container">
+    <div class="feature rev">
+      <div class="rv">
+        <span class="eyebrow">Motiv finden</span>
+        <h2>Suche alles — und bekomme <span class="grad-text">die besten zuerst</span> zurück.</h2>
+        <p>Tippe eine Vorlage an wie „Porträt“ oder „Nacht“ — oder gib ein Wort ein (die Texteingabe funktioniert vorerst auf Englisch). Jede Aufnahme landet in einem Raster — sortiert, nicht nur gefunden.</p>
+        <a class="learn-more" href="/de/find-best-photos-iphone/">Drei Wege zu einem Foto <span aria-hidden="true">&rsaquo;</span></a>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card capped" style="--cap:470px">
+            <video class="screen-loop" src="/video/web-find-subject.mp4"
+                   poster="/images/shots/find-subject-poster.jpg"
+                   loop muted playsinline preload="none"
+                   width="660" height="1344"
+                   aria-label="Eine Suche in Motiv finden eingeben, danach das sortierte Raster der Treffer"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="like-this">
+  <div class="container">
+    <div class="section-head rv" style="margin-bottom:44px;">
+      <span class="eyebrow">Wie dieses Foto</span>
+      <h2>Wähle ein Foto, <span class="grad-text">finde den Rest.</span></h2>
+      <p>Wähle ein Foto und bekomme andere, die ihm ähneln — die ähnlichsten zuerst.</p>
+        <a class="learn-more" href="/de/find-best-photos-iphone/">Suchen nach Beispiel, erklärt <span aria-hidden="true">&rsaquo;</span></a>
+    </div>
+    <div class="shot-pair rv">
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="/images/shots/likethis.jpg" alt="Ein Referenzfoto wird gewählt — 1.708 Fotos daran gemessen und sortiert" loading="lazy" width="800" height="1734"></div>
+      </div>
+      <div class="arrow" aria-hidden="true">&rarr;</div>
+      <div class="shot">
+        <div class="screen-card capped" style="--cap:400px"><img src="/images/shots/review-grid.jpg" alt="Das Ergebnis — ein Raster zum Überprüfen mit ähnlichen Fotos, jedes bewertet, die besten zuerst" loading="lazy" width="800" height="1734"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="dedupe" class="rise">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Duplikate</span>
+        <h2>11 Aufnahmen desselben Sonnenuntergangs &rarr; <span class="grad-text">ein Wischen behält die schärfste.</span></h2>
+        <p>Duplikate, Serien und fast identische Aufnahmen kommen schon gruppiert an. Du wählst die, die dir gefällt, und machst weiter.</p>
+        <a class="learn-more" href="/de/duplicate-photo-finder-iphone/">So funktioniert der Duplikatfinder <span aria-hidden="true">&rsaquo;</span></a>
+      </div>
+      <div class="rv">
+        <div class="stack-wrap" id="stackDemo">
+          <div class="stack-card" style="transform:rotate(-7deg) translate(-16px,10px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(5deg) translate(14px,4px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(-3deg) translate(-6px,-6px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card" style="transform:rotate(8deg) translate(20px,-12px); background-image:url('/images/art/subject-sunset.jpg');"></div>
+          <div class="stack-card keeper" style="background-image:url('/images/art/subject-sunset.jpg');">
+            <span class="keeper-badge">Schärfste &check;</span>
+            <span class="count-badge">11 Fotos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="discover">
+  <div class="container">
+    <div class="section-head rv" style="margin-bottom:44px;">
+      <span class="eyebrow">Entdecken — Szenen &amp; Zeitleiste</span>
+      <h2>Nimm dir die Mediathek <span class="grad-text">Stück für Stück vor.</span></h2>
+      <p>Szenen sammeln deine Reisen, Themen und Serien von selbst. Die Zeitleiste führt dich durch Tage, Monate und Jahre.</p>
+      <a class="learn-more" href="/de/photo-organizer-iphone/">So funktioniert das Aufräumen <span aria-hidden="true">&rsaquo;</span></a>
+    </div>
+    <div class="shot-pair rv">
+      <div class="shot">
+        <div class="screen-card"><img src="/images/shots/discover-scenes.jpg" alt="Entdecken — Szenen, automatisch gesammelte Reisen, Themen und Serien" loading="lazy" width="800" height="1734"></div>
+      </div>
+      <div class="shot">
+        <div class="screen-card"><img src="/images/shots/discover-timeline.jpg" alt="Entdecken — Zeitleiste, vom Jahr über den Monat bis zum Tag" loading="lazy" width="800" height="1734"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="done" class="rise">
+  <div class="container">
+    <div class="feature rev">
+      <div class="rv">
+        <span class="eyebrow">Überprüfen &rarr; Fertig</span>
+        <h2>Wische die besten rein. <span class="grad-text">Fertig in einem Bildschirm.</span></h2>
+        <p>Die besten steigen nach oben. Wische nach rechts zum Behalten, nach unten zum Belassen, nach links zum Verwerfen. Mit dem Rad vergleichst du ähnliche Fotos.</p>
+        <a class="learn-more" href="/de/photo-culling-iphone/">Der ganze Ablauf der Überprüfung <span aria-hidden="true">&rsaquo;</span></a>
+      </div>
+      <div class="rv">
+        <div class="shot">
+          <div class="screen-card">
+            <video class="screen-loop" src="/video/web-review-swipe.mp4"
+                   poster="/images/shots/review-swipe-poster.jpg"
+                   loop muted playsinline preload="none"
+                   width="660" height="1344"
+                   aria-label="Zwei fast identische Aufnahmen desselben Hundes auf einem Rad — von Ähnliche 1 von 2, bewertet 6,8, zu Ähnliche 2 von 2, dann wird eine behalten"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="studio">
+  <div class="container">
+    <div class="feature">
+      <div class="rv">
+        <span class="eyebrow">Studio — eigene Einstellungen</span>
+        <h2>Wenn du <span class="grad-text">die Kontrolle willst.</span></h2>
+        <p>Sieben Qualitätsachsen zum Einstellen. Bis zu drei Motive. Ein Balance-Rad, das Motivtreffer gegen Qualität abwägt. Als eigene Sortierprofile speichern.</p>
+        <a class="learn-more" href="/de/studio/">Studio entdecken <span aria-hidden="true">&rsaquo;</span></a>
+      </div>
+      <div class="rv">
+        <div class="wheel-shot">
+          <div class="screen-card">
+            <video class="screen-loop" src="/video/web-studio-wheel.mp4"
+                   poster="/images/shots/studio-wheel-poster.jpg"
+                   loop muted playsinline preload="none"
+                   width="920" height="852"
+                   aria-label="Studios Balance-Rad wird hin und her gedreht: die Gewichtung der Top-Motive fällt von 75 % auf 25 %, während der Radar Qualitätsfokus von 25 % auf 75 % wächst und wieder zurückgeht"></video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="privacy">
+  <div class="container">
+    <div class="privacy-band rv">
+      <img class="bgphoto" src="/images/shots/privacy-art.jpg" alt="Ein Messingschloss auf einem verschnürten Stapel ausgedruckter Fotos" loading="lazy">
+      <div class="scrim"></div>
+      <div class="privacy-copy">
+        <span class="eyebrow" style="color:rgba(244,242,237,.65);">Privat</span>
+        <h2>Nichts verlässt dein Telefon.</h2>
+        <p>Suche, Bewertung und dein Geschmacksprofil laufen auf deinem Telefon. Deine Fotos werden nirgendwohin hochgeladen.</p>
+        <a class="learn-more" href="/de/private-ai-photo-app/">So funktioniert die Verarbeitung auf dem Gerät <span aria-hidden="true">&rsaquo;</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="uses">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">Wofür es benutzt wird</span>
+      <h2>Vier Aufgaben. <span class="grad-text">Eine App.</span></h2>
+      <p>Die Aufnahmen auf dieser Seite und in den Ratgebern sind echte Sortierungen, keine Mockups: 1.708 Fotos an einem Beispiel gemessen, ein Geschmacksprofil aus 1.082 Überprüfungen und eine Aussortierung von 650 Fotos, die mit 4 behaltenen, 484 belassenen und 162 verworfenen Fotos endete.</p>
+    </div>
+    <div class="usecase-grid rv">
+      <a class="usecase" href="/de/vacation-photos-iphone/">
+        <span class="uc-kicker">Eine Reise aussortieren</span>
+        <h3>1.200 Urlaubsfotos &rarr; das Album, das sich zeigen lässt</h3>
+        <p>Richte eine Sortierung auf die Reise und überprüfe die besten, statt jede Aufnahme durchzuwischen. Duplikate und Serien kommen schon gestapelt, so ist jeder Moment eine Entscheidung.</p>
+        <span class="uc-more">So sortierst du eine Reise auf dem iPhone aus &rarr;</span>
+      </a>
+      <a class="usecase" href="/de/find-best-photos-iphone/">
+        <span class="uc-kicker">Alte Favoriten finden</span>
+        <h3>Das Foto, von dem du weißt, dass es da ist — und das du nicht findest</h3>
+        <p>Beschreibe es mit Worten oder zeig auf ein ähnliches Foto. Die Treffer kommen sortiert zurück, die besten zuerst — auch solche, die drei Jahre tief vergraben sind.</p>
+        <span class="uc-more">So findest du deine besten Fotos &rarr;</span>
+      </a>
+      <a class="usecase" href="/de/duplicate-photo-finder-iphone/">
+        <span class="uc-kicker">Duplikate aufräumen</span>
+        <h3>19 Versionen derselben Aufnahme, eine bleibt</h3>
+        <p>Exakte Duplikate, Serien und fast identische Aufnahmen kommen gruppiert, die schärfste markiert. In der Demo-Mediathek tauchte eine Rose 19-mal auf; eine Entscheidung erledigte den ganzen Stapel.</p>
+        <span class="uc-more">So funktioniert der Duplikatfinder &rarr;</span>
+      </a>
+      <a class="usecase" href="/de/ai-photo-picker-iphone/">
+        <span class="uc-kicker">Deine Sammlung aufbauen</span>
+        <h3>Eine Mediathek, die lernt, was du magst</h3>
+        <p>Jedes Behalten und Verwerfen schärft dein Geschmacksprofil. Nach einer Weile liefert die Sortierung nach Dein Geschmack das Album, das du selbst zusammengestellt hättest.</p>
+        <span class="uc-more">Was eine KI-Fotoauswahl macht &rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="rise" style="padding-bottom:0;">
+  <div class="container">
+    <div class="rv" style="text-align:center;">
+      <span class="eyebrow">Jede Sortierung hat drei Schritte</span>
+    </div>
+    <div class="stats rv" style="margin-top:18px;">
+      <div class="stat"><div class="num">Finden</div><div class="label">Sechs Werkzeuge, je ein Tippen: Suchbegriff, Beispielfoto, Ort, Geschmack.</div></div>
+      <div class="stat"><div class="num">Sortieren</div><div class="label">Bewertet nach Schärfe, Belichtung, Bildaufbau und danach, wie sehr es deinen behaltenen Fotos ähnelt.</div></div>
+      <div class="stat"><div class="num">Abschließen</div><div class="label">Ein Bildschirm: Album gefüllt, Favoriten markiert, der Rest gelöscht.</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="rise">
+  <div class="container pricing-hero rv">
+    <span class="eyebrow">Preise</span>
+    <h2>Fünf kostenlose Aktionen pro Woche. <span class="grad-text">Einmal zahlen</span> für unbegrenzt.</h2>
+    <div class="plan-panel">
+      <div class="plan-cols">
+        <div class="plan-col">
+          <span class="plan">Kostenlos</span>
+          <div class="amount">5 Aktionen pro Woche</div>
+          <ul>
+            <li><b>Unbegrenzt sortieren</b> — alle sechs Werkzeuge, Entdecken, jeder Filter</li>
+            <li>Teilen, Favorit, zu Album hinzufügen, löschen — jede zählt einmal</li>
+            <li>Kein Konto, keine Kreditkarte</li>
+            <li>Deine Fotos bleiben auf deinem Telefon</li>
+          </ul>
+        </div>
+        <div class="plan-col featured">
+          <span class="plan">Premium</span>
+          <div class="amount"><span class="grad-text">Einmal zahlen</span></div>
+          <ul>
+            <li><b>Unbegrenzte Aktionen</b></li>
+            <li>Studios volle Kontrolle — sieben Qualitätsachsen, das Balance-Rad, gespeicherte Profile</li>
+            <li>Ein Kauf, an dein Apple-Konto gebunden — wird auf einem neuen Telefon wiederhergestellt</li>
+            <li><b>Kein Abo. Niemals.</b></li>
+          </ul>
+        </div>
+      </div>
+      <div class="plan-foot">
+        <a class="cta grad" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+          Kostenlos laden
+        </a>
+        <p class="plan-note">iPhone · iOS 18.5+ · Jederzeit in der App auf Premium upgraden.</p>
+        <p class="plan-note"><a class="learn-more" href="/de/pricing/">Was als Aktion zählt und was Premium bringt <span aria-hidden="true">&rsaquo;</span></a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Häufige Fragen.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>Verlassen meine Fotos jemals mein Telefon?</summary><div class="faq-answer">Nein. Jeder Schritt — Suche, Bewertung, Geschmacksprofil — läuft auf der Neural Engine deines iPhone. Es gibt keine Uploads, kein Konto und keinen SpectraSort-Server im Weg.</div></details>
+      <details class="faq-item"><summary>Nutzt SpectraSort meine Fotos, um KI zu trainieren?</summary><div class="faq-answer">Nein. Nichts wird hochgeladen, also gibt es nichts, womit trainiert werden könnte. Alles passiert auf deinem iPhone, und der Entwickler sieht deine Fotos nie.</div></details>
+      <details class="faq-item"><summary>Wie unterscheidet sich das von Apple Fotos oder Google Fotos?</summary><div class="faq-answer">Die sind zum Ansehen und Aufbewahren gebaut. SpectraSort ist zum Auswählen gebaut — es sortiert, was es findet, nach dem, wonach du gefragt hast oder was es über deinen Geschmack gelernt hat, und gibt dir dann einen Ablauf zum Überprüfen. Und es ist zu 100 % lokal: Nichts über deine Mediathek verlässt das Telefon.</div></details>
+      <details class="faq-item"><summary>Wie schnell ist es?</summary><div class="faq-answer">Nahezu sofort, sobald der Index auf dem Gerät steht — auch über Tausende Fotos. Der Index entsteht bei der ersten Sortierung, mit bis zu 100 Fotos pro Sekunde auf neueren iPhones, und bleibt automatisch aktuell, wenn neue Fotos dazukommen.</div></details>
+      <details class="faq-item"><summary>Was ist kostenlos, und was schaltet Premium frei?</summary><div class="faq-answer">Fünf Aktionen pro Woche sind für alle kostenlos, dauerhaft — teilen, Favorit, zu Album hinzufügen oder löschen. Jede zählt einmal, egal wie viele Fotos sie umfasst, und der Zähler füllt sich montags wieder auf. Sortieren und Überprüfen sind kostenlos und unbegrenzt. Einmal zahlen für unbegrenzte Aktionen plus Studio (Qualitätsachsen, das Balance-Rad, gespeicherte Profile). Kein Abo.</div></details>
+      <details class="faq-item"><summary>Schafft es Speicherplatz?</summary><div class="faq-answer">Es löscht die Fotos, die du ihm nennst, über den Löschvorgang von iOS: Sie landen in <b>Zuletzt gelöscht</b>, und der Speicher ist zurück, sobald du dieses Album leerst — oder automatisch nach 30 Tagen. SpectraSort berührt nur deine Fotomediathek, nie den Rest deines Telefons.</div></details>
+      <details class="faq-item"><summary>Was ist das Profil Dein Geschmack?</summary><div class="faq-answer">Ein persönliches Profil, das mit deiner Nutzung entsteht — gebaut aus den Fotos, die du behältst, und denen, die du verwirfst, alles auf deinem Gerät. Wenn es genug gelernt hat, sortiert es nach deinen eigenen Vorlieben. Forme es in Studio oder setze es jederzeit zurück und baue es neu auf. Es verlässt dein Telefon nie.</div></details>
+      <details class="faq-item"><summary>Ich habe Premium in SpectraSort 2.x gekauft — bleibt es mir?</summary><div class="faq-answer">Ja — derselbe Kauf, er wird automatisch übernommen. Wenn er auf einem neuen Telefon nicht auftaucht, tippe in den Einstellungen auf Käufe wiederherstellen.</div></details>
+      <details class="faq-item"><summary>Auf welchen Geräten läuft es?</summary><div class="faq-answer">iPhone mit iOS 18.5 oder neuer. Die gesamte Verarbeitung läuft auf Apples Neural Engine; neuere Chips indexieren und sortieren schneller. Kein Apple Intelligence nötig, keine Regionssperren.</div></details>
+    </div>
+    <div class="rv" style="text-align:center;margin-top:28px;"><a class="learn-more" href="/de/features/">Noch Fragen? Jedes Detail steht auf der Funktionen-Seite <span aria-hidden="true">&rsaquo;</span></a></div>
+  </div>
+</section>

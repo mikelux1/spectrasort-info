@@ -4,6 +4,7 @@
 
 # Scratch
 tmp/
+__pycache__/
 
 # Raw camera/screen-recording source for the site's promo loops.
 # 428 MB, and video/v2demo-1.mov alone is 191 MB — over GitHub's hard 100 MB

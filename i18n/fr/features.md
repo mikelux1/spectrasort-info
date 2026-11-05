@@ -1,0 +1,192 @@
+---
+title: Fonctionnalités SpectraSort — Tous les outils, réglages et limites | Sélecteur de photos IA
+description: La liste complète. Six outils en un geste, les sept axes de qualité de Studio, Scènes et Chronologie, filtres, piles, Sélection auto, mode guidé, Actions par lot, ce qui est gratuit et ce que Premium ajoute, configuration requise et confidentialité. iPhone, iOS 18.5+.
+ogTitle: Fonctionnalités SpectraSort — Tous les outils, réglages et limites
+ogDescription: Six outils en un geste, les sept axes de qualité de Studio, Scènes et Chronologie, filtres, piles, Sélection auto, mode guidé, Actions par lot, gratuit vs Premium, configuration requise. Sur une seule page.
+breadcrumb: Fonctionnalités
+---
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/fr/">SpectraSort</a><span class="sep">&#8250;</span>Fonctionnalités</div>
+    <h1>Tout ce qu'il fait, <span class="grad-text">sur une page.</span></h1>
+    <p class="lead">SpectraSort est un sélecteur de photos IA embarqué pour iPhone qui classe votre pellicule selon la qualité et vos goûts. Il trie aussi, supprime les doublons et nettoie. Un seul paiement, sans abonnement. Ci-dessous : chaque outil, chaque réglage, chaque limite, et ce que comprend chaque offre. À jour pour la version 3.2, novembre 2026.</p>
+    <div>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Télécharger sur l'App Store
+      </a>
+      <span class="hero-meta">Gratuit &middot; iPhone &middot; iOS 18.5+ &middot; Mis à jour le 31 octobre 2026</span>
+    </div>
+    <div class="trust-chips">
+      <span class="chip"><b>100 % sur l'appareil</b> — rien n'est envoyé</span>
+      <span class="chip"><b>Gratuit</b> 5 actions par semaine</span>
+      <span class="chip"><b>Un seul paiement</b> — actions illimitées</span>
+    </div>
+  </div>
+</section>
+
+<section id="toolbox" class="slab">
+  <div class="container">
+    <div class="prose rv"><span class="eyebrow">Boîte à outils</span><h2>Six outils. <span class="grad-text">Un geste chacun.</span></h2></div>
+    <div class="cmp-wrap rv">
+      <table class="cmp">
+        <thead><tr><th>Outil</th><th>Ce que vous donnez</th><th>Ce que vous obtenez</th></tr></thead>
+        <tbody>
+          <tr><th>Vos goûts</th><td>Rien — il a appris de vos vérifications (30 sélections pour démarrer)</td><td class="yes">La photothèque classée selon ce que vous gardez d'habitude</td></tr>
+          <tr><th>Meilleurs clichés</th><td>Une tendance : technique ↔ artistique</td><td class="yes">Les plus nettes, les mieux exposées, les mieux composées d'abord</td></tr>
+          <tr><th>Trouver un sujet</th><td>Des mots ou un modèle — la recherche saisie fonctionne en anglais pour l'instant</td><td class="yes">Chaque correspondance, les meilleures d'abord</td></tr>
+          <tr><th>Comme cette photo</th><td>Une photo d'exemple</td><td class="yes">Tout ce qui lui ressemble, les plus similaires d'abord</td></tr>
+          <tr><th>Doublons</th><td>Un morceau de la photothèque</td><td class="yes">Doublons, rafales et quasi-identiques en piles, la plus nette signalée</td></tr>
+          <tr><th>Photos d'un lieu</th><td>Une épingle sur la carte, ou un nom de lieu</td><td class="yes">Tout ce qui y a été pris, classé</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="discover" class="slab rise">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">Découvrir</span>
+        <h2>Des scènes et <span class="grad-text">une chronologie.</span></h2>
+        <p><b>Scènes</b> — voyages, thèmes et séries rassemblés automatiquement. Aucun album à créer, aucune étiquette. Chaque scène se trie toute seule.</p>
+        <p><b>Chronologie</b> — année → mois → jour, avec le nombre de photos. Cochez les mois voulus et triez-les ensemble. Un interrupteur <b>Afficher les photos triées</b> masque ce que vous avez déjà terminé.</p>
+      </div>
+      <div class="rv prose">
+        <span class="eyebrow">Filtres</span>
+        <h2>Affinez <span class="grad-text">n'importe quel tri.</span></h2>
+        <p><b>Période</b> — dernières 24 heures, 7 jours, 30 jours ou une période personnalisée.<br>
+        <b>Lieu</b> — cherchez un endroit ou choisissez une épingle sur la carte ; les photos sans lieu sont listées à part.<br>
+        <b>Album</b> — n'importe quel album, ou Pas dans un album.<br>
+        <b>Exclure</b> — les photos des albums choisis, les captures d'écran, les documents et reçus, les photos déjà vérifiées. L'interrupteur documents met le papier, les formulaires et les captures de côté avant un tri ; il ne les supprime jamais.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="review" class="slab">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">Vérification</span>
+        <h2>Notées, <span class="grad-text">les meilleures d'abord.</span></h2>
+        <p><b>Gestes</b> — à droite pour conserver, vers le bas pour garder, à gauche pour écarter. Touchez pour le plein écran.<br>
+        <b>Piles</b> — Doublons (copies exactes), Rafales (clichés à quelques secondes d'intervalle), Similaires (même scène). Chacune s'active ou se désactive. Une molette parcourt une pile sans quitter la photo.<br>
+        <b>Sélection auto</b> — range toute la file par palier de score en un geste : les meilleures dans Conservées, les moyennes dans Gardées, les plus faibles dans Écartées. Rien n'est appliqué à votre photothèque avant que vous n'agissiez.<br>
+        <b>Mode guidé</b> — après un tri, les meilleures photos sont déjà conservées. Agissez tout de suite, ou choisissez à la main. Se désactive dans les Réglages.<br>
+        <b>Sélection multiple</b> — appuyez, maintenez et faites glisser sur la grille.<br>
+        <b>Nom du profil</b> — la grille indique le profil qui a trié les photos.</p>
+      </div>
+      <div class="rv prose">
+        <span class="eyebrow">Actions par lot</span>
+        <h2>Terminez <span class="grad-text">en un écran.</span></h2>
+        <p><b>Enregistrer</b> — les photos conservées dans un ou plusieurs albums, nouveaux ou existants. Elles apparaissent dans Photos Apple.<br>
+        <b>Favori</b> — ajoutez les photos conservées aux favoris.<br>
+        <b>Partager</b> — la feuille de partage du système.<br>
+        <b>Supprimer</b> — les photos écartées passent par la confirmation du système et vont dans Supprimés récemment, où elles restent 30 jours. La ligne indique l'espace libéré.<br>
+        Les photos ne comptent comme vérifiées qu'après avoir touché Terminé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="studio" class="slab rise">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">Studio — Premium</span>
+        <h2>Les <span class="grad-text">réglages manuels.</span></h2>
+        <p>Sept axes de qualité — Netteté, Exposition, Contraste, Bruit, Composition, Harmonie colorée, Équilibre visuel — pondérés un par un ou déplacés ensemble avec le curseur Technique / Artistique. Jusqu'à trois sujets par tri. Une molette d'équilibre qui arbitre entre correspondance du sujet et qualité. Toute configuration enregistrée en profil nommé. <a href="/fr/studio/">La page Studio →</a></p>
+      </div>
+      <div class="rv prose">
+        <span class="eyebrow">Vos goûts</span>
+        <h2>Un profil <span class="grad-text">qui apprend.</span></h2>
+        <p>Construit à partir des photos que vous gardez et de celles que vous écartez. Il faut 30 sélections pour démarrer ; chaque vérification ensuite l'affine. Mettez-le en pause, réinitialisez-le, ou enregistrez un instantané et continuez. Stocké sur le téléphone, jamais envoyé.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="pricing" class="slab">
+  <div class="container">
+    <div class="prose rv"><span class="eyebrow">Tarifs</span><h2>Gratuit vs <span class="grad-text">Premium.</span></h2></div>
+    <div class="cmp-wrap rv">
+      <table class="cmp">
+        <thead><tr><th></th><th>Gratuit</th><th>Premium</th></tr></thead>
+        <tbody>
+          <tr><th>Prix</th><td>Gratuit — pour toujours, pas un essai</td><td class="yes">Un seul paiement<span class="sub">Sans abonnement</span></td></tr>
+          <tr><th>Tris</th><td class="yes">Illimités</td><td class="yes">Illimités</td></tr>
+          <tr><th>Six outils, Découvrir, filtres</th><td class="yes">Tout inclus</td><td class="yes">Tout inclus</td></tr>
+          <tr><th>Actions — partager, ajouter aux favoris, ajouter à un album, supprimer</th><td>5 par semaine — chacune compte une fois, quel que soit le nombre de photos ; rechargées le lundi</td><td class="yes">Illimitées</td></tr>
+          <tr><th>Studio</th><td>Ouvrez et regardez ; trier depuis Studio demande Premium</td><td class="yes">Tris personnalisés et profils enregistrés : sept axes, trois sujets, molette d'équilibre</td></tr>
+          <tr><th>Compte ou carte pour commencer</th><td class="yes">Aucun</td><td>Achat avec l'identifiant Apple — restaurable sur un nouveau téléphone</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="prose rv" style="text-align:center;margin-top:18px;"><p><a href="/fr/pricing/">Tout sur les tarifs →</a></p></div>
+  </div>
+</section>
+
+<section id="speed" class="slab rise">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">Vitesse</span>
+        <h2>Indexez une fois. <span class="grad-text">Un instant à chaque tri.</span></h2>
+        <p>Le premier tri construit un index sur l'appareil, jusqu'à 100 photos par seconde sur les iPhone récents. Chaque tri suivant s'appuie sur cet index et revient presque instantanément. Les nouvelles photos sont indexées à leur arrivée.</p>
+      </div>
+      <div class="rv prose">
+        <span class="eyebrow">Confidentialité</span>
+        <h2>Rien ne quitte <span class="grad-text">votre téléphone.</span></h2>
+        <p>La recherche, le classement et le profil de goût tournent sur le Neural Engine de l'iPhone. Aucun envoi, aucun compte, aucun serveur dans le circuit. Les statistiques d'usage anonymes sont facultatives — désactivées par défaut dans l'UE, au Royaume-Uni et dans l'EEE — et ne contiennent jamais le contenu des photos. <a href="/fr/private-ai-photo-app/">Comment ça marche →</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="requirements" class="slab">
+  <div class="container prose rv">
+    <span class="eyebrow">Configuration requise</span>
+    <h2>iPhone, <span class="grad-text">iOS 18.5 ou ultérieur.</span></h2>
+    <p>Tourne sur le Neural Engine d'Apple ; les puces récentes indexent et trient plus vite. Aucune fonction Apple Intelligence requise, aucun blocage par région. Langues : anglais, français, allemand, italien, espagnol et portugais (Brésil), plus 简体中文 dans l'édition pour la Chine continentale (光谱挑片). Pas d'iPad, de Mac, d'Android ni de version web. Il fonctionne par-dessus votre photothèque existante au lieu de la remplacer — voir <a href="/fr/ai-photo-organizer-vs-apple-photos/">SpectraSort vs Photos Apple</a> et <a href="/fr/spectrasort-vs-google-photos/">vs Google Photos</a>.</p>
+    <div class="callout">
+      <div class="co-title">Absents de cette liste, volontairement</div>
+      <ul>
+        <li>Pas de sauvegarde ni de synchronisation cloud — ce n'est pas un outil de stockage. Photos Apple reste votre photothèque.</li>
+        <li>Pas de total d'espace en continu. Chaque suppression indique l'espace libéré ; l'espace revient quand Supprimés récemment est vidé, au plus tard 30 jours après.</li>
+        <li>Pas de retouche. Il sélectionne ; il ne modifie pas.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="slab">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions sur les fonctionnalités.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>C'est rapide à quel point ?</summary><div class="faq-answer">Quasi instantané une fois l'index sur l'appareil en place, même sur des milliers de photos. L'index se construit au premier tri — jusqu'à 100 photos par seconde sur les iPhone récents — et se met à jour automatiquement à l'arrivée de nouvelles photos.</div></details>
+      <details class="faq-item"><summary>Est-ce que ça libère de l'espace ?</summary><div class="faq-answer">Il supprime les photos que vous lui indiquez, via le circuit de suppression d'iOS : elles vont dans Supprimés récemment, et l'espace revient dès que vous videz cet album — ou automatiquement au bout de 30 jours. SpectraSort ne touche qu'à votre photothèque, jamais au reste du téléphone.</div></details>
+      <details class="faq-item"><summary>SpectraSort utilise-t-il mes photos pour entraîner une IA ?</summary><div class="faq-answer">Non. Rien n'est envoyé, donc il n'y a rien sur quoi entraîner. Tout se passe sur votre iPhone, et l'auteur ne voit jamais vos photos.</div></details>
+      <details class="faq-item"><summary>Qu'est-ce que le profil Vos goûts ?</summary><div class="faq-answer">Un profil personnel qui se dessine à mesure que vous utilisez l'app, construit à partir des photos que vous gardez et de celles que vous écartez — tout sur votre appareil. Il faut 30 sélections pour démarrer ; une fois qu'il a assez appris, il trie selon vos préférences. Affinez-le dans Studio, ou réinitialisez-le et reconstruisez-le quand vous voulez.</div></details>
+      <details class="faq-item"><summary>Sur quels appareils fonctionne-t-il ?</summary><div class="faq-answer">iPhone sous iOS 18.5 ou ultérieur. Tout le traitement tourne sur le Neural Engine d'Apple ; les puces récentes indexent et trient plus vite. Aucune fonction Apple Intelligence requise et aucun blocage par région. Pas d'iPad, de Mac, d'Android ni de version web.</div></details>
+      <details class="faq-item"><summary>J'ai acheté Premium dans SpectraSort 2.x — est-ce que je le garde ?</summary><div class="faq-answer">Oui — même achat, il est repris automatiquement. S'il n'apparaît pas sur un nouveau téléphone, touchez Restaurer les achats dans les Réglages.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">À lire aussi</span>
+      <div class="related-grid">
+        <a href="/fr/pricing/">Tarifs<span>Ce qu'est un tri, ce que Premium ajoute</span></a>
+        <a href="/fr/changelog/">Nouveautés<span>Chaque version, la plus récente d'abord</span></a>
+        <a href="/fr/studio/">Studio<span>Les réglages manuels en détail</span></a>
+      </div>
+    </div>
+  </div>
+</section>

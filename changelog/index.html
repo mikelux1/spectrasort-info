@@ -4,29 +4,36 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Changelog. New 2026-09-12. Entries are the App Store "What's New" texts as
-     posted (pulled from ASC), lightly trimmed; months are App Store release
-     months. Add the newest release at the top on every ship and update the
+<!-- Changelog. Entries state the reason each release exists — the product
+     change Mike initiated — not every fix or polish item from the build.
+     Add the newest release at the top on every ship and update the
      "Current version" line here and on /features/. -->
 
-<title>SpectraSort Changelog — What's New in Every Version</title>
-<meta name="description" content="Release notes for every SpectraSort version, from 1.0 (January 2026) to 3.1 (September 2026), as posted to the App Store. iPhone, iOS 18.5 or later.">
+<title>SpectraSort Changelog — The Point of Every Release</title>
+<meta name="description" content="What each SpectraSort release was for, from 1.0 (January 2026) to 3.2 (November 2026). iPhone, iOS 18.5 or later.">
 <meta name="author" content="Mike Lu">
 <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
 <link rel="canonical" href="https://spectrasort.app/changelog/">
+<link rel="alternate" hreflang="en" href="https://spectrasort.app/changelog/">
+<link rel="alternate" hreflang="fr" href="https://spectrasort.app/fr/changelog/">
+<link rel="alternate" hreflang="de" href="https://spectrasort.app/de/changelog/">
+<link rel="alternate" hreflang="it" href="https://spectrasort.app/it/changelog/">
+<link rel="alternate" hreflang="es" href="https://spectrasort.app/es/changelog/">
+<link rel="alternate" hreflang="pt-BR" href="https://spectrasort.app/pt/changelog/">
+<link rel="alternate" hreflang="x-default" href="https://spectrasort.app/changelog/">
 
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SpectraSort">
-<meta property="og:title" content="SpectraSort Changelog — What's New in Every Version">
-<meta property="og:description" content="Release notes for every SpectraSort version, newest first, as posted to the App Store.">
+<meta property="og:title" content="SpectraSort Changelog — The Point of Every Release">
+<meta property="og:description" content="What each SpectraSort release was for, newest first.">
 <meta property="og:image" content="https://spectrasort.app/og-image.png?v=3">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:image:alt" content="SpectraSort — Your best photos, found. A row of nine photos with the top three ringed and scored.">
 <meta property="og:url" content="https://spectrasort.app/changelog/">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="SpectraSort Changelog — What's New in Every Version">
-<meta name="twitter:description" content="Release notes for every SpectraSort version, newest first, as posted to the App Store.">
+<meta name="twitter:title" content="SpectraSort Changelog — The Point of Every Release">
+<meta name="twitter:description" content="What each SpectraSort release was for, newest first.">
 <meta name="twitter:image" content="https://spectrasort.app/og-image.png?v=3">
 
 <meta name="apple-itunes-app" content="app-id=6757512134">
@@ -48,7 +55,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/site.css?v=20260928d">
+<link rel="stylesheet" href="/assets/site.css?v=20261101">
 <style>
   /* Changelog-only: a release is a version number with its month beside it.
      Everything else reuses .prose. */
@@ -71,6 +78,9 @@
       <a href="/features/">Features</a>
       <a href="/pricing/">Pricing</a>
     </div>
+    <details class="lang-menu"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.7-3.8 9s1.3 6.4 3.8 9"/></svg> EN</summary>
+      <div class="lang-menu-panel"><a href="/changelog/" hreflang="en" lang="en" aria-current="page">English</a><a href="/fr/changelog/" hreflang="fr" lang="fr">Français</a><a href="/de/changelog/" hreflang="de" lang="de">Deutsch</a><a href="/it/changelog/" hreflang="it" lang="it">Italiano</a><a href="/es/changelog/" hreflang="es" lang="es">Español</a><a href="/pt/changelog/" hreflang="pt" lang="pt-BR">Português</a><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></div>
+    </details>
     <a class="cta-small" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
       Download
     </a>
@@ -83,12 +93,12 @@
   <div class="container">
     <div class="crumbs"><a href="/">SpectraSort</a><span class="sep">&#8250;</span>Changelog</div>
     <h1>What changed, <span class="grad-text">version by version.</span></h1>
-    <p class="lead">Release notes as posted to the App Store, newest first. Current version: <b>3.1</b>. iPhone, iOS 18.5 or later.</p>
+    <p class="lead">The point of each release, newest first. Current version: <b>3.2</b>. iPhone, iOS 18.5 or later.</p>
     <div>
       <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
         Download on the App Store
       </a>
-      <span class="hero-meta">Free &middot; iPhone &middot; iOS 18.5+</span>
+      <span class="hero-meta">Free &middot; iPhone &middot; iOS 18.5+ &middot; Updated 31 October 2026</span>
     </div>
   </div>
 </section>
@@ -97,21 +107,20 @@
   <div class="container prose rv">
     <p style="color:var(--text-low);font-size:15px;">Pricing lines in older notes describe the model at the time — today's is on the <a href="/pricing/">pricing page</a>.</p>
 
+    <article class="release" id="v3-2">
+      <h2>3.2 <span class="when">November 2026</span></h2>
+      <h3>Five more languages</h3>
+      <p>SpectraSort now speaks French, German, Italian, Spanish and Portuguese (Brazil) — the whole interface and the App Store listing.</p>
+      <h3>Documents &amp; receipts</h3>
+      <p>Filters → Exclude can now hold back screenshots, forms and photos of paper before a sort, so the review is the photos you meant to keep. It holds them aside; it never deletes them. <a href="/documents-receipts-iphone/">How the documents filter works →</a></p>
+    </article>
+
     <article class="release" id="v3-1">
       <h2>3.1 <span class="when">September 2026</span></h2>
       <h3>Sorting is now unlimited</h3>
-      <p>The five-sorts-a-week limit is gone. Sharing, favoriting, adding to albums and deleting now count toward five free actions a week — each counts once, however many photos — and the count refills Monday. Premium removes the cap and opens Studio: $19.99 once, no subscription.</p>
+      <p>The five-sorts-a-week limit is gone. Sharing, favoriting, adding to albums and deleting now count toward five free actions a week — each counts once, however many photos — and the count refills Monday. Premium removes the cap and opens Studio.</p>
       <h3>Guided Mode</h3>
-      <p>After a sort, the best-matching photos are already picked, so you can share, favorite, add to album or delete duplicates right away. Exit Guided Mode any time to review by hand, or switch it off in Settings.</p>
-      <h3>Misc</h3>
-      <ul>
-        <li>Batch Process is now Batch Actions, and Delete shows the storage it frees.</li>
-        <li>The review queue is now called “In review”, and a photo's current group is highlighted on the deck.</li>
-        <li>Select mode in the Review grid keeps your selection when you switch groups.</li>
-        <li>A new ⋯ menu during review shares, favorites, adds to album or deletes right away.</li>
-        <li>Buttons that are out of free actions show a lock; a tap opens Premium.</li>
-        <li>The built-in Nature subject now matches landscapes, water and wildlife far more accurately.</li>
-      </ul>
+      <p>After a sort, the best-matching photos are already picked, so you can act on them right away. Exit Guided Mode any time to review by hand, or switch it off in Settings.</p>
     </article>
 
     <article class="release" id="v3-0-5">
@@ -119,19 +128,7 @@
       <h3>Your Taste</h3>
       <p>A popup tells you when your profile is ready. The Your Taste card shows what it has learned so far, and the profile name once it is built.</p>
       <h3>Reviewed photos</h3>
-      <p>A photo counts as reviewed only after you tap Done in Batch Process. New: an Exclude → Reviewed photos switch in Filters, and a reviewed count with a reset in Settings.</p>
-      <h3>Batch Process</h3>
-      <ul>
-        <li>Add picks to several albums in one pass.</li>
-        <li>The button stays dimmed until a pile has a photo.</li>
-      </ul>
-      <h3>Review</h3>
-      <ul>
-        <li>Pick, Keep and Discard share one look.</li>
-        <li>Dedupe Autopick discards the copies and leaves the best one for you to decide.</li>
-        <li>The subtitle on the Review grid names the profile that sorted the photos.</li>
-      </ul>
-      <p>Various bug fixes.</p>
+      <p>A photo counts as reviewed only after you tap Done. Filters → Exclude can now hold back photos you have already reviewed, and Settings shows the count with a reset.</p>
     </article>
 
     <article class="release" id="v3-0-1">
@@ -139,7 +136,6 @@
       <p>Fewer interruptions. The in-app tips no longer appear on their own. Every screen that had a walkthrough keeps a “?” button, so the guidance is there when you want it and out of the way when you don't. The one that still appears on its own is the note telling you your Taste profile is ready.</p>
       <p>The Review grid now opens flat. Only true duplicates stack on arrival — Sequence and Similar start off, so no photo is hidden behind a cover before you've asked for grouping. Whatever you change is remembered next time.</p>
       <p>Discover → Timeline opens on your three most recent months instead of every month collapsed. Older months stay folded.</p>
-      <p>Fixed a tip on the Home screen that named controls the app no longer has. The rate-this-app prompt now appears after you finish a review session, rather than only after a bulk action.</p>
     </article>
 
     <article class="release" id="v3-0">
@@ -163,19 +159,12 @@
       <p>Pull down on Home to flip through the life you've photographed — trips, days, themes, and look-alike shots, gathered into scenes automatically. Each card sorts on its own: tap Sort to keep the best of that moment.</p>
       <h3>Personal taste, your way</h3>
       <p>Your Taste profile can now learn from exactly the photos you choose. Build it from your whole library, or apply a filter first so only those photos teach it.</p>
-      <h3>Refinements</h3>
-      <ul>
-        <li>Long-press the Personal or Customized profile to bookmark it, or reset and rebuild.</li>
-        <li>The Albums filter now sorts only the albums you pick.</li>
-        <li>Various fixes.</li>
-      </ul>
     </article>
 
     <article class="release" id="v2-3">
       <h2>2.3 <span class="when">June 2026</span></h2>
       <p><b>Image Search filter.</b> Pick an example photo and your sort narrows to just the ones that look like it — same scene, same subject. Under Filters → Include → Image search.</p>
       <p><b>Faster repeat sorts.</b> After the first sort, sorting and image search reuse a cached index instead of re-reading every photo, so they finish much faster.</p>
-      <p><b>Fixes.</b> The keyboard no longer covers the Select button when you type a custom subject.</p>
     </article>
 
     <article class="release" id="v2-2">
@@ -189,22 +178,19 @@
       <p>Leave albums out of a sort. In Filters, the Exclude section lets you skip Screenshots, app folders like WhatsApp, Favorites, or any album you pick — or invert the list to sort only the albums you choose.</p>
       <h3>Multi-select</h3>
       <p>Press and hold, then drag across the Review grid to select many photos at once, then pick or discard them in bulk.</p>
-      <p>Also: reset controls for quality adjustments and Autopick, more accurate duplicate detection, smoother Review grid scrolling.</p>
     </article>
 
     <article class="release" id="v2-1">
       <h2>2.1 <span class="when">June 2026</span></h2>
-      <ul>
-        <li>After the first sort, each photo sorts over 3× faster thanks to a new indexing system.</li>
-        <li>Visual feedback while the Review screen is prepared after sorting, so the app does not appear frozen.</li>
-        <li>No more freezes or crashes after review: opening Bulk Actions (previously Next Steps) is now instant.</li>
-        <li>Fixes: filtering by location no longer crashes; restoring a purchase confirms clearly; the upgrade screen fits without scrolling; the Technical / Artistic slider handle stays faintly visible as a hint.</li>
-      </ul>
+      <h3>Faster after the first sort</h3>
+      <p>A new indexing system makes each photo sort over 3× faster after the first pass.</p>
+      <h3>No more freezes after review</h3>
+      <p>The Review screen now shows progress while it prepares, and opening Bulk Actions is instant.</p>
     </article>
 
     <article class="release" id="v2-0-5">
       <h2>2.0.4 · 2.0.5 <span class="when">May 2026</span></h2>
-      <p>Fixed a freeze when applying filters to very large libraries, a crash when selecting a custom date range, and a crash when opening the Location filter on very large libraries.</p>
+      <p>Stability fixes for very large libraries: filtering, custom date ranges and the Location filter no longer freeze or crash.</p>
     </article>
 
     <article class="release" id="v2-0">
@@ -282,17 +268,20 @@
         <a href="/changelog/">Changelog</a>
         <a href="/duplicate-photo-finder-iphone/">Duplicate photo finder</a>
         <a href="/photo-organizer-iphone/">AI photo organizer</a>
+        <a href="/documents-receipts-iphone/">Documents &amp; receipts</a>
+        <a href="/press/">Press kit</a>
         <a href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">Download on the App Store</a>
       </div>
     </div>
     <div class="foot-meta">
-      <div>&copy; 2026 Mike Lu &middot; SpectraSort</div>
+      <div>&copy; 2026 Mike Lu &middot; SpectraSort &middot; Updated 31 October 2026</div>
       <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
     </div>
+    <div class="lang-switch">Language: <a href="/changelog/" hreflang="en" lang="en" aria-current="page">English</a> &middot; <a href="/fr/changelog/" hreflang="fr" lang="fr">Français</a> &middot; <a href="/de/changelog/" hreflang="de" lang="de">Deutsch</a> &middot; <a href="/it/changelog/" hreflang="it" lang="it">Italiano</a> &middot; <a href="/es/changelog/" hreflang="es" lang="es">Español</a> &middot; <a href="/pt/changelog/" hreflang="pt" lang="pt-BR">Português</a></div>
   </div>
 </footer>
 
-<script src="/assets/site.js" defer></script>
+<script src="/assets/site.js?v=20261101" defer></script>
 <script type="module" src="/assets/analytics.js"></script>
 </body>
 </html>

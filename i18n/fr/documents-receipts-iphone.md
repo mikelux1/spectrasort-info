@@ -1,0 +1,130 @@
+---
+title: Trier vos photos sans reçus ni captures d'écran — iPhone | SpectraSort
+description: Le filtre Documents et reçus de SpectraSort met de côté les captures d'écran, les formulaires et les photos de papier avant un tri : la vérification ne contient que les photos que vous vouliez garder. En local, sur iPhone.
+ogTitle: Trier vos photos sans reçus ni captures d'écran
+ogDescription: Le filtre Documents et reçus met de côté les captures d'écran, les formulaires et les photos de papier avant un tri. La vérification ne contient que les photos que vous vouliez garder.
+breadcrumb: Documents et reçus
+---
+
+<section class="page-hero">
+  <div class="container">
+    <div class="crumbs"><a href="/fr/">SpectraSort</a><span class="sep">&#8250;</span>Documents et reçus</div>
+    <h1>Triez les photos. <span class="grad-text">Passez la paperasse.</span></h1>
+    <p class="lead">Votre pellicule contient des photos, mais aussi des reçus, des captures d'écran et des formulaires. Le filtre <b>Documents et reçus</b> met le papier de côté avant un tri : la vérification ne contient que les images que vous vouliez garder.</p>
+    <div>
+      <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
+        Télécharger sur l'App Store
+      </a>
+      <span class="hero-meta">Gratuit &middot; iPhone &middot; iOS 18.5+ &middot; Mis à jour le 31 octobre 2026</span>
+    </div>
+    <div class="trust-chips">
+      <span class="chip"><b>100 % sur l'appareil</b> — rien n'est envoyé</span>
+      <span class="chip"><b>Gratuit</b> 5 actions par semaine</span>
+      <span class="chip"><b>Un seul paiement</b> — actions illimitées</span>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="split">
+      <div class="rv prose">
+        <span class="eyebrow">Le problème du papier</span>
+        <h2>Les reçus sont nets. <span class="grad-text">C'est le problème.</span></h2>
+        <p>Un tri de qualité récompense la netteté et le contraste. Un reçu, un formulaire ou une capture d'écran est souvent l'élément le plus net et le plus contrasté de la pellicule : il remonte donc près du haut d'une pile que vous aviez ouverte pour trouver une photo.</p>
+        <p>Le filtre Documents et reçus retire ce bruit avant le classement. Il examine l'image sur le téléphone, décide s'il s'agit de papier ou d'un écran, et met ces images de côté. Les photos que vous vouliez trier sont celles qui restent dans la file.</p>
+      </div>
+      <div class="rv">
+        <div class="callout" style="margin-top:0">
+          <div class="co-title">Dans le tri</div>
+          <ul>
+            <li>Des personnes, des lieux, des plats, des animaux</li>
+            <li>Des voyages, des journées et les photos que vous vouliez prendre</li>
+            <li>Tout ce que vous pouvez décrire, montrer du doigt ou trier selon votre goût</li>
+          </ul>
+          <div class="co-title" style="margin-top:18px">Mises de côté</div>
+          <ul>
+            <li>Captures d'écran et enregistrements d'écran</li>
+            <li>Reçus, factures, formulaires et photos de papier</li>
+            <li>Images plates et chargées de texte qui ne sont pas l'intérêt de la pellicule</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container">
+    <div class="split rev">
+      <div class="rv prose">
+        <span class="eyebrow">Où le trouver</span>
+        <h2>Filtres → Exclure. <span class="grad-text">Activé par défaut.</span></h2>
+        <p>Ouvrez Filtres avant un tri : le filtre est déjà là, sous <b>Exclure</b>. Il est activé par défaut, pour qu'un nouvel utilisateur obtienne un premier tri propre sans avoir à le découvrir.</p>
+        <p>Désactivez-le quand le papier <em>est</em> le sujet : un album de reçus, un dossier de formulaires, un nettoyage de captures d'écran. Le filtre s'applique à un seul tri ; il ne modifie pas votre photothèque.</p>
+      </div>
+      <div class="rv prose">
+        <span class="eyebrow">Il met de côté, il ne supprime pas</span>
+        <h2>Rien ne quitte la file <span class="grad-text">et rien n'est supprimé.</span></h2>
+        <p>Les documents sont mis de côté pour ce tri, pas retirés du téléphone. Rien n'est appliqué à votre photothèque tant que vous n'agissez pas, et les suppressions passent toujours par la boîte de confirmation de Photos.</p>
+        <p>Si exclure les documents devait vider le lot — par exemple si vous triez un album de reçus — ils reviennent automatiquement. Un tri ne produit jamais zéro photo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="rv" style="text-align:center;"><span class="eyebrow">Sa place dans le tri</span></div>
+    <div class="stats rv" style="margin-top:18px;">
+      <div class="stat"><div class="num">Filtre</div><div class="label">Filtres → Exclure → Documents et reçus. Activé par défaut.</div></div>
+      <div class="stat"><div class="num">Tri</div><div class="label">Le papier est mis de côté ; les photos sont classées par qualité, par goût ou par sujet.</div></div>
+      <div class="stat"><div class="num">Vérification</div><div class="label">Balayez à droite pour conserver les gagnantes. Actions par lot termine le reste en un écran.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="slab rise">
+  <div class="container prose rv">
+    <h2>Les détails</h2>
+    <p>Le contrôle des documents tourne sur le Neural Engine de l'iPhone, dans le cadre du tri. Il lit les données d'analyse que le tri a déjà calculées, donc il n'ajoute aucun chargement d'image. Aucune photo, aucune donnée d'analyse ni aucune classification ne quitte le téléphone.</p>
+    <p>C'est un classificateur, pas une promesse de perfection. La photo d'un reçu posé sur une table en bois peut ressembler à la photo d'une table en bois. Le filtre reste un filtre, et il suffit d'un geste pour le désactiver sur un lot où le papier est le sujet. <a href="/fr/features/">Tous les filtres et réglages →</a></p>
+    <div class="callout">
+      <div class="co-title">Ce qu'il n'est pas</div>
+      <ul>
+        <li>Ce n'est pas un scanner de documents. Il ne lit pas, ne transcrit pas et ne classe pas les reçus.</li>
+        <li>Il ne supprime rien. Il met les documents de côté pour le tri en cours.</li>
+        <li>Il n'envoie rien pour un second avis. Le contrôle se fait sur l'appareil.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="faq" class="slab">
+  <div class="container">
+    <div class="section-head rv">
+      <span class="eyebrow">FAQ</span>
+      <h2>Questions sur Documents et reçus.</h2>
+    </div>
+    <div class="faq-list rv">
+      <details class="faq-item"><summary>Le filtre Documents supprime-t-il mes reçus ?</summary><div class="faq-answer">Non. Il les met de côté pour ce tri. Rien n'est appliqué à votre photothèque tant que vous n'agissez pas, et les suppressions passent toujours par la boîte de confirmation de Photos.</div></details>
+      <details class="faq-item"><summary>Qu'est-ce qui compte comme document ou reçu ?</summary><div class="faq-answer">Les captures d'écran, les photos de papier, les formulaires, les reçus, les factures et les images plates et chargées de texte du même type. Le classificateur lit l'image sur l'appareil ; il n'envoie rien.</div></details>
+      <details class="faq-item"><summary>Et si je veux trier un album de reçus ?</summary><div class="faq-answer">Désactivez le filtre pour ce tri. Si exclure les documents devait vider le lot, ils reviennent automatiquement : un tri ne produit jamais zéro photo.</div></details>
+      <details class="faq-item"><summary>Fonctionne-t-il avec tous les tris ?</summary><div class="faq-answer">Oui. Le filtre s'applique à Meilleurs clichés, Vos goûts, Trouver un sujet, Comme cette photo, Doublons, Photos d'un lieu, Scènes et la Chronologie.</div></details>
+      <details class="faq-item"><summary>Le classificateur est-il sur l'appareil ?</summary><div class="faq-answer">Oui. Le contrôle des documents tourne sur le Neural Engine de l'iPhone, dans le cadre du tri. Aucune photo ni aucune donnée d'analyse ne quitte le téléphone.</div></details>
+    </div>
+  </div>
+</section>
+
+<section class="slab">
+  <div class="container">
+    <div class="rv">
+      <span class="eyebrow">À lire aussi</span>
+      <div class="related-grid">
+        <a href="/fr/photo-organizer-iphone/">Organisateur de photos IA<span>Scènes, Chronologie et sélection classée</span></a>
+        <a href="/fr/ai-photo-picker-iphone/">Sélecteur de photos IA<span>Ce que fait un sélecteur, et comment il classe</span></a>
+        <a href="/fr/duplicate-photo-finder-iphone/">Détecteur de doublons<span>Éliminez aussi les répétitions</span></a>
+      </div>
+    </div>
+  </div>
+</section>

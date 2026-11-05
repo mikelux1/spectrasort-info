@@ -51,6 +51,11 @@
 -->
 <link rel="canonical" href="https://spectrasort.app">
 <link rel="alternate" hreflang="en" href="https://spectrasort.app/">
+<link rel="alternate" hreflang="fr" href="https://spectrasort.app/fr/">
+<link rel="alternate" hreflang="de" href="https://spectrasort.app/de/">
+<link rel="alternate" hreflang="it" href="https://spectrasort.app/it/">
+<link rel="alternate" hreflang="es" href="https://spectrasort.app/es/">
+<link rel="alternate" hreflang="pt-BR" href="https://spectrasort.app/pt/">
 <link rel="alternate" hreflang="zh-Hans" href="https://spectrasort.app/zh/">
 <link rel="alternate" hreflang="x-default" href="https://spectrasort.app/">
 
@@ -99,7 +104,9 @@
   "operatingSystem": "iOS 18.5+",
   "applicationCategory": "PhotographyApplication",
   "applicationSubCategory": "Photo Sorting",
-  "softwareVersion": "3.1",
+  "softwareVersion": "3.2",
+  "dateModified": "2026-10-31",
+  "availableLanguage": ["en", "fr", "de", "it", "es", "pt"],
   "description": "On-device AI photo picker for iPhone. Finds the photos you're looking for and ranks them — by quality, by your taste, or by what you asked for — then hands you the winners to keep, share or clear. Everything runs locally; nothing is uploaded.",
   "url": "https://spectrasort.app",
   "downloadUrl": "https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134",
@@ -215,7 +222,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/site.css?v=20260928d">
+<link rel="stylesheet" href="assets/site.css?v=20261101">
 </head>
 <body>
 
@@ -229,10 +236,9 @@
       <a href="#privacy">Privacy</a>
       <a href="#pricing">Pricing</a>
     </div>
-    <a class="lang-switch" href="/zh/" lang="zh-Hans" hreflang="zh-Hans" aria-label="切换到中文" onclick="try{localStorage.setItem('ss-lang','zh')}catch(e){}">
-      <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.7-3.8 9s1.3 6.4 3.8 9"/></svg>
-      中文
-    </a>
+    <details class="lang-menu"><summary aria-label="Language"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.7 3.8 9s-1.3 6.4-3.8 9M12 3c-2.5 2.6-3.8 5.7-3.8 9s1.3 6.4 3.8 9"/></svg> EN</summary>
+      <div class="lang-menu-panel"><a href="/" hreflang="en" lang="en" aria-current="page">English</a><a href="/fr/" hreflang="fr" lang="fr">Français</a><a href="/de/" hreflang="de" lang="de">Deutsch</a><a href="/it/" hreflang="it" lang="it">Italiano</a><a href="/es/" hreflang="es" lang="es">Español</a><a href="/pt/" hreflang="pt" lang="pt-BR">Português</a><a href="/zh/" hreflang="zh-Hans" lang="zh-Hans">中文</a></div>
+    </details>
     <a class="cta-small" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
       Download
@@ -250,12 +256,13 @@
         <span class="eyebrow">AI photo picker &amp; photo culling · iPhone</span>
         <h1>Your best photos. <span class="grad-text">Found.</span></h1>
         <p class="lead">Most photo apps ask “is this a good photo?” SpectraSort asks “would <em>you</em> keep it?” Every time you keep or reject a photo, it learns — and your camera roll comes back ranked, winners first.</p>
+        <p class="hero-def">SpectraSort is an on-device AI photo picker for iPhone that ranks your camera roll by quality and your own taste. It also culls, dedupes and cleans up. $19.99 once, no subscription.</p>
         <div>
           <a class="cta" href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">
             <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 12.04c-.02-2.16 1.77-3.2 1.85-3.25-1.01-1.48-2.59-1.68-3.14-1.7-1.33-.13-2.61.78-3.29.78-.69 0-1.73-.76-2.85-.74-1.46.02-2.83.85-3.59 2.17-1.54 2.66-.39 6.59 1.1 8.75.73 1.06 1.6 2.24 2.73 2.2 1.1-.04 1.51-.71 2.84-.71 1.32 0 1.7.71 2.85.69 1.18-.02 1.92-1.07 2.64-2.13.84-1.22 1.18-2.42 1.2-2.48-.03-.01-2.3-.88-2.34-3.58zM14.95 5.6c.61-.74 1.02-1.77.9-2.8-.88.04-1.94.58-2.57 1.31-.56.65-1.06 1.7-.93 2.71.98.07 1.99-.5 2.6-1.22z"/></svg>
             Download on the App Store
           </a>
-          <span class="hero-meta">Free · iPhone · iOS 18.5+</span>
+          <span class="hero-meta">Free · iPhone · iOS 18.5+<br>Updated 31 October 2026</span>
         </div>
         <div class="trust-chips">
           <span class="chip"><b>100% on-device</b> — nothing uploaded</span>
@@ -704,7 +711,7 @@
     <div class="foot-grid">
       <div class="foot-col">
         <div class="foot-brand"><img src="/images/app-icon-flat.png" alt="">SpectraSort</div>
-        <p>An AI photo picker and culling app for iPhone. It runs entirely on your device: nothing uploaded, no account, no subscription.</p>
+        <p>SpectraSort is an on-device AI photo picker for iPhone that ranks your camera roll by quality and your own taste. It also culls, dedupes and cleans up. $19.99 once, no subscription. Nothing is uploaded and there is no account.</p>
       </div>
       <div class="foot-col">
         <div class="fc-title">Guides</div>
@@ -730,17 +737,27 @@
         <a href="/changelog/">Changelog</a>
         <a href="/duplicate-photo-finder-iphone/">Duplicate photo finder</a>
         <a href="/photo-organizer-iphone/">AI photo organizer</a>
+        <a href="/documents-receipts-iphone/">Documents &amp; receipts</a>
+        <a href="/press/">Press kit</a>
         <a href="https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134?ppid=5fd01708-3a73-4412-9bea-b411522af1f3">Download on the App Store</a>
       </div>
     </div>
     <div class="foot-meta">
-      <div>&copy; 2026 Mike Lu &middot; SpectraSort</div>
+      <div>&copy; 2026 Mike Lu &middot; SpectraSort &middot; Updated 31 October 2026</div>
       <div><a href="/privacy">Privacy</a><a href="/terms">Terms</a><a href="mailto:spectrasortapp@gmail.com">Support</a></div>
     </div>
+    <div class="also-in">Also in:
+      <a href="https://apps.apple.com/fr/app/spectrasort-ai-photo-picker/id6757512134?ct=web_footer">FR</a> &middot;
+      <a href="https://apps.apple.com/de/app/spectrasort-ai-photo-picker/id6757512134?ct=web_footer">DE</a> &middot;
+      <a href="https://apps.apple.com/it/app/spectrasort-ai-photo-picker/id6757512134?ct=web_footer">IT</a> &middot;
+      <a href="https://apps.apple.com/es/app/spectrasort-ai-photo-picker/id6757512134?ct=web_footer">ES</a> &middot;
+      <a href="https://apps.apple.com/br/app/spectrasort-ai-photo-picker/id6757512134?ct=web_footer">PT</a>
+    </div>
+    <div class="lang-switch">Language: <a href="/" hreflang="en" lang="en" aria-current="page">English</a> &middot; <a href="/fr/" hreflang="fr" lang="fr">Français</a> &middot; <a href="/de/" hreflang="de" lang="de">Deutsch</a> &middot; <a href="/it/" hreflang="it" lang="it">Italiano</a> &middot; <a href="/es/" hreflang="es" lang="es">Español</a> &middot; <a href="/pt/" hreflang="pt" lang="pt-BR">Português</a></div>
   </div>
 </footer>
 
-<script src="assets/site.js" defer></script>
+<script src="assets/site.js?v=20261101" defer></script>
 <script type="module" src="assets/analytics.js"></script>
 </body>
 </html>

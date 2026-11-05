@@ -1,6 +1,6 @@
 # SpectraSort
 
-> SpectraSort is an on-device AI photo picker for iPhone. Other apps find your photos; SpectraSort ranks them. Ask for something — by phrase, by example photo, by place, or by your own taste — and the matches come back scored best-first, ready to keep, share or clear. Everything runs on the iPhone's Neural Engine. Nothing is uploaded and there is no account.
+> SpectraSort is an on-device AI photo picker for iPhone that ranks your camera roll by quality and your own taste. It also culls, dedupes and cleans up. $19.99 once, no subscription. Other apps find your photos; SpectraSort ranks them. Ask for something — by phrase, by example photo, by place, or by your own taste — and the matches come back scored best-first, ready to keep, share or clear. Everything runs on the iPhone's Neural Engine. Nothing is uploaded and there is no account.
 
 The problem is not finding photos. It is deciding among them. Built-in search can return 87 photos of "beach"; it cannot tell you which three are worth keeping, and it cannot learn that you would have picked the backlit one. SpectraSort scores every result for quality and, if you ask, for how closely it matches the photos you keep — then hands you a review flow to act on the answer.
 
@@ -27,6 +27,11 @@ Studio is there when the one-tap defaults are not specific enough:
 - **Scenes** gather trips, themes and series automatically. No albums to create, no tagging.
 - **Timeline** drills from year to month to day.
 - Any slice can be sorted on its own, so a library of tens of thousands is never faced all at once.
+
+## Filters
+
+- Date range, location, album, and Exclude.
+- **Exclude** can hold back screenshots, documents & receipts, and photos already reviewed before a sort. The documents switch reads the image on-device and holds paper, forms and screenshots aside; it never deletes them. If excluding them would leave an empty batch, they come back.
 
 ## Review and finish
 
@@ -69,6 +74,7 @@ It clears the photos you tell it to, which is where most camera-roll storage goe
 ## Links
 
 - [Website](https://spectrasort.app)
+- [Français](https://spectrasort.app/fr/) · [Deutsch](https://spectrasort.app/de/) · [Italiano](https://spectrasort.app/it/) · [Español](https://spectrasort.app/es/) · [Português (Brasil)](https://spectrasort.app/pt/)
 - [App Store](https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134)
 - [Privacy Policy](https://spectrasort.app/privacy)
 - [Terms of Use](https://spectrasort.app/terms)
@@ -92,10 +98,16 @@ It clears the photos you tell it to, which is where most camera-roll storage goe
 - [SpectraSort vs Google Photos](https://spectrasort.app/spectrasort-vs-google-photos/) — cloud library vs on-device picker
 - [Photo picking vs photo culling](https://spectrasort.app/ai-photo-picker-vs-photo-culling/) — the two terms, mapped
 - [How to pick the best photos from your camera roll](https://spectrasort.app/how-to-pick-best-photos-from-camera-roll/) — manual and assisted methods
+- [Sort photos without receipts or screenshots](https://spectrasort.app/documents-receipts-iphone/) — the Documents & receipts filter
+- [Press kit](https://spectrasort.app/press/) — facts, screenshots and contact
 
 ## Version
 
-Current version: 3.1 (September 2026). Full release history: https://spectrasort.app/changelog/ iPhone, iOS 18.5 or later.
+Current version: 3.2 (November 2026). Full release history: https://spectrasort.app/changelog/
+
+Languages: English, French, German, Italian, Spanish and Portuguese (Brazil), plus Simplified Chinese in the Mainland China edition (光谱挑片).
+
+iPhone, iOS 18.5 or later.
 
 ## 中文（简体）— 光谱挑片
 

@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
+# Translation source fragments and the build script; not pages.
+Disallow: /i18n/
 
 # AI / LLM crawlers — explicitly welcome.
 # We want SpectraSort to be discoverable via ChatGPT, Claude, Perplexity,
@@ -241,3 +243,5 @@ Sitemap: https://spectrasort.app/sitemap.xml
 # zh-only subset, for Baidu/Sogou/360/Shenma submission — keeps their
 # limited crawl budget on the 7 pages that are actually in Chinese.
 Sitemap: https://spectrasort.app/sitemap-zh.xml
+# The five 3.2 languages (fr, de, it, es, pt-BR), 19 pages each.
+Sitemap: https://spectrasort.app/sitemap-i18n.xml

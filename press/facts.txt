@@ -1,0 +1,26 @@
+SpectraSort — press facts
+Updated 31 October 2026
+
+What it is: An on-device AI photo picker for iPhone that ranks your camera roll by quality and your own taste. It also culls, dedupes and cleans up.
+Price: Free download. Five actions a week are free forever; $19.99 once for unlimited actions and Studio. No subscription, no account, no credit card to start.
+Platform: iPhone, iOS 18.5 or later. No iPad, Mac, Android or web version.
+Languages: English, French, German, Italian, Spanish and Portuguese (Brazil). The Mainland China edition is 光谱挑片.
+Privacy: 100% on-device. Search, scoring and the taste profile run on the iPhone's Neural Engine. No photo uploads, no account, no SpectraSort server.
+Speed: Up to 100 photos a second on recent iPhones. The index is built on the first sort, then kept current automatically.
+Tools: Your Taste, Best Shots, Find a Subject, Like This Photo, Dedupe, Photos of a location. Studio adds seven quality axes, up to three subjects and saved profiles.
+Find a Subject: typed search works in English for now; the template tiles (Portrait, Night, etc.) work in any language.
+First released: January 2026. Version 3.2 shipped November 2026.
+Maker: Mike Lu, independent developer.
+Contact: spectrasortapp@gmail.com
+Website: https://spectrasort.app
+Press page: https://spectrasort.app/press/
+App Store: https://apps.apple.com/us/app/spectrasort-ai-photo-picker/id6757512134
+
+New in 3.2:
+- French, German, Italian, Spanish and Portuguese (Brazil) across the whole interface and the App Store listing.
+- Filters → Exclude has a Documents & receipts switch: screenshots, forms and photos of paper are held back before a sort. It never deletes them.
+- Sharing fixes: Instagram, WeChat and Xiaohongshu accept the photo, upright, for single and multi-photo shares.
+
+What we will not claim:
+- No "better than Apple Photos" claim. They are built for different jobs: Apple Photos browses and stores; SpectraSort picks and ranks.
+- No accuracy percentage for the documents classifier. It is a filter, not a promise.
